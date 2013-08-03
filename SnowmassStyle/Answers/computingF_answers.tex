@@ -134,10 +134,9 @@ Cosmic frontier simulation codes face a similar situation as with lattice QCD an
 The IF experiments share the need of continued development of common HEP tools like Geant4 and ROOT with the other frontiers.  In addition, the IF experiments will heavily benefit from the development of a data handling system that is easily distributed and has transparent access for the user.  The example of the tiered computing used by the LHC experiments is a good basis for developing the model for the IF.  It is expected that any solution developed would provide access to the data as well as methods for submitting jobs to the grid. Advances in adapting key software tools to exploit multi-threading and GPU environments will also be beneficial across frontiers. 
 
 
-The divide between massively parallel "leadership class" computing
-employed by LQCD configuration generation and the massive throughput-based
-employed by experimental HEP is more sociological than technical.  On
-close examination, the leadership class systems, for example OLCF and
+While it may be true that leadership-class computers can run data-intensive jobs, there are significant design differences.
+A single machine may be able to handle traditional HPC tasks and data-intensive tasks, but the architectures (and facilities) designed for number-crunching are very different from those designed for data-intensive analysis. The conventional supercomputer is a non-optimal device for data-intensive analysis (using various metrics: flops/byte, I/O, storage), while the data server is not optimal for HPC applications. And this is true even if both systems are based on the same "CPU". 
+ On close examination, the leadership class systems, for example OLCF and
 ALCF, can provide quite cost-effective throughput based computing for
 experimental HEP, but this is not seen as their mission.  Historically,
 the leadership class supercomputer centers have not been particularly
