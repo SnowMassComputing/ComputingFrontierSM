@@ -1,0 +1,187 @@
+According to publicly available information from vendor roadmaps, during the
+next several years commodity server computers, such as those used in the
+dedicated lattice QCD clusters discussed in Section~\ref{subsec:lqcd:current}
+above, will likely be similar to the current multicore machines.  Core counts
+per processor will increase two-fold or more, improvements in core
+architectures will yield higher flop counts per clock cycle, and memory
+bandwidth will increase through higher memory clock speeds and perhaps through
+new memory architectures.  Infiniband or similar networking will continue to
+increase in speed, doubling every three to five years.  Together, these
+hardware improvements should continue the exponential drop in cost per
+sustained flop for lattice QCD simulations that has been observed for more
+than the past decade.  However, during the two dedicated hardware projects
+that ran from FY2006 to FY2009 and from FY2009-FY2014, the halving time for
+price per flop has increased, from about 19 months to over 26 months.
+
+Better cost effectiveness, with the burden of more difficult programming, will
+continue to be available by incorporating accelerators such as GPUs and the
+emerging Intel MIC hardware into conventional servers.  These accelerators
+will continue the trend of having large low power core counts with small, fast
+local memory, with challenging communications bottlenecks for accessing
+non-local memory and communicating with neighbor processors and accelerators
+via the system I/O bus (``PCI express'') and over Infiniband or similar
+networks.  
+ 
+Judging from the trends of the last half decade, the evolution of
+supercomputers at the leadership-class facilities may follow two distinct
+patterns, one similar to that observed on the IBM BlueGene series of machines,
+and the other to the Cray series.  On BlueGene-like hardware, future machines
+may have increased core counts and hardware threads per node, with each
+processor continuing to run at low speeds compared with Intel and AMD x86
+processors.  For large core count jobs, this requires heterogeneous software
+which simultaneously uses multithreading across local cores and hardware
+threads, and message passing between nodes.    The current BlueGene/Q
+supercomputer exemplifies this pattern.  Software developed under the
+current SciDAC-3 lattice QCD grant copes well with this architecture.
+
+On Cray-like hardware, future machines may have a larger fraction of their
+computing capacity delivered by accelerators such as NVIDIA GPUs or by
+future Intel MIC-architecture coprocessors.  These processing elements would
+have very high core counts, perhaps in the thousands, running at low power and
+with access to small, fast local memory.  Problems of interest for lattice
+field theory would have to be spread across thousands of these coprocessors
+There would be challenging communications bottlenecks between the GPU or
+other coprocessor elements, with access to non-local memory only with high
+latency and low bandwidth over the local I/O bus for neighbor elements, and
+over the high performance network for more distant coprocessors.  The Titan
+supercomputer at ORNL exemplifies this pattern.  To fully exploit
+supercomputers like Titan, new algorithms must be developed to minimize the
+penalties imposed by the communications bottlenecks.  Recently~\cite{QUDAdd}
+an implementation of L\"{u}scher's~\cite{DomainDecomp} domain decomposition
+communications-avoidance algorithm developed with DOE support via the SciDAC
+program has demonstrated very good strong scaling using hundreds of GPUs.
+
+As computational capacities increase over the next five years, data storage
+volumes will increase as well.  Gauge-field ensemble and propagator data file
+sizes will increase at the planned finer lattice spacings and larger
+simulation volumes.  Since these are space-time simulations, data volumes
+increase as the fourth power of inverse lattice spacing.  In 2013, the
+LQCD-ext dedicated hardware project increased the fraction of the hardware
+budget spent on storage from five to eight percent to accomodate the increased
+demand.  The fraction of time spent by analysis jobs on file I/O will continue
+to increase.  Improvements to software will be necessary to optimize I/O, and
+the workflow patterns employed during analysis campaigns may need to change to
+reduce demands on disk and tape storage.
+
+%\textcolor{red}{Paragraphs on what physics will be enabled with the
+%anticipated computing resources, and whether this will be sufficient for our
+%computing needs.}
+
+The advent of petascale supercomputers is for the first time enabling
+widespread simulations with physical up and down quark masses at small lattice
+spacings and large volumes.  This development will enable major advances on a
+range of important calculations.  Over the next five years, the US lattice-QCD
+effort in precision matrix elements for the intensity frontier will generate
+large sets of gauge-field ensembles with the domain-wall fermion
+(DWF)~\cite{Kaplan:1992bt,Furman:1994ky,Vranas:2006zk} and highly improved
+staggered quark (HISQ)~\cite{Follana:2006rc} lattice actions. Each of these
+formulations has its own advantages, and the availability of two independent
+sets of configurations will enable valuable cross-checks on lattice
+calculations of the most important quantities.
+
+While the challenges to further reductions in errors depend on the quantity, a
+few key advances in the next five years will help a broad range of
+calculations.  First, the widespread simulation of physical $u$ and $d$ quark
+masses will obviate the need for chiral extrapolations.  Such simulations have
+already been used for studies of the spectrum and several matrix elements
+including the leptonic decay constant ratio $f_K/f_\pi$ and the neutral kaon
+mixing parameter
+$\hat{B}_K$~\cite{Aoki:2009ix,Durr:2010vn,Durr:2010aw,Bazavov:2013cp,Dowdall:2013rya}.
+A second advance will be the systematic inclusion of isospin-breaking and
+electromagnetic (EM) effects.  Once calculations attain percent-level
+accuracy, as is the case at present for quark masses, $f_K/f_\pi$, the
+$K\to\pi\ell\nu$ and $B\to D^*\ell\nu$ form factors, and $\hat B_K$, one must
+study both of these effects.  A partial and approximate inclusion of such
+effects is already made for light quark masses, $f_\pi$, $f_K$ and $\hat B_K$.
+Full inclusion would require nondegenerate $u$ and $d$ quarks and the
+incorporation of QED into the simulations, both of which are planned for the
+five-year DWF and HISQ configuration-generation programs.  A final
+across-the-board improvement that will likely become standard in the next five
+years is the use of charmed sea quarks.  These are already included in two of
+the major streams of gauge-field ensembles being generated
+worldwide~\cite{Baron:2009wt,Bazavov:2012xda}.
+
+The anticipated increase in computing resources over the next five years will
+significantly benefit the already mature quark-flavor physics program,
+improving the precision of weak-matrix elements needed to determine CKM matrix
+elements, constrain the CKM unitarity triangle, and search for evidence of
+non-Standard Model quark flavor-changing interactions.  It will also enable
+dramatic reduction in the errors of nucleon matrix elements needed to compute
+nucleon-neutrino scattering cross sections, interpret $\mu \to e$ conversion
+and dark-matter experiments, and search for violations of fundamental
+symmetries of the Standard Model.  Lattice calculations involving nucleons,
+however, typically require larger spatial volumes and more statistics than
+their meson counterparts.  Therefore achieving comparable percent-level
+precision for nucleon matrix elements will require more computing time than
+the USQCD anticipates receiving on the leadership-class machines and on
+dedicated hardware in the next few years, so the US lattice-QCD community
+could profitably take advantage of additional computing resources were they to
+become available.
+
+%\textcolor{red}{Paragraph on need for more dedicated hardware as our 
+%measurement needs increase as a fraction of our job distribution.}
+
+%The needs of current and upcoming experiments, as well as the steady increase
+%in computing capabilities, have driven an expansion in the number and variety
+%hadronic matrix elements being computed with lattice QCD over the past few
+%years, and this trend is expected to continue.  Therefore the ratio of
+%computing time spent doing ``measurements,'' {\it i.e.}  computations of
+%operator expectation values, to that spent doing gauge-field ensemble
+%generation is steadily increasing.  As discussed previously, capability
+%computing hardware is typically used for ensemble generation, and dedicated
+%conventional and GPU-accelerated clusters are used for measurements.  The
+%ratio of flops available on capacity versus capability hardware has remained
+%roughly flat; new increments of the dedicated capacity hardware funded by the
+%DOE HEP and NP program offices come online annually and in some years the
+%aggregate capacity exceeds the allocations available on capability hardware
+%via INCITE.  However, when major new capability machines become available
+%roughly every 4 to 5 years, the fraction of their aggregate capacity available
+%to USQCD can exceed the dedicated capacity resources.  The USQCD collaboration
+%accommodates this trend by running some of the largest measurement jobs on
+%capability hardware at the leadership-computing facilities rather than on
+%capacity clusters.  The collaboration's scientific goals would be accomplished
+%more efficiently and cost effectively with increased support for dedicated
+%lattice-QCD hardware.
+
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{l|ccc}  
+Year & Leadership Class TF-yrs & Capacity (Cluster) TF-yrs \\  \hline
+2015 & 430 & 325 \\
+2016 & 680 & 520 \\
+2017 & 1080 & 800 \\
+2018 & 1715 & 1275 \\ 
+2019 & 2720 & 1900 \\ \hline
+\end{tabular}
+\caption{Available resources for lattice QCD simulations, in TF-yrs units,
+assumed for the planned program of physics calculations.  The conversion
+factor for core-hours, assuming 8000 hours per year, is 1 TF-year = 6.53M core-hour.}
+\label{tab:fiveyear}
+\end{center}
+\end{table}
+
+%\textcolor{red}{Thesis paragraph for this section.}
+The planned U.S. physics program over the next five years is described in detail
+in the USQCD
+whitepapers~\cite{USQCD_EF_whitepaper13,USQCD_IF_whitepaper13,USQCD_NP_whitepaper13,USQCD_Thermo_whitepaper13}.
+This physics program assumes the availability to USQCD of capability resources
+at the DOE leadership class facilities, as well as the availability of dedicated
+capacity resources at Fermilab, Jefferson Lab, and BNL, deployed and operated
+by the proposed ``LQCD-III'' project.  The sustained LQCD TF-years provided by
+these resources by year are given in Table ~\ref{tab:fiveyear}. In all, this
+program of physics calculations 
+will require well over an order of magnitude of increased computing capacity
+beyond that used in prior years.  Further, over an order of magnitude increase
+in storage utilization (disk and tape) from the current approximately 2
+petabyte usage will be needed to support the simulations.   This computing and
+storage capacity can be provided by the growth
+of the various leadership-class facilities and larger allocations on those
+supercomputers, and by the continued availability and expansion of the
+dedicated hardware for lattice field theory supported by the DOE HEP and NP
+program offices.  The anticipated evolution of high performance computing
+hardware will also require the evolution of software and the introduction and
+refinement of new techniques and algorithms.  DOE support for the personnel to
+invent and refine algorithms and to provide new software will be necessary to
+exploit the hardware and to complete the planned physics program.
+
+

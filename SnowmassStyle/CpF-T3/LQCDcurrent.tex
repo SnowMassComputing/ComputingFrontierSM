@@ -1,0 +1,299 @@
+%\textcolor{red}{Paragraph on role of capacity and capability machines 
+%in lattice QCD physics job stream.}
+%
+%Both capability and capacity machines play important roles in numerical
+%lattice simulations, and access to both types of computing resources is
+%essential for the lattice field theory community.  Members of the USQCD
+%collaboration, for example, run jobs that range in size from requiring a
+%single node to requiring a hundred-thousand nodes.  The generation of
+%gauge-field configurations is the largest numerical problem in lattice
+%simulations, and requires high-capability machines such as the Blue Gene/Q and
+%the Cray XE/XK.  These jobs, which have long times-to-solution and must be
+%performed in series, can only be run at leadership-class facilities.
+%Subsequent computations of operator expectation values on these gauge-field
+%ensembles are more I/O-intensive, span a range of smaller job sizes, and can
+%be run in parallel.  These can be run most efficiently on high-capacity PC and
+%GPU clusters such as the dedicated lattice-QCD facilities at Fermilab and
+%Jefferson Lab.  Utilizing both leadership-class facilities and dedicated
+%clusters is therefore the most cost-effective means for meeting the computing
+%needs of the lattice community, and continued support of both the national
+%supercomputing centers and of dedicated USQCD hardware will be needed to meet
+%the scientific goals enumerated in Secs.~\ref{subsec:lqcd:IF}
+%and~\ref{subsec:lqcd:EF}.
+
+The simulation codes of lattice gauge theory require substantial computing
+resources in order to calculate hadron masses and interactions with sufficient
+precision to test the Standard Model against emerging experimental
+measurements.  At present, lattice theorists in the United States run these
+codes on a variety of hardware, including large supercomputers at DOE and NSF
+leadership computing facilities, medium-range supercomputers and clusters at
+various NSF-supported centers and at NERSC, dedicated computing systems at
+Fermilab, Jefferson Lab, and Brookhaven, and smaller clusters at university
+sites.  Depending upon the size of problem and the type of calculation, either
+{\em capability} or {\em capacity} computing systems are required.  Access to
+both types of computing resources is essential for the lattice field theory
+community.
+
+Lattice gauge theory simulations require parallel programming techniques, with
+the calculations running cooperatively across hundreds to many thousands of
+processors or processor cores.  The simulations must be run on hardware suitable
+for massively parallel computations. The simulations are floating point intensive;
+however, throughput is limited by memory bandwidth or by the latency and
+bandwidth of interprocessor communications. Interprocessor communications of
+data rely on message passing algorithms, typically implemented using an
+MPI~\cite{MPI} library.
+
+Several types of high performance computing hardware perform lattice QCD
+calculations.  First, commodity clusters, based on Intel or AMD x86 processors
+and Infiniband networks.  Such clusters have hundreds of nodes and thousands
+of cores.  Next, accelerated commodity clusters, similar to the the standard
+clusters but with general purpose graphics processing units (GPUs) or Intel
+many integrated core (MIC) accelerators installed in each server.  These
+clusters have fewer nodes but typically hundreds of accelerators.  Next, very
+large scale Cray supercomputers, consisting of thousands of AMD x86 processors
+with a proprietary network, with the newest models also containing thousands
+of GPUs.  Finally, very large scale IBM BlueGene supercomputers, consisting
+of hundreds of thousands of PowerPC cores interconnected on a proprietary
+network.
+
+The Cray and IBM supercomputers provide better scaling for large
+processor-count jobs and so are capable of efficiently performing calculations
+using tens of thousands of processors.  Computing allocations on these DOE
+leadership-class facilities favor calculations that require significant
+fractions of the machines, and operational policies restrict running jobs to
+those with large minimum processor counts.  Commodity clusters and accelerated
+clusters give better cost efficiency for smaller jobs, spanning hundreds to a
+few thousand core.
+%more importantly, because sufficient computing capacity cannot be obtained via
+%INCITE allocations to fulfill the planned physics program, the dedicated
+%hardware funded by DOE HEP and NP provides essential computing resources.
+More than half of integrated computing capacity used by USQCD
+since 2006 has been provided by commodity clusters and accelerated clusters.
+
+Prior to 2006, computing capacity improvements in new generations of
+processors resulted from the higher clock speeds enabled by smaller
+semiconductor feature sizes.  Device physics factors slowed the rate of
+improvement as leakage currents and other inefficiencies began to dominate
+power consumption.  Processor manufacturers instead moved to putting multiple
+processing cores in each processor package.  As feature sizes decreased, in
+the same die area these multicore processors first provided two, then four,
+and now as many as sixteen cores.  The cores within a package are coupled
+together with shared memory caches and common memory address spaces.  For lattice QCD
+software, which already coped via message passing with the difficulties of
+running a single calculation across a large number of cooperating processors,
+the transition to multicore processors was largely seamless.  One significant
+issue with multicore systems did emerge, the need to strictly assign processes
+to individual cores and to use ``local'' memory; all recent commodity systems
+with multiple processor sockets use NUMA (Non-Uniform Memory Access) designs
+that causes additional latency and effectively lower memory bandwidth when a
+core access main memory attached to a different processor socket.   
+
+Since 2008, lattice theorists began to exploit general purpose graphics
+processing units (GPU) for their floating point computing capabilities.  Two
+major vendors, NVIDIA and ATI, began selling numerical accelerators based on
+their GPU chips and provided programming environments such as CUDA (NVIDIA)
+and OpenCL (ATI and others).  Unlike the multicore processors discussed above,
+which can be utilized with conventional message-passing software, these
+accelerators have orders of magnitude higher core counts, with much smaller
+local memory per core.  Fully exploiting the potential computing capacity of
+these accelerators requires considerable expertise and programming effort.
+For large lattice QCD simulations, the problems must be spread across multiple
+accelerators, leading to a hierarchy of computing resources with very
+different performance: very fast but small local memory physically attached to
+the accelerator cores, much larger but slower (higher latency, lower
+bandwidth) memory in the host system housing the accelerator, and additional
+processors, accelerators, and memory in host systems connected via an
+Infiniband network.
+
+The generation of ensembles of gauge-field configurations is the largest
+numerical problem in lattice QCD simulations.  Because the configurations in an
+ensemble are members of a Markov chain, the individual jobs must be performed
+in series.  To minimize time-to-solution, the individual calculations must run
+on a large number of cores on machines with architectures that deliver
+excellent scaling at very high processor count.  Typical jobs span tens of
+thousands of cores, running for months to produce the order thousand
+configurations of a given ensemble.  Such calculations require capability
+machines such as Blue Gene or Cray supercomputers.
+
+Capability hardware operated by the DOE and currently employed for lattice QCD
+calculations include BlueGene/P and /Q, and Cray XE/XK supercomputers.  The
+USQCD collaboration applies as a single entity for INCITE allocations on the
+DOE leadership class computing facilities (LCF) at Argonne National Lab
+(BlueGene hardware) and Oak Ridge National Lab (Cray hardware).  These
+facilities are funded by the DOE Advanced Scientific Computing Research (ASCR)
+program office.  The USQCD INCITE awards for lattice QCD simulations are
+consistently among the largest allocations at either of the ANL or ORNL LCF.
+For calendar year 2012, these allocations were 50M and 46M core hours,
+respectively, and in 2013, 290M (250M on the BlueGene/Q, and 40M on the
+BlueGene/P) and 140M core-hours.  In terms of integrated sustained teraflops,
+for lattice QCD applications 290M and 140M core-hours correspond to
+approximately 45 and 22~Tflop/sec-yrs.
+
+Computations of operator expectation values using gauge-field ensembles are
+relatively more I/O-intensive than ensemble generation, span a wide range of
+smaller job sizes, and can be run in parallel.  That is, such analysis
+calculations, repeated for each member of an ensemble, can consist of tens to
+hundreds of independent jobs running simultaneously on a large capacity
+computing system.  Time-to-solution is not critical for the individual jobs,
+so even though they execute many of the same computational kernels as the
+ensemble generation calculations on capability machines, they can be run using
+fewer processors; because of strong scaling effects, running at lower
+processors counts yields better performance per processor on the kernels.
+Depending upon the specific stage of the analysis computation, the individual
+jobs range in size from requiring a single multicore computer to many
+thousands of cores across hundreds of computers.  A single analysis campaign,
+such as the calculation of a leptonic decay constant, may consist of tens of
+thousands of individual jobs.  These jobs run most efficiently and cost
+effectively on large commodity clusters.
+
+Capacity hardware consists of Infiniband-coupled commodity clusters, some of
+which include GPU (general purpose graphics processing unit) hardware
+accelerators.  The DOE HEP and NP program offices have supported the lattice
+gauge theory community by funding since FY2006 dedicated capacity hardware at
+Fermilab, Jefferson Lab, and Brookhaven.  Lattice gauge simulations for
+nuclear physics have similar computational requirements to those for high
+energy physics and can utilize the same hardware.  Two joint HEP/NP projects,
+LQCD (FY06-FY09) and LQCD-ext (FY10-FY14) have provided funds for hardware
+purchases and support personnel.  USQCD has submitted a proposal for a third
+project, LQCD-III, which would run from FY14-FY19.  These dedicated capacity
+resources are allocated by USQCD.  As of the beginning of July 2013, the
+dedicated USQCD hardware at Fermilab, Jefferson Lab, and Brookhaven has a
+total capacity of 570M and 770M core-hours, respectively, on conventional and
+GPU-accelerated hardware.  In terms of integrated sustained teraflops, these
+correspond, respectively, to 88~TFlop/sec-yrs and 119~TFlop/sec-yrs.
+% of sustained 88 TFlops on conventional clusters and a BG/Q half-rack
+% and an effective sustained 119 TFlops on GPU-accelerated clusters.  
+%  1 jpsi-core-hr = 1.226 GF-hr.  Assume 8000 hours delivered per year.
+Because sufficient allocations are not available via INCITE, these dedicated
+USQCD hardware resources provide essential computing capacity.
+In Table~\ref{tab:current} we list the LCF capability and dedicated
+capacity resources utilized for lattice QCD simulations since 2010.
+The capability resources are broken out showing both the ANL and ORNL
+leadership class facilities; the capacity resources include all usage  on the 
+DOE HEP and NP funded hardware at Fermilab, Jefferson Lab, and BNL.
+
+\begin{table}[t]
+\begin{center}
+\begin{tabular}{l|ccc}  
+Year & ANL LCF & ORNL LCF & Dedicated Capacity Hardware \\  \hline
+2010 & 187M & 53.6M & 125M \\
+2011 & 182M & 49.8M & 205M \\
+2012 & 143M & 77.9M & 330M \\
+2013 & 290M (allocated) & 140M (allocated) & 971M (planned) \\ \hline
+\end{tabular}
+\caption{Utilized capacity in core-hours of LCF and dedicated capacity 
+hardware for lattice QCD simulations.  The conversion factor for LQCD sustained
+TF-years, assuming 8000 hours per year, is 1 TF-year = 6.53M core-hour.}
+\label{tab:current}
+\end{center}
+\end{table}
+
+Non-DOE supported resources are also used for lattice QCD calculations.  USQCD
+has a PRAC grant for the development of code for the NSF's petascale computing
+facility, Blue Waters, and expects to obtain a significant allocation on this
+computer during 2013.  Subgroups within USQCD also make use of computing
+facilities at the DOE's National Energy Research Scientific Computing Center
+(NERSC), the Lawrence Livermore National Laboratory (LLNL), and centers
+supported by the NSF's XSEDE Program.  In addition, the RBC Collaboration has
+access to dedicated Blue Gene/Q computers at the RIKEN BNL Research Center at
+Brookhaven National Laboratory and the University of Edinburgh.
+
+Because of the variety of processor types and parallel architectures,
+efficient utilization of the above computing resources requires flexible and
+effective software.  Since 2004, DOE grants to USQCD during the three
+SciDAC~\cite{SciDAC} programs (2001-2006, 2006-2011, and 2011-2016) led to the
+development of the USQCD software stack~\cite{SciDAC-software}.  This stack
+includes low level communications and I/O application program interfaces
+(APIs) implemented via libraries ported to and optimized for each of the
+architectures.  The stack includes linear algebra libraries with routines that
+operate on single lattice sites, or across a full lattice with communications
+between neighboring sites.  Lattice QCD applications 
+%such as MILC or Chroma can
+utilize the various libraries of the software stack to run efficiently on any
+of the available computing resources.  The USQCD software stack is a publicly
+available resource supporting all of the main lattice gauge and fermion
+actions in current use.  Further, it provides a general purpose framework that
+can be extended to other quantum field theories besides QCD.
+
+In addition to the computational resources discussed above, lattice field
+theory simulations require data storage and network resources.  Tape archives
+of the various gauge-field ensembles are maintained at multiple sites to
+insure against accidental loss.  Ensembles reside on disk at any of the
+computational resource sites where they are required as input data for
+analysis jobs.  Intermediate data products generated and used in the analysis
+campaigns, such as quark propagators, reside on disk.  Computationally
+expensive propagators may be archived to tape, as well as distributed to any
+other site where they serve as inputs to additional analyses.  Although the
+volumes are modest compared to the various experiments, lattice field theory
+data require substantial storage resources.  For example, at Fermilab as of
+July 2013 over 1.8 petabytes of lattice field theory data were on tape, an
+increase of 0.8 petabytes over the volume stored as of July 2012.  The
+dedicated capacity clusters at Fermilab and Jefferson Lab utilize more than
+1.4 petabyes of disk configured in parallel file systems.  Fortunately, USQCD
+can leverage the storage infrastructure at Fermilab and Jefferson Lab built to
+support the DOE experimental programs.  The transfer of data between sites
+relies on national data networking infrastructure, such as ESnet, to achieve
+the required data rates.  Similar to data storage, the volume and rate of data
+transfer is modest compared to that required by experiments, but is
+nevertheless substantial.
+
+By matching the scale of a lattice field theory simulation to the most
+suitable type and size of machine, the USQCD community maximizes the overall
+cost-effectiveness of available computing resources.  Utilizing both
+leadership-class facilities and dedicated clusters is an effective means for
+meeting the computing needs of the lattice community.  Continued support of
+both the national supercomputing centers and of dedicated USQCD hardware, and
+support for software and algorithm development, will be needed to meet the
+scientific goals enumerated in Secs.~\ref{subsec:lqcd:IF}
+and~\ref{subsec:lqcd:EF}.
+
+%\textcolor{red}{Additional topic:  (1) Storage.  Needs are modest compared to
+%EF experiment, but substantial enough to require national lab resources.  
+%Tape: roughly 1.5 PB archive, growing annually at 0.5 to 1.0 PB.  Disk: 
+%about 1.4 PB (FNAL + JLab) growing annually at 0.2 to 0.3 PB.  We leverage
+%infrastructure that exists because of the experimental programs. }
+
+%As new high performance computing systems come online, based on new
+%processors, accelerators, and /or networks, the various lattice QCD libraries
+%and applications must be tuned or modified to effectively use the new
+%resources and to produce correct results.  This requires an on-going
+%software development program such as the current SciDAC-3 LQCD
+%projects under the DOE Nuclear Physics and High Energy Physics program
+%offices.  NVIDIA GPUs, IBM BlueGene systems, and Intel MIC (Many
+%Integrated Core) architecture acclerators are examples of recent
+%hardware innovations that required intensive software development
+%efforts and are the subject of continuing development.
+
+%Support from the DOE HEP and NP program offices for dedicated hardware
+%for lattice QCD calculations has also been essential over the past decade,
+%and will continue to be essential during the next.  Large scale
+%capability machines at the DOE leadership computing facilities, such
+%as the BlueGene/L, /P, and /Q systems at Argonne National Lab and the
+%various Cray supercomputers at Oak Ridge National Lab, have been used
+%to produce various ensembles of vacuum gauge configurations at a
+%variety of lattice spacings, with different numbers of dynamical
+%quarks and different quark masses, and with a variety of actions.
+%Since the members of these ensembles are elements of Markov chains,
+%the calculations are necessarily serial, with each configuration
+%serving as the input to the calculation of the next configuration at a
+%later time step.  To minimize time to solution, lattice theorists
+%employ machines with exellent scaling properties and very high
+%computing capacity such as those at the LCFs.
+
+%Each gauge configuration ensemble serves in the Monte Carlo
+%integrations necessary for the calculations of decay constants and
+%particle masses.  Since 2007, at least half of all floating point
+%operations performed on lattice QCD calculations have been spent on the
+%analysis of the gauge ensembles, with the other half spent on the
+%production of the ensembles.  This fraction has been increasing (as
+%the number of analysis campaigns has increased??).  Dedicated lattice QCD
+%hardware funded by DOE HEP and NP, consisting of clusters at Fermilab
+%and Jefferson Lab, the purpose-built QCDOC machine at Brookhaven and
+%now a small (compared to the ANL LCF systems) BlueGene/Q system at
+%Brookhaven, are used for all but the most-computationally intensive
+%analysis calculations.  The DOE ASCR- and NSF-funded supercomputing
+%facilities do not provide enough resources to the lattice community to
+%perform lattice QCD simulations in a timely manner to support the DOE HEP
+%experimental programs.
+
+
