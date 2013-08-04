@@ -136,26 +136,11 @@ Cosmic frontier simulation codes face a similar situation as with lattice QCD an
 
 The IF experiments share the need of continued development of common HEP tools like Geant4 and ROOT with the other frontiers.  In addition, the IF experiments will heavily benefit from the development of a data handling system that is easily distributed and has transparent access for the user.  The example of the tiered computing used by the LHC experiments is a good basis for developing the model for the IF.  It is expected that any solution developed would provide access to the data as well as methods for submitting jobs to the grid. Advances in adapting key software tools to exploit multi-threading and GPU environments will also be beneficial across frontiers. 
 
+While it may be true that leadership-class computers can run data-intensive jobs, there are significant design differences.  A single machine may be able to handle traditional HPC tasks and data-intensive tasks, but the architectures (and facilities) designed for number-crunching are very different from those designed for data-intensive analysis. The conventional supercomputer is a non-optimal device for data-intensive analysis (using various metrics: flops/byte, I/O, storage), while the data server is not optimal for HPC applications. And this is true even if both systems are based on the same "CPU".
 
-While it may be true that leadership-class computers can run data-intensive jobs, there are significant design differences.
-A single machine may be able to handle traditional HPC tasks and data-intensive tasks, but the architectures (and facilities) designed for number-crunching are very different from those designed for data-intensive analysis. The conventional supercomputer is a non-optimal device for data-intensive analysis (using various metrics: flops/byte, I/O, storage), while the data server is not optimal for HPC applications. And this is true even if both systems are based on the same "CPU". 
- On close examination, the leadership class systems, for example OLCF and
-ALCF, can provide quite cost-effective throughput based computing for
-experimental HEP, but this is not seen as their mission.  Historically,
-the leadership class supercomputer centers have not been particularly
-data-friendly, but this is changing rapidly with the realization that an
-ability to treat "big data" problems is vital.
+Judging from tests by ATLAS of running Geant, ROOT, and ALPGEN on the ANL "Intrepid" BlueGene/P, tightly-coupled leadership class systems such as those at the OLCF and at the ALCF can provide effective high throughput computing for experimental HEP.  However, this is not seen as their mission, as they were designed to give excellent performance on massively parallel codes (thousands to hundreds of thousands of processors per job).  Further, these facilities provide important tightly-coupled computing resources for a number of areas of HEP, including lattice QCD, cosmology, and accelerator simulation, and they are fully subscribed via the INCITE program.  Historically, the leadership class supercomputer centers have not been particularly data-friendly, important for high throughput computing, but this is changing rapidly with the realization that an ability to treat "big data" problems is vital.
 
-In technology, HEP clusters and leadership class systems are converging.
-Often the CPUs are the same, and the problems of poor utilization of CPU
-capabilities are common. Challenges such as "can we exploit GPUs
-effectively?" are are also common ground, but the highly capable
-intercommunications networks of leadership-class facilities remain largely
-irrelevant to experimental HEP.
-
-Bottom line, there is a very large overlap between the work required to
-make HEP code run effectively on an 2020 laptop and that required to
-exploit a 2020 Leadership Class Facility.
+In technology, HEP clusters used for high throughput computing and leadership class systems are converging.  Often the CPUs are the same, and the problems of poor utilization of CPU capabilities are common. Challenges such as "can we exploit GPUs effectively?" are are also common ground, but the highly capable intercommunications networks of leadership-class facilities remain largely irrelevant to experimental HEP while being vital to theoretical calculations.
 
 
 \subsection{COMF4}
