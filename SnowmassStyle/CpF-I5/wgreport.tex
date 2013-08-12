@@ -63,7 +63,7 @@ re-use and some moves towards public access have begun at the LHC.  The Tevatron
 have larger and more focused activities at this time.
 
 \subsection{Intensity Frontier}
-Lepton colliders in intensity frontier “factory mode” also run up against the cost of storage, 
+Lepton colliders in intensity frontier ``factory mode'' also run up against the cost of storage, 
 but the physics of lepton collisions is relatively clean and recording all events relevant to the 
 targeted physics has proved possible in the past and is a realistic expectation for the future.  
 The Belle II TDR estimates a data rate to persistent storage of 0.4 to 1.8 gigabytes/s, which is 
@@ -72,8 +72,8 @@ comparable to LHC Run-2 rates but without the need to discard data with signific
 Most of the many other intensity frontier experiments do not individually challenge storage 
 capabilities, but there is a recognition that data management (and workflow management) is 
 often inefficient and burdensome. Most experiments find it hard to escape from the comfort 
-and constriction of limiting all their data-intensive work to a single site – normally Fermilab. 
-The statement “all international efforts would benefit from an ATLAS-like model” was made and 
+and constriction of limiting all their data-intensive work to a single site -- normally Fermilab. 
+The statement ``all international efforts would benefit from an ATLAS-like model'' was made and 
 should probably be interpreted as a need for ATLAS-like data management functions at a much 
 lower cost and complexity than the current ATLAS system.
 
@@ -96,8 +96,8 @@ HEP-detector-in-space telescopes, and large-scale simulations.
 The Sloan Digital Sky Survey pioneered the use of innovative database technology to make 
 its data maximally useful to scientists.  This approach continues with LSST, notably the 
 development of a multi-petabyte scalable object catalog database that is capable of rapid 
-response to complex queries.  The data management needs of the sky surveys – handling image 
-catalogs and object catalogs – appear very different from those of experimental HEP, but 
+response to complex queries.  The data management needs of the sky surveys -- handling image 
+catalogs and object catalogs -- appear very different from those of experimental HEP, but 
 nevertheless, the baseline LSST object catalog employs HEP’s xrootd technology in the key 
 role of providing a switchyard between MYSQL front ends and thousands of MYSQL backend servers.  
 LSST’s 3.2 gigapixel camera will produce 15 terabytes per night, building up to over 100 
@@ -154,7 +154,7 @@ challenges as HEP experiments, and may be subject to the higher availability
 expectations typical of image-based astronomy
 
 \subsubsection{Simulations}
-Simulation provides our only way to perform “experimental cosmology” since only one 
+Simulation provides our only way to perform ``experimental cosmology'' since only one 
 universe is observable.  Simulation also plays a vital role in understanding all 
 aspects of astrophysics, such as supernovae, for which only very limited observation 
 data can be collected for each occurrence. Finally, simulation is needed for the 
@@ -163,9 +163,9 @@ design of observational programs and for their detailed technical elements.
 Already today, post-processing of simulation data presents a major data-intensive 
 computing challenge, requiring data management, large-scale databases and tools for 
 data analytics.  Some of today’s pain relates to the much more ready availability of 
-national resources for computation than those for data management and analysis: “we 
+national resources for computation than those for data management and analysis: ``we 
 can easily generate many petabytes from simulations and have [almost] no place to 
-store them and analyze them”.
+store them and analyze them''.
 
 There is some expectation that compute-intensive simulation will be co-located with the 
 data-intensive facilities for analysis of the simulation, but powerful, easy to use 
@@ -223,15 +223,18 @@ scientific or even commercial fields.
 
 \section{Technology Outlook}
 \label{sec:cpfi5-technology}
-A simplistic prediction for the future evolution of technology would to continue to 
+A simplistic prediction for the future evolution of technology is that it 
+would to continue to 
 evolve as it has in the past.  Figure aa shows a highly selective, but relevant, 
 view of technology evolution, charting how much you can get for \$1M in disk storage, 
 CPU power and long-haul network links that have been bought by over three decades 
-for some particular experimental HEP activities .  Some notable features of the 
+for some particular experimental HEP activities.  The figure is  selective in that 
+it involves real purchases of hardware and services for a limited range of 
+experiments -- L3, BaBar, and parts of the LHC program. Some notable features of the 
 evolution are:
 \begin{itemize}
 \item
-Over three decades the line “doubling every 1.3 years” is a good match to the average 
+Over three decades the line ``doubling every 1.3 years'' is a good match to the average 
 CPU evolution and is not far from the average disk capacity evolution.
 \item
 The data do not exclude a marked slow down in evolution from about 2010.
@@ -239,11 +242,11 @@ The data do not exclude a marked slow down in evolution from about 2010.
 The network evolution shows a major discontinuity, corresponding to de-regulation 
 and the end of European PTT monopolies.
 \item
-Disk accesses per \$M – almost totally dominated by the unchanging rotational 
-speed of disks – has changed hardly at all in two decades.
+Disk accesses per \$M -- almost totally dominated by the unchanging rotational 
+speed of disks -- has changed hardly at all in two decades.
 \item
 Comparison of technology evolution with the BaBar and ATLAS raw data rates to 
-persistent storage (just two examples of HEP’s “data frontier”) shows a similar 
+persistent storage (just two examples of HEP’s ``data frontier'') shows a similar 
 distance from the technology evolution and hence, perhaps a similar level of 
 technological challenge but separated by more than a decade in time. 
 \end{itemize}
@@ -256,8 +259,8 @@ Much of this change relates to the problems with disk technology described
 below, but tape storage does have the intrinsic properties of negligible 
 power usage, a different set of failure modes and often lower failure rate 
 than disks, and persistently lower cost than disks.  The scientific and the 
-commercial world has and will continue to have, a need for archival or “just 
-in case we need it” storage with these properties.
+commercial world has and will continue to have, a need for archival or ``just 
+in case we need it'' storage with these properties.
 
 Tape does fail, so HEP has traditionally taken advantage of its enforced distributed 
 approach to computing to make a copy or copies elsewhere in the world.  A cheaper 
@@ -282,8 +285,8 @@ centers that see a clear need for this integration.
 
 Tape technology has, for many decades, been limited by marketing considerations 
 more than by technology.  Tape is very far from its fundamental physical 
-limitations and suffers mainly from the existence of very few – approximately 
-two today – major drive manufacturers who can see no reason to compete with 
+limitations and suffers mainly from the existence of very few -- approximately 
+two today -- major drive manufacturers who can see no reason to compete with 
 themselves.  The technology could deliver twice the capacity per dollar every 
 18 months, but it seems reasonable to expect a doubling time of around three 
 years for the marketed products.
@@ -293,11 +296,11 @@ The 30-year run of exponential growth in capacity per dollar is almost certainly
 The factors responsible are both market related and technology related.
 
 The consumer market for rotating disks is now declining.  An increasing number of 
-consumer devices – for example most HEP laptops – are now being bought with flash 
+consumer devices -- for example most HEP laptops -- are now being bought with flash 
 memory taking over the historical role of disk.  One consequence is that an appealing 
-and for-a-short-time successful HEP storage strategy – buy the cheapest, slowest, 
+and for-a-short-time successful HEP storage strategy -- buy the cheapest, slowest, 
 largest consumer-market disks and hide them behind a layer of faster enterprise disks 
-or solid-state-disks – no longer works as well as it did.
+or solid-state-disks -- no longer works as well as it did.
 
 In the enterprise-disk world, devices are loosely classified by their interfaces. 
 SATA disks with low rotational speed and maximum capacity are used for less demanding 
@@ -318,17 +321,17 @@ and/or by using a higher coercivity material that would allow smaller bit sizes.
 Technological developments along these directions have been in the works for some 
 years, but according to industry experts, none will be advanced enough to bring the 
 next jump in disk capacity to market much before the end of the decade.  The prime 
-“use-a-larger-volume-of-magnetic material” approach is shingled recording, 
+``use-a-larger-volume-of-magnetic material'' approach is shingled recording, 
 conceptually illustrated in Figure bb. In this approach a specially shaped write 
 head lays down tracks with a triangular cross section, which become a set of 
-“shingles” as successive tracks are written.  Each shingle goes deep into the 
+``shingles'' as successive tracks are written.  Each shingle goes deep into the 
 material, so can be stable even if it is much narrower than current tracks.  
 It is impossible to re-write sectors or single tracks with this approach.  
 To change any information on the disk, a large block of tracks must be erased 
 and re-written.  HEP would have no problem with such a device, but its success 
-in the wider marketplace could be problematic.  The “high-coercivity” approaches 
+in the wider marketplace could be problematic.  The ``high-coercivity'' approaches 
 include Heat-Assisted Magnetic Recording (HAMR) using a uniform surface with higher 
-coercivity and “bit patterned recording” using lithography to lay down a circular 
+coercivity and ``bit patterned recording'' using lithography to lay down a circular 
 pattern of bits that are close together but physically isolated from each other.
 
 The next ten years of disk evolution is thus highly uncertain.  It would be 
@@ -354,14 +357,14 @@ improve physics analysis throughput.
 
 In this mode, solid-state storage is certain to play an increasing but not 
 dominant role in HEP, and perhaps an even larger role in the commercial world.  
-The woes of rotating disk described above are likely to allow solid-state – 
-specifically flash-memory-based – storage to lower its cost relative to disk 
+The woes of rotating disk described above are likely to allow solid-state -- 
+specifically flash-memory-based -- storage to lower its cost relative to disk 
 and gain market share.  It seems plausible that the cost differential would 
 go down from around a factor ten now to around a factor 3 within ten years.  
 Industry experts do not expect current solid-state technologies to “kill” disk 
 in the foreseeable future, not least because it is almost inconceivable to 
-create the large number of multi-billion dollar “fabs” – chip fabrication 
-facilities – that would be needed to displace the world’s many exabytes of disk.
+create the large number of multi-billion dollar ``fabs'' -- chip fabrication 
+facilities -- that would be needed to displace the world’s many exabytes of disk.
 
 \subsection{Storage Middleware and Data Management}
 With the notable exception of the adoption by several HEP sites of the 
@@ -414,7 +417,7 @@ challenges, but HEP is still at the bleeding/leading edge in terms of overall
 complexity.
 
 The commercial world of distributed data-intensive applications should not be 
-ignored – individual technologies and de-facto standards relevant to HEP are 
+ignored -- individual technologies and de-facto standards relevant to HEP are 
 almost certain to appear.  The wide scientific world must also not be ignored.  
 HEP will be able to bring benefit, reap credit and attract non-HEP funding by 
 helping adapt some of its most successful distributed computing technologies 
@@ -430,7 +433,7 @@ used in HEP today.
 \section{Data, Software and Physics Preservation}
 It is widely recognized that “knowledge preservation” in all frontiers is becoming 
 increasingly important, or even vital, as the size of data samples and the time 
-scale of experiments increase.  Here, “knowledge preservation” includes the preservation 
+scale of experiments increase.  Here, ``knowledge preservation'' includes the preservation 
 of data, the accompanying software, the capability to apply the software to the data 
 in a reproducible way, and a record of how the software was applied to obtain a given 
 result.  There are several motivations for effort in this area:
@@ -450,7 +453,7 @@ RECAST, and the extensions to HepDB provide a means of encapsulating the structu
 of a given analysis in a manner that allows easy communication between experts and 
 relatively simple re-use.  More broad outreach efforts, such as those supported by 
 nearly all Energy Frontier experiments, have also developed simple yet powerful 
-“public-friendly” interfaces to simplified experimental data and analysis tools.
+``public-friendly'' interfaces to simplified experimental data and analysis tools.
 \item
 Mandate: stewardship of the public investment in fundamental research is very important. 
 (Have to write this carefully) While this is recognized by many of the experiments, 
@@ -465,7 +468,7 @@ turns into a mandate from the funding agencies.
 \subsection{Current Efforts in Knowledge Preservation}
 Worldwide, and across many disciplines, the past couple of years have seen widespread 
 recognition that Data/Knowledge preservation is critical to the long-term exploitation 
-of any science that qualifies as “Big Data”.  This broad interest has spawned a 
+of any science that qualifies as ``Big Data''.  This broad interest has spawned a 
 dizzying array of national and international disciplinary and cross-disciplinary 
 efforts to attempt to address the related issues.  Up to now, many of these have 
 focused solely on providing a means of storage and indexing of datasets.  This is 
@@ -522,7 +525,7 @@ networks and CPU are clearly uncertain.  However, it is certain that HEP computi
 models will need to adapt to make the most efficient use of all these elements.  
 The best way to adapt would be to make the implementation of the models 
 intrinsically adjustable to adapt to a wide range of situations. The now old, 
-but never really implemented, concept of “virtual data” would go a long way to 
+but never really implemented, concept of ``virtual data'' would go a long way to 
 making HEP computing dynamically adaptable to wide range of relative storage and 
 CPU costs.  In a virtual data system, all derived (or simulated) data products 
 begin existence solely as the rigorously complete recipes for creating them.  
