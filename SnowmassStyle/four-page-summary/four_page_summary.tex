@@ -35,8 +35,9 @@ review of the topics we studied, {\it i.e.}, user needs and capabilities of
 current and future technology. For many years, the particle physics
 community has been a great source of computing innovation and expertise. It
 is essential to leverage those assets through wider sharing of knowledge
-throughout the experimental and theoretical communities. In fact, we should
-be sharing our expertise with the entire scientific community.
+throughout the experimental and theoretical communities. 
+We should be open to bi-directional sharing of expertise with the entire
+community of data-intensive science."
 
 The experimental program relies for the most part on distributed
 high-throughput computing (HTC). Data analysis, simulation and
@@ -72,10 +73,9 @@ cores. Thus, we cannot rely on new hardware to run serial codes faster, and
 we must parallelize codes to increase application performance. In addition
 to multi-core chips, there are accelerators such as graphical processing
 units (GPUs) and many-core chips such as the Intel Xeon Phi. 
-%% The next line is untrue for LGT -- needs have always outstipped resources. 
 In the past computing resource needs for energy frontier experiments scaled
 roughly with the rate that processor speeds increased, following Moore's
-law. In the future this requires full use of many-core architectures. Also
+law. In the future this requires full use of multiple-core architectures. Also
 in the storage area scaling of disk capacity and throughput is of
 significant concern, as per-unit capacities no longer increase as rapidly.
 
@@ -125,14 +125,17 @@ than half of the computing cost now are for storage, and in the future it
 may become cost-effective to recompute certain derived quantities rather
 than storing them.
 
-The {\it Intensity Frontier} experiments have lower computing requirements
-but are a more diverse set. A survey was conducted and found that there is
-significant commonality in different experiments' needs. Sharing of
-resources across experiments, like in the Open Science Grid, would address
-peak compute resources needs. Better coordination of software development
-and leveraging the experience and expertise of the energy frontier
-experiments could increase the efficiency of intensity frontier software
-development.
+The {\it Intensity Frontier} experiments have combined computing requirements
+on the scale of a single energy frontier experiment but they are a more
+diverse set than the energy frontier. A survey was conducted and found that
+there is significant commonality in different experiments’ needs. Sharing of
+resources across experiments, like in the Open Science Grid, is a first step
+in addressing peak compute resources needs.  Continued coordination of
+software development between these experiments will allow for efficiently
+developed coding infrastructure.  Leveraging the data handling experience and
+expertise of the energy frontier experiments for the diverse intensity
+frontier experiments would significantly improve their ability to reconstruct
+and analyze data.
 
 {\it Cosmic Frontier} experiments will greatly expand their storage needs
 with the start of new surveys and the development of new instruments.
@@ -150,7 +153,10 @@ access to data are also issues that need attention.
 
 {\it Accelerator Science} is called on to simulate new accelerator designs
 and to provide near-real-time simulations feedback for accelerator
-operation. It will be necessary to include additional physics in codes and
+operation. 
+Research into new algorithms and designs has potential to bring new ideas and
+capabilities to the field.
+It will be necessary to include additional physics in codes and
 to improve algorithms to achieve these goals. Production runs can use from
 10K to 100K cores. Considerable effort is being expended to port to new
 architectures, in particular to address the real-time requirements.
@@ -158,7 +164,7 @@ architectures, in particular to address the real-time requirements.
 {\it Lattice Field Theory} calculations rely on national supercomputer
 centers and hardware purchased for the USQCD Computing Project. Allocations
 at supercomputer centers have exceeded 500 M core-hrs this year, and
-resource requests go up by a factor of 50 until the end of this decade.
+resource requests will go up by a factor of 50 by the end of this decade.
 This program provides essential input for interpretation of a number of
 experiments, and increased precision will be required in the future. For
 example, the $b$ quark mass and the strong coupling $\alpha_s$ will need to
@@ -214,10 +220,12 @@ The {\it Storage and Data Management} subgroup found that storage continues
 to be a cost driver for many experiments. It is necessary to manage the
 cost to optimize the science output from the experiment. Tape storage
 continues to be relatively inexpensive and should be more utilized within
-the storage hierarchy. While new disk technology has been arriving every 18
-months, there is now less competition and the technology cycle is slowing
-down. Operating distributed data management systems can be costly for
-experiments, and R\&D in this area could benefit a number of experiments.
+the storage hierarchy. 
+Disk storage is likely to increase in capacity/cost relatively slowly due
+to a shrinking consumer market and technology barriers.
+Operating distributed data management systems can be costly for
+experiments, and continued R\&D in this area would benefit a number of 
+experiments.
 
 To summarize, the challenging resource needs for the planned and proposed
 physics programs require efficient and flexible use of all resources. HEP
@@ -247,7 +255,8 @@ and networking. Continued evolution of the data management and storage
 systems will be needed in order to take advantage of new network
 capabilities, ensure efficiency and robustness of the global data
 federations, and to contain the level of effort needed for operations.
-Significant challenges with data management and access remain, and we
+Significant challenges with data management and access remain and research
+into these areas could continue to bring benefit across the Frontiers.  We
 expect solutions that will be based on content delivery approaches, dynamic
 data placement, and remote data access.
 
