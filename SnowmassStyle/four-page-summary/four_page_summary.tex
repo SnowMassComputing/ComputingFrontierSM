@@ -75,7 +75,8 @@ to multi-core chips, there are accelerators such as graphical processing
 units (GPUs) and many-core chips such as the Intel Xeon Phi. 
 In the past computing resource needs for energy frontier experiments scaled
 roughly with the rate that processor speeds increased, following Moore's
-law. In the future this requires full use of multiple-core architectures. Also
+law. In the future this requires full use of multiple-core and many-thread 
+architectures. Also
 in the storage area scaling of disk capacity and throughput is of
 significant concern, as per-unit capacities no longer increase as rapidly.
 
@@ -86,13 +87,16 @@ stages in their efforts to port to these new technologies. Lattice QCD, for
 example, started its GPU porting efforts in 2008 and has had code in
 production for some time, particularly for quark inversions; however, there
 are other parts of the code that are still only running on CPUs.
+Cosmological simulations have exploited GPUs since 2009 and some 
+codes have fully incorporated GPUs in their production versions, running 
+at full scale on hybrid supercomputers.
 Accelerator science is also actively porting codes to GPUs. Some of the
 solvers and particle-in-cell infrastructures have been ported and very
 significant speed-ups have been obtained. The perturbative QCD community
 has also started using GPUs.
 
 These trends lead to vastly increasing code and system complexities. For
-example. only a limited number of people in the field can program GPUs. In
+example, only a limited number of people in the field can program GPUs. In
 this and other highly technical areas, developing and keeping expertise in
 new software technologies is a challenge, while well-trained personnel and
 key developers are leaving to take attractive positions in industry.
@@ -121,11 +125,11 @@ year now, but in 2021 the rate may rise to 130 PB. Attention needs to be
 paid to data management and wide-area networking, to assure that network
 connectivity does not become a bottleneck for the distributed event
 analysis. It is important to monitor storage cost and throughputs. More
-than half of the computing cost now are for storage, and in the future it
+than half of the computing cost is now for storage, and in the future it
 may become cost-effective to recompute certain derived quantities rather
 than storing them.
 
-The {\it Intensity Frontier} experiments have combined computing requirements
+{\it Intensity Frontier} experiments have combined computing requirements
 on the scale of a single energy frontier experiment but they are a more
 diverse set than the energy frontier. A survey was conducted and found that
 there is significant commonality in different experiments’ needs. Sharing of
@@ -139,14 +143,16 @@ and analyze data.
 
 {\it Cosmic Frontier} experiments will greatly expand their storage needs
 with the start of new surveys and the development of new instruments.
-Current data sets are about 1 PB, and the total data set is expected to
+Current data sets are about 1 PB, and the total data set is expected to be
 about 50 PB in ten years. Beyond that, in 10--20 years data will be
 collected at the rate of 400 PB/yr. On the astrophysics and cosmology
 theory side, some of the most challenging simulations are being run on
-supercomputers. Very large simulations will require increasing computing
+supercomputers. 
+Current allocations for this effort are approximately 200M core-hours annually.
+Very large simulations will require increasing computing
 power. Comparing simulations with observations will play a crucial role in
 interpretation of experiments, and simulations are needed to help design
-new instruments. There are very significant challenges of dealing with new
+new instruments. There are very significant challenges in dealing with new
 computers architectures and very large data sets, as described above.
 Growing archival storage, visualization of simulations and allowing public
 access to data are also issues that need attention.
@@ -271,7 +277,7 @@ treat networks as a resource that needs to be managed and planned for.
 
 Computing will be essential for progress in theory and experiment over the
 next two decades. The field continues to learn how to do more science with
-smaller resources, requiring us to be more flexible and perhaps tolerate
+constrained resources, requiring us to be more flexible and perhaps tolerate
 higher levels of risk. The advances in computer hardware that we have seen
 in the past may not continue at the same rate in the future. The issues
 identified in this report require continuing attention. Addressing them
