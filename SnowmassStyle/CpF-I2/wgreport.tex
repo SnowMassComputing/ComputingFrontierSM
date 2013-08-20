@@ -23,6 +23,52 @@
 \section{Introduction}
 \label{sec:comp-intro}
 
+The field of particle physics has become increasingly reliant on large-scale computing resources to address the challenges of analyzing large datasets, completing specialized computations and simulations, and allowing for wide-spread participation of large groups of researchers.  For a variety of reasons, these resources have become more distributed over a large geographic area, and some resources are highly-specialized computing machines.  In this report for the Snowmass Computing Frontier Study, we consider several questions about distributed computing and facility infrastructures that could impact future resource requirements and research directions.
+
+\section{Current HEP Use of the U.S. National Computing Infrastructure}
+
+Different computational problems in particle physics are naturally suited for different kinds of computing facilities.  In general, there are two paradigms.  One is high-throughput computing (HTC), which is implemented in standard commodity computers and can address problems that are “embarrassingly parallel,” i.e., those that can be computed independently with the results combined afterward.  The other is high performance computing (HPC), which uses ''supercomputers'' to solve large problems by distributing computational work among many processors and using specialized high-speed, low-latency networks to communicate partial results among processors during execution of the job.
+
+The Worldwide LHC Computing Grid (WLCG) is an HTC resource that is the main computational resource used by the LHC experiments, of which ATLAS and CMS have the largest computing needs.  As the name implies, the WLCG is an example of a grid infrastructure, which is described in much more detail in Section XXX [needs proper LaTeX reference to grid section].  There are over 170 facilities connected to the WLCG, distributed over 36 countries.  Fifteen of those sites are located in the United States, and they tend to have more resources than the average WLCG site.  The WLCG is organized into a tiered hierarchy of sites, in which sites at each tier have different computational responsibilities and service levels, and thus different hardware configurations.  The Tier-0 center is at CERN; it is responsible for prompt reconstruction of detector data, some calibration and alignment tasks and keeping a custodial copy of the raw data.  There are currently twelve Tier-1 sites, which keep a second custodial copy of the raw data, reprocess older data with improved calibration and alignment constants, perform skims of large data samples, and archive simulated datasets.  Both Tier-0 and Tier-1 centers operate tape libraries and have 24/7 system support.  The remaining sites are Tier-2 sites, which host data samples for physics analysis and generate simulated datasets.  Tier-2 centers typically only have business-hours support within their time zone.  The facilities are composed of large clusters of commodity machines powered by x86-style processors, which are accessed through batch scheduling systems.
+
+The computational problems of the LHC experiments are well matched to the structure of the WLCG.  Computations are centered around individual, statistically independent collision events, and this “embarrassingly parallel” regime works well for the HTC systems that the WLCG provides.  This scheme has served the LHC experiments very well.  The current resources of the WLCG are 2 MHS06 of CPU and 190 PB of disk.  CMS and ATLAS used about 300,000 cores continuously during 2012, resulting in about 2.6 billion CPU hours.  These resources, along with robust middleware and a strong effort in operations, have allowed the experiments to turn around physics results very quickly.  The workflows for the experiments, be they for data processing, calibration, simulation or user analysis, have performed as expected, and any concerns about scaling with the expected increase in resources should be able to be addressed in the course of normal operations.  There is a good window for this work during the current LHC shutdown.
+
+As discussed below, whether the WLCG will continue to serve the needs of the LHC experiments depends very much on how WLCG capacity evolves, and how efficiently the experiments can make use of it.  This is an important question, given the anticipated growth in LHC luminosity (from $7 x 10^33$ to $1 x 10^34 /cm^2/s$), event complexity due to pileup (from a typical 20 extra interactions per event in the previous LHC run to 25 in the 2015 run), and trigger rate to maintain sensitivity to the Higgs boson and new-physics signatures (from 300 Hz to perhaps 1 kHz).  However, any changes to the WLCG usage can be made in an evolutionary fashion, and the underlying paradigm of HTC should continue to work.
+
+Because of the sheer scale of the existing WLCG resources, we anticipate that the WLCG will remain the main resource for LHC experiment computations.  However, the use of other facilities, such as those described below, should be explored to see if they can successfully perform the same computations and thus augment the LHC computing capacity.
+
+(NOTE: Make sure there is something about processor evolution -RG)
+
+National High Performance Computing centers are used and required by a number of projects
+\begin{itemize}
+\item Lattice QCD (Energy)
+\item Accelerator design and R\&D (Energy and Intensity)
+\item Data analysis and synthetic maps (Cosmic)
+\item N-body and hydro cosmology simulations (Cosmic)
+\item Supernova modeling (Cosmic)
+\end{itemize}
+The need for HPC computing, driven by the needs of LQCD and computational cosmology to support Energy and Cosmic Frontier experiments and theory outpaces historical trends, even as extrapolation of those trends becomes uncertain due to power and technology limitations.
+Intensity Frontier Experiments
+? 
+Daya Bay already using HPC at NERSC
+What are the needs/plans for the other experiments?
+
+
+Given the computational needs of various HEP efforts in both experimental and theoretical work, will computing resources of the required size be available over the appropriate timescales without any new targeted efforts?
+
+The needed computing resources for Energy Frontier experiments are currently set by the needs of the CMS and ATLAS experiments.  Both of these experiments have had several years of running experience and have developed the tools to predict future resource needs as a function of experimental parameters such as the trigger rate, pileup distribution, event size, number of reprocessing and analysis passes per year and so forth.  These models have been shown to be reasonably predictive.  [Ref a CHEP paper on this?]
+
+It currently appears that the needs will be met for the foreseeable (~10 year) future as long as several conditions are satisfied.  So far, the funding for the WLCG has been roughly constant, allowing resource growth to continue with Moore’s Law.  Experiments have been able to adjust their computing models to adapt to the available growth in resources along with the growth in data sets.  While Moore’s Law does not seem to hold as well as it used to, resources should still grow over time, although not as quickly as before.  Near-constant WLCG funding will be necessary for the experiments to keep up with growing datasets and event complexity.  
+
+Meanwhile, computing architectures are changing, and the experiments’ software bases must evolve to keep up with them.  Adapting the software to take advantage of multicore processor architectures is also critical for LHC experiments to meet their computing needs.  The experiments will also need to find greater efficiencies in resource usage, for both processing and disk resources.  Currently both ATLAS and CMS distribute many datasets to their computing sites that are subsequently rarely or never used; this is then a waste of storage.  The experiments will also need to proactively pursue and take advantage of a variety of resources beyond the WLCG.  These include opportunistic resources that might be available at universities, laboratories and NSF and DOE computing centers, and paid resources that might be available through commercial clouds.  Fortunately, both CMS and ATLAS are actively pursuing many of these measures, which are an important part of the development plans underway during the current LHC shutdown.
+
+Intensity Frontier experiments have relatively modest computing needs, at least in comparison to those of the Energy Frontier experiments.  Any single such experiment is expected to produce “only” a petabyte of data over its entire lifetime, compared to CMS or ATLAS which will produce several petabytes per year.  Thus it should not be difficult to provide the needed scale of computing resources for these experiments as long as sufficient funds are available.  These experiments too will be able to help themselves by actively pursuing opportunistic resources and operational efficiencies as the Energy Frontier experiments are.
+
+Cosmic Frontier experiments have well-defined storage needs, and these become competitive with those of CMS and ATLAS in future years.  The Dark Energy Survey should produce “only” a petabyte of data by 2016 (well within current capabilities), but LSST could produce 100 PB by 2030.  The Square Kilometer Array could produce as much as 1500 PB/year when it is operational in the 2020’s.  In addition, these experiments could have very different access and processing patterns than those of the accelerator-based experiments.  There appears to be little information available yet on the related processing capacity needs of these experiments....
+
+Richard -- can you take it from here?  Write a bit about what else you might know about the CF experiments (I don’t know anything beyond what I’m getting off their slides!) and also the theory stuff, especially our LQCD friends.
+:1
+
 
 
 
