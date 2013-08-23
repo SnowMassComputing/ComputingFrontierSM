@@ -48,7 +48,7 @@ National High Performance Computing centers are used and required by a number of
 
 A great need for HPC computing, driven by the needs of LQCD and computational cosmology but required by other fields as well, will outpace even the historical trend (see Figure \ref{fig:NERSC-Computational-Hours}), even as extrapolation of those trends becomes uncertain due to power and technology limitations.
 
-\begin{figure}[p]
+\begin{figure}[h]
 \includegraphics[width=\textwidth]{CpF-I2/images/2013-NERSC-Usage-HEP.pdf}
 \caption{Historical normalized computing hours used at NERSC (green line) and just for HEP projects (blue line). Results from NERSC requirements reviews with HEP scientists and DOE program managers (large blue crosses) show a need for computing greater than what will be supplied by extrapolating the trend.}
 \label{fig:NERSC-Computational-Hours}
@@ -133,10 +133,171 @@ The success of grid systems depends on robust wide-area networking for both the 
 
 Different grids are operated by different national or regional entities.  These grids have grown organically, each with their own middleware that serves as the interface to the computing resources.  In the United States, the grid infrastructure used for particle physics is operated by the Open Science Grid (OSG).  The OSG provides much of the infrastructure needed for particle-physics experiments to run their workflows, such as the grid middleware, and supplies operational support through its Grid Operations Center.  Because of the need for a US-based grid infrastructure, the US HEP community helped develop and launch the OSG and continues to derive great benefit from it.  The OSG currently has about 120 affiliated sites and supports about 30 VO’s.  
 
-The figure below [needs proper LaTeX reference] shows the steady growth in OSG usage over the past six and a half years.  While most of the activity and most of the growth has come from the LHC experiments (as discussed below), a large number of VO’s have made substantial use of the grid, and the grid computing community continues to diversify.  Science areas such as protein structure studies, anti-earthquake engineering, and brain research have made excellent use of OSG resources.  This makes the OSG an excellent example of a project started by particle physicists that has had broader impact on the general scientific community. 
+The Figure \ref{fig:OSG-growth} below shows the steady growth in OSG usage over the past six and a half years.  While most of the activity and most of the growth has come from the LHC experiments (as discussed below), a large number of VO’s have made substantial use of the grid, and the grid computing community continues to diversify.  Science areas such as protein structure studies, anti-earthquake engineering, and brain research have made excellent use of OSG resources.  This makes the OSG an excellent example of a project started by particle physicists that has had broader impact on the general scientific community. 
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{CpF-I2/images/vo_hours_bar_smry.png}
+\caption{Growth in OSG usage over the past six and half years.}
+\label{fig:OSG-growth}
+\end{figure}
+
+For energy-frontier experiments such as CMS and ATLAS, with aggregate datasets in the tens of petabytes, the grid is the default location for most of the computing activity.  The LHC experiments are unusual in the history of particle physics in that it was planned from the very beginning that most of the computing activity would take place away from the host laboratory.  About ⅚ of the total CPU and disk available to the experiments is not at CERN but at distributed sites.  The CERN facility is only responsible for a first-pass reconstruction of the data shortly after they are recorded, plus some calibration and alignment activities.  Everything else required to perform a physics measurement -- re-processing with improved calibration and alignment, skimming to produce datasets more concentrated in events of interest, Monte Carlo simulation production and archiving, and final-stage user data analysis -- are all conducted over the grid.  Most of the workflows described above are centrally managed by operations teams who decide which grid resources are used for which workflows.  The exception to this is user analysis, which is in the hands of individual physicists.  Historically, users have been constrained to submit their jobs to grid sites have a copy of the data sample that they wish to analyze.  However, this constraint has recently been relaxed through the deployment of Xrootd data access over the wide-area network, as discussed below.
+
+Figure \ref{fig:OSG-usage} below shows OSG usage by virtual organization over the past year.  We see that ATLAS and CMS dominate the OSG, using about six million CPU hours per week.  Contrariwise, it should be noted that US-based grid computing resources play an outsized role in LHC computing, relative to the US-based fraction of the experimental collaborations.  For instance, on CMS the US grid sites provided about 40% of the CPU time over the past year, while only about ⅓ of CMS membership is from the US.  The equivalent numbers for ATLAS are about 30% of the CPU time and about 20% of the collaboration. Besides being the biggest customer of CPU time, the LHC experiments are also the largest provider of processing resources, which can be opportunistically available to other VO’s.  Thus we can see that the LHC experiments, the Open Science Grid and the US LHC users are all interdependent on each other for their success.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{CpF-I2/images/vo_hours_bar_smry_1.png}
+\caption{OSG usage by vitual organization.}
+\label{fig:OSG-usage}
+\end{figure}
+
+Since the data processing and analysis of the LHC experiments is dependent on grid computing, it is fair to say that grid computing is a key technology for discovery in particle physics.  Looking back to the Higgs boson observation of July 2012, we can see that ATLAS and CMS were able to turn around their data analyses very quickly.  Events recorded just a few weeks beforehand were included in the analysis.  The significant computing resources available through the WLCG, and their efficient and straightforward usage, made it possible to analyze this data quickly, to compute the significance of the observations and the strength of limits, and (perhaps most importantly) to prepare the necessary simulation samples that were needed to understand the data.  In his remarks at the end of the CERN seminar announcing the Higgs observation, CERN Director General Rolf Heuer explicitly recognized the role of the WLCG in the work.
+
+At the very least, since the LHC experiments plan on relying on grid computing resources for the foreseeable future, we can anticipate that any future LHC discoveries will depend on the success of distributed computing.  While exactly how distributed computing is used may change in the future (as discussed by the Energy Frontier group), we expect that distributed computing is here to stay, as the model has proven to be successful and it will be a great challenge to concentrate all computing resources for a single experiment in one location in the future.  It will be important to sustain and further develop our distributed-computing infrastructures.
+
+\subsection{Research and development in grid infrastructures}
+
+While grid computing has been a very successful technology for modern particle-physics experiments, especially those at the LHC, our operational experience has exposed a number of issues that should be addressed in the future if grids are to continue to serve the needs of the field.  Many of these can be addressed with either small-scale R\&D efforts, or through the promotion of best practices that are already known but not widely adopted.  In the end, none of these issues should be seen as show-stoppers for the long-term growth of distributed computing, but these developments should be pursued to improve efficiency and ease of use.
+
+\subsubsection{Identity management}
+
+The need for grid certificates has been the bete noir for many a particle physicist.  These certificates are used for identity management, and the process of obtaining a certificate can be quite convoluted, possibly requiring the use of multiple Web browsers and a number of utility programs to put the issued credentials in a form that can be used when a grid job is submitted.  Indeed, the Snowmass physics studies that were done on the grid brought many new users (mostly theorists) into the grid system, and they resisted the process of obtaining certificates.
+
+However, just about every university campus already has some form of single sign-on that can be used to validate a user’s identity for campus computing resources; campuses could then vouch for the identity of their users to the outside world.  The CILogon service (http://cilogon.org) uses this campus-level vetting to generate grid certificates through a simple Web-page username and password login.  A number of grid computing sites will accept these certificates, but their usage needs to become more widespread.
+
+Of course a better solution still would be to eliminate the use of certificates altogether, or to at least make them invisible to ordinary users.  This can be achieved through pilot-based submission systems, where it is the pilot jobs that are authenticated rather than the user jobs that the pilots subsequently execute.  But the pilot jobs must still be able to provide traceability back to the user whose job is being run, so that sites can identify users if the need arises.  The OSG is currently studying the matter of traceability.  The use of pilot jobs is discussed further below.
+
+\subsubsection{Streamlining operations}
+
+As it currently stands, the operation of the computing grid for particle-physics experiments is very labor intensive; it is not very different from the operation of a complete multi-purpose particle detector.  Human effort is required nearly 24/7, with multiple people monitoring multiple layers of the system.  Many of the people who do this work are non-expert physicists in the collaboration who serve as computing shifters.  They observe symptoms of a problem at a particular computing site, but the root cause may not be a site problem; experts must intervene to untangle what is going on.  A large contingent of full-time experts are regularly busy solving infrastructure problems and optimizing resource usage.  CMS has 30 FTE (from 60 people) working on computing operations, while ATLAS has [get this number]. This is in addition to the teams of people who are actually operating the grid infrastructures themselves, which is about 10 FTE for the OSG.  As in so many cases, staffing costs are a significant element of the computing budgets for the experiments and the grids.
+
+How can all of these operational tasks be performed with fewer people?  We should look to develop self-learning systems that can monitor the infrastructure and the computational work to be done, figure out the resource requirements for the work, and optimize the scheduling of the work.  These systems could identify problems on the infrastructure and make sure that work isn’t scheduled into those problems.  Related to this is a need for self-healing systems that can solve the problems themselves, or at least flag them for intervention by a human.  Research in this sort of machine learning might be funded through DOE ASCR or NSF OCI programs, and we should not hesitate to look towards industry for solutions, as Internet companies are also running very large distributed computing infrastructures.
+
+\subsubsection{Storage management}
+
+Batch jobs are naturally suited for the grid -- each job is short-lived and when it is finished, the processing resource is freed up and can be used by a different job.  At the moment, the grid is not as well suited for data storage.  Stored data does not clean itself up when it has outlived its usefulness, and indeed users tend to be paranoid about holding on to obsolete data.  How to store and access data in the grid environment is perhaps the largest unsolved problem of grid computing.
+
+Storage management has two main forms: the management of large-scale datasets that are of use by large groups within an experimental collaboration, and the management of small-scale datasets owned by particular users.  The former issue is discussed by the Storage and Data Management group; we only note here that there is some debate within the community whether there will be a scaling problem or not as LHC datasets grow.  In any case, it is expected that experiments will continue to take responsibility for developing management systems for their own data.
+
+Small-scale user storage is a more general issue for grid infrastructures, as many communities beyond HEP want to manage small (compared to HEP) datasets.  Over the past few years, we have seen the emergence of the “dropbox” model, in which a particular set of files can be placed “in the cloud” and then made accessible on any computer.  The file set can be managed by each user in the way he or she desires, with a set of straightforward API’s.  It will be useful for distributed-computing infrastructures to develop their own dropboxes, so that users can have access to their data anytime and anywhere in the system.  The first forms of such global data access have now emerged in the form of CMS’s “Any Data, Anytime, Anywhere” (AAA) project and ATLAS’s “Federating ATLAS storage systems using Xrootd” (FAX) project, both of which rely on Xrootd as their underlying technology. [add references]  These systems are already giving experiments and individual users greater flexibility in how and where they run their workflows by making data more globally available for access.  Potential issues with bandwidth can be solved through optimization and prioritization.  The further development of such systems should be encouraged.
+
+\subsubsection{Simplification and scaling of job submission}
+
+As the grid currently works, each new job that starts in a batch slot must be authenticated by a site’s grid gatekeeper by checking the user’s credentials.  Given that a user may submit hundreds or even thousands of jobs at time, the same credentials are checked over and over again.  This is obviously an inefficient process.  One solution that is already being deployed is the use of pilot jobs.  A pilot job can be authenticated once at a site and then pull in and execute multiple individual user jobs in sequence from an external task queue.  In this case, the validation of the credentials of the individual jobs must fall to the pilot system.  A drawback to this scheme that needs further exploration is that it can be difficult to trace the origins of a given job submitted through a pilot system back to the user who submitted it.  Solutions such as glexec exist, but these need more widespread deployment and testing.
+
+\subsubsection{Dynamic scheduling}
+
+Historically, the only resource that a batch job needed to have scheduled for it was a CPU.  Other resources were more static in nature and could be used (or not used) at any time without concern.  However, batch jobs are now requiring a more diverse set of resources.  Some jobs may have special memory requirements or wish to use the wide-area network in a real-time fashion.  As a result, job scheduling mechanisms will have to be able to schedule a more heterogeneous set of resources.  HTCondor is already starting to move in this direction; these efforts should continue to be supported.
+
+\subsubsection{Clouds vs. grids}
+
+NOTE -- this section might well move to the next part, where we explicitly have a question about clouds.  Need to see how that evolves a little bit, or perhaps just rephrase here to say that what we call grid computing could someday embrace cloud computing too.
+
+The cloud computing paradigm presents users with a virtual machine that requires extensive configuration by the user.  In contrast, grid computing sites usually have the appropriate environment already set up.  The largest cloud-computing providers are commercial entities, such Amazon, which charge for the use of CPU time, storage, and inbound and outbound network bandwidth.  To date, there have been several small experiments in using cloud facilities for HEP applications.  CMS has configured machines from the Amazon cloud to appear as an extension of an existing Tier-2 cluster, running the jobs on the cloud but reading data from dedicated CMS sites with the Xrootd protocol.  ATLAS has performed a number of large workflows with both Amazon and Google clouds, some of which was paid for with a grant from Google.  These tests used from hundreds to thousands of CPU’s and ran from one to six months in duration.
+
+While these tests were quite successful, we do not believe that commercial clouds are currently a viable option for large-scale particle-physics computing.  This is largely due to costs; it is currently cheaper to operate a Tier-2 center at a university rather than to buy equivalent cloud resources.  Costs are a particular concern with respect to data, as the cost of hosting data in the Amazon cloud is \$0.10/GB/month.  Data can be read in over the WAN at no charge, but transferring data out to a user’s home computer can cost as much as \$0.12/GB.   The output files must be staged out over the network, which also has a cost.  In addition, the computing sites operated for HEP often have specially-tuned infrastructures that support the particular needs of these computational tasks and that are not readily available for generic cloud resources.
+
+That being said, the costs of commercial clouds could well fall over time, and we expect that more academic computing centers will be setting up cloud interfaces to their clusters.  Given how rapidly clouds have emerged in commercial markets, the development of opportunistic clouds could come quickly.  Thus we should still develop the capabilities to fully use computing clouds, should conditions become more economically favorable in the future.
+
+\subsection{Conclusions on grid infrastructures}
+
+The fundamental paradigm of using grid computing for the embarrassingly-parallel problem of HEP event data processing seems to be sound.  The distributed computing approach should be able to scale up appropriately, especially with the developments that have been envisioned and in some cases are currently underway.  Many of the issues are about how to make the grid easier to use, both for users and for operators, more than about any fundamental issues of scale.
+
+There has been a major push to involve a wide range of sciences in grid computing, with some notable successes in non-HEP science domains.  But HEP has always been, and still is, by far the largest consumer of grid resources, as seen earlier [reference to figure].  If we believe that distributed computing will remain a cornerstone of computing for particle physics, we must be prepared to take the lead on investing in developing this technology; we cannot assume that anyone else will step up and do it for us.
+
+\section{What role will national computing centers play in computations for HEP?}
+
+The U.S. national high performance computing (HPC) centers run by the Department of Energy Office of Science and the National Science Foundation have traditionally served the particle physics and high energy physics (HEP) communities by enabling and supporting large simulations in Lattice Quantum Chromodynamics (LQCD), accelerator research and design, cosmology, supernova physics. The astrophysics community has also used HPC centers to produce mock catalogs in support of satellite and ground-based sky surveys.
+ 
+Over the next 5 to 10 years HPC centers are expected to continue their roles with these traditional communities. However, computational and storage needed to support upcoming initiatives in part sponsored by the Department of Energy Office of Science – including the LHC upgrade, the Large Synoptic Sky Survey, and the CMBPol satellite mission – will stress the ability of HPC centers, even if they are able to continue the traditional HPC growth rate of 1.8-2.0 X per year.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{CpF-I2/images/Top500-plot.png}
+\caption{Performance of the Top 500 supercomputers as compiled by Top500.org.  Computational power doubles about every 14 months. An exascale system in the U.S. may be achieved sometime around 2020-2023, depending on funding and the rate of technology advances needed to control power consumed by such a system.}
+\label{fig:Top-500}
+\end{figure}
+
+The National Energy Research Scientific Computing Center (NERSC) – the production HPC center for the U.S. Department of Energy’s Office of Science – has conducted two reviews with the HEP community to determine their computing and storage needs. The first review, in 2009, targeted needs for 2014, while the second, in 2012, targeted 2017.  The findings reveal a shortage of anticipated resources needed to support DOE HEP mission needs. The shortage is driven by the LQCD community’s need to calculate fundamental parameters of the Standard Model using physical quark masses, the need to generate mock catalogs to support sky surveys studying the distribution of matter and energy in the early universe.[check again]
+
+In addition to the resources needed by the traditional HEP HPC community, funding agencies – in particular the DOE HEP office – are becoming increasingly cognizant of the computing needs of all sections of the HEP research community. In part this is due to the awareness by the traditional HTC communities that they too find HPC center resources valuable. Some of these groups – most notably HEP theorists carrying out Monte Carlo simulations that are used by experimentalists – are beginning to use HPC centers(1). For example, the DOE Offices of HEP and Advanced Scientific Computing (ASCR) have started a joint partnership to transform the GEANT-4 code into an efficient parallel code that can take advantage of multicore and HPC platforms. In parallel, the Energy Frontier experimental community and major Cosmic Frontier experiments are preparing to use HPC facilities.
+ 
+The upcoming LHC run at a center-of-mass energy near 14 TeV will severely strain the computing capacity of the ATLAS and CMS experiments (reference to other sections?). The higher energies, luminosities and trigger rates expected in the LHC high energy run starting in 2015 require substantial increases in computing capacity to handle them. However, expected increases in computing capacity are modest: the computational needs to do the science are now beginning to exceed the available resources. This places LHC experiments in a position where the science is not limited by the number of events that can be produced at the accelerator, but by the number of events that can be simulated. An attractive solution is to port elements of ATLAS and CMS software (Monte Carlo event generators such as Alpgen and simulation of events using the Geant4 toolkit appears to be the best starting points) to run on High-Performance Computers that are at existing DoE resources. ALTAS is developing a front-end cluster to allow it to interact with these computers via the Open Science Grid.
+ 
+Using supercomputers for HEP experiments such as ATLAS has these benefits:
+\begin{enumerate} 
+\item{By increasing the resources for simulation, the discovery reach of the experiment is substantially increased.}
+\item{Because leadership computers have very large capacity and is a shared resource across DOE, the experiments will be better able accommodate large fluctuations in resource needs typical of HEP experiments}
+\item{The availability of supercomputing resources to HEP physicists will speed up the development of software that takes advantage of new computation architectures in a way that is broadly applicable to the new generation of commodity hardware.}
+\end{enumerate}
+ 
+HPC facilities have a number of additional attractive features.
+
+\begin{itemize} 
+\item{They can play a facilitating role in helping particle physicists make the transition to new computing architectures by providing access to prototype architectures, HPC consulting, and training classes.}
+\item{The facilities are run by computing experts, with 24x7 monitoring and response to problems}
+\item{Centralized problem tracking and solutions}
+\item{Consulting and account support}
+\item{Centralized repositories of software and data}
+\item{A traditional sustained growth rate of resources (~2X/year computing, 1.7X/year storage)}
+\item{State of the art networking (e.g., NERSC has advanced, secure, and open network access; all access to NERSC now goes through a state-of-the-art 100 G network that includes advanced security monitoring and completely open and transparent access for science teams. ).}
+\item{State of the art hardware and software technologies}
+\item{Access to the large storage, high I/O capabilities, and networking are available.  Access to computational resources “close” to the data to be analyzed reduces the need move large data sets many times over the network.}
+\end{itemize} 
+
+From the standpoint of the HPC centers, there are challenges to accommodating an expanded workload. The addition of traditional HTC workflows, and those currently using the WLCG in particular, onto national HPC centers will require integrating them into job scheduling systems already in place. Serial jobs, which characterize most of WLCG computing, is not a good fit with large parallel computational systems. Identity management and data ownership and management pose other obstacles. Finally, providing computing, storage, and services to a new community requires an allocation of resources from funding agencies either through normal allocations processes or through outside funding from the community to augment the HPC centers’ base program.
+ 
+The good news is that at least one HPC Center – NERSC – has a long history of supporting “non-traditional” HEP efforts. NERSC hosts the PDSF clusters (which has its origins in the Superconducting Supercollider), which is the Tier 1 site for the Daya Bay neutrino experiment and a Tier 3 site for ATLAS. PDSF is also used by ALICE, [update from Craig]. NERSC also hosts the Lattice Connection and Deep Sky web data-driven science gateways for LQCD field configurations [check] and supernova discovery. NERSC’s HPC systems were used to calculate the more than 1 million [check] simulated realizations of the early universe needed to process results from the Planck CMB satellite mission. NERSC computers were also used to calculate synthetic supernova spectra that played a key role in the discovery of Dark Energy by Perlmutter, et al.  NERSC has the flexibility , open access, close affiliation with sister center ESnet, and know-how to support “non-traditional” HPC if funding is available to support it.
+ Providing computing, storage, and services to a new community requires an allocation of resources from funding agencies either through normal allocations processes or through outside funding from the community. There are a number of potentially feasible ways to accommodate an influx of “non-traditional” (e.g. WLCG work) into national HPC centers:
+ 
+·      Program managers can allocate resources via the normal allocations process. This would mean holding some resources away from traditional HEP supercomputing efforts. But, if HPC capacity continues to grow at traditional rates while “non-traditional” computing needs grow more slowly, there is an opportunity for significant computing cycles to be available.
+·      Programmatic funds from HEP could be contributed directly to HPC centers to support HEP efforts (e.g. from DOE HEP to NERSC or indirectly through ASCR).
+·      Support for hardware procurement, operation, and support at one of more HPC centers can be contributed directly by research teams or facilities.
+ 
+There are a number of examples of the latter model at NERSC, where the Berkeley HEP and Nuclear Physics community funds the PDSF cluster and the Joint Genome Institute is now using NERSC to host its computing, storage, and support needs. NERSC also administers resources funded by the Planck Satellite mission and the Palomar Transient Sky Survey. Discussions are currently underway for similar projects with the Berkley Lab Advanced Light Source, the LCLS at Stanford, the DOE KBase project, and the Large Synopic Sky Telescope project.
+ 
+
+\subsection{HPC Center Growth Rates and Plans}
+ 
+As shown in Figure \ref{fig:NERSC-Computational-Hours} above the projected need for HEP production computing within DOE will outpace even the traditional Moore’s Law increase of approximately 2X per year.  The red line in the plot connects the stated requirements with 2012 usage and shows that just the traditional HPC HEP computing community has needs that far exceed the traditional trend lines. Much of this is driven by the need for simulations to support interpretation of data being collected from the LHC and cosmological sky surveys. Additional computing is needed for accelerator research and design.
+ 
+This pressing need for resources comes at a time of uncertain budgetary forecasts. The DOE exascale initiative targets enabling an exascale compute system by 2022-2023 – with the actual timeframe dependent on funding and technology advances – through the Fast Forward (processor design) and Design Forward (system design) partnerships with HPC vendors. The Exascale Initiative includes partnerships with government, the computer industry, DOE laboratories, and academia.  Goals include
+\begin{itemize}
+\item{1,000 times more performance than a Petaflop system}
+\item{Capability to execute 1 billion degrees of concurrency}
+\item{20 MW power consumption or less}
+\item{200 cabinets or less (space constraint)}
+\item{Development and execution time productivity improvements}
+\end{itemize}
+ 
+[insert discussion/plot of NSF and DOE LCF capabilities and plans. LCF futures? LCF resources are not programmatic production cycles with guaranteed access. Even less good fit than NERSC.]
+ 
+ 
+While the past focus on HPC centers has largely been on massive parallel computations, the need for, and ability to facilitate handling of, accompanying data has quietly grown over the years. The plot below shows that archival data at NERSC has grown consistently at about 1.7X per year. Figure XXX shows the historical growth in data stored at NERSC’s archival storage systems and extrapolation of that trend. The findings from the NERSC HEP requirements reviews show a sharp increase above the trend line starting in 2013-2014 through 2017. This largely reflects a need to support simulated and experimental data from sky surveys, including LSST and Cosmic Background Radiation satellite missions, as well a growing need to centrally store and analyze experimental data from satellites and accelerators.
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{CpF-I2/images/2013-NERSC-HPSS-Usage.png}
+\caption{There is now wide recognition within the HPC community that “Big Data” is a growing and crucial component of HPC.  [Insert info from DOE/ASCR/HEP Data Summit]}
+\label{fig:NERSC-HPSS}
+\end{figure}
+
+\section{What coordination will be required across facilities and research teams, and are new models of computing required for it?}
 
 
-\section{Summary}
+The scale of computing facilities and resources has greatly increased over the past few decades of HEP research, as the size of experimental datasets and the sophistication of theoretical calculations and simulations has grown.  It has reached the point where large organizations are now needed to interact with the computing providers in order to get the most use out of them.  A fair amount of expertise is required to design, optimize and then operate the workflows on the most modern infrastructures.
+
+Larger experiments, like those at the LHC, do have the resources to make full use of infrastructures such as that of grid computing.  But many smaller projects simply lack the available effort to do so.  This seems to be especially true for the projects in the Intensity Frontier area, which typically have many fewer physicists working on them compared to CMS or ATLAS.  This is a clear case where additional coordination between the research teams could be beneficial.  Fermilab, as the host laboratory for many of these experiments, is already trying to play a coordinating role, at least at the level of providing uniform event-processing frameworks across many experiments.  This model should be extended even further, to help the Intensity Frontier projects have a uniform approach to computing that can take advantage of the efficiencies of scale that come from working together.  We suggest that an Intensity Frontier Computing Consortium could be formed to advocate for the computing needs of the Intensity Frontier experiments.  Given that the funding for research at the Intensity Frontier is coordinated through one program at DOE HEP, it might be possible to find the funds to help support the computing efforts of multiple experiments there.
+
+As the quest for computing resources takes researchers away from their current “natural” computing homes of distributed HTC on the grid and HPC at specialized shared facilities, it will become more important for users to be able to move between the different computing paradigms easily.  The ability to make seamless transitions will rely on work that is both technical, such as creating uniform systems of identity management and job submission, and political, such as coordinating between entities such as the OSG, XSEDE, and national centers such as NERSC.  It would be useful for the leaders of those organizations to discuss how they could start to build a computing infrastructure that can truly serve all the members of the HEP community.
+
+We are at a critical time for HPC computing. To continue the historic, Moore’s Law-like, growth in HPC computing power, the HPC community must adapt to build (with HPC vendors) and use new energy-efficient technologies. The path forward will require use of low-power, simple fundamental processing units. The current leading architectural candidates are systems that incorporate NVIDIA GPUs (Graphical Processing Units), the Intel Phi “many-core” processor, processors based on AMD’s APU technology, and units integrating ARM-based processors.
+ 
+In addition to engineering and technology advancements needed to actually build  energy-efficient, performant processors and system, application development on these new architectures poses a serious challenge. The programming strategy, in practice since the late 1990s, of optimizing code to minimize CPU cycles and inter-node communication must be replaced with a paradigm that stresses minimizing data movement at all levels (from on-chip cache, to on-node shared memory, to storage media) and maximizing SIMD (vector) processing operating on contiguous data, and use of light-weight threads of execution. Virtually all HPC software will have to be modified significantly or rewritten to execute acceptably well (or at all in some cases) on these architectures. Programming models for their architectures are nascent and/or proprietary to a particular vendor’s architecture. Some science communities have embraced one technology or another, while others are waiting to see which programming model and/or language “wins out.” In either case, a significant investment in code development will be required.
+ 
+This issue also applies to HTC applications, like those that currently use the WLCG. Although traditional multi-core processors and systems will continue to exist for some time, the growth in computing power will come from “many-core”
+processors. If the HEP community does not adapt codes to run in parallel (using fine-grained parallelism [ e.g. GPUs] and possibly coarse-grained parallelism [e.g. MPI]) it will be precluding itself from using a vast source of computational power in a time of greater need.
+ 
+[Coordination: software infrastructure and identify management] Anything else?
+ection{Summary}
 \label{sec:comp-summary}
 
 
