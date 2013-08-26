@@ -1,0 +1,172 @@
+Experiments at the ``intensity frontier" cover a broad range of areas within high-energy, and even nuclear, physics.  The common thread is that, through the use of intense beams and sensitive detectors, they search for processes that are extremely rare in the Standard Model and look for tiny deviations from Standard-Model
+expectations.  Therefore the future success of the experimental intensity-physics program hinges on reliable Standard-Model predictions on the same
+timescale as the experiments and with commensurate uncertainties.  In many cases, the comparison between the measurements and Standard-Model predictions are currently limited by theoretical uncertainties from nonperturbative hadronic amplitudes that can only be computed with controlled uncertainties that are systematically improvable via lattice QCD.  Thus facilities for numerical lattice QCD are an essential theoretical compliment to the experimental program.
+  
+In this section we discuss several key opportunities for lattice-QCD calculations to aid in the
+interpretation of experimental measurements at the intensity frontier.  In some cases, such as for the determination of CKM matrix elements that are parametric inputs to
+Standard-Model predictions, improving the precision of existing calculations is sufficient, and the expected
+increase in computing power due to Moore's law will enable a continued reduction in errors.
+In other cases, like the muon $g-2$ and the nucleonic probes of non-Standard-Model physics, new hadronic matrix elements
+are required; these calculations are typically computationally more demanding, and methods are
+under active development.  More details can be found in the USQCD whitepaper ``Lattice QCD at the Intensity Frontier"~\cite{USQCD_IF_whitepaper13}, the document ``Project~X: Physics Opportunities"~\cite{Kronfeld:2013uoa}, and in the summary reports by other working groups in these proceedings. 
+
+\begin{itemize}
+
+\item {\it Quark-flavor physics.} Reducing errors in the hadronic matrix elements involving quark-flavor-changing transitions has been a major focus
+of the worldwide lattice-QCD community over the last decade.  The results for some quantities are now very precise, and play an important role in the determination of
+the elements of the CKM matrix and in tests of the Standard Model via the global CKM unitarity-triangle fit.
+
+In the kaon sector, errors on gold-plated matrix elements (such as leptonic decay constants and neutral kaon mixing) have been computed to a few percent or better precision, and promising methods are being developed to attack more complicated quantities such as $K\to\pi\pi$ amplitudes~\cite{Blum:2011pu,Blum:2011ng,Blum:2012uk} and the long-distance contributions to the $K_L$-$K_S$ mass difference $\Delta M_K$~\cite{Yu:2011np,Christ:2012se}.  Initial results suggest that calculations of the two complex decay amplitudes $A_0$ and $A_2$ describing the decays $K\to(\pi\pi)_I$ for $I=0$ and 2 respectively are now realistic targets for large-scale lattice QCD
+calculations.  The complex $I=2$, $K\to\pi\pi$ decay amplitude $A_2$ has now been computed in lattice QCD with 15\%
+errors~\cite{Blum:2011ng,Blum:2012uk}, and a full calculation of $\epsilon^\prime$ with a total error at the 20\% level may be possible in 
+two~years.  This advance will open the exciting possibility to search for physics beyond the Standard Model via existing experimental measurements from KTeV and NA48 of direct
+$CP$-violation in the kaon system~\cite{Batley:2002gn,Abouzaid:2010ny}.  Further, with this precision, combining the pattern of experimental results for $K\to\pi\nu\bar\nu$ with
+$\epsilon'/\epsilon$ can help to distinguish between new-physics models~\cite{Buras:1999da,Kronfeld:2013uoa}.  
+
+The rare kaon decays $K^+ \to \pi^+ \nu \bar{\nu}$ and $K_L \to \pi^0 \nu \bar{\nu}$ are especially promising channels for new-physics discovery because the Standard-Model branching fractions are known to a precision unmatched by any other quark flavor-changing-neutral-current process.  The limiting source of uncertainty in the Standard-Model predictions for $\BR(K^+ \to \pi^+ \nu \bar{\nu})$ and $\BR(K_L \to \pi^0 \nu \bar{\nu})$ is the parametric error from $|V_{cb}|^4,$ and is approximately $\sim$10\%~\cite{Brod:2010hi}.  Therefore a reduction in the uncertainty on $|V_{cb}|$ is essential for interpreting the results of the forthcoming measurements by NA62, KOTO, ORKA, and subsequent experiments at Project~X as tests of the Standard Model.  The CKM matrix element $|V_{cb}|$ can be obtained from exclusive $B \to D^{(*)} \ell\nu$ decays provided
+lattice-QCD calculations of the hadronic form factors~\cite{Bailey:2010gb}.  In the next five years, the projected improvement in the $B\to D^* \ell\nu$ form factor will reduce the error in $|V_{cb}|$ to
+$\lesssim 1.5\%$, and thereby reduce the error on the Standard-Model $K\to\pi\nu\bar{\nu}$ branching
+fractions to $\lesssim 6$\%.  With this precision, the theoretical uncertainties in the Standard-Model predictions will be commensurate
+with the projected experimental errors in time for the first stage of Project~X.
+
+\textcolor{red}{Paragraph on $B$-physics here.}
+
+%%%%%%%%%%%%%%%%
+\item {\it Neutrino experiments.}  One of the largest sources of uncertainty in accelerator-based
+neutrino experiments arises from the determination of the neutrino flux.
+This is because the beam energies are in the few-GeV range, for which the interaction with hadronic targets
+is most complicated by the nuclear environment.
+At the LBNE experiment, in particular, the oscillation signal occurs at energies where quasielastic
+scattering dominates.
+Therefore a measurement or theoretical calculation of the $\nu_\mu$ quasielastic scattering cross section as
+a function of energy $E_\nu$ provides, to first approximation, a determination of the neutrino flux.
+The cross section for quasielastic $\nu_\mu n \to \mu^-p$ and $\bar{\nu}_\mu p\to \mu^+n$ scattering is 
+parameterized by hadronic form factors that can be computed from first principles with lattice QCD.
+The two most important form factors are the vector and axial-vector form factors, corresponding to the $V$ 
+and $A$ components of $W^\pm$ exchange.
+The vector form factor can be measured in elastic $ep$ scattering.
+In practice, the axial-vector form factor has most often been modeled by a one-parameter dipole 
+form~\cite{LlewellynSmith:1971zm}
+\begin{equation}
+    F_A(Q^2) = \frac{g_A}{(1+Q^2/M_A^2)^2},
+    \label{lqcd:eq:dipole}
+\end{equation}
+although other parametrizations have been
+proposed~\cite{Kelly:2004hm,Bradford:2006yz,Bodek:2007ym,Bhattacharya:2011ah}.
+The normalization $g_A=F_A(0)=-1.27$ is taken from neutron $\beta$~decay \cite{Beringer:1900zz}.
+The form in Eq.~(\ref{lqcd:eq:dipole}) in the low~$Q^2$ range relevant neutrino experiments does not rest on a
+sound foundation.
+Fortunately, the lattice-QCD community has a significant, ongoing effort devoted to calculating $F_A(Q^2)$ 
+\cite{Khan:2006de,Yamazaki:2009zq,Bratt:2010jn,Alexandrou:2010hf,Alexandrou:2013joa}.
+Recently two papers with careful attention to excited-state contamination in the lattice correlation functions and the chiral extrapolation~\cite{Capitani:2012gj} and 
+lattice data at physical pion mass~\cite{Horsley:2013ayv} find values of the axial charge in agreement with experiment, $g_A\approx1.25$.
+A~caveat here is that Refs.~\cite{Capitani:2012gj,Horsley:2013ayv} simulate with only $N_f=2$ sea quarks.
+If these findings hold up with $2+1$ and $2+1+1$ flavors of sea quark, the clear next step is to compute the 
+shape of the form factors with lattice QCD.
+If the calculations of the vector form factor reproduce experimental measurements, then one could proceed to 
+use the lattice-QCD calculation of the axial-vector form factor in analyzing neutrino data.
+
+Proton decay is forbidden in the Standard Model but is a natural prediction of grand unification.
+Extensive experimental searches have found no evidence for proton decay, but future experiments
+will continue to improve the limits.
+To obtain constraints on model parameters requires knowledge of hadronic matrix elements
+$\langle\pi,K,\eta,\ldots|\mathcal{O}_{\Delta B=1} | p \rangle$ of the baryon-number violating operators
+$\mathcal{O}_{\Delta B=1}$ in the effective Hamiltonian.
+Estimates of these matrix elements based on the bag model, sum rules, and the quark model vary by as much as a factor of three, and lead to an ${\mathcal O}(10)$ uncertainty in the model predictions for the proton
+lifetime.  \textcolor{red}{(Add refs. for model estimates.)} Therefore, \emph{ab initio} QCD calculations of proton-decay matrix elements with controlled systematic
+uncertainties of even $\sim 20\%$ would represent a significant improvement, and be sufficiently precise for
+constraining GUT theories. Recently the RBC and UKQCD Collaborations obtained the first direct calculation of proton-decay matrix
+elements with $N_f=2+1$ dynamical quarks~\cite{Aoki:2013yxa}.
+The result is obtained from a single lattice spacing, and the total statistical plus systematic uncertainties
+range from 20--40\%.
+Use of gauge-field ensembles with finer lattice spacings and lighter pions, combined with a new technique to
+reduce the statistical error~\cite{Blum:2012uh}, however, should enable a straightforward reduction of the
+errors to the $\sim 10\%$ level in the next five years.
+
+\item {\it Charged-lepton physics.}  Charged-lepton flavor violation (CFLV) is so highly suppressed in the Standard Model that any observation of
+CLFV would be unambiguous evidence of new physics.
+Many new-physics models allow for CLFV and predict rates close to current limits.
+Model predictions for the $\mu \to e$ conversion rate off a target nucleus depend upon the light- and
+strange-quark content of the nucleon~\cite{Cirigliano:2009bz}.
+These quark scalar-density matrix elements are also needed to
+interpret dark-matter detection experiments in which the dark-matter particle scatters off a
+nucleus~\cite{Bottino:1999ei,Ellis:2008hf,Hill:2011be}.
+Lattice-QCD can provide nonperturbative calculations of the scalar quark content of the nucleon with
+controlled uncertainties.
+Results for the strange-quark density obtained with different methods and lattice formulations agree at the 1--2$\sigma$ level, and a
+recent compilation quotes an error on the average $m_s \langle N| \bar{s}s|N \rangle$ of about
+25\%~\cite{Junnarkar:2013ac}.
+With this precision, the current lattice results already rule out the much larger values of 
+$m_s\langle N|\bar{s}s|N\rangle$ favored by early non-lattice
+estimates~\cite{Nelson:1987dg,Kaplan:1988ku,Jaffe:1989mj}.
+Lattice-QCD can also provide first-principles calculations of the pion-nucleon sigma
+term~\cite{Young:2009zb,Durr:2011mp,Horsley:2011wr,Dinter:2012tt,Shanahan:2012wh} and the charm-quark content
+of the nucleon~\cite{Freeman:2012ry,Gong:2013vja}.
+A realistic goal for the next five years is to pin down the values of all of the quark scalar density matrix
+elements for $q=u,d,s,c$ with $\sim$ 10--20\% uncertainties; even greater precision can be expected on the
+timescale of a continuation of Mu2e at Stage~2 of Project~X.
+
+The muon anomalous magnetic moment $a_\mu$ provides one of the most precise tests of the SM and places important constraints on its extensions~\cite{Hewett:2012ns}.
+With new experiments planned at Fermilab (E989) and J-PARC (E34) that aim to improve on the current 0.54 ppm measurement at BNL~\cite{Bennett:2006fi} by at least a factor of four, it will continue to play a central
+role in particle physics for the foreseeable future.
+In order to leverage the improved precision on $g-2$ from the new experiments, the theoretical uncertainty on the Standard Model prediction must be shored-up, as well as be brought to a comparable level of
+precision~\cite{Hewett:2012ns}.  
+
+The largest sources of uncertainty in the SM calculation are from the non-perturbative hadronic contributions.
+The hadronic vacuum polarization (HVP) contribution to the muon anomaly, $a_{\mu}(\rm HVP)$, has been obtained to a precision of 0.6\% using experimental measurements of $e^{+}e^{-}\to\rm hadrons$ and $\tau\to\rm hadrons$~\cite{Davier:2010nc,Hagiwara:2011af}.
+The result including $\tau$ data is about two standard deviations larger than the pure $e^+e^-$
+determination, and reduces the discrepancy with the Standard Model to below three standard
+deviations~\cite{Davier:2010nc}.
+A direct lattice-QCD calculation of the hadronic vacuum polarization with $\sim 1\%$ precision may help shed
+light on the apparent discrepancy between $e^{+}e^{-}$ and $\tau$ data;
+ultimately a lattice-QCD calculation of $a_{\mu}(\rm HVP)$ with sub-percent precision can circumvent these
+concerns.  The HVP contribution to the muon anomalous magnetic moment has been computed in lattice QCD by several groups~\cite{Blum:2002ii,Gockeler:2003cw,Aubin:2006xv,Feng:2011zk,Boyle:2011hu,DellaMorte:2011aa} (see also the recent talks at Lattice 2013), and statistical errors on lattice calculations of $a_{\mu}(\rm HVP)$ are currently
+at about the 3--5\% level, but important systematic errors remain. Anticipated increases in computing resources will enable simulations directly at the physical quark masses with large volumes, and brute-force calculations of quark-disconnected diagrams, thereby eliminating important systematic errors.
+
+Unlike the case for the HVP, the hadronic light-by-light (HLbL) contribution to the muon anomaly cannot be extracted from experiment. Present estimates of this contribution rely on models~\cite{Prades:2009tw,Nyffeler:2009tw}, and report errors estimated to be 25--40\% range.
+Therefore an \emph{ab initio} calculation $a_\mu({\rm HLbL})$ is the highest theoretical priority for $(g-2)_\mu$.
+A promising strategy to calculate $a_\mu({\rm HLbL})$ is via lattice QCD plus lattice QED where
+the muon and photons are treated nonperturbatively along with the quarks and
+gluons~\cite{Hayakawa:2005eq}.
+First results using this approach for the single quark-loop part of the HLbL contribution
+have been reported recently~\cite{Blum:2013qu}.
+Much effort is still needed to reduce statistical errors which remain mostly uncontrolled.
+In order to bring the error on the HLbL contribution to, at, or below, the projected experimental uncertainty
+on the time scale of the Muon $g-2$ experiment, one must reduce the error on $a_\mu({\rm HLbL})$ to
+approximately 15\% or better.
+Assuming this accuracy, a reduction of the HVP error by a factor of 2, and the expected reduction in
+experimental errors, then the present central value would lie 7--8$\sigma$ from the SM prediction.
+
+\item {\it Tests of fundamental symmetries with nucleons.}  Beyond-the-Standard-Model sources of $CP$ violation that may help to explain the observed baryon asymmetry include nonzero electric dipole moments (EDMs) of leptons and nucleons \cite{Pospelov:2005pr} or neutron-anti-neutron mixing~\cite{Mohapatra:1980qe}.
+
+Lattice QCD can provide first-principles QCD calculations of the strong-$CP$ contribution to the neutron EDM
+$d_N/\bar{\theta}$ with improved precision and controlled uncertainties, as well of matrix elements of non-SM
+EDM-inducing operators.
+Pilot lattice-QCD calculations have already been carried out for this strong-$CP$ contribution to the neutron
+and proton EDMs~\cite{Shintani:2008nt,Shintani:2005xg,Aoki:2008gv}.
+Currently the statistical errors are still $\sim$30\%, both because of the general property that nucleon
+correlation functions have large statistical errors and because the calculation involves correlation functions weighted with the topological charge, which introduces substantial statistical fluctuations.
+A lattice-QCD calculation of the matrix elements of dimension-6 operators needed for beyond-the-Standard Model theories is also
+underway~\cite{Bhattacharya:2012bf}. This research is still in an early phase, and a reasonable and useful goal for the coming five years is a suite of matrix elements with solid errors at the 10--20\% level.
+
+A low-energy process that would provide direct evidence for baryon number violation from beyond-the-Standard Model physics is the
+transition of neutrons to antineutrons, which violates baryon number by two units~\cite{Mohapatra:1980qe}.
+A proposed neutron-antineutron oscillation experiment at Project~X could improve the limit on the
+$n$-$\bar{n}$ transition rate by a factor of $\sim 1000$.
+For many grand unified theories (GUTs) with Majorana neutrinos and early universe sphaleron processes, the
+prediction for the oscillation period is between $10^9$ and $10^{11}$ seconds~\cite{Nussinov:2001rb,%
+Babu:2008rq,Mohapatra:2009wp,Winslow:2010wf,Babu:2012vc}.
+However, this estimate is based on naive dimensional analysis, and could prove to be quite inaccurate when
+the nonperturbative QCD effects are properly accounted for.
+Calculations of these matrix elements with reliable errors anywhere below 50\% would provide valuable
+guidance for new-physics model predictions.
+Lattice-QCD calculations can provide both the matrix elements of the six-fermion operators governing this
+process and calculate the QCD running of these operators to the scale of nuclear physics.
+Initial work on computing these matrix elements is currently underway~\cite{Buchoff:2012bm}.
+The main challenge at this stage is to make sufficient lattice measurements to obtain a statistically
+significant signal. A first result is expected in the next 1--2 years, with anticipated errors of $\sim 25\%$; results with errors of $\sim 10\%$ or smaller should be achievable over the next five years.
+
+\end{itemize}
+
+
+

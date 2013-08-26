@@ -1,0 +1,75 @@
+Experiments at the ``energy frontier" directly probe physics up to the TeV scale.  Therefore they can provide unique information about the mechanism of electroweak symmetry breaking realized in nature, either through direct production of new particles or through observing deviations from Standard-Model rate predictions.   Numerical lattice field theory simulations can aid in the search for new physics at current and future high-energy collider facilities in both situations.   
+
+If new TeV-scale resonances are discovered at the LHC or elsewhere, in particular with the same quantum numbers as existing electroweak particles ({\it i.e.} $W'$, $Z'$, and $h'$), these states may be composite objects that result from an underlying strongly-coupled theory such as in Technicolor or Little-Higgs models.   In this case, nonperturbative lattice gauge theory simulations will be needed to make quantitative predictions for the masses and decay constants of these new particles to be compared to the experimental data, and thereby narrow the space of possible new-physics models.  If, on the other hand, non-Standard Model particles are too heavy for direct detection, indirect evidence for Higgs compositeness may still appear as altered rates for electroweak gauge-boson scattering, changes to the Higgs coupling constants, or the presence of additional light Higgs-like resonances.  In this scenario, quantitative lattice-field-theory input may be even more valuable to distinguish between underlying strongly-coupled theories above the TeV-scale that lead to similar experimental observations at lower energies.  
+
+As at the intensity frontier, searches for new physics at high-energy colliders via observing deviations from Standard-Model rates demand precise predictions with controlled uncertainties.  Parametric errors from the quark masses $m_c$ and $m_b$ and the strong coupling constant $\alpha_s$ are the largest sources of uncertainty in the Standard-Model branching-ratio predictions for several Higgs decay channels~\cite{Denner:2011mq}.  Future proposed collider facilities such as the ILC, TLEP, or a muon collider would reduce the experimental uncertainties in Higgs partial widths to the sub-percent level, so reducing the theoretical uncertainties in the corresponding Standard-Model predictions to the same level is essential.  Numerical lattice-QCD simulations provide the only first-principles method for calculating the parameters (quark masses and coupling constant) of the QCD Lagrangian.  Thus supporting lattice-QCD calculations are critical for exploiting precision measurements current and future high-energy colliders.
+
+In this section we discuss key opportunities for lattice gauge theory calculations to aid in the
+interpretation of experimental measurements at the energy frontier.  In some cases, such as for the determination of quark masses and $\alpha_s$, precise calculations are already available, and the application of future computing resources to existing lattice methods will enable a continued reduction in errors and further independent cross-checks.  In other cases, like calculations of strongly-coupled beyond-the Standard Model gauge theories, new lattice simulation software and analysis methods are required; these calculations are typically computationally more demanding, and methods are
+under active development.  More details can be found in the USQCD whitepaper ``Lattice Gauge Theories at the Energy Frontier"~\cite{USQCD_EF_whitepaper13} and in the summary reports by other working groups in these proceedings. 
+
+\begin{itemize}
+
+\item {\it Parametric inputs $\alpha_s$, $m_c$, and $m_b$ to Standard-Model Higgs predictions.}  The single largest source of error in the theoretical calculation of the dominant Standard-Model Higgs decay mode $H\rightarrow b\overline{b}$ is  the parametric uncertainty in the $b$-quark mass~\cite{Denner:2011mq}.  Because this mode dominates the total Higgs width, this uncertainty is also significant for most of the other Higgs branching fractions.  Parametric uncertainties in $\alpha_s$ and $m_c$ are the largest sources of uncertainty in the partial widths $H\rightarrow c\overline{c}$ and $H\rightarrow gg$, respectively.
+ 
+The most precise known method for obtaining the quark masses $m_c$ and $m_b$ from lattice simulations employs correlation functions of the quark's electromagnetic current~\cite{Allison:2008xk,McNeile:2010ji}  Moments of these correlation functions can easily be calculated nonperturbatively in lattice simulations and then compared to the perturbative expressions which are known to ${\mathcal O}(\alpha_s^3)$.  These moments can also be determined from experimental $e^+e^-$-annihilation data as in Ref.~\cite{Chetyrkin:2009fv}.  The lattice determination of $m_c^{\overline{\rm MS}}(m_c,n_f=4)= 1.273(6)$~GeV is currently the most precise in the world~\cite{Beringer:1900zz}; this is primarily because the data for the lattice correlation functions is much cleaner than the $e^+e^-$ annihilation data.  The uncertainty is dominated by the estimate of neglected terms of ${\mathcal O}(\alpha_s^4)$ in the continuum perturbation theory.  Therefore only modest improvements can be expected without a higher-order perturbative calculation.  
+
+The result for the $b$-quark mass obtained in this way is
+$m_b^{\overline{\rm MS}}(m_b, n_f=5) = 4.164(23)$~GeV~\cite{McNeile:2010ji}, and is not currently as precise as the results from
+ $e^+e^-$ annihilation~\cite{Chetyrkin:2009fv,Beringer:1900zz}.
+The sources of systematic uncertainty  are completely different than for $m_c$.
+In this case, perturbative uncertainties are tiny because $\alpha_s(m_b)^4  \ll \alpha_s(m_c)^4$, and discretization errors dominate the current uncertainty, followed by statistical errors.  These should be straightforward to reduce by brute force computing
+ power, and so are likely to come down by a factor of two in the next few years, 
+ perhaps to $\delta m_b \sim 0.011$~GeV or better.  Precisions of that order for $m_b$ have already been claimed from
+ $e^+e^-$ data from
+ reanalyses of the data and perturbation theory of Ref.~\cite{Chetyrkin:2009fv}, and coming lattice
+ calculations with be able to check these using the computing power expected in the next few years.
+ 
+The strong coupling constant, $\alpha_s$, is also an output of these lattice calculations, and a very
+precise value of $\alpha_s(M_Z, n_f=5) = 0.1183(7)$ has been obtained in Ref.~\cite{McNeile:2010ji}, 
+with an uncertainty dominated by continuum perturbation theory.
+Unlike the heavy-quark masses, for which the correlation function methods give the most precise
+results at present, there are numerous good ways of obtaining $\alpha_s$ with lattice methods.  
+Several other quantities have been used to make good determinations $\alpha_s$ with lattice QCD, including
+Wilson loops~\cite{McNeile:2010ji}, the Adler function~\cite{Shintani:2010ph},
+the Schr{\"o}dinger functional~\cite{Aoki:2009tf},
+and the ghost-gluon vertex~\cite{Blossier:2012ef}.
+All of the lattice determinations are consistent, and each is individually more precise than the most
+precise determination that does not use lattice QCD.
+The most precise current determination of $\alpha_s$ may improve only modestly over the next
+few years, since the error is dominated by perturbation theory.
+
+Lattice-QCD calculations have already determined the quark masses $m_c$ and $m_b$ and the strong coupling $\alpha_s$ more precisely than is currently
+being assumed in discussions of Higgs decay channels~\cite{Denner:2011mq}.  The current uncertainties in $\alpha_s$, $m_c$, and $m_b$ from lattice QCD are all currently around a half a per cent and the results, especially for $m_b$, will continue to improve.  For all of these quantities, increased corroboration from independent lattice calculations is expected in the next few years, making the determinations very robust.  If the lattice errors on $\alpha_s$ and $m_c$ shrink by $\sim 30\%$ and on $m_b$ by a factor of two, and these uncertainties are used in the Standard-Model Higgs predictions, \textcolor{red}{get numbers from Sally \ldots}
+
+%\begin{table}[t]
+%\begin{center}
+%\caption{Current and projected uncertainties in $\alpha_s$, $m_c$, and $m_b$ from lattice QCD; the uncertainties obtained from non-lattice determinations, quoted by the PDG, and used the LHC Higgs cross-section working group are shown for comparison. \label{tab:QuarkMasses}}\vspace{2mm}
+%\begin{tabular}{cccccc}
+%\hline\hline
+%	&  Higgs Cross-Section 	& 	&  	& Present & 2018   \\
+%	&   Working Group~\cite{Denner:2011mq}	&  PDG~\cite{Beringer:1900zz}		&  Non-lattice		&  Lattice &  Lattice  \\
+%\hline
+%$\delta \alpha_s$ &0.002	&0.0007	&0.0012 \cite{Beringer:1900zz}		&0.0006 \cite{McNeile:2010ji}	& 0.0004	\\
+%$\delta m_c$ (GeV) &0.03	&	0.025&	0.013 \cite{Chetyrkin:2009fv}	& 0.006 \cite{McNeile:2010ji}	& 0.004	\\
+%$\delta m_b$ (GeV) &0.06	&	0.03	&	0.016 \cite{Chetyrkin:2009fv}	& 0.023 \cite{McNeile:2010ji}	& 0.011	\\
+%\hline\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+%Table~\ref{tab:QuarkMasses} gives the current uncertainties in $\alpha_s$, $m_c$, and $m_b$ from both lattice and non-lattice methods, along with projections for the lattice errors in the next five years.  For comparison, the uncertainties in these quantities estimated by the PDG and used by the LHC Higgs cross-section working group are also shown.
+
+\item {\it Composite-Higgs model building.}  The recent discovery of the Higgs-like particle at $\sim$ 126~GeV is the beginning of the experimental
+search for a deeper dynamical explanation of electroweak symmetry breaking beyond the Standard
+Model.  In preparation for the start of the LHC, the lattice-field-theory community has developed an important research direction to study strongly-coupled gauge theories that may provide a natural electroweak symmetry breaking mechanism.  The primary focus of this effort is now on the composite Higgs mechanism, and is described in greater detail in the USQCD white paper ``Lattice Gauge Theories at the Energy Frontier"~\cite{USQCD_EF_whitepaper13}. 
+
+New strongly-coupled gauge theories may behave behave quite differently than na{\"i}ve expectations based on intuition from QCD.  Applying advanced lattice-field-theory technology to these theories enables quantitative study of their properties, and may provide new nonperturbative insight into this fundamental problem.  The organizing principle of the USQCD program in beyond-the-Standard Model physics is to explore the dynamical implications of (i) approximate scale invariance and (ii) chiral symmetries with dynamical symmetry breaking patterns that may lead to the composite Higgs mechanism with protection of the light scalar mass.  A light composite Higgs that arises as a pseudo-dilaton associated with spontaneous breaking of conformal symmetry may occur in Technicolor models, and is also rather natural in supersymmetric theories with flat directions.  Finding an experimentally-viable candidate model requires first identifying a near-conformal ``walking" theory, and then computing the spectrum to see if it contains a light scalar that is well-separated from the remaining new strongly-coupled resonances.   Once a candidate model is discovered, predictions can be made for experimental observables including the spectrum, modifications to $W$-$W$ scattering, and the oblique $S$-parameter that can be tested at the 14 TeV run at the LHC or at future high-energy collider facilities.  A naturally-light composite Higgs can also arise as a pseudo-Nambu Goldstone boson in Little Higgs and minimal conformal Technicolor models~\cite{ArkaniHamed:2002qy,Galloway:2010bp}.  At the TeV scale, the physics of the higher-scale theory may be parameterized in terms of an effective theory with a set of low-energy constants whose numerical values are determined by the underlying UV completion.   A central challenge to support this scenario for models based on effective phenomenological Lagrangians is to use lattice field theory to demonstrate that viable UV-complete theories exist.  Once a model with a psuedo-Nambu Goldstone Higgs has been established, lattice simulations can provide {\it ab initio} calculations of the low-energy constants from the underlying high-scale theory.  These parameters can then be used to make testable predictions for the 14~TeV LHC run.  In the coming years, lattice calculations of new strongly-coupled gauge theories will become a valuable quantitative tool for narrowing the space of beyond-the-Standard Model theories, and will be essential if the mechanism of electroweak symmetry breaking realized in Nature is nonperturbative.
+
+Common and important to studying both composite-Higgs paradigms has been the development of new tools to study gauge theories beyond QCD.  The existing lattice-QCD software has been extended to enable simulations of theories with arbitrary numbers of colors $N_c$ and flavors $N_f$, and with fermions in the adjoint and two-index symmetric (sextet) representations~\cite{DelDebbio:2010hu,Fodor:2012ni,DeGrand:2013uha}.  Existing lattice methods to study the running coupling in QCD have been extended to identify theories with near-conformal behavior~\cite{Appelquist:2007hu,Appelquist:2009ty,Bilgici:2009nm,Hasenfratz:2010fi,Fodor:2012td}.  Other methods being used to look for viable composite-Higgs theories include computing the mass anomalous dimension (which should be of ${\mathcal O}(1)$ in a walking theory)~\cite{Bursa:2010xr,Appelquist:2011dp,Cheng:2013eu,DeGrand:2013uha} and computing the hadron spectrum to identify the pattern of chiral-symmetry breaking and possible Higgs candidates~\cite{Appelquist:2010xv,Fodor:2012et,Fodor:2012ty,Aoki:2013zsa}.  Calculations of several important low-energy properties such as the $S$ parameter~\cite{Appelquist:2010xv} and $W$-$W$ scattering~\cite{Appelquist:2012sm} have been obtained for a few specific theories, particularly $SU(3)$ gauge theories with increasing numbers of fermions in fundamental and higher representations.  The $S$ parameter in particular is one of the stronger constraints on new physics modifying the
+electroweak sector. The lattice result for $S$ in the $SU(3)$ theory with $N_f=2$ fundamental fermions is in conflict with electroweak precision measurements, but the observed reduction at in $S$ for $N_f = 6$ fermions indicates that the value of $S$ in many-fermion theories can be acceptably small~\cite{Appelquist:2010xv}, in contrast to more na{\"i}ve scaling estimates~\cite{Peskin:1990zt}.  
+
+\item{\it Supersymmetry model building.}  \textcolor{red}{Would like to add one paragraph on SUSY, with an emphasis on the goal of simulating super-QCD on the lattice and determining the low-energy constants that encode SUSY breaking in low-energy SUSY models (e.g. the MSSM) for use in constraining SUSY parameter space and in model building.  \ldots}%May ask Simon to do it because I don't think I'll have time \ldots}
+
+\end{itemize}
+
+

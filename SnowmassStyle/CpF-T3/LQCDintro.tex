@@ -1,0 +1,78 @@
+One of the foremost goals of high-energy physics is to test the
+Standard Model of particle physics (SM) and to search for indications of
+new physics beyond.  Towards this aim, the experimental high-energy
+physics program is pursuing 
+three complementary approaches: experiments
+at the ``energy frontier" try to directly produce non-Standard Model
+particles in collisions at large center-of-mass energies;
+experiments at the ``cosmic frontier" look for
+  astronomical evidence of new interactions and aim to detect
+  cosmically-produced non-SM particles through their interaction with
+  ordinary matter; while experiments at the ``intensity
+frontier"~\cite{Hewett:2012ns} make precise measurements of rare
+processes and look for discrepancies with
+the SM.   In many cases, interpretation of the experimental measurements requires a quantitative understanding the nonperturbative dynamics of the quarks and gluons in the underlying process.  Lattice gauge theory provides the only known method
+for \emph{ab initio} quantum chromodynamics (QCD) calculations with controlled uncertainties, by casting
+the basic equations of QCD into a form amenable to high-performance
+computing.  Thus, facilities for numerical lattice QCD are an
+essential theoretical adjunct to the experimental high-energy physics
+program.  This report describes the computational and software infrastructure resources needed for lattice gauge theory to meet the scientific goals of the future energy- and intensity-frontier experimental programs.  We focus on the efforts and plans in the US, but comparable efforts are ongoing in Europe and Japan.
+
+Experiments at the intensity frontier probe
+quantum-mechanical loop effects; thus they can be sensitive to physics at
+higher energy scales than those directly accessible at the LHC, in
+some cases as high as 1,000~TeV or even 10,000~TeV~\cite{Isidori:2010kg}.  
+Contributions from new heavy particles may be
+observable as deviations of the measurements from Standard-Model
+expectations, provided both the experimental measurements and
+theoretical predictions are sufficiently precise.  For many quantities, the comparison between the measurements and Standard-Model predictions are currently limited by theoretical uncertainties from nonperturbative hadronic amplitudes such as decay constants, form 
+factors, and meson-mixing matrix elements.  These nonperturbative hadronic parameters can only be calculated with controlled uncertainties that are systematically improvable using numerical lattice QCD.  The U.S. Lattice-QCD Collaboration (USQCD) lays out an ambitious five-year vision for future lattice-QCD calculations in the white paper ``Lattice QCD at the Intensity Frontier"~\cite{USQCD_IF_whitepaper13}, explaining how they can provide essential and timely information for current, upcoming, and proposed experiments.  
+In some cases, such as for the determination of CKM matrix elements that are parametric inputs to
+Standard-Model predictions, improving the precision of existing calculations is sufficient, and the expected
+increase in computing power due to Moore's law will enable a continued reduction in errors.
+In other cases, like the muon $g-2$ and the nucleonic probes of non-Standard-Model physics, new hadronic matrix elements
+are required; these calculations are typically computationally more demanding, and methods are
+under active development.  Ultimately, the goal is to improve the accuracy of QCD calculations to the point where they no longer limit what can be learned from high precision experiments that seek to test the Standard Model.  Indeed, lattice-QCD calculations for the intensity frontier
+may play a key role in definitively establishing the presence of
+physics beyond-the-Standard Model and in determining its underlying
+structure.
+
+The Large Hadron Collider (LHC) aims to directly produce new particles in high-energy proton-proton collisions that can be detected by the ATLAS and CMS experiments, and already these experiments have discovered a $\sim$ 125 GeV Higgs-like particle~\cite{Aad:2012tfa,Chatrchyan:2012ufa}.   If, however, electroweak symmetry breaking is realized in Nature via the Standard-Model Higgs, the mass of the light Higgs must be finely tuned, leading to the well-known hierarchy problem.   Therefore many proposed new-physics models aim to provide a deeper dynamical mechanism that resolves this shortcoming of the Standard Model.  Examples include technicolor~\cite{Farhi:1980xs,Hill:2002ap}, in which the Higgs may be a dilaton associated with the breaking of conformal ({\it i.e.} scale) symmetry, or little Higgs scenarios~\cite{Kaplan:1983sm,ArkaniHamed:2002pa,ArkaniHamed:2002qy}, in which the Higgs is a pseudo-Goldstone boson associated with chiral-symmetry breaking.  The common thread in these classes of new-physics models is that the Higgs boson is composite, and its dynamics are nonperturbative at the electroweak scale.  Therefore a natural tool for studying these theories is lattice gauge theory.   In recent years, members of the lattice-gauge-theory community have been developing methods to study gauge theories beyond QCD.  The USQCD Collaboration documents progress in lattice calculations for beyond-the-Standard Model physics in the white paper ``Lattice Gauge Theories at the Energy Frontier"~\cite{USQCD_EF_whitepaper13}, and outlines strategic goals for the next five years focusing on aiding new-physics searches at the LHC.  The current highest priority is to find a viable composite-Higgs model with a light scalar, and to then to compute predictions of this theory that can be tested at the 14-TeV LHC run for other quantities such as the heavier particle spectrum, the oblique $S$-parameter~\cite{Peskin:1990zt}, and $W$-$W$ scattering.  More broadly, the goal of the lattice beyond-the-Standard Model effort is to develop quantitative tools for studying new gauge theories, which may behave quite differently than naive expectations based on intuition from QCD.  In the future, numerical lattice gauge theory calculations can provide essential quantitative input to Higgs (and other new-physics) model building, and, ultimately, may play a key role in discovering nonperturbative dynamics at the LHC. 
+
+The lattice gauge theory research community in the United States coordinates much of its effort to obtain
+computational hardware and develop software infrastructure through the USQCD Collaboration.
+Support for USQCD has been obtained from the high-energy physics and nuclear physics offices of DOE in the
+form of (i) funds for hardware and support staff, (ii) computational resources on leadership-class machines
+through INCITE awards, and (iii) SciDAC awards for software and algorithm development.
+The first has consisted of two 4--5 year grants, the second of which extends until 2014.
+Since its inception, the INCITE program has awarded computing resources to USQCD every year.
+SciDAC has funded three software projects for lattice QCD, the most recent beginning in 2012.
+All three components have been critical for progress in lattice QCD in the past decade.
+The primary purpose of USQCD is to support the high-energy and nuclear physics experimental programs in the
+U.S. and worldwide.
+To this end, USQCD establishes scientific priorities, which are documented in white papers~\cite{USQCD_EF_whitepaper13,USQCD_IF_whitepaper13,USQCD_NP_whitepaper13,USQCD_Thermo_whitepaper13}.
+USQCD's internal and INCITE computing resources are then allocated, in a proposal driven process, to
+self-directed smaller groups within USQCD to accomplish these goals.
+
+At present, members of USQCD make use of dedicated high-capacity PC and GPU cluster funded by the DOE through the LQCD-ext
+Infrastructure Project, as well as a Cray XE/XK computer, and IBM Blue Gene/Q and Blue Gene/P computers, made
+available by the DOE's INCITE Program.
+During 2013, USQCD, as a whole, expects to sustain approximately 300 teraflop/s on these machines.
+USQCD also has a PRAC grant to develop code for the NSF's new petascale computing facility, Blue Waters.
+Further, subgroups within USQCD apply individually to utilize other DOE and NSF supercomputer centers.
+For some time, the resources USQCD has obtained have grown with a doubling time of approximately 1.5~years,
+consistent with Moore's law, and this growth rate will need to continue to meet the collaboration's scientific objectives.
+ 
+The software developed by USQCD under a SciDAC grant enables U.S. lattice gauge theorists to use a wide variety
+of architectures with very high efficiency, and it is critical that USQCD software efforts continue at their
+current pace.
+Historically, the advance preparation of USQCD for new hardware has enabled members to take full advantage of
+early science time that is often available while new machines are coming online and being tested.
+Over time, the development of new algorithms has had at least as important an impact on the field of lattice
+QCD as advances in hardware, and this trend is expected to continue, although the rate of algorithmic
+advances is not as smooth or easy to predict as that of hardware.
+
+This report presents the future computing needs and plans of the U.S. lattice gauge theory community, and argues that continued support of the U.S. (and worldwide) lattice-QCD effort is essential to fully capitalize on the enormous investment in the high-energy physics experimental program.  This report is organized as follows.  Section~\ref{sec:lqcd:physics} presents the role of lattice QCD to aid in the search for new physics at the energy and intensity frontiers.  Next, Section~\ref{sec:lqcd:resources} presents details of the computational hardware and software resources needed to undertake
+these calculations.   Finally, Section~\ref{sec:lqcd:summ} recaps the main findings of this report.   Achieving the scientific goals outlined in the USQCD white papers~\cite{USQCD_EF_whitepaper13,USQCD_IF_whitepaper13} and summarized here will require support of both the national supercomputing centers and of dedicated USQCD hardware, investment in software development, and support of postdoctoral researchers and junior faculty.  Given sustained investment in numerical lattice field theory, the lattice community will continue to pursue the nonperturbative theoretical calculations needed to support the current and future experimental particle-physics programs at the energy and intensity frontiers.
+
+
