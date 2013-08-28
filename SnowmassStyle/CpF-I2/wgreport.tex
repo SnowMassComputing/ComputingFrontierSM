@@ -37,7 +37,7 @@ As discussed below, whether the WLCG will continue to serve the needs of the LHC
 
 Because of the sheer scale of the existing WLCG resources, we anticipate that the WLCG will remain the main resource for LHC experiment computations.  However, the use of other facilities, such as those described below, should be explored to see if they can successfully perform the same computations and thus augment the LHC computing capacity.
 
-National High Performance Computing centers are used and required by a number of HEP projects, including
+
 \begin{itemize}
 \item Lattice QCD (Energy)
 \item Accelerator design and R\&D (Energy and Intensity)
@@ -54,13 +54,21 @@ A great need for HPC computing, driven by the needs of LQCD and computational co
 \label{fig:NERSC-Computational-Hours}
 \end{figure}
 
-\textcolor{red}{I think we need to make a stronger distinction between the HPC centers and the HPC computing paradigm here.  We're talking here about the possibility of IF experiments using the centers, not the HPC paradigm.  Maybe this section can be an opportunity to talk about the centers' interest into supporting computing that doesn't fit the traditional HPC paradigm?}  Intensity Frontier experiments have combined computing requirements on a scale that could map onto the HPC center model. The experiments have a diverse set of needs, but a survey found that there is significant commonality among them. Some experiments have already made effective use of HPC centers' facilities and expertise. For example, the Daya Bay experiment analysis was conducted at NERSC, which also served as the Tier 1 data center.  NERSC also has expertise gained from supporting KAMLAND, IceCube, BaBar, SNO, ALICE, ATLAS, and Palomar PTF data analysis.  There may be an opportunity for Intensity Frontier experiment to band together and take advantage of centralized facilities as a source of computing and storage and a gathering place for software repositories and expertise on common requirements.
+\textcolor{red}{I think we need to make a stronger distinction between the HPC centers and the HPC computing paradigm here.  We're talking here about the possibility of IF experiments using the centers, not the HPC paradigm.  Maybe this section can be an opportunity to talk about the centers' interest into supporting computing that doesn't fit the traditional HPC paradigm?}
+\textcolor{blue}{Is this more along the lines you were thinking of?}
+Intensity Frontier experiments have a diverse set of needs, but in aggregate 
+they have large data and aanalysis requirements. HPC centers are interested in 
+enabling data-driven scientific discovery and are preparing to support data-intensive HTC
+computing. Some experiments have already made effective use of HPC centers' facilities; 
+for example, analysis for the Daya Bay experiment was conducted at DOE's NERSC center, which also 
+served as the Tier 1 data center.  DOE HPC centers have also supported KAMLAND, IceCube, BaBar, 
+SNO, ALICE, ATLAS, and Palomar PTF data analysis.  
 
 One effort, Perturbative QCD,  that has largely relied on HTC computing to date has already started using HPC centers and expects to 
 expand those efforts to be able to complete the calculation of important background and signal reactions at the
 LHC.  
-They have determined that it would be beneficial to make the national HPC
-facilities ALCF~\cite{ALCF}, OLCF~\cite{OLCF} and NERSC~\cite{NERSC}
+They have determined that it would be beneficial to make the national DOE HPC
+facilities 
 generally accessible to particle theorists and
 experimentalists in order to enable the use of existing
 calculational tools for experimental studies involving extensive
@@ -91,16 +99,17 @@ the development of techniques and algorithms for identifying cosmological signat
 
 There are three primary computational tasks associated with sky surveys: image generation, image processing, and cosmological simulation. The first 
 is primarily an HTC task, the second is alredy running in HPC mode using up to thousands of processors, and the third uses cutting-edge HPC applications.  The computing requirements for image simulation and image processing will increase greatly over the next five years and, while substantial
-on the order of 100 million hour, are expected to be accomodated at DOE and NSF centers. The HPC hours needed for cosmological simulations are extreme, however, expanding from 24M hours used at NERSC in 2012 to 3-10 billion hours by 2017 (reference NERSC report). The current outlook
-makes it unlikely that these hours will be available on this time scale. 
+on the order of 100 million hour, are expected to be accomodated at DOE and NSF centers. The HPC hours needed for cosmological simulations are extreme, however, reaching 10s of billions of hours by 2017 (reference NERSC report). The current outlook
+makes it unlikely that HPC centers have adequate capacity to meeting these needs for cosmological
+simulations on this time scale. 
  
 Likewise, researchers performing Lattice QCD theory calculations 
 -- which are essential for interpretation of many experiments done in high-energy and nuclear physics -- 
-face an expected deficit in computing cycles. In in a (cite NERSC report) LQCD researchers estimate needing 24 Billion NERSC hours
-in 2017, much more than the 9 billion available HEP hours at that center provided by growth following historical trends.
+face an expected deficit in computing cycles. In in a recent report (cite NERSC report) 
+LQCD researchers estimate needing 10s of billions of  hours in 2017, much more than will be available 
+for LQCD if historical trends hold.
 
-HPC needs for accelerator research and design are growing, too, but are expected to be accommodated by planned HPC capacity and capability 
-increases (cite NERSC report) \textcolor{red}{Is this HPC paradigm or HPC center resources?}. 
+HPC needs for accelerator research and design are growing, too, but are expected to be accommodated by planned HPC center capacity and capability increases (cite NERSC report). 
 
 
 \section{Will Distributed Computing Models Be Adequate?}
@@ -199,9 +208,9 @@ There has been a major push to involve a wide range of sciences in grid computin
 
 \section{What role will national computing centers play in computations for HEP?}
 
-The U.S. national high performance computing (HPC) centers run by the Department of Energy Office of Science and the National Science Foundation have traditionally served the particle physics and high energy physics (HEP) communities by enabling and supporting large simulations in Lattice Quantum Chromodynamics (LQCD), accelerator research and design, cosmology, supernova physics. The astrophysics community has also used HPC centers to produce mock catalogs in support of satellite and ground-based sky surveys.
+The U.S. national high performance computing (HPC) centers run by the Department of Energy Office of Science and the National Science Foundation have traditionally served the particle physics and high energy physics (HEP) communities by enabling and supporting large simulations in Lattice Quantum Chromodynamics (LQCD), accelerator research and design, cosmology, and supernova physics. The astrophysics community has also used HPC centers to produce mock catalogs in support of satellite and ground-based sky surveys.
  
-Over the next 5 to 10 years HPC centers are expected to continue their roles with these traditional communities. However, the computational and storage resources needed to support upcoming initiatives in part sponsored by the Department of Energy Office of Science -- including the LHC upgrade, the Large Synoptic Sky Survey, and the CMBPol satellite mission -- will stress the ability of HPC centers, even if they are able to continue the traditional HPC growth rate of 1.8-2.0 X per year.
+Over the next fine to ten years HPC centers are expected to continue their roles with these traditional communities. However, the computational and storage resources needed to support upcoming initiatives in part sponsored by the Department of Energy Office of Science -- including the LHC upgrade and  the Large Synoptic Sky Survey -- will stress the ability of HPC centers, even if they are able to continue the traditional HPC growth rate of 1.8-2.0 X per year.
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{CpF-I2/images/Top500-plot.png}
@@ -209,11 +218,21 @@ Over the next 5 to 10 years HPC centers are expected to continue their roles wit
 \label{fig:Top-500}
 \end{figure}
 
-The National Energy Research Scientific Computing Center (NERSC)--– the production HPC center for the U.S. Department of Energy’s Office of Science -- has conducted two reviews with the HEP community to determine their computing and storage needs. The first review, in 2009, targeted needs for 2014, while the second, in 2012, targeted 2017.  The findings reveal a shortage of anticipated resources needed to support DOE HEP mission needs. The shortage is driven by the LQCD community’s need to calculate fundamental parameters of the Standard Model using physical quark masses, the need to generate mock catalogs to support sky surveys studying the distribution of matter and energy in the early universe.[check again]
+The National Energy Research Scientific Computing Center (NERSC)--– the production HPC center for the U.S. Department of Energy’s Office of Science -- has conducted two reviews with the HEP community to determine their computing and storage needs. The first review, in 2009, targeted needs for 2014, while the second, in 2012, targeted 2017.  The findings reveal a shortage of anticipated resources needed to support DOE HEP mission needs. 
+The shortage is largely driven by the LQCD and cosmological simulation communities. 
 
-In addition to the resources needed by the traditional HEP HPC community, funding agencies -- in particular the DOE HEP office -- are becoming increasingly cognizant of the computing needs of all sections of the HEP research community. In part this is due to the awareness by the traditional HTC communities that they too find HPC center resources valuable. Some of these groups -- most notably HEP theorists carrying out Monte Carlo simulations that are used by experimentalists -- are beginning to use HPC centers(1) \textcolor{red}{Needs a reference?}. For example, the DOE Offices of HEP and Advanced Scientific Computing (ASCR) have started a joint partnership to transform the GEANT-4 code into an efficient parallel code that can take advantage of multicore and HPC platforms. In parallel, the Energy Frontier experimental community and major Cosmic Frontier experiments are preparing to use HPC facilities.
+
+In addition to the resources needed by the traditional HEP HPC community, funding agencies 
+-- in particular the DOE HEP office -- are becoming increasingly cognizant of the computing 
+needs of all sections of the HEP research community. In part this is due to the awareness 
+by the traditional HTC communities that they too find HPC center resources valuable. 
+Some of these groups -- most notably HEP theorists carrying out Monte Carlo simulations that 
+are used by experimentalists -- are beginning to use HPC centers(1) \textcolor{red}{Needs a reference?}. 
+For example, the DOE Offices of HEP and Advanced Scientific Computing (ASCR) have started a joint partnership to transform the GEANT-4 code into an efficient parallel code that can take advantage of multicore and HPC platforms. In parallel, the Energy Frontier experimental community and major Cosmic Frontier experiments are preparing to use HPC facilities.
  
-The upcoming LHC run at a center-of-mass energy near 14 TeV will severely strain the computing capacity of the ATLAS and CMS experiments (reference to other sections?). The higher energies, luminosities and trigger rates expected in the LHC high energy run starting in 2015 require substantial increases in computing capacity to handle them. However, expected increases in computing capacity are modest: the computational needs to do the science are now beginning to exceed the available resources. This places LHC experiments in a position where the science is not limited by the possible trigger bandwidth, but by the number of events that can be simulated.  \textcolor{red}{Not sure I agree with this for all cases.  ATLAS seems to be much more limited by simulations than CMS.  For us, we're more limited by the storage, which tends to be more costly than the CPU.}  An attractive solution is to port elements of ATLAS and CMS software (Monte Carlo event generators such as Alpgen and simulation of events using the Geant4 toolkit appears to be the best starting points) to run on HPC resources that are at existing DOE resources. ALTAS is developing a front-end cluster to allow it to interact with these computers via the Open Science Grid.
+The upcoming LHC run at a center-of-mass energy near 14 TeV will severely strain the computing capacity of the ATLAS and CMS experiments (reference to other sections?). The higher energies, luminosities and trigger rates expected in the LHC high energy run starting in 2015 require substantial increases in computing capacity to handle them. However, expected increases in computing capacity are modest: the computational needs to do the science are now beginning to exceed the available resources. This places LHC experiments in a position where the science is not limited by the possible trigger bandwidth, but by the number of events that can be simulated.  \textcolor{red}{Not sure I agree with this for all cases.  ATLAS seems to be much more limited by simulations than CMS.  For us, we're more limited by the storage, which tends to be more costly than the CPU.} 
+\textcolor{blue}{I'll let you (Ken) figure this one out. I'm quoting from others text.}
+ An attractive solution is to port elements of ATLAS and CMS software (Monte Carlo event generators such as Alpgen and simulation of events using the Geant4 toolkit appears to be the best starting points) to run on HPC resources that are at existing DOE resources. ALTAS is developing a front-end cluster to allow it to interact with these computers via the Open Science Grid.
  
 Using supercomputers for HEP experiments such as ATLAS and CMS has these benefits:
 \begin{enumerate} 
@@ -236,25 +255,33 @@ HPC centers have a number of additional attractive features.
 \item{Access to the large storage, high I/O capabilities, and networking are available.  Access to computational resources “close” to the data to be analyzed reduces the need move large data sets many times over the network.}
 \end{itemize} 
 
-From the standpoint of the HPC centers, there are challenges to accommodating an expanded workload. The addition of traditional HTC workflows, and those currently using the WLCG in particular, onto national HPC centers will require integrating them into job scheduling systems already in place. Serial jobs, which characterize most of WLCG computing, is not a good fit with large parallel computational systems. Identity management and data ownership and management pose other obstacles. Finally, providing computing, storage, and services to a new community requires an allocation of resources from funding agencies either through normal allocations processes or through outside funding from the community to augment the HPC centers’ base program.
+From the standpoint of the HPC centers, there are challenges to accommodating an expanded workload. The addition of traditional HTC workflows, and those currently using the WLCG in particular, onto 
+national HPC centers will require integrating them into job scheduling systems already in place. 
+A workload containing many serial compute jobs, which characterize most of WLCG computing, 
+is not a good fit with large parallel computational systems with expensive node interconnects. 
+Identity management and data ownership and management pose other obstacles. Finally, providing 
+computing, storage, and services to a new community requires an additional resources from 
+funding agencies either through the normal resource allocations processes or through outside 
+funding from the community to augment the HPC centers’ base programs.
  
-The good news is that at least one HPC Center -- NERSC -- has a long history of supporting “non-traditional” HEP efforts.  NERSC hosts the PDSF cluster (which has its origins in the Superconducting Supercollider), which is the Tier 1 site for the Daya Bay neutrino experiment and a Tier 3 site for ATLAS. PDSF is also used by ALICE, [update from Craig]. NERSC also hosts the Lattice Connection and Deep Sky web data-driven science gateways for LQCD field configurations [check] and supernova discovery. NERSC’s HPC systems were used to calculate the more than 1 million [check] simulated realizations of the early universe needed to process results from the Planck CMB satellite mission. NERSC computers were also used to calculate synthetic supernova spectra that played a key role in the discovery of ``dark energy'' by Perlmutter {\it et al}.  NERSC has the flexibility , open access, close affiliation with sister center ESnet, and know-how to support “non-traditional” HPC if funding is available to support it.
- Providing computing, storage, and services to a new community requires an allocation of resources from funding agencies either through normal allocations processes or through outside funding from the community. There are a number of potentially feasible ways to accommodate an influx of “non-traditional” (e.g. WLCG work) into national HPC centers:
+Meeting these challenges is not completely new to HPC centers. For exanmple,
+NERSC has a long history of supporting “non-traditional HPC” HEP research.  
+NERSC hosts the PDSF cluster (which has its origins in the Superconducting Supercollider), 
+which is the Tier 1 site for the Daya Bay neutrino experiment and 
+a Tier 3 site for ATLAS. PDSF is also currently used by ALICE, STAR, and CUORE. 
+ NERSC also hosts the Lattice Connection and Deep Sky web data-driven science gateways for 
+LQCD field configurations  and supernova discovery. 
+NERSC’s HPC systems were used to calculate the more than 100,000 simulated realizations of the 
+early universe needed to process results from the Planck CMB satellite mission. 
 
-\begin{itemize} 
-\item Program managers can allocate resources via the normal allocations process. This would mean holding some resources away from traditional HEP supercomputing efforts. But, if HPC capacity continues to grow at traditional rates while “non-traditional” computing needs grow more slowly, there is an opportunity for significant computing cycles to be available.
-\item Programmatic funds from HEP could be contributed directly to HPC centers to support HEP efforts (e.g. from DOE HEP to NERSC or indirectly through ASCR).
-\item Support for hardware procurement, operation, and support at one of more HPC centers can be contributed directly by research teams or facilities.
-\end{itemize} 
-
-There are a number of examples of the latter model at NERSC, where the Berkeley HEP and Nuclear Physics community funds the PDSF cluster and the Joint Genome Institute is now using NERSC to host its computing, storage, and support needs. NERSC also administers resources funded by the Planck Satellite mission and the Palomar Transient Sky Survey. Discussions are currently underway for similar projects with the Berkley Lab Advanced Light Source, the LCLS at Stanford, the DOE KBase project, and the Large Synopic Sky Telescope project.
- 
 
 \subsection{HPC Center Growth Rates and Plans}
  
-As shown in Figure \ref{fig:NERSC-Computational-Hours} above the projected need for HEP production computing within DOE will outpace even the traditional Moore's Law increase of approximately 2X per year.  The red line in the plot connects the stated requirements with 2012 usage and shows that just the traditional HPC HEP computing community has needs that far exceed the traditional trend lines. Much of this is driven by the need for simulations to support interpretation of data being collected from the LHC and cosmological sky surveys. \textcolor{red}{I thought that a lot of what is driving this is lattice QCD, which is not what is limiting LHC interpretation -- we're in the perturbative world.  Intensity frontier, maybe so.}  Additional computing is needed for accelerator research and design.
+As shown in Figure \ref{fig:NERSC-Computational-Hours} above the projected need for HEP production computing within DOE will outpace even the traditional Moore's Law increase of approximately 2X per year.  The red line in the plot connects the stated requirements with 2012 usage and shows that just the traditional HPC HEP computing community has needs that far exceed the traditional trend lines. 
  
-This pressing need for resources comes at a time of uncertain budgetary forecasts. The DOE exascale initiative targets enabling an exascale compute system by 2022-2023 -- with the actual timeframe dependent on funding and technology advances -- through the Fast Forward (processor design) and Design Forward (system design) partnerships with HPC vendors. The Exascale Initiative includes partnerships with government, the computer industry, DOE laboratories, and academia.  Goals include
+We are at a critical time for HPC computing. To continue the historic, Moore's Law-like, growth in HPC computing power, the HPC community must adapt to build (with HPC vendors) and use new energy-efficient technologies. The path forward will require use of low-power, simple fundamental processing units. The current leading architectural candidates are systems that incorporate NVIDIA GPUs (Graphical Processing Units), the Intel Phi “many-core” processor, processors based on AMD's APU technology, and units integrating ARM-based technology.
+
+This pressing need for resources and innovation comes at a time of uncertain budgetary forecasts. The DOE exascale initiative targets enabling an exascale compute system by 2022-2023 -- with the actual timeframe dependent on funding and technology advances -- through the Fast Forward (processor design) and Design Forward (system design) partnerships with HPC vendors. The Exascale Initiative includes partnerships with government, the computer industry, DOE laboratories, and academia.  Goals include
 \begin{itemize}
 \item{1,000 times more performance than a Petaflop system}
 \item{Capability to execute 1 billion degrees of concurrency}
@@ -263,16 +290,14 @@ This pressing need for resources comes at a time of uncertain budgetary forecast
 \item{Development and execution time productivity improvements}
 \end{itemize}
  
-[insert discussion/plot of NSF and DOE LCF capabilities and plans. LCF futures? LCF resources are not programmatic production cycles with guaranteed access. Even less good fit than NERSC.]
+[Other plans? EXCEDE / NSF .]
  
  
-While the past focus on HPC centers has largely been on massive parallel computations, the need for, and ability to facilitate handling of, accompanying data has quietly grown over the years. The plot below shows that archival data at NERSC has grown consistently at about 1.7X per year. Figure~\ref{fig:NERSC-HPSS} shows the historical growth in data stored at NERSC's archival storage systems and extrapolation of that trend. The findings from the NERSC HEP requirements reviews show a sharp increase above the trend line starting in 2013-2014 through 2017. This largely reflects a need to support simulated and experimental data from sky surveys, including LSST and Cosmic Background Radiation satellite missions, as well a growing need to centrally store and analyze experimental data from satellites and accelerators.
+While the past focus on HPC centers has largely been on massive parallel computations, the need for, and ability to facilitate handling of, accompanying data has quietly grown over the years. 
+All the DOE Office of Science HPC centers have drafted plans to accomodate data-driven science and 
+there is a proposal for a Virtual Data Center with DOE to address data issues. 
 
-\begin{figure}[h]
-\includegraphics[width=\textwidth]{CpF-I2/images/2013-NERSC-HPSS-Usage.png}
-\caption{There is now wide recognition within the HPC community that “Big Data” is a growing and crucial component of HPC.  [Insert info from DOE/ASCR/HEP Data Summit]}
-\label{fig:NERSC-HPSS}
-\end{figure}
+[Other plans? NSF?]
 
 \section{What coordination will be required across facilities and research teams, and are new models of computing required for it?}
 
@@ -283,12 +308,27 @@ Larger experiments, like those at the LHC, do have the resources to make full us
 
 As the quest for computing resources takes researchers away from their current “natural” computing homes of distributed HTC on the grid and HPC at specialized shared facilities, it will become more important for users to be able to move between the different computing paradigms easily.  The ability to make seamless transitions will rely on work that is both technical, such as creating uniform systems of identity management and job submission, and political, such as coordinating between entities such as the OSG, XSEDE, and national centers such as NERSC.  It would be useful for the leaders of those organizations to discuss how they could start to build a computing infrastructure that can truly serve all the members of the HEP community.
 
-We are at a critical time for HPC computing. To continue the historic, Moore's Law-like, growth in HPC computing power, the HPC community must adapt to build (with HPC vendors) and use new energy-efficient technologies. The path forward will require use of low-power, simple fundamental processing units. The current leading architectural candidates are systems that incorporate NVIDIA GPUs (Graphical Processing Units), the Intel Phi “many-core” processor, processors based on AMD's APU technology, and units integrating ARM-based processors.
+
+Engineering and technology advancements will enable energy-efficient, performant processors and systems, but the 
+programming paradigms employed by the application developer will likely become more complex, for both HPC and HTC 
+applications.   
+Code development on these new architectures will pose a serious challenge. 
+The programming strategy, in practice since the late 1990s, of optimizing code to minimize CPU cycles and 
+inter-node communication must be replaced with a paradigm that stresses minimizing data movement at all levels 
+(from on-chip cache, to on-node shared memory, to storage media) and maximizing SIMD (vector) 
+processing operating on contiguous data, and use of light-weight threads of execution. 
+Most HPC software may have to be modified significantly or rewritten to execute acceptably well 
+(or at all in some cases) on these architectures. Programming models for their architectures are 
+nascent and/or proprietary to a particular vendor’s architecture. Some science communities have 
+embraced one technology or another, while others are waiting to see which programming model 
+and/or language “wins out.” In either case, a significant investment in code development will be required.
  
-In addition to engineering and technology advancements needed to actually build  energy-efficient, performant processors and system, application development on these new architectures poses a serious challenge. The programming strategy, in practice since the late 1990s, of optimizing code to minimize CPU cycles and inter-node communication must be replaced with a paradigm that stresses minimizing data movement at all levels (from on-chip cache, to on-node shared memory, to storage media) and maximizing SIMD (vector) processing operating on contiguous data, and use of light-weight threads of execution. Virtually all HPC software will have to be modified significantly or rewritten to execute acceptably well (or at all in some cases) on these architectures. Programming models for their architectures are nascent and/or proprietary to a particular vendor’s architecture. Some science communities have embraced one technology or another, while others are waiting to see which programming model and/or language “wins out.” In either case, a significant investment in code development will be required.
- 
-This issue also applies to HTC applications, like those that currently use the WLCG. Although traditional multi-core processors and systems will continue to exist for some time, the growth in computing power will come from “many-core”
-processors. If the HEP community does not adapt codes to run in parallel (using fine-grained parallelism ({\it e.g.} GPUs) and possibly coarse-grained parallelism ({\it e.g.} MPI)) it will be precluding itself from using a vast source of computational power in a time of greater need.
+This issue is relevant to those applications that currently use the WLCG. 
+Although traditional multi-core processors and systems will continue to exist for some time, 
+growth in computing power will come from “massively multi-core” processors. If the HEP community does not adapt codes 
+to run in parallel (using fine-grained parallelism ({\it e.g.} GPUs) and possibly 
+coarse-grained parallelism ({\it e.g.} MPI)) it will be precluding itself from using a vast source 
+of computational power in a time of greater need.
  
 \section{Summary}
 \label{sec:comp-summary}
@@ -298,11 +338,12 @@ As long as certain conditions are in place and specific steps are taken to keep 
 
 Intensity-frontier experiments have smaller computing needs in comparison, and there is nothing technically that prevents them from being met.  Such experiments should be aware of the existence of resources available to them through the OSG or at national computing centers, and they could benefit from a coordinated effort amongst them to gain access to resources and share software and training.
 
-Cosmic-frontier experiments and the simulations needed to interpret them are among the drivers of a need for growth in HPC resources in the coming years, along with lattice QCD and accelerator design.  Indeed, demand for access to HPC across HEP is expected to exceed the expected availability.  Such computations is critically needed to interpret results from a number of important experiments and realize scientific returns from national investments in those experiments.  The NERSC report on HEP computing needs indicates a shortage of HPC resources needed for HEP by a factor of four by 2017.  While funding and technology development needed to sustain traditional HPC growth rates are uncertain, they must be maintained to support HEP science.
+Cosmic-frontier experiments and the simulations needed to interpret them are among the drivers of a need for growth in HPC resources in the coming years, along with lattice QCD and accelerator design.  Indeed, demand for access to HPC across HEP is expected to exceed the expected availability.  
+Such computations are critically needed to interpret results from a number of important experiments and realize scientific returns from national investments in those experiments.  The NERSC report on HEP computing needs indicates a shortage of HPC resources needed for HEP by a factor of four by 2017.  While funding and technology development needed to sustain traditional HPC growth rates are uncertain, they must be maintained to support HEP science.
 
 Distributed computing infrastructures, which have been critical to the success of the LHC experiments, should continue to be able to serve these and other applications even as they grow in scale.  There are no show-stoppers seen in increasing scale, but various developments should be purused to improve efficiency and ease of use.  Keeping sufficient staff support at a reasonable cost is a continuing concern; finding operational efficiencies could help address this.  Given that HEP is the largest user of distributed scientific computing, currently in the form of grid computing, members of the field must continue to take a leadership role in its development.
 
-National centers play an important role in some aspects of computing, and HEP might be able to take advantage of an expanded role.  It is already used in many of the applications listed above.  While there are not enough resources available at the centers to rival those of the WLCG, experiments should explore the use of the centers as part of their efforts to diversify their computing architectures.  These centers do have access to large, state-of-the-art resources, operational support and expertise in many areas of computing.
+National centers play an important role in some aspects of computing, and HEP might be able to take advantage of an expanded role.  It is already used in many of the applications listed above.  While there are not enough resources dedicated to HEP available at the centers to rival those of the WLCG, experiments should explore the use of the centers as part of their efforts to diversify their computing architectures.  These centers do have access to large, state-of-the-art resources, operational support and expertise in many areas of computing.
 
 We expect that distributed computing and facility infrastructures will continue to play a vital role in enabling discovery science.
 
