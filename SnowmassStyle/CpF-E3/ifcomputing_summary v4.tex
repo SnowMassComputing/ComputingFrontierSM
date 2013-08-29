@@ -1,4 +1,35 @@
-
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%Summary of Intensity Frontier computing needs for 2013 CSS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[prd,twocolumn,showpacs,preprintnumbers,amsmath,amssymb,superscriptaddress,nofootinbib]{revtex4}
+%\documentclass[prd,showpacs,preprintnumbers,amsmath,amssymb,superscriptaddress,nofootinbib]{revtex4}
+%\usepackage{graphicx}
+%\RequirePackage{lineno}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{overpic,color}
+\usepackage{afterpage}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{enumerate}
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{upgreek}
+\usepackage{dcolumn}      %align table columns on decimal point
+\usepackage{bm}           %bold math
+\usepackage{multirow}
+\usepackage{bigstrut}
+\usepackage{upgreek}
+\usepackage[tight]{units} %tight is the default
+                          %adds \unit[val]{unit}
+                          %\unitfrac[val]{unum}{udenom}
+                          %\nicefrac[opt. command]{num}{denom}
 \hyphenation{LArTPC}
 \hyphenation{LArTPCs}
 \hyphenation{FPGAs}
@@ -9,28 +40,27 @@
 \hyphenation{LAPD}
 \hyphenation{MPPCs}
 
+% Set the beginning of a LaTeX document
+\begin{document}
+%\pagewiselinenumbers
 
-%%%%%% Computing Chapter  %%%%%%%%%%%%%%%%
- 
-\chapter{Computing Frontier: Computing for the Intensity Frontier}
-\label{chap:mag}
+\title{Computing Needs of the Intensity Frontier}         % Enter your title between curly braces
 
+\author{B.~Rebel}
+\affiliation{Fermi National Accelerator Laboratory, Batavia, IL 60510, USA}
+\author{M.~C.~Sanchez}
+\affiliation{Iowa State University, Ames, IA, 50010 USA}
+\author{S.~Wolbers} 
+\affiliation{Fermi National Accelerator Laboratory, Batavia, IL 60510, USA}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}\begin{boldmath}
+\date{\today}
 
-\input CpF-E3/authorlist.tex
-%Conveners are also listed separately in authorlist.tex
+%\begin{abstract}
+%This summary describes the current and future computing needs of the Intensity Frontier experiments.
+%\end{abstract}
 
-\end{boldmath}\end{center}
+\maketitle
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
 \label{sec:intro}
 Computing at the Intensity Frontier (IF) has many significant challenges. The experiments, projects and theory all require demanding computing capabilities and technologies.  Though not as data intensive as the LHC experiments, the IF experiments and IF computing have significant computing requirements in theory and modeling, beam line and experiment design, triggers and DAQ, online monitoring, event reconstruction and processing, and physics analysis.  It is critical for the success of the field that IF computing is modern, capable, has adequate capacity and support, and is able to take advantage of the latest developments in computing hardware and software advances.
