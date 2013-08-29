@@ -104,7 +104,7 @@ Typically the hardware demands of IF experiments are modest compared to those of
 
 The current and projected CPU needs for the IF experiments are shown in Table~\ref{table:cpu}.    The CPU needs are given in terms of the number of dedicated grid slots needed for each experiment each year, and the estimated sum for US-based and international-based experiments are also given. These estimates are based on near-term needs and involve some projections which should be taken only as an order of magnitude. It should be noted that the grid usage by IF experiments tends to follow a feast and famine pattern.  The production of simulation, reconstruction of simulation and data, and the analysis of those files follows cycles that are strongly correlated with the major conference cycle.  The peak usage per experiment should be used in determining the needs rather than the steady state usage since the ideal peak time usage can reach ten times the planned steady state usage. To ensure the ability to meet the peak usage needs, each experiment should have a dedicated number of slots that is a large fraction, at least 50\%, of the typical peak usage need as well as access to run opportunistically on a much larger pool of slots. Having that level of resources available ensures timely production of results. 
 
-\begin{table*}
+\begin{table}
 \caption{\label{table:cpu}  Annual dedicated grid slot usage by experiment in the IF.  The total columns call out the totals for the Fermilab-based and foreign-based experiments separately.  The experiments based outside of the US are only shown as the total.} 
 
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|} 
@@ -127,7 +127,7 @@ Year  &  NO$\nu$A  & MicroBooNE & LBNE & g-2    & MINER$\nu$A & MINOS$+$ & $\mu2
 
 \end{tabular}
 
-\end{table*}
+\end{table}
 
 
 There is excellent support of the Fermilab based experiments both in terms of storage and CPU.  Issues are mostly in efficient data handling and script optimization. Resources for computing professionals is provided through Fermilab and would be extremely useful if increased. On site grid access is however not sufficient, offline Monte Carlo generation is common among experiments. Professional support is thus required for methods to seamlessly use Fermilab and non-Fermilab resources through job submission protocols. For Fermilab-based experiments, university and other national lab resources are used in the production of Monte Carlo files. A common protocol to access these resources such as OSG is in the foreseeable future.
@@ -146,7 +146,7 @@ All respondents indicated the need for data handling systems that seamlessly int
 
 The current and projected storage needs for the IF experiments are shown in Table~\ref{table:storage}.  The storage needs are presented as the additional storage needed each year. These are estimates based on near term projected needs by the experiments and extrapolation based on the planned life cycles of the various experiments at Fermilab. 
 
-\begin{table*}
+\begin{table}
 \caption{\label{table:storage}  Additional annual permanent storage (in terabytes) needed by each experiment in the IF.  The total columns call out the totals for the Fermilab-based and foreign-based experiments separately.  The experiments based outside of the US are only shown as the total.} 
 
 \begin{tabular}{|l|c|c|c|c|c|c|c|c|c|} 
@@ -169,7 +169,7 @@ Year  &  NO$\nu$A  & MicroBooNE & LBNE & g-2    & MINER$\nu$A & MINOS$+$ & $\mu2
 
 \end{tabular}
 
-\end{table*}
+\end{table}
 
 \subsubsection{Overall Computing Model}
 \label{sec:compmodel}
