@@ -1,0 +1,136 @@
+ 
+\section{Computing for Perturbative QCD}
+\label{chap:PQCD}
+
+
+This workshop provided a framework for implementing higher order  
+calculations in a standardized computing environment made available 
+by DOE at the National Energy Research Scientific Computing Center
+(NERSC)~\cite{NERSC}.  Resource requirements were determined for the
+calculation of important background and signal reactions at the
+LHC, including higher order QCD and EW effects. Prototypical results 
+are listed in Tab.~\ref{tab:summary} and have been summarized in a 
+white paper~\cite{HPCWP}.
+
+Different High Performance Computing (HPC) environments were tested
+during this workshop and their suitability for perturbative QCD calculations 
+was assessed. We find that it would be beneficial to make the national HPC 
+facilities ALCF~\cite{ALCF}, OLCF~\cite{OLCF} and NERSC~\cite{NERSC} 
+generally accessible to particle theorists and
+experimentalists in order to enable the use of existing
+calculational tools for experimental studies involving extensive
+multiple runs without depending on the computer power and manpower
+available to the code authors. Access to these facilities will also
+allow prototyping the next generation of parallel computer programs
+for QCD phenomenology and precision calculations.
+
+The computation of NLO corrections in perturbative QCD has been automatized 
+entirely. Resource requirements for NLO calculations determined during 
+this workshop can thus be seen as a baseline that enables phenomenology 
+during the LHC era. NNLO calculations are still performed 
+on a case-by-case basis, and their computing needs can only be 
+projected with a large uncertainty. It seems clear, however, that cutting edge 
+calculations will require access to leadership class computing facilities.
+
+The use of HPC in perturbative QCD applications is currently in
+an exploratory phase. We expect that the demand for access to HPC
+facilities will continue to grow as more researchers realize the 
+potential of parallel computing in accelerating scientific progress. 
+At the same time, we expect growing demand for educating young researchers 
+in cutting edge computing technology. It would be highly beneficial 
+to provide a series of topical schools and workshops related 
+to HPC in HEP. They may be co-organized with experiments to foster 
+the creation of a knowledge base.
+
+Large-scale distributed computing in Grid environments 
+may become relevant for perturbative QCD applications 
+in the near future. This development will be accelerated if Computing Grids
+can also provide access to HPC facilities and clusters where parallel 
+computing is possible on a smaller scale. The Open Science Grid (OSG)~\cite{OSG} 
+has taken first steps in this direction, and we have successfully used their
+existing interface. The amount of training for new users could be minimized
+if the OSG were to act as a front-end to the national HPC facilities
+as well as conventional computing facilities.
+
+\begin{table}
+  \begin{tabular}{ccc}
+    \hline
+    Type of calculation & CPU hours per project & projects per year \\
+    \hline\hline
+    NLO parton level & 50,000 - 600,000 & 10-12\\
+    NNLO parton level & 50,000 - 1,000,000 & 5-6\\
+    Event generation & 50,000 - 250,000 & 5-8\\
+    Matrix Element Method & $\sim$ 200,000 & 3-5\\
+    Exclusive jet cross sections & $\sim$ 300,000 & 1-2\\
+    Parton Distributions & $\sim$ 50,000 & 5-6\\
+    \hline
+  \end{tabular}
+  \caption{Summary of computing requirements for typical projects
+    carried out by the US community~\cite{HPCWP}.
+    \label{tab:summary}}
+\end{table}
+
+\clearpage
+
+\begin{table}
+  \centering
+  \begin{tabular}{llrr}
+    \hline
+    Process & Ref. & \multicolumn{2}{c}{Requirements}\\
+    & & CPU [core~h] & Storage [GB] \\
+    \hline\hline
+    $pp\to W^\pm+5 jets$ & \cite{Bern:2013gka} & 600,000 & 1,500 \\
+    $pp\to W^\pm+4 jets$ & \cite{Berger:2010zx} & 100,000 & 200\\
+    $pp\to Z+4 jets$ & \cite{Ita:2011wn} & 200,000 & 200\\
+    $pp\to Z+3 jets$ & \cite{Berger:2010vm} & 50,000 & 100 \\
+    $pp\to 4 jets$ & \cite{Bern:2011ep} & 200,000 & 150\\
+    \hline
+  \end{tabular}
+  \caption{CPU and Storage requirements for calculations on the
+    list of important processes identified during the LesHouches
+    series of workshops~\cite{AlcarazMaestre:2012vp}.
+    Numbers assume cross-checks with at least two independent runs
+    and are reported for AMD Opteron\trademark processors running at 2.1~GHz.
+    Storage requirements are reported for Root NTuple files which can be used
+    to replicate the entire event analysis.
+  \label{tab:nlo_wishlist}}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{llrr}
+    \hline
+    Process & Ref. & Requirements & CPU clock\\
+    & & CPU [core~h] & [GHz]\\
+    \hline\hline
+    $pp\to W/Z$ & \cite{Melnikov:2006di,Li:2012wna} & 50,000 & 2.67 \\
+    $pp\to H$ & \cite{Anastasiou:2005qj} & 50,000 & 2.67 \\
+    $pp\to t\bar{t}$ & \cite{Baernreuther:2012ws,Czakon:2013goa} & 1,000,000 & 2.27\\
+    $pp\to $ jets ($g$ only) & \cite{Ridder:2013mf} & 85,000 & 2.20 \\
+    $pp\to H+$jet ($g$ only) & \cite{Boughezal:2013uia} & 500,000 & 2.67 \\
+    \hline
+  \end{tabular}
+  \caption{Summary of computing requirements for NNLO calculations.
+    Numbers were obtained on Intel\registered Xeon\registered CPU's.
+    \label{tab:nnlo_requirements}}
+\end{table}
+
+\begin{table}
+  \centering
+  \begin{tabular}{llllr}
+    \hline
+    Process & \multicolumn{2}{c}{$N_{jet}$} & Ref. & CPU [core~h] \\
+    & NLO & LO & & \\
+    \hline\hline
+    $pp\to W^\pm+jets$ & $\le$2 & $\le$4 & \cite{Hoeche:2012yf} & 100,000 \\
+    $pp\to h+jets$ & $\le$2 & $\le$3 & \cite{Hoeche:2013xxx} & 150,000 \\
+    $pp\to t\bar{t}+jets$ & $\le$1 & $\le$2 & \cite{Hoeche:2013mua} & 250,000 \\
+    $pp\to l\bar{\nu}\bar{l}'\nu'$ & $\le$1 & $\le$2 & \cite{Cascioli:2013xxx} & 50,000 \\
+    \hline
+  \end{tabular}
+  \caption{Computing requirements for merged NLO simulations in
+    various benchmark processes, using the Sherpa event generator
+    and assuming cross-checks with at least two independent runs.
+    \label{tab:nlo_merging}}
+\end{table}
+
