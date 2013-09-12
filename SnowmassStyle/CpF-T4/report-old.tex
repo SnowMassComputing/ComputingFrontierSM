@@ -16,13 +16,12 @@
 \bigskip
 
 \begin{center}
-{\large Conveners: Stefan H{\"o}che,  Laura Reina\\
-  Observer: Markus Wobisch \\[2ex]
-Christian Bauer, Zvi Bern, Radja Boughezal, John Campbell,
-Lance Dixon, Thomas Gehrmann, Junichi Kanzaki, Alexander Mitov,
-Pavel Nadolsky, Fredrick Olness, Michael Peskin, Frank Petriello, 
-Stefano Pozzorini, Frank Siegert, Doreen Wackeroth, Jonathan Walsh, 
-Ciaran Williams}
+{\large Conveners: Stefan H{\"o}che$^1$,  Laura Reina$^2$\\
+  Observer: Markus Wobisch$^3$} \\
+\bigskip
+$^1${\it Theoretical Physics Department, SLAC National Accelerator Laboratory}\\
+$^2${\it Department of Physics, Florida State University}\\
+$^3${\it Department of Physics, Louisiana Tech University }\\
 \end{center}
 
 \medskip
@@ -80,18 +79,18 @@ obtaining very accurate theoretical predictions at a pace and in a
 format that is immediately useful to the experiments.
 
 \section{Main results and recommendations}
-This workshop provided a framework for implementing higher order  
-calculations in a standardized computing environment made available 
-by DOE at the National Energy Research Scientific Computing Center
+This workshop provided a framework for implementing NLO calculations
+in a standardized computing environment made available by DOE at the
+National Energy Research Scientific Computing Center
 (NERSC)~\cite{NERSC}.  Resource requirements were determined for the
 calculation of important background and signal reactions at the
 LHC, including higher order QCD and EW effects. Prototypical results 
-have been summarized in a white paper~\cite{HPCWP}. Resource
-requirements are also listed in Tab.~\ref{tab:summary}.
+have been summarized in a white paper~\cite{HPCWP}. They are also
+collected in Tables~\ref{tab:nlo_wishlist}-\ref{tab:nlo_merging}.
 
 Different High Performance Computing (HPC) environments were tested
-during this workshop and their suitability for perturbative QCD calculations 
-was assessed. We find that it would be beneficial to make the national HPC 
+and their suitability for perturbative QCD calculations was assessed.
+We find that it would be beneficial to make the national HPC 
 facilities ALCF~\cite{ALCF}, OLCF~\cite{OLCF} and NERSC~\cite{NERSC} 
 generally accessible to particle theorists and
 experimentalists in order to enable the use of existing
@@ -101,51 +100,15 @@ available to the code authors. Access to these facilities will also
 allow prototyping the next generation of parallel computer programs
 for QCD phenomenology and precision calculations.
 
-The computation of NLO corrections in perturbative QCD has been automatized 
-entirely. Resource requirements for NLO calculations determined during 
-this workshop can thus be seen as a baseline that enables phenomenology 
-during the LHC era. NNLO calculations are still performed 
-on a case-by-case basis, and their computing needs can only be 
-projected with a large uncertainty. It seems clear, however, that cutting edge 
-calculations will require access to leadership class computing facilities.
-
-The use of HPC in perturbative QCD applications is currently in
-an exploratory phase. We expect that the demand for access to HPC
-facilities will continue to grow as more researchers realize the 
-potential of parallel computing in accelerating scientific progress. 
-At the same time, we expect growing demand for educating young researchers 
-in cutting edge computing technology. It would be highly beneficial 
-to provide a series of topical schools and workshops related 
-to HPC in HEP. They may be co-organized with experiments to foster 
-the creation of a knowledge base.
-
 Large-scale distributed computing in Grid environments 
 may become relevant for perturbative QCD applications 
-in the near future. This development will be accelerated if Computing Grids
-can also provide access to HPC facilities and clusters where parallel 
-computing is possible on a smaller scale. The Open Science Grid (OSG)~\cite{OSG} 
-has taken first steps in this direction, and we have successfully used their
+in the near future. This development will be accelerated if the Grid
+can provide access to HPC facilities, where parallel 
+computing is possible. The Open Science Grid (OSG)~\cite{OSG} has taken 
+first steps in this direction, and we have successfully used their
 existing interface. The amount of training for new users could be minimized
 if the OSG were to act as a front-end to the national HPC facilities
 as well as conventional computing facilities.
-
-\begin{table}
-  \begin{tabular}{ccc}
-    \hline
-    Type of calculation & CPU hours per project & projects per year \\
-    \hline\hline
-    NLO parton level & 50,000 - 600,000 & 10-12\\
-    NNLO parton level & 50,000 - 1,000,000 & 5-6\\
-    Event generation & 50,000 - 250,000 & 5-8\\
-    Matrix Element Method & $\sim$ 200,000 & 3-5\\
-    Exclusive jet cross sections & $\sim$ 300,000 & 1-2\\
-    Parton Distributions & $\sim$ 50,000 & 5-6\\
-    \hline
-  \end{tabular}
-  \caption{Summary of computing requirements for the projects
-    in Sec.~\ref{sec:requirements}
-    \label{tab:summary}}
-\end{table}
 
 \section{Technology review}
 Most state-of-the art perturbative QCD calculations are performed
@@ -165,9 +128,9 @@ Typical event generators need an initialization phase. During this
 stage, the a priori weights of adaptive MC algorithms like
 VEGAS~\cite{Lepage:1977sw} or the Multi Channel~\cite{Kleiss:1994qy}
 are optimized for the particular calculation of interest. True
-parallel computing on tightly coupled systems is highly advantageous 
-in this phase in order to quickly exchange data needed for the 
-optimization between different compute nodes.
+parallel computing is highly advantageous in this phase in order to
+quickly exchange data needed for the optimization between different
+compute nodes.
 
 The benefits of Message-Passing-Interface (MPI) parallelization
 in this context has been assessed during this workshop by implementing
@@ -205,59 +168,7 @@ GPUs~\cite{Hagiwara:2009aq,Giele:2010ks,Hagiwara:2013oka}.
 Proof-of-concept implementations of these methods have shown great
 potential and may be used on a larger scale in the near future.
 
-\begin{table}
-  \centering
-  \begin{tabular}{ccc}
-    \hline
-    n-gluons  & integration &  generation \\
-    & (BASES) & (SPRING) \\\hline\hline
-    0 &             95  &                24\\
-    1 &             84  &                44\\
-    2 &             67  &                70\\
-    3 &             39  &              $>$1000\\
-    4 &             18  &                n.a.\\
-    \hline
-  \end{tabular}
-  \caption{Ratios of total execution times of GPU and CPU programs 
-    for MC integration and event generation in $u\bar{d}\to W^++n$gluons
-    with BASES/SPRING~\cite{Kawabata:1995th}.
-    We used an NVidia Tesla C2075 GPU with CUDA\trademark 4.2 and
-    an Intel\registered Core i7 2.67 GHz. 
-    \label{tab:gpu}}
-\end{table}
-
-For the purpose of this study we use a GPU-implementation of a
-$u\bar{d}\to W^++n$ gluons calculation~\cite{Hagiwara:2013oka}
-as the benchmark process. Table~\ref{tab:gpu} shows ratios of
-total execution times between CPU and GPU programs for MC integration 
-and event generation with BASES/SPRING~\cite{Kawabata:1995th}.
-We parallelized the event generation in the sense that multiple 
-phase-space points are produced at the same time, in a load balanced
-approach between the different CUDA kernels. The CPU program was not 
-parallelized, hence the numbers shown in Tab.~\ref{tab:gpu} 
-are indicative only of the gain when using GPUs alone.
-Newer GPU architectures should further enhance performance.  
-
-We have also tested MPI communication on an Intel\registered 
-Xeon Phi\trademark coprocessor, which was made available to us by CERN 
-OpenLab~\cite{COLA}. The clock frequency of its compute cores was 1.238~GHz, 
-and the total memory of the system was 16~GB. The total number of compute 
-cores was 244 (61$\times$4). We find that the execution speed of the 
-executable can be reduced, depending on the complexity of the problem.
-In simple MPI mode we observe strong scaling up to about 32 coprocessor 
-cores. The ratio of computation time when run on a single coprocessor 
-core, compared to a single CPU core ranges from 4.67 for $e^+e^-\to 2$jets 
-over 7.52 for $e^+e^-\to 4$jets to 19.2 for $pp\to W^\pm+5$jets. 
-It therefore seems more promising to use the coprocessor in offload 
-and multi-threaded mode, rather than as an additional multi-core processor. 
-Current limitations in this context are entirely due to the structure 
-of our executable, which has not yet been optimized for accelerators. 
-Substantially higher gain may therefore be expected in the future.
-
-Developments for the application of GPUs and coprocessors to more complex 
-and time consuming problems are ongoing.  Massively parallel computations 
-using accelerators will likely become an important technique for perturbative 
-QCD calculations and should be integrated with other HPC methods.
+\todo{Intel Phi benchmark to be added here.}
 
 \subsection{Suitability of existing HPC resources}
 During this workshop, several HPC resources under supervision of the
@@ -332,7 +243,6 @@ researcher entering the field, who want to make use of both,
 large-scale distributed computing as well as HPC.
 
 \section{Resource requirements}
-\label{sec:requirements}
 
 One of the aims of this workshop has been to provide a
 quantitative estimate of the computational resources needed to
