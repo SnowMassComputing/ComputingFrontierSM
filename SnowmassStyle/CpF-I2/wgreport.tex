@@ -31,7 +31,17 @@ In this report for the Snowmass Computing Frontier Study, we consider several qu
 
 Different computational problems in particle physics are naturally suited for different kinds of computing facilities.  In general, there are two paradigms.  One is high-throughput computing (HTC), which is implemented in standard commodity computers and can address problems that are ``embarrassingly parallel,'' i.e., those that can be computed independently with the results combined afterward.  The other is high performance computing (HPC), which uses supercomputers to solve large problems by distributing computational work among many processors and using specialized high-speed, low-latency networks to communicate partial results among processors during execution of the job.
 
-Historically, HPC machines have been housed at specialized national centers [such as NERSC, some stuff about the HPC landscape here].  However, in response to greater community demand, these centers have been developing new facilities that are geared towards the HTC paradigm.  [And maybe some examples.]  Thus, the centers are in a stronger position to support a wider variety of computing tasks, and it is possible that both HPC- and HTC- driven science can find a home at these national centers.  Some successful examples are mentioned later in this report.
+Historically, HPC machines for open science have been located at specialized national centers funded by the 
+Department of Energy and the National 
+Science Foundation. These supercomputers were designed and built to solve large-scale computational problems, 
+typically tightly coupled simulations requiring fast processors, a high-speed internal network, and sometimes a 
+fast I/O subsystem. In recent years a need for HTC has quickly grown in the science community. Part of this demand has arisen from
+the data-driven science (e.g. LHC data analysis) and part has from the simulation community's need to perfom 
+massive numbers of ensemble runs to explore paramater space and test and validate codes. 
+In response to this demand, national centers have been developing capabilities geared towards supporting the HTC paradigm.  
+For example, NERSC hosts and operates systems that run HTC workflows for genomics, high energy and nuclear physics,
+astronomy, and materials science. Software has also been developed to support these workflows on the largest HPC systems.
+Thus, the centers are in a stronger position to support a wider variety of computing tasks, and it is possible that both HPC- and HTC- driven science can find a home at these national centers.  Some successful examples are mentioned later in this report.
 
 The Worldwide LHC Computing Grid (WLCG) is an HTC resource that is the main computational resource used by the LHC experiments, of which ATLAS and CMS have the largest computing needs.  As the name implies, the WLCG is an example of a grid infrastructure, which is described in much more detail in Section~\ref{sec:grid}.  There are over 170 facilities connected to the WLCG, distributed over 36 countries.  Fifteen of those sites are located in the United States, and they tend to have more resources than the average WLCG site.  The WLCG is organized into a tiered hierarchy of sites, in which sites at each tier have different computational responsibilities and service levels, and thus different hardware configurations.  The Tier-0 center is at CERN; it is responsible for prompt reconstruction of detector data, some calibration and alignment tasks and keeping a custodial copy of the raw data.  There are currently twelve Tier-1 sites, which keep a second custodial copy of the raw data, reprocess older data with improved calibration and alignment constants, perform skims of large data samples, and archive simulated datasets.  Both Tier-0 and Tier-1 centers operate tape libraries and have 24/7 system support.  The remaining sites are Tier-2 sites, which host data samples for physics analysis and generate simulated datasets.  Tier-2 centers typically only have business-hours support within their time zone.  The facilities are composed of large clusters of commodity machines powered by x86-style processors, which are accessed through batch scheduling systems.
 
@@ -43,14 +53,14 @@ Because of the sheer scale of the existing WLCG resources, we anticipate that th
 
 Intensity Frontier experiments have a diverse set of needs, but in aggregate they have large data and analysis requirements. While these experiments are generally served by HTC facilities, a number of existing experiments have successfully taken advantage of HPC centers' interest in enabling data-driven scientific discovery through data-intensive HTC computing.  For example, analysis for the Daya Bay experiment was conducted at DOE's NERSC center, which also served as the Tier 1 data center.  DOE HPC centers have also supported KAMLAND, IceCube, BaBar, SNO, ALICE, ATLAS, and Palomar PTF data analysis.
 
-[This is where some text disappeared!]
+National High Performance Computing centers are used and required in a number of HEP areas of research, including
 
 \begin{itemize}
-\item Lattice QCD (Energy)
-\item Accelerator design and R\&D (Energy and Intensity)
-\item Data analysis and synthetic maps (Cosmic)
-\item N-body and hydro cosmology simulations (Cosmic)
-\item Supernova modeling (Cosmic)
+\item Lattice QCD (Energy Frontier)
+\item Accelerator design and R\&D (Energy and Intensity Frontiers)
+\item Data analysis and creations of synthetic maps (Cosmic Frontier)
+\item N-body and hydrodynamic cosmology simulations (Cosmic Frontier)
+\item Supernova modeling (Cosmic Frontier)
 \end{itemize}
 
 A great need for HPC computing, driven by the needs of LQCD and computational cosmology but required by other fields as well, will outpace even the historical trend (see Figure \ref{fig:NERSC-Computational-Hours}), even as extrapolation of those trends becomes uncertain due to power and technology limitations.
