@@ -3,26 +3,12 @@
 \section{Computing for Cosmic Frontier Science}
 
 
-The unique importance of the ``Cosmic Frontier'', the interface
-between particle physics, cosmology, and astrophysics has been long
-recognized. With the cementing of the cosmological ``Standard Model''
--- well measured, but deeply mysterious -- recent progress in this
-area has been dramatic, and has propelled the field to the forefront
-of research in fundamental physics. Topics of key interest in the
-Cosmic Frontier include dark energy, dark matter, physics of the early
-universe, and astrophysical and cosmological probes of fundamental
-physics. Research in these areas impacts our basic notions of space
-and time, the uneasy interaction between gravity and quantum
-mechanics, the origin of primordial fluctuations responsible for all
-structure in the Universe, and provides unique discovery channels for
-reaching beyond the Standard Model of particle physics in the dark
-matter and neutrino sectors. Excitingly, a host of new experiments and
-observations are poised to significantly advance, perhaps decisively,
-our current understanding of the Cosmic Frontier.
-
-Experimental and observational activities in the Cosmic Frontier cover
+The ``Cosmic Frontier'' (CF) is at the interface
+between particle physics, cosmology, and astrophysics. 
+Experimental and observational activities in the CF cover
 laboratory experiments as well as multi-band observations of the
-quiescent and transient sky. Direct dark matter search experiments,
+quiescent and transient sky. 
+Direct dark matter search experiments,
 laboratory tests of gravity theories, and accelerator dark matter
 searches fall into the first class. Investigations of dark energy,
 indirect dark matter detection, and studies of primordial fluctuations
@@ -31,11 +17,11 @@ frequency bands is exploited, from the radio to TeV energies. Relevant
 theoretical research also casts a very wide net -- from quantum
 gravity to the astrophysics of galaxy formation.
 
-The size and complexity of Cosmic Frontier experiments is also
+The size and complexity of CF experiments is also
 diverse, ranging from the tabletop to large cosmological surveys,
 simultaneously covering a number of precision measurements and
-discovery-oriented searches. A defining characteristic of the Cosmic
-Frontier is a trend towards ever larger and more complex observational
+discovery-oriented searches. A defining characteristic of the CF 
+is a trend towards ever larger and more complex observational
 campaigns, with sky surveys now reaching collaboration memberships of
 over a thousand researchers, of roughly the same size as a large high
 energy physics experiment. Cross-correlating different survey
@@ -45,9 +31,7 @@ the major drivers for the computational and data requirements that we
 consider below.
 
 
-\subsection{Cosmic Frontier Computational Needs}
-%%%\subsection{Cosmic Frontier Computational Needs for Experimental Facilities}
-The dramatic increase in data from Cosmic Frontier experiments over
+The dramatic increase in data from CF experiments over
 the last decade has led to fundamental breakthroughs in our knowledge
 of the ``Dark Universe'' and physics at very high energies. Driven by
 technological advances, current experiments generate in excess of a
@@ -58,28 +42,8 @@ in the size of direct dark matter detectors, massive radio surveys,
 and ground and space-based Cosmic Microwave Background (CMB)
 experiments will continue this growth in data over the coming decade.
 
-Current experiments, such as the Dark Energy Survey (DES), will
-generate a petabyte of data over the period 2013-2017. Next-generation
-imaging surveys such as the Large Synoptic Survey Telescope (LSST)
-will increase data volumes to $> 60$PB on the 2020--2030
-timescale. The computational requirements for processing, and
-archiving these data are projected to grow from $\sim$70K cores in
-2020 to $\sim$280K cores by 2030. (Here a core is defined as a core in
-a modern multi-core CPU.) Project-led processing is, however, unlikely
-to meet the exacting requirements of dark energy science. Facilities
-that possess the capability of reanalyzing petascale data resources
-throughout the lifespan of these missions will be required. As an
-illutrative example, reprocessing the LSST images five years into the
-survey will require approximately a billion CPU-hours. Post-2030
-technology trends, including energy resolving detectors such as
-Microwave Kinetic Inductance Detectors (MKIDs) and advances in radio
-detectors, are expected to maintain the steep growth in data. The
-near-future VLA Sky Survey (VLASS) will be followed by the Square
-Kilometer Array (SKA) expected to come on-line in 2020 and to generate
-between 300 and 1500PB of data per year.
-
-%%%\subsection{Simulation Facilities}
-The intrinsically observational nature of much of Cosmic Frontier
+Regarding simulation facilities, 
+the intrinsically observational nature of much of CF
 science implies a great reliance on simulation and modeling. Not only
 must simulations provide robust predictions for observations, they are
 also essential in planning and optimizing surveys, and in estimating
@@ -108,10 +72,9 @@ suggested Virtual Data Facility (VDF) capability at ALCF, NERSC, and
 OLCF, would go a long way towards addressing these issues for Cosmic
 Frontier simulations.
 
-\subsection{Data Growth and Computational Requirement}
-
-There is a continued growth in data from Cosmic Frontier
-experiments. Survey experiments currently exceed 1PB of stored
+There is a continued growth in data from CF
+experiments. 
+Survey experiments currently exceed 1PB of stored
 data. Over the next decade the mass of data will exceed 100PB. In
 subsequent decades the development of radio experiments and energy
 resolving detectors will result in an increase in data streaming to
@@ -131,7 +94,6 @@ science requirements based on having complete datasets from missions
 such as LSST, Euclid, and large radio surveys would argue for at least
 another order of magnitude increase across the board.
 
-\subsection{Computational Resources for Cosmic Frontier Experiments}  
 
 The use of computational resources will need to grow to match the
 associated data rates for the processing and analysis of observational
@@ -160,16 +122,13 @@ codes will be based on well-architected core libraries, where it will
 be cost efficient to spend resources to optimize their parallel
 execution, thus substantially decreasing the hardware investment.
 
-\subsection{Data Preservation and Archiving} 
 
-Archiving the observational data in of itself does not appear to be a
-huge challenge, as long as it is understood that each data item needs
-to be stored redundantly, preferably in a geoplexed way. The projected
-data volumes involved are not particularly large compared to
+The projected
+data volumes for archiving of observational data 
+are not particularly large compared to
 commercial data sets (with the possible exception of SKA). Given that
 the eventual data volumes will probably exceed a few exabytes, the
 analyses must be co-located with the data.
-
 The most likely high-level architecture for scientific analyses will
 be a hierarchy of tiers, in some ways analogous to the LHC computing
 model, where the Tier 0 data is a complete capture of all raw data,
@@ -187,8 +146,6 @@ leverage the best solutions. A high speed, reliable and
 inexpensive networking infrastructure connecting the instruments and
 all the sites involved in the archiving will be crucial to the success
 of the entire enterprise.
-
-\subsection{New Computational Models for Distributed Computing}
 
 Today's architectures for data analysis and simulations include
 supercomputers, suitable for massive parallel computations where the
@@ -210,9 +167,6 @@ large matrices and graphs, it is likely that a combination of large
 minimize communication overhead. Also, new storage technologies with
 fast random access (SSD, memory bus flash, phase change memory, NVRAM)
 will play a crucial role in the storage hierarchy.
-
-\subsection{Development of Data Analytics Infrastructure for
-  Experiments and Simulations}
 
 Large-scale data sets, arising from both simulations and experiments,
 present different analysis tasks requiring a variety of data access
@@ -261,18 +215,6 @@ related to computer graphics, mapping to GPU hardware will be very
 important, as this approach can yield performance gains of well over
 an order of magnitude.
 
-%Data access requires touching a large fraction of the data volumes,
-%based upon a 4-dimensional spatial index, as the ray tracing is
-%potentially traversing along past light cones, connecting multiple
-%snapshots of the simulations. The accuracy requirements of these
-%computations will also demand that the simulations save larger than
-%usual numbers of snapshots, increasing the storage requirements. Large
-%memory machines combined with massive local GPUs are likely to be an
-%optimal platform for these computations: data can be prefetched in
-%large chunks into memory and local SSD, and rendered using the
-%multiprocessors over the local backplanes. Multiple machines can take
-%different parts of the output and run in parallel.
-
 Dealing with each of these access patterns demands substantial
 investments in hardware and software development. To build an
 efficient streaming engine, every one of the bottlenecks, both in
@@ -298,13 +240,8 @@ tools, standards for verification, validation, and code testing, and
 long-term support for maintenance and further development of the
 resulting software base.
 
-% Need something on making code last longer than an experiment
-% Need something on community development
-
-\subsection{Critical Role of Simulations}
-
-It is now widely recognized that simulation plays a critical role in
-Cosmic Frontier science, not only as the primary tool for theoretical
+Simulation plays a critical role in
+CF science, not only as the primary tool for theoretical
 predictions, but even more significantly, in evaluating and
 interpreting the capabilities of current and planned experiments. For
 optical surveys, the chain begins with a large cosmological simulation
@@ -326,22 +263,21 @@ deviations from $\Lambda$CDM are to be measured, this is an absolutely
 essential task.
 
 Directly analogous to the situation in building a community-supported
-software base for Cosmic Frontier experiments, there is a related need
+software base for CF experiments, there is a related need
 for bringing together larger collaborations in the area of
 simulations. The LQCD community has shown what is possible in this
 direction by working together in a large national collaboration. Such
-efforts are now beginning within the Cosmic Frontier and will
+efforts are now beginning within the CF and will
 hopefully come to fruition in the near term.
 
-\subsection{The Development of Computing for the Cosmic Frontier} 
 
-While much of the science in Cosmic Frontiers is undertaken by small
+While much of the science in CFs is undertaken by small
 groups of physicists, the collaborations themselves have grown to
 hundreds and sometimes thousands of members. Many of the techniques
 utilized by these collaborations are common to multiple Cosmic
 Frontiers experiments. Most experiments have, however, developed their
-analysis and processing software independently of other Cosmic
-Frontiers programs. This can lead to duplication of effort, software
+analysis and processing software independently of other CF 
+programs. This can lead to duplication of effort, software
 that is tailored only to meet a specific need, non-scalable
 approaches, and software that is difficult to sustain beyond the
 lifetime of an individual experiment. Programs for sustainable
@@ -350,30 +286,6 @@ computing developments more robust. To ensure that the software and
 techniques maintained by these programs are successful will require a
 community that actively uses and develops within these tools (as has
 been demonstrated, for example, by the GEANT4 development). 
-
-\subsection{Creation of Career Paths} 
-
-Over the coming decade Cosmic Frontier science will become ever more
-dependent on developments in computing; from the management of data
-through to the development of the algorithms that will produce
-fundamental breakthroughs in our understanding of the ``Dark
-Universe''. This dependence will impose substantial requirements on
-the quality and sustainability of the software required by Cosmic
-Frontier experiments. There is, however, a growing disconnect between
-the way physicists are trained for the research problems of the next
-decade and the skill sets that they will require to be
-successful. Part of this problem lies in the traditional physics
-curriculum and part in the lack of career paths (including tenure
-stream careers) of researchers who work at the interface of computing
-and physics. Physicists with the skills and activities that satisfy
-the computational needs of Cosmic Frontier experiments do not map well
-to the traditional success metrics used in academia. Addressing these
-needs by the Cosmic Frontier community will require the development of
-academic and career mentors for computational physicists, and the
-opening of long-term career paths both at national laboratories and at
-universities. A number of areas of HEP (e.g. the Energy Frontier) have
-addressed many of these challenges and may provide exemplars for the
-Cosmic Frontier community.
 
 
 \begin{center}
@@ -392,7 +304,7 @@ CPU hours & 200M & $>$20G & $> 100$G\\
 \hline
 \label{tab:CompNeeds}
 \end{tabular}
-\caption{Compute needs in 10-20 years.}
+\caption{Compute needs for Cosmic Frontier Science in 10-20 years.}
 \end{table}
 \end{center}
 
