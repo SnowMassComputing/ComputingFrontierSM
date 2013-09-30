@@ -3,7 +3,7 @@
 Computing at the Intensity Frontier (IF) has many significant challenges. The
 experiments, projects and theory all require demanding computing capabilities
 and technologies.  Though not as data intensive as the LHC experiments, the IF
-experiments have significant computing requirements in for simulation,  theory
+experiments have significant computing requirements for simulation,  theory
 and modeling, beam line and experiment design, triggers and DAQ, online
 monitoring, event reconstruction and processing, and physics analysis.  It is
 critical for the success of the field that IF computing is modern, capable,
@@ -24,8 +24,8 @@ nuclei and atoms.
 The IF has become a focus of the U.S.-based particle physics program. Many  of
 the experiments are designed to use very intense particle beams to measure
 rare processes. There is a large number of experiments and a range of scales
-in data output and throughput, as well as in the number of experimenters.  This
-can potentially lead to fragmentation, reinvention of the wheel, lack of
+in data output and throughput, as well as in the number of experimenters.
+This can potentially lead to fragmentation, reinvention of the wheel, lack of
 access to computing advances and in general more dollars for each type of
 computing and personnel support needed. Furthermore there is significant
 overlap of human resources among experiments, making any significant
@@ -52,21 +52,22 @@ field.
 
 The responses and conclusions to the survey can be summarized in five aspects:  
 
-\begin{itemize}
-\item Support for software packages. A list is given in the full report. There
-is significant benefit to encouraging collaborative efforts among experiments.
-An examples is the LArSoft common simulation, reconstruction and
-analysis toolkit, used by experiments developing simulations and
-reconstructions for liquid argon time projection chambers. This is a
-collaborative effort that makes better use of development and maintenance of resources, that has maintenance support by Fermilab,. 
-In addition to simulation and reconstruction related software packages, there are
+\begin{itemize} 
+\item Support for software packages. A list is given in the
+full report. There is significant benefit to encouraging collaborative efforts
+among experiments. An example is the LArSoft common simulation,
+reconstruction and analysis toolkit, used by experiments developing
+simulations and reconstructions for liquid argon time projection chambers.
+This is a collaborative effort that makes better use of development and
+maintenance of resources, that has maintenance support by Fermilab.  In
+addition to simulation and reconstruction related software packages, there are
 several other computing tools that are widely used in the field that should be
 maintained.  These tools provide infrastructure access for code management,
 data management, grid access, electronic log books and document management.
 
 \item Support for software frameworks. Efforts for common frameworks can have
 a significant impact, in terms of optimizing  development and support, and in
-minimizing overheads on the training of experimenters.  The Fermilab-based IF
+minimizing overhead on the training of experimenters.  The Fermilab-based IF
 experiments (g-2, $\mu2$e, NO$\nu$A, ArgoNeuT, LArIAT, MicroBooNE, LBNE) have
 converged on ART as a framework for job control, I/O operations, and tracking
 of data provenance. Resources for the ART framework thus address needs that
@@ -93,20 +94,20 @@ existing expertise at Fermilab and elsewhere could fulfill this need of the
 wider IF community if this was promoted and properly funded.
 
 \item Access to dedicated and shared resources.  In general, demands for
-computing resource of IF experiments are modest compared to those of the EF
-experiments.  However, those needs are not insignificant, and all experiment
+computing resources of IF experiments are modest compared to those of the EF
+experiments.  However, those needs are not insignificant, and all experiments
 require at least 1,000 dedicated batch slots.  NO$\nu$A requires 4.8 million
 CPU hours per year alone for its simulation needs, LBNE expects to need
 several PB of storage space each year during operation, and even smaller scale
 experiments like MINER$\nu$A and MicroBooNE expect to need PB-sized storage.
 The full report shows a table of current and projected CPU needs. Each
 experiment has peak demands following cycles that are strongly correlated with
-the major conference cycle.  It is important to take the peak demand per
+major conference cycles.  It is important to take the peak demand per
 experiment into account when planning for resource needs. Those peaks
 typically are much larger than the planned steady state usage. To meet those
 demands for turnaround during peak usage each experiment should have access to
 run opportunistically on a much larger pool of slots, in addition to its
-dedicated number of slots, to ensures physics results get produced timely.
+dedicated number of slots, to ensures physics results get timely produced.
 
 The survey showed that support of the Fermilab based experiments in terms of
 storage and CPU is rated as excellent.  There are still issues, mostly in
@@ -120,21 +121,21 @@ these resources such as OSG is expected in future.
 However, non-U.S. experiments with U.S. participation enjoy significantly
 lower levels of support. OSG provides some support of opportunistic use of
 grid resources.  Without their own domestic computing resources these
-experimenter need to rely either on resources in other countries, with low
+experimenters need to rely either on resources in other countries, with low
 priority, or on university based resources that are shared amongst a broad
-pool of university users from multiple disciplines. As an example, experiments
-like T2K run intensively and very successfully on grid resources in Europe and
-Canada.   These researchers must have access to dedicated resources that can
-be shared with other IF experiments in order to be competitive with analysis
-of data and simulation. It was widely noted that the lack of dedicated U.S.
+pool of university users from multiple disciplines. In contrast, foreign experimenters
+from T2K run intensively and very successfully on grid resources in Europe and
+Canada.  In order to be competitive with analysis of data and simulation, the US 
+researchers must have access to dedicated resources that can
+be shared with other IF experiments. It was widely noted that the lack of dedicated U.S.
 resources has a detrimental impact on the science.
 
-Networking requirements are for data to move  easily between storage systems,
+Networking requirements are for data to move easily between storage systems,
 be accessible for data acquisition, reconstruction, simulation and analysis
 and that there is the ability to take advantage of distributed computing,
 either as part of the grid or cloud.  Networking must not be a barrier to
-making effective use of distributed computing. With IF experiments
-becoming larger and more international network requirements will grow.
+making effective use of distributed computing. With IF experiments becoming
+larger and more international network requirements will grow.
 
 \item Access to data handling and storage.   Fermilab-based experiments have
 their primary data copies stored at Fermilab.  The infrastructure there
@@ -179,7 +180,7 @@ help prevent the users from making mistakes.
 
 The evolution of the computing model follows several lines including taking
 advantage of new computing paradigms, like clouds, different cache schemes,
-GPU and multicore processing.   There is a concern that as the number of cores
+GPU and multicore processing. There is a concern that as the number of cores
 in CPUs increases, RAM capacity and memory bandwidth will not keep pace,
 causing the single-threaded batch processing model to be progressively less
 efficient on future systems unless special care is taken to design clusters
