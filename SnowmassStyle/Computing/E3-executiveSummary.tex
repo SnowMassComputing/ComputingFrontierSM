@@ -1,51 +1,58 @@
 \section{Computing for Intensity Frontier Science}
 
-Computing at the Intensity Frontier (IF) has many significant challenges. The experiments, projects and theory all require demanding computing capabilities and technologies.  Though not as data intensive as the LHC experiments, the IF experiments and IF computing have significant computing requirements in theory and modeling, beam line and experiment design, triggers and DAQ, online monitoring, event reconstruction and processing, and physics analysis.  It is critical for the success of the field that IF computing is modern, capable, has adequate capacity and support, and is able to take advantage of the latest developments in computing hardware and software advances.
+Computing at the Intensity Frontier (IF) has many significant challenges. The
+experiments, projects and theory all require demanding computing capabilities
+and technologies.  Though not as data intensive as the LHC experiments, the IF
+experiments have significant computing requirements in for simulation,  theory
+and modeling, beam line and experiment design, triggers and DAQ, online
+monitoring, event reconstruction and processing, and physics analysis.  It is
+critical for the success of the field that IF computing is modern, capable,
+has adequate capacity and support, and is able to take advantage of the latest
+developments in computing hardware and software advances.
 
-The IF encompasses a large spectrum of physics, including quark flavor physics, 
-charged lepton processes, neutrinos, baryon number violation, 
-new light weakly coupled particles, and nucleons, nuclei and atoms. 
-The requirements and resources of quark flavor physics, as in Belle II and LHCb, 
-are more similar to those of the energy frontier. The requirements and resources of 
-experiments looking for baryon number violation and 
-experiments searching new light weakly coupled particles are more similar to 
-those of the cosmic frontier. 
-The Computing Frontier IF report thus focuses on the areas of charged lepton processes, 
-neutrinos, baryon number violation and nucleons, nuclei and atoms. 
+The IF encompasses a large spectrum of physics, including quark flavor
+physics,  charged lepton processes, neutrinos, baryon number violation,  new
+light weakly coupled particles, and nucleons, nuclei and atoms.  The
+requirements and resources of quark flavor physics, as in Belle II and LHCb,
+are more similar to those of the energy frontier. The requirements and
+resources of  experiments looking for baryon number violation and  experiments
+searching new light weakly coupled particles are more similar to  those of the
+cosmic frontier.  The Computing Frontier IF report thus focuses on the areas
+of charged lepton processes,  neutrinos, baryon number violation and nucleons,
+nuclei and atoms.
 
-The IF has become the central focus of the US-based particle physics program.
-The transition to the IF dominated domestic program coincides with the
-transition at Fermilab from operating Energy Frontier (EF) experiments to
-operating IF experiments.  Many of the IF experiments are designed to measure
-rare processes by using very intense beams of particles.  Successful running
-of these experiments will involve not only the delivery of high intensity
-beams, but also the ability to efficiently store and analyze the data produced
-by the experiments.
+The IF has become a focus of the U.S.-based particle physics program. Many  of
+the experiments are designed to use very intense particle beams to measure
+rare processes. There is a large number of experiments and a range of scales
+in data output and throughput, as well as in the number of experimenters.  This
+can potentially lead to fragmentation, reinvention of the wheel, lack of
+access to computing advances and in general more dollars for each type of
+computing and personnel support needed. Furthermore there is significant
+overlap of human resources among experiments, making any significant
+divergence of  software, frameworks and tools between them particularly
+inefficient.  A broad range of experiments leads to a wide breadth of needs,
+from support of tens to hundreds of experimenters, from high intensity
+realtime processing but small data sets, to large data sets which in the sum
+are equivalent to the previous generation of collider experiments. Over the
+last few years there has been a significant effort by the IF experiments at
+Fermilab to join forces in using a more homogeneous set of software packages,
+frameworks and tools to access infrastructure resources. This trend has
+reduced fragmentation and led to more efficient use of resources. We recommend
+to expand this trend to the broader IF community, adapted to the needs of each
+collaboration.
 
-The IF has a large number of experiments and a range of scales in data output
-and throughput as well as number of experimenters. The situation is thus very
-different than at the EF which has just few experiments each of a very large
-scale. The number of experiments and range of scales can potentially lead to
-fragmentation, reinvention of the wheel, lack of access to computing advances
-and in general more dollars for each type of computing and personnel support
-needed. Furthermore, while there might be significant overlap of the human
-resources among experiments, there is little benefit when the tools and other
-resources used diverge significantly. A broad range of experiments leads to a
-wide breadth of needs, from support of tens to hundreds of experimenters, from
-high intensity realtime processing but small data sets to large data sets
-which in the sum are equivalent to the previous generation of collider
-experiments. Over the last few years there has been a significant effort by
-the IF experiments at Fermilab to join forces in using a more homogeneous set
-of software packages, frameworks and tools to access infrastructure resources.
-This trend has reduced fragmentation and led to more efficient use of
-resources. We would like to see this trend expand in the broader IF community
-adapted to the needs of each collaboration.
-
-For this report a qualitative survey was conducted of the current and near term future experiments in the IF in order to understand their computing needs and also the foreseen evolution of these needs.  Computing liaisons and representatives for the LBNE, MicroBooNE, MINER$\nu$A, MINOS$+$, Muon $g-2$, NO$\nu$A, SEAQUEST,  Daya Bay, IceCube, SNO+, Super-Kamiokande and T2K collaborations all responded to the survey. This does not cover all experiments in all areas but we consider it a representative survey of the IF  field.
+For this report a qualitative survey was conducted of the current and near-
+term future experiments in the IF in order to understand their computing needs
+and also the excepted evolution of these needs.  Computing liaisons and
+representatives for the LBNE, MicroBooNE, MINER$\nu$A, MINOS$+$, Muon $g-2$,
+NO$\nu$A, SEAQUEST,  Daya Bay, IceCube, SNO+, Super-Kamiokande and T2K
+collaborations all responded to the survey. This does not cover all
+experiments in all areas but we consider it a representative survey of the IF
+field.
 
 The responses and conclusions to the survey can be summarized in five aspects:  
-\begin{itemize}
 
+\begin{itemize}
 \item Support for software packages. A list is given in the full report. There
 is significant benefit to encouraging collaborative efforts among experiments.
 An examples is the LArSoft common simulation, reconstruction and
@@ -57,48 +64,166 @@ several other computing tools that are widely used in the field that should be
 maintained.  These tools provide infrastructure access for code management,
 data management, grid access, electronic log books and document management.
 
-\item Support for software frameworks.
-Efforts for common frameworks can have a significant impact, in terms of optimizing 
-development and support, and in minimizing overheads on the training of experimenters. 
-The Fermilab-based IF experiments (g-2, $\mu2$e, NO$\nu$A, ArgoNeuT, LArIAT, MicroBooNE, LBNE) have converged on ART as a framework for job control, I/O operations, and tracking of data provenance. Resources for the ART framework thus address needs that exist across the experiments, such as more accessible parallelization of experiment's code. In fact, the primary limitation listed by users of ART was the inability to parallelize jobs at the level of individual algorithms.  The ability to do so will become more critical as the numbers of channels in IF experiments continue to increase and the separation of signal from background becomes more difficult due to the rare nature of the processes being examined.  This ability will also allow IF experiments to take advantage of the design of modern computers containing multiple cores.
+\item Support for software frameworks. Efforts for common frameworks can have
+a significant impact, in terms of optimizing  development and support, and in
+minimizing overheads on the training of experimenters.  The Fermilab-based IF
+experiments (g-2, $\mu2$e, NO$\nu$A, ArgoNeuT, LArIAT, MicroBooNE, LBNE) have
+converged on ART as a framework for job control, I/O operations, and tracking
+of data provenance. Resources for the ART framework thus address needs that
+exist across the experiments, such as more accessible parallelization of
+experiment's code. In fact, the primary limitation listed by users of ART was
+the inability to parallelize jobs at the level of individual algorithms.  The
+ability to do so will become more critical as the numbers of channels in IF
+experiments continue to increase and the separation of signal from background
+becomes more difficult due to the rare nature of the processes being examined.
+This ability will also allow IF experiments to take advantage of the design of
+modern computers containing multiple cores. Other experiments use LHC-derived
+frameworks such as Gaudi, or homegrown frameworks like MINOS(+), IceTray and
+RAT. The level of support for development and maintenance of such frameworks
+varies. These experiments would also benefit from more access to
+parallelization and professional computing support.
 
-Other experiments use LHC derived frameworks such as Gaudi or homegrown frameworks like MINOS(+), IceTray and RAT. The level of support for development and maintenance of such frameworks varies depending if the experiment is a significant stakeholder and/or significant human resources are available. These experiments would also benefit from more accessible parallelization and professional computing support.
+The survey identified the need for making consultants available to help with
+software development. All experiments indicated that with more computing
+professional effort they would put that effort toward parallelization of code,
+establishing batch submission to off-site computing, establishing best
+practices for writing software, software development, and  optimizing use of
+Geant4. Such expertise is in high demand within the IF community. Already
+existing expertise at Fermilab and elsewhere could fulfill this need of the
+wider IF community if this was promoted and properly funded.
 
-The survey identified the need for using consultants for software development, as is the case fore experiments using ART, or directly in the development of data acquisition programs, as is the case for NO$\nu$A and MicroBooNE.  Every experiment indicated that if more computing professional effort were made available, they could efficiently make use of that effort to accomplish parallelization of code, establishing offsite batch submission farms, establishing best practices for writing software, software development, and  optimizing use of Geant4. Such expertise is in high demand within the IF community and the already existing expertise at Fermilab could fulfill this need to the wider IF community both inside and outside of Fermilab if this was promoted and funded. 
+\item Access to dedicated and shared resources.  In general, demands for
+computing resource of IF experiments are modest compared to those of the EF
+experiments.  However, those needs are not insignificant, and all experiment
+require at least 1,000 dedicated batch slots.  NO$\nu$A requires 4.8 million
+CPU hours per year alone for its simulation needs, LBNE expects to need
+several PB of storage space each year during operation, and even smaller scale
+experiments like MINER$\nu$A and MicroBooNE expect to need PB-sized storage.
+The full report shows a table of current and projected CPU needs. Each
+experiment has peak demands following cycles that are strongly correlated with
+the major conference cycle.  It is important to take the peak demand per
+experiment into account when planning for resource needs. Those peaks
+typically are much larger than the planned steady state usage. To meet those
+demands for turnaround during peak usage each experiment should have access to
+run opportunistically on a much larger pool of slots, in addition to its
+dedicated number of slots, to ensures physics results get produced timely.
 
-\item Access to dedicated and shared resources. Typically, demands for computing resource of IF experiments are modest compared to those of the EF experiments.  However, that does not mean that the needs are insignificant, e.g. all experiment require at least 1000 dedicated batch slots. Other examples are that NO$\nu$A  needs 4.8 million CPU hours per year to produce simulation files alone, LBNE expects to need several PB of storage space each year during operation, and even smaller scale experiments like MINER$\nu$A and MicroBooNE expect to use PB of storage.
+The survey showed that support of the Fermilab based experiments in terms of
+storage and CPU is rated as excellent.  There are still issues, mostly in
+efficient data handling and script optimization, and additional resources for
+computing professionals are sought.  Professional support is required to
+enable seamless use of resources through Grid job submission, on- or off-site.
+For Fermilab-based experiments, university and other national lab resources
+are used in the production of Monte Carlo files. A common protocol to access
+these resources such as OSG is expected in future.
 
-The full review shows a table of current and projected CPU needs. Grid use tends to follow a feast and famine pattern.  The production of simulation, reconstruction of simulation and data, and the analysis of those files follows cycles that are strongly correlated with the major conference cycle.  The peak usage per experiment should be used in determining the needs rather than the steady state usage since the ideal peak time usage can reach ten times the planned steady state usage. To ensure the ability to meet the peak usage needs, each experiment should have a dedicated number of slots that is a large fraction, at least 50\%, of the typical peak usage need as well as access to run opportunistically on a much larger pool of slots. Having that level of resources available ensures timely production of results. 
+However, non-U.S. experiments with U.S. participation enjoy significantly
+lower levels of support. OSG provides some support of opportunistic use of
+grid resources.  Without their own domestic computing resources these
+experimenter need to rely either on resources in other countries, with low
+priority, or on university based resources that are shared amongst a broad
+pool of university users from multiple disciplines. As an example, experiments
+like T2K run intensively and very successfully on grid resources in Europe and
+Canada.   These researchers must have access to dedicated resources that can
+be shared with other IF experiments in order to be competitive with analysis
+of data and simulation. It was widely noted that the lack of dedicated U.S.
+resources has a detrimental impact on the science.
 
-There is excellent support of the Fermilab based experiments both in terms of storage and CPU.  Issues are mostly in efficient data handling and script optimization. Resources for computing professionals is provided through Fermilab and would be extremely useful if increased. On site grid access is however not sufficient, offline Monte Carlo generation is common among experiments. Professional support is thus required for methods to seamlessly use Fermilab and non-Fermilab resources through job submission protocols. For Fermilab-based experiments, university and other national lab resources are used in the production of Monte Carlo files. A common protocol to access these resources such as OSG is in the foreseeable future.
+Networking requirements are for data to move  easily between storage systems,
+be accessible for data acquisition, reconstruction, simulation and analysis
+and that there is the ability to take advantage of distributed computing,
+either as part of the grid or cloud.  Networking must not be a barrier to
+making effective use of distributed computing. With IF experiments
+becoming larger and more international network requirements will grow.
 
-Non-U.S. experiments with US participation enjoy significantly less support.  They get some level of support from the Open Science Grid, however those US groups have no dedicated US-based grid computing resources. These experiments tend to rely either on resources in other countries, with low priority, or on university based resources that are shared amongst a broad pool of university users from multiple disciplines.  As an example experiments like T2K run intensively on grid resources in Europe and Canada.  Canadian and UK grid support was cited several times as a model both for grid computing and grid storage. These researchers must have access to dedicated resources that can be shared with other IF experiments in order to be competitive with analysis of data and simulation. It was widely noted that the lack of dedicated US resources has a detrimental impact on the science. 
+\item Access to data handling and storage.   Fermilab-based experiments have
+their primary data copies stored at Fermilab.  The infrastructure there
+handles active storage as well as archiving of data.  The SAM system designed
+and maintained at Fermilab was noted as the preferred data distribution system
+for these experiments. Heavy I/O for analysis of large numbers of smaller
+sized events is an issue for systems like BlueArc. Fermilab should continue to
+receive support from the DOE to ensure proper archiving of data. Other
+experiments indicated using grid protocols for data storage.
 
-The IF computing networking requirements are that the data be able to be move easily to the necessary locations, be accessible for data acquisition, reconstruction, simulation and analysis and that there is the ability to take advantage of distributed computing, either as part of the grid or cloud.  The networking must not be a barrier to making effective use of the distributed computing that is available and allow collaborations to reconstruct and analyze the data in a distributed way.  The scale of the networking need is estimable by comparing the scale of the IF computing to the EF computing. As IF moves to larger and more international collaborations the network requirements will be will grow as the experiments collect more data and more people analyze the data and the people are more distributed. 
+All respondents indicated the need for data handling systems that seamlessly
+integrate distribution of files across the network from multiple locations, to
+enable experiments to make optimal use of storage resources at national lab
+and universities.  The need for such a system is acutely felt by experiments
+that are not based at Fermilab.  One possible solution to this problem could
+resemble the tiered computing structure used by the LHC experiments, with all
+IF experiments making use of that structure.
 
-\item Access to data handling and storage.  Respondents from experiments based at Fermilab indicated that their primary data copies are stored at Fermilab.  The infrastructure there handles active storage as well as archiving of data.  The SAM system designed and maintained at Fermilab was noted as the preferred data distribution system for these experiments. Heavy I/O for analysis of large numbers of smaller sized events is an issue for systems like BlueArc. Fermilab should continue to receive support from the DOE to ensure proper archiving of data. Other experiments indicated using grid protocols for data storage. 
 
-All respondents indicated the need for data handling systems that seamlessly integrate distribution of files across the network from multiple locations.  This desire enables experiments to make optimal use of national lab and university resources.  The need for such a system is acutely felt by experiments that are not based at Fermilab.  One possible solution to this problem could resemble the tiered computing structure used by the LHC experiments, with all IF experiments making use of that structure.
+\item Overall computing model and its evolution.  There is a high degree of
+commonality in IF experiment's computing models, despite large differences in
+the type of data being analyzed, the scale of processing, or the specific
+workflows followed.   The general model is that of a traditional event driven
+analysis and Monte Carlo simulation using centralized data stores that are
+distributed to independent analysis jobs running in parallel on grid computing
+clusters.  In the current model of provisioning, there is a remarkable overlap
+in the infrastructure used by experiments. For large computing facilities such
+a Fermilab, it would be useful to design a set of scalable solutions
+corresponding to each of these patterns, with associated toolkits that would
+allow access and monitoring. Provisioning an experiment or changing a
+computing model would then correspond to adjusting the scales in the
+appropriate processing units.
 
+Computing should be made transparent to the user, such that non-experts can
+perform any reasonable portion of the data handling and simulation. All
+experiments would like to see computing become more distributed across sites,
+but only in very large units where it can be efficiently maintained.  Users
+without a home lab or large institution require equal access to dedicated
+resources. We need  continuous improvements in reducing the barrier of entry
+for new users, to make the systems easier to use, and to add facilities that
+help prevent the users from making mistakes.
 
-\item Overall computing model and its evolution. The respondents indicated a high degree of commonality when describing their experiment's computing model despite large differences in the type of data being analyzed, the scale of that processing, or the specific workflows followed.  The model is summarized as a traditional event driven analysis and Monte Carlo simulation using centralized data stores that are distributed to independent analysis jobs running in parallel on grid computing clusters.  In the current model of provisioning, there is a remarkable overlap in the infrastructure used by experiments. For large computing facilities such a Fermilab, it would be useful to design a set of scalable solutions corresponding to each of these patterns, with associated toolkits that would allow access and monitoring. Provisioning an experiment or changing a computing model would then correspond to adjusting the scales in the appropriate processing units.
-
-The consensus is that computing should be made transparent to the user, such that non-experts can perform any reasonable portion of the data handling and simulation.  Moreover, all experiments would like to see computing become more distributed across sites, but only in very large units where it can be efficiently maintained.  Users without a home lab or large institution require equal access to dedicated resources. 
-
-The evolution of the computing model follows several lines including taking advantage of new computing paradigms, like clouds, different cache schemes, GPU and multicore processing.  Perhaps even more importantly, we need to continuously make improvements in reducing the barrier of entry for new users, make the systems easier to use, and add facilities that help prevent the users from making mistakes.
-
-In regards to computing technology, there is a concern that as the number of cores in CPUs increases, RAM capacity and memory bandwidth will not keep pace, causing the single-threaded batch processing model to be progressively less efficient on future systems unless special care is taken to design clusters with this use case in mind. 
-
-There is currently no significant use of multi-threading, since the main bottlenecks are Geant4 (single-threaded) and file I/O. Geant4's multithreading addition might have a very significant impact across the field. There is also a possibility of parallelization at the level of the ART framework. Greater availability of multi-core/GPU hardware in grid nodes would provide motivation for upgrading code to use it. For example currently we can only run GPU-accelerated code on local, custom-built systems. 
+The evolution of the computing model follows several lines including taking
+advantage of new computing paradigms, like clouds, different cache schemes,
+GPU and multicore processing.   There is a concern that as the number of cores
+in CPUs increases, RAM capacity and memory bandwidth will not keep pace,
+causing the single-threaded batch processing model to be progressively less
+efficient on future systems unless special care is taken to design clusters
+with this use case in mind. There is currently no significant use of multi-
+threading, since the main bottlenecks are Geant4 (single-threaded) and file
+I/O. Geant4's multithreading addition might have a very significant impact
+across the field. There is also a possibility of parallelization at the level
+of the ART framework. Greater availability of multi-core/GPU hardware in grid
+nodes would provide motivation for upgrading code to use it. For example
+currently we can only run GPU-accelerated code on local, custom-built systems.
 
 \end{itemize}
 
-To summarize, the computing needs of the IF experiments should be viewed collectively.  When combined, these experiments require the resources and support similar to a single EF experiment.  The support of these experiments directly impacts the quality of results and the efficiency with which those results can be obtained.  There is significant support already for IF experiments that are based at Fermilab and the required support there is expected to increase as the current generation of experiments under construction begin to take data.  The support of IF experiments that are not based at Fermilab but still have significant US collaboration, such as T2K, needs to be improved.  Specifically, there should be an investment in infrastructure and professional support to serve these experiments.  
+To summarize, the computing needs of the IF experiments should be viewed
+collectively.  When combined, these experiments require the resources and
+support similar to a single EF experiment.  The support of these experiments
+directly impacts the quality of results and the efficiency with which those
+results can be obtained.  There is significant support already for IF
+experiments that are based at Fermilab and the support requirements are
+expected to increase as the generation of experiments currently under
+construction begin to take data.  The support of IF experiments that are not
+based at Fermilab but still have significant U.S. collaboration, such as T2K,
+needs to be improved.  Specifically, there should be an investment in
+infrastructure and professional support to serve these experiments.
 
-The Computing Frontier should also strive for transparent access to data and hardware resources for the IF.  Users must have a simple interface with which to request data sets that then determines the stored location of those data and returns the data quickly to the user.  Similarly, there should be a standardized grid submission tool that determines the optimal location for running jobs without the user having to specify.  
+Transparent access to data and computing hardware resources is required for IF
+experiments.   Users must have a simple interface with which to request data
+sets that then determines the stored location of those data and returns the
+data quickly to the user.  Similarly, there should be a standardized grid
+submission tool that determines the optimal location for running jobs without
+the user having to specify.
 
-The IF benefits significantly from the ability to share common frameworks and tools, such as ART, GENIE, NuSoft and LArSoft.  The support of these efforts must be continued and increased as new experiments come on line and more users are added to current experiments.  Similarly, the common tools used across all frontiers, such as ROOT and Geant4, must be supported and continuously improved. Computing professionals are in demand as support for key software frameworks, software packages, scripting access to grid resources and data handling. Fermilab is a natural center for IF support in these areas given the existing expertise and large number of IF experiments already on site. 
+The IF benefits significantly from the ability to share common frameworks and
+tools, such as ART, GENIE, NuSoft and LArSoft.  The support of these efforts
+must be continued and increased as new experiments come on line and more users
+are added to current experiments.  Similarly, the common tools used across all
+frontiers, such as ROOT and Geant4, must be supported and continuously
+improved. Computing professionals are in demand as support for key software
+frameworks, software packages, scripting access to grid resources and data
+handling. Fermilab is a natural center for IF support in these areas given the
+existing expertise and large number of IF experiments already on site.
 
-There are efforts (and problems) that are shared across frontiers, significant investments in ROOT and Geant4 optimizations, HPC for HEP, transparent OSG access and open data solutions would have a high payoff. 
+There are efforts (and problems) that are shared across frontiers, significant
+investments in ROOT and Geant4 optimizations, HPC for HEP, transparent OSG
+access and open data solutions would have a high payoff.
 
 
