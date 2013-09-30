@@ -1,7 +1,58 @@
-
 \section{Computing for Perturbative QCD}
 \label{chap:PQCD}
+\subsection{Introduction}
 
+One of the main challenges facing the particle-physics community to date
+is the interpretation of LHC measurements on the basis of accurate and
+robust theoretical predictions.  The discovery of a Higgs-like
+particle in Summer 2012~\cite{Aad:2012tfa,Chatrchyan:2012ufa} serves
+as a remarkable example of the level of detail and accuracy that must
+be achieved in order to enable a
+discovery~\cite{Dittmaier:2011ti,Dittmaier:2012vm,Heinemeyer:2013tqa}.
+Signals for the Higgs boson of the Standard Model (SM) are orders of 
+magnitude smaller than their backgrounds at the LHC, and they are 
+determined by quantum effects.  Detailed calculations are therefore 
+mandatory, and they will become even more necessary as we further 
+explore the Terascale at the full LHC design energy.
+
+Providing precise theoretical predictions has been a priority of the US 
+theoretical particle-physics community for many years, and has seen an
+unprecedented boost of activity during the last ten years. With the
+aim of extracting evidence of new physics from the data, theorists
+have focused on reducing the systematic uncertainty of their predictions
+by including strong (QCD) and electroweak (EW) effects at higher orders
+in the perturbative expansion. This is particularly important as
+beyond Standard Model effects are expected roughly at the TeV scale. 
+Typical decay chains of potential new particles would involve many 
+decay products, several of which can be massive. The SM backgrounds 
+are complex processes which call for highly sophisticated calculational 
+tools in order to provide realistic predictions.
+
+We have reached a time when no conceptual problems stay in
+the way of being able to break Next-to-Leading Order (NLO)
+perturbative QCD calculations into standard modular steps and automate
+them, making them available to the worldwide LHC community.  It is
+implicit that such an effort will benefit greatly from a unified
+environment in which calculations can be performed and data can be
+exchanged freely between theorists and experimentalists,
+as well as from the availability of adequate computational means
+for extensive multiple analyses.
+
+We nowadays see the frontier of perturbative
+calculations for collider phenomenology being both in the
+development and optimization of Next-to-Next-to-Leading Order (NNLO)
+QCD calculations, sometimes combined with EW corrections, and in the
+study of more exclusive signatures that requires resummation 
+of logarithmically enhanced higher-order corrections to all orders.
+It is also conceivable that techniques for matching NNLO fixed-order 
+calculations to parton-shower simulations will be constructed in the 
+near to mid-term future. In all cases, the availability 
+of extensive computational resources could be instrumental
+in boosting the exploration of new techniques as well as in
+obtaining very accurate theoretical predictions at a pace and in a
+format that is immediately useful to the experiments.
+
+\subsection{Results and recommendations}
 
 This workshop provided a framework for implementing higher order  
 calculations in a standardized computing environment made available 
@@ -71,67 +122,66 @@ as well as conventional computing facilities.
     \label{tab:summary}}
 \end{table}
 
-\clearpage
 
-\begin{table}
-  \centering
-  \begin{tabular}{llrr}
-    \hline
-    Process & Ref. & \multicolumn{2}{c}{Requirements}\\
-    & & CPU [core~h] & Storage [GB] \\
-    \hline\hline
-    $pp\to W^\pm+5 jets$ & \cite{Bern:2013gka} & 600,000 & 1,500 \\
-    $pp\to W^\pm+4 jets$ & \cite{Berger:2010zx} & 100,000 & 200\\
-    $pp\to Z+4 jets$ & \cite{Ita:2011wn} & 200,000 & 200\\
-    $pp\to Z+3 jets$ & \cite{Berger:2010vm} & 50,000 & 100 \\
-    $pp\to 4 jets$ & \cite{Bern:2011ep} & 200,000 & 150\\
-    \hline
-  \end{tabular}
-  \caption{CPU and Storage requirements for calculations on the
-    list of important processes identified during the LesHouches
-    series of workshops~\cite{AlcarazMaestre:2012vp}.
-    Numbers assume cross-checks with at least two independent runs
-    and are reported for AMD Opteron\trademark processors running at 2.1~GHz.
-    Storage requirements are reported for Root NTuple files which can be used
-    to replicate the entire event analysis.
-  \label{tab:nlo_wishlist}}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{llrr}
-    \hline
-    Process & Ref. & Requirements & CPU clock\\
-    & & CPU [core~h] & [GHz]\\
-    \hline\hline
-    $pp\to W/Z$ & \cite{Melnikov:2006di,Li:2012wna} & 50,000 & 2.67 \\
-    $pp\to H$ & \cite{Anastasiou:2005qj} & 50,000 & 2.67 \\
-    $pp\to t\bar{t}$ & \cite{Baernreuther:2012ws,Czakon:2013goa} & 1,000,000 & 2.27\\
-    $pp\to $ jets ($g$ only) & \cite{Ridder:2013mf} & 85,000 & 2.20 \\
-    $pp\to H+$jet ($g$ only) & \cite{Boughezal:2013uia} & 500,000 & 2.67 \\
-    \hline
-  \end{tabular}
-  \caption{Summary of computing requirements for NNLO calculations.
-    Numbers were obtained on Intel\registered Xeon\registered CPU's.
-    \label{tab:nnlo_requirements}}
-\end{table}
-
-\begin{table}
-  \centering
-  \begin{tabular}{llllr}
-    \hline
-    Process & \multicolumn{2}{c}{$N_{jet}$} & Ref. & CPU [core~h] \\
-    & NLO & LO & & \\
-    \hline\hline
-    $pp\to W^\pm+jets$ & $\le$2 & $\le$4 & \cite{Hoeche:2012yf} & 100,000 \\
-    $pp\to h+jets$ & $\le$2 & $\le$3 & \cite{Hoeche:2013xxx} & 150,000 \\
-    $pp\to t\bar{t}+jets$ & $\le$1 & $\le$2 & \cite{Hoeche:2013mua} & 250,000 \\
-    $pp\to l\bar{\nu}\bar{l}'\nu'$ & $\le$1 & $\le$2 & \cite{Cascioli:2013xxx} & 50,000 \\
-    \hline
-  \end{tabular}
-  \caption{Computing requirements for merged NLO simulations in
-    various benchmark processes, using the Sherpa event generator
-    and assuming cross-checks with at least two independent runs.
-    \label{tab:nlo_merging}}
-\end{table}
+%%%\begin{table}
+%%%  \centering
+%%%  \begin{tabular}{llrr}
+%%%    \hline
+%%%    Process & Ref. & \multicolumn{2}{c}{Requirements}\\
+%%%    & & CPU [core~h] & Storage [GB] \\
+%%%    \hline\hline
+%%%    $pp\to W^\pm+5 jets$ & \cite{Bern:2013gka} & 600,000 & 1,500 \\
+%%%    $pp\to W^\pm+4 jets$ & \cite{Berger:2010zx} & 100,000 & 200\\
+%%%    $pp\to Z+4 jets$ & \cite{Ita:2011wn} & 200,000 & 200\\
+%%%    $pp\to Z+3 jets$ & \cite{Berger:2010vm} & 50,000 & 100 \\
+%%%    $pp\to 4 jets$ & \cite{Bern:2011ep} & 200,000 & 150\\
+%%%    \hline
+%%%  \end{tabular}
+%%%  \caption{CPU and Storage requirements for calculations on the
+%%%    list of important processes identified during the LesHouches
+%%%    series of workshops~\cite{AlcarazMaestre:2012vp}.
+%%%    Numbers assume cross-checks with at least two independent runs
+%%%    and are reported for AMD Opteron\trademark processors running at 2.1~GHz.
+%%%    Storage requirements are reported for Root NTuple files which can be used
+%%%    to replicate the entire event analysis.
+%%%  \label{tab:nlo_wishlist}}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%  \centering
+%%%  \begin{tabular}{llrr}
+%%%    \hline
+%%%    Process & Ref. & Requirements & CPU clock\\
+%%%    & & CPU [core~h] & [GHz]\\
+%%%    \hline\hline
+%%%    $pp\to W/Z$ & \cite{Melnikov:2006di,Li:2012wna} & 50,000 & 2.67 \\
+%%%    $pp\to H$ & \cite{Anastasiou:2005qj} & 50,000 & 2.67 \\
+%%%    $pp\to t\bar{t}$ & \cite{Baernreuther:2012ws,Czakon:2013goa} & 1,000,000 & 2.27\\
+%%%    $pp\to $ jets ($g$ only) & \cite{Ridder:2013mf} & 85,000 & 2.20 \\
+%%%    $pp\to H+$jet ($g$ only) & \cite{Boughezal:2013uia} & 500,000 & 2.67 \\
+%%%    \hline
+%%%  \end{tabular}
+%%%  \caption{Summary of computing requirements for NNLO calculations.
+%%%    Numbers were obtained on Intel\registered Xeon\registered CPU's.
+%%%    \label{tab:nnlo_requirements}}
+%%%\end{table}
+%%%
+%%%\begin{table}
+%%%  \centering
+%%%  \begin{tabular}{llllr}
+%%%    \hline
+%%%    Process & \multicolumn{2}{c}{$N_{jet}$} & Ref. & CPU [core~h] \\
+%%%    & NLO & LO & & \\
+%%%    \hline\hline
+%%%    $pp\to W^\pm+jets$ & $\le$2 & $\le$4 & \cite{Hoeche:2012yf} & 100,000 \\
+%%%    $pp\to h+jets$ & $\le$2 & $\le$3 & \cite{Hoeche:2013xxx} & 150,000 \\
+%%%    $pp\to t\bar{t}+jets$ & $\le$1 & $\le$2 & \cite{Hoeche:2013mua} & 250,000 \\
+%%%    $pp\to l\bar{\nu}\bar{l}'\nu'$ & $\le$1 & $\le$2 & \cite{Cascioli:2013xxx} & 50,000 \\
+%%%    \hline
+%%%  \end{tabular}
+%%%  \caption{Computing requirements for merged NLO simulations in
+%%%    various benchmark processes, using the Sherpa event generator
+%%%    and assuming cross-checks with at least two independent runs.
+%%%    \label{tab:nlo_merging}}
+%%%\end{table}
 
