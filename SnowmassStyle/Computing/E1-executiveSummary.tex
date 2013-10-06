@@ -14,7 +14,7 @@ searches fall into the first class. Investigations of dark energy,
 indirect dark matter detection, and studies of primordial fluctuations
 fall into the second class; essentially the entire range of available
 frequency bands is exploited, from the radio to TeV energies. Relevant
-theoretical research also casts a very wide net -- from quantum
+theoretical research also casts a very wide net---from quantum
 gravity to the astrophysics of galaxy formation.
 
 The size and complexity of CF experiments is also
@@ -64,7 +64,7 @@ archiving, and analysis requirements (often in concert with
 observational data) are just as demanding as for observational
 datasets. Although there are significant challenges in fully
 exploiting future supercomputing hardware, the expected resources
-should satisfy simulation requirements, currently at the 10PFlops
+should satisfy simulation requirements, currently at the 10 PFlops
 scale and expected to reach the exascale after 2020. The data-related
 issues are more serious and will need changes in the current
 large-scale computing model. Successful implementation of the recently
@@ -74,11 +74,11 @@ simulations.
 
 There is a continued growth in data from CF
 experiments. 
-Survey experiments currently exceed 1PB of stored
-data. Over the next decade the mass of data will exceed 100PB. In
+Survey experiments currently exceed 1 PB of stored
+data. Over the next decade the mass of data will exceed 100 PB. In
 subsequent decades the development of radio experiments and energy
 resolving detectors will result in an increase in data streaming to
-$> 15$GB/s.
+$> 15$ GB/s.
 
 Simulation requirements are projected to increase steeply. Current
 allocations are estimated to be of the order of 200M compute
@@ -86,9 +86,9 @@ hours/year, with associated storage in the few PB range, and a shared
 data volume of the order of 100TB. Data management standards and
 software infrastructure vary widely across research teams. The
 projected requirements for 2020 are an order of magnitude improvement
-in data rates (to 10-100 GB/s), a similar increase in peak
+in data rates (to 10--100 GB/s), a similar increase in peak
 supercomputer performance ($\approx 200$ PFlops), and the ability to store and
-analyze data sets in the 100PB class. It is difficult to make precise
+analyze data sets in the 100 PB class. It is difficult to make precise
 estimates for 2030 as hardware projections are hazy, however, the
 science requirements based on having complete datasets from missions
 such as LSST, Euclid, and large radio surveys would argue for at least
@@ -107,7 +107,7 @@ capabilities must therefore grow as a quadratic function of time.
 
 Most pipelines can be characterized by the number of cycles needed to
 process a byte of data. Typical numbers in astrophysics today range
-from a few thousand to 100K cycles, thus to process a canonical 100PB
+from a few thousand to 100K cycles, thus to process a canonical 100 PB
 data set, 10$^{22}$ cycles, or about a billion CPU hours, are
 required. One particular characteristic of this processing is that it
 will require a reasonable, but not excessive sequential I/O rate to
@@ -184,7 +184,7 @@ the hardware requirements, this is an area where the clever use of
 data structures will have an enormous impact on the system
 performance, and related algorithmic techniques will be explored
 extensively. The challenge here is that the small data accesses will
-be executed billions of times, suggesting a parallel, sharded database
+be executed billions of times, suggesting a parallel, shared database
 cluster with a random access capability of tens of millions of IOPS
 and a sequential data speed of several hundred GB/s, with an unusually
 high computing capability inside the servers themselves.
@@ -197,7 +197,7 @@ objects. These require very fast streaming access to data, algorithms
 that can compute the necessary statistics over (possibly multiple)
 streams, and hardware that can handle these highly parallelizable
 stream computations efficiently (multiprocessors). Here the
-requirements would be a streaming data rate in access of 500GB/s
+requirements would be a streaming data rate in excess of 500 GB/s
 between the data store and the processing, and a peak processing
 capability of several PFlops over vectorizable code. These patterns
 map best onto traditional HPC systems, with the caveat of the extreme
@@ -271,7 +271,7 @@ efforts are now beginning within the CF and will
 hopefully come to fruition in the near term.
 
 
-While much of the science in CFs is undertaken by small
+While much of the science in CF is undertaken by small
 groups of physicists, the collaborations themselves have grown to
 hundreds and sometimes thousands of members. Many of the techniques
 utilized by these collaborations are common to multiple CF 
@@ -294,17 +294,17 @@ been demonstrated, for example, by the GEANT4 development).
  \hline 
 {\bf Experimental Data} & 2013 & 2020 & 2030+ \\
 \hline
-Storage & 1PB & 6PB & 100-1500PB \\
+Storage & 1 PB & 6 PB & 100--1500 PB \\
 Cores & 10$^3$ & 70K & 300+K \\
 CPU hours & 3x10$^6$ hrs & $2\times 10^8$ hrs & $\sim 10^9$ hrs \\
 {\bf Simulations} &&& \\
-Storage & 1-10 PB & 10-100PB & $> 100$PB - 1EB\\
-Cores & 0.1-1M & 10-100M &$> 1$G\\
+Storage & 1--10 PB & 10--100 PB & $> 100 $PB -- 1EB\\
+Cores & 0.1--1M & 10--100M &$> 1$G\\
 CPU hours & 200M & $>$20G & $> 100$G\\
 \hline
-\label{tab:CompNeeds}
 \end{tabular}
-\caption{Compute needs for Cosmic Frontier Science in 10-20 years.}
+\label{tab:CompNeeds}
+\caption{Compute needs for Cosmic Frontier Science in 10--20 years.}
 \end{table}
 \end{center}
 
