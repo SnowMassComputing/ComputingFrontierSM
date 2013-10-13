@@ -22,11 +22,11 @@ The size and complexity of Cosmic Frontier experiments varies,
 ranging from the tabletop to large cosmological surveys,
 simultaneously covering a number of precision measurements and
 discovery-oriented searches. %%%A defining characteristic of 
-The Cosmic Frontier 
-is trending towards ever larger and more complex observational
-campaigns. 
-The number of collaborators in sky surveys in now exceeding a
-thousand, comparable to the number for a high
+A defining characteristic of the Cosmic Frontier 
+is a trend towards ever larger and more complex observational
+campaigns, with over over a thousand researchers
+collaboratoring on sky surveys, making them roughly the size of
+a large high
 energy physics experiment. Cross-correlating different survey
 observations can extract more information, help to eliminate
 degeneracies, and reduce systematic errors. These factors are among
@@ -67,7 +67,7 @@ required simulations varies from medium-scale campaigns for
 determining covariance matrices to state-of-the-art simulations of
 large-volume surveys, or, at the opposite extreme,
 investigating dark matter annihilation signals from dwarf galaxies.
-{\red Why is the latter the opposite extreme?}
+{\color{red} Why is the latter the opposite extreme?}
 
 %%%Required facilities for carrying out simulations include large-scale
 %%%supercomputing resources at DOE and NSF centers, local
@@ -127,7 +127,7 @@ data set requires 10$^{22}$ cycles, or about a billion CPU hours.
 One particular characteristic of this processing is that it
 will require a reasonable, but not excessive, sequential I/O rate to
 the data storage disks, typically less than a GB/s per
-processing node. {\red define}
+processing node. {\color{red} define}
 
 Much of this processing is massively parallel, and thus will execute
 %%%very well on SIMD architectures. Emerging many-core platforms will
@@ -144,7 +144,7 @@ The projected
 data volumes for archiving observational data 
 are not particularly large compared to
 commercial data sets (with the possible exception of SKA). 
-{\red What is SKA?}
+{\color{red} What is SKA?}
 Given that
 the eventual data volumes will probably exceed a few exabytes, the
 analyses must be co-located with the data.
@@ -172,7 +172,7 @@ inexpensive networking infrastructure connecting the instruments and
 all the sites involved in the archiving will be crucial to the success
 of the entire enterprise.
 
-{\red Editor asks why this paragraph is here.  Should it be in introduction?}
+{\color{red} Editor asks why this paragraph is here.  Should it be in introduction?}
 Today's architectures for data analysis and simulations include
 supercomputers, suitable for massive parallel computations where the
 number of cycles per byte of data is huge, possessing a large
@@ -196,7 +196,7 @@ time-domain surveys.
 We will likely need large, powerful shared memory computers to efficiently
 execute algorithms that require large matrices and graphs.
 Also, new storage technologies with
-fast random access (SSD, memory bus flash, {\red should that just be
+fast random access (SSD, memory bus flash, {\color{red} should that just be
 flash memory?}  phase change memory, 
 non-volatile RAM) will play a crucial role in the storage hierarchy.
 
@@ -223,8 +223,8 @@ cluster with a random access capability of tens of millions of IOPS
 and a sequential data speed of several hundred GB/s, with an unusually
 high computing capability inside the servers themselves.
 
-Other types of analyses will have to
-touch a large fraction, possibly all of the data, like computing an
+At the other end of the spectrum are analyses that need to access
+a large fraction all collected data, such as computing the
 FFT of a scalar field over the entire volume, or computing correlation
 functions of various orders, over different subclasses of
 objects. These require very fast streaming access to data, algorithms
@@ -334,9 +334,9 @@ particles throught matter is an example of a successful, widely used tool.
 
 \begin{center}
 \begin{table}
-\begin{centering}
 \caption{Computing requirements for Cosmic Frontier science over the next
  10--20 years.}
+\begin{centering}
 \begin{tabular}{|l|r|r|r|} 
  \hline 
 {\bf Experimental Data} & 2013 & 2020 & 2030+ \\

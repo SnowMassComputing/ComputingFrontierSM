@@ -1,16 +1,20 @@
 \section{Computing for the Energy Frontier}
 
-Computing for experiments at the ``Energy Frontier'' (EF) is now dominated by
+Computing for experiments at the Energy Frontier is now dominated by
 the huge data processing and analysis demands for the Large Hadron Collider
-(LHC). The scale of the LHC computing problem has required to put in place the
+(LHC). The scale of the LHC computing problem has required creating the
 global computing infrastructure of the LHC computing grid, which has been
 hugely successful.  The LHC has driven much of the progress toward the
-usability of a truly distributed computing environment, that makes full use of
-networks to connect a tiered system of computing centers at various scales, to
-federate storage systems enabling access to and analysis of hundred-petabyte-
-scale data sets, and allowing to share the use of resources across different
-science groups, thereby increasing overall throughput and productivity.
+usability of a truly distributed computing environment. 
+That environment makes full use of
+networks to connect a tiered system of computing centers at various scales. 
+It also makes use of
+federated storage systems that enable access to and analysis of 
+data sets with hundreds of petabytes. 
+Finally, it allows shared use of the resources by different science groups
+enabling increased overall throughput and productivity.
 
+{\color{red} Lothar can you please rewrite this paragraph, as requested by Julia?}
 Progress in distributed high-throughput computing, in high-performance
 networks, in distributed data management, in remote data access, in work flow
 systems, etc., enables the experiment groups to marshal these diverse and
@@ -24,52 +28,59 @@ provider and computing specialists, which is necessary for  sustaining and
 further developing this distributed environment.
 
 Today LHC computing routinely uses 250,000 CPU processor cores and nearly 170
-petabytes of disk storage in addition to large multi-hundred petabyte capacity
-tape libraries.  The experiments generate over a petabyte per second of data
+PB of disk storage in addition to large multi-hundred PB capacity
+tape libraries.  The experiments generate over 1 PB per second of data
 at the detector device level. Triggering and real-time event filtering  is
-used to reduce this by six orders of magnitude. In the case of LHC experiments
-at the start of Run 2 this makes for a final rate to persistent storage of
-around one gigabyte per second. The main requirement dictating the rate to
+used to reduce this by six orders of magnitude, resulting in 1 GB/s of data
+stored permanently. 
+%%%In the case of LHC experiments
+%%%at the start of Run 2 this makes for a final rate to persistent storage of
+%%%around one gigabyte per second. 
+The main requirement dictating the rate to
 storage is keeping the storage cost, and the  cost of the computing to analyze
 the stored data, at a tolerable level.
 
 Looking forward, the HL-LHC stands out as a significant challenge, while
-science at EF lepton colliders is unlikely to be constrained by computing
+science at Energy Frontier lepton colliders is unlikely to be constrained by computing
 issues.  At the LHC, however, the expected increases in trigger rate, pileup
 and detector complexity (number of channels) could increase the data rates by
 a about a factor of 10 or more.   This order of magnitude increase in storage
-and CPU requirements presents a new challenge for the computing infrastructure
+and CPU requirements presents a new challenge for the computing infrastructure,
 and the community will need time to prepare for it. The LHC community is
 beginning to review their computing models as they make plans for the next
 decade.  It is anticipated that the general design will be an evolution from
-the current models with the computing resources distributed at computing
+the current models, with the computing resources distributed at computing
 centers around the world.
 
-The full report on Computing for the EF bases its  prediction of the magnitude
-of changes that should be expected over the coming 10 years, by looking back
+The full report on Computing for the Energy Frontier bases its  prediction of the magnitude
+of changes that should be expected over the coming decade, by looking back
 on  the changes between the Tevatron and LHC over the past 10 years. We argue
-that  the resource need increases for LHC Run2, starting in 2015 and ending
+that the resources needed for LHC Run2, starting in 2015 and ending
 in 2021 with the possible start of  the HL-LHC upgrade, can probably be
 accommodated with a roughly flat budget profile. However, the change to HL-LHC
 will be a large disruptive step, like the one going from the Tevatron to the
 LHC.
 
-The increase in LHC computing and disk storage since its start is shown in
-Figure~\ref{fig:growth}.  The CPU increases at a rate of 363kHS06 per year and
-the disk at 34PB a year on average.  The rough linear increase is the
+The increases in LHC computing and disk storage since its start are shown in
+Figure~\ref{fig:growth}.  CPU performance is measured in terms of a standard
+benchmark known as HEP-SPEC06 (HS06) \cite{HS06}.
+The CPU increases at a rate of 363K HS06 per year and
+the disk at 34 PB a year on average.  The rough linear increase is the
 combination of three separate periods that average to linear.  The period
-2008, 2009, and 2010 were the procurement ramp for LHC as the scale of the
+2008 through 2010 covered the procurement ramp for LHC as the scale of the
 available system was tested and commissioned. The period from 2010 to 2013 is
-the first run where the computing and storage increased at a rate defined by
-the incoming data to process and analyze.  The resources needed to accommodate
+the first run, where the computing and storage increased at a rate defined
+by the volume of incoming data to be processed and analyzed.
+The resources needed to accommodate
 the higher trigger rate and event complexity expected in the second run define
-2015.  The three periods roughly average out to a linear increase.
+2015.  The three periods roughly average out to a linear increase in
+CPU power and disk capacity.
 
 The growth curves below do not scale with total integrated luminosity but
-indicate that more computing is needed per unit time as trigger rates and event
+indicate that more hardware is needed per unit time as trigger rates and event
 complexity increase. It is not reasonable to expect that the techniques
-currently used to analyze data in the EF will continue to scale indefinitely.
-The EF will need to adopt new techniques and methods moving forward.
+currently used to analyze data in the Energy Frontier will continue to scale indefinitely.
+The Energy Frontier will need to adopt new techniques and methods moving forward.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
@@ -79,48 +90,53 @@ The EF will need to adopt new techniques and methods moving forward.
 \begin{center}
 \includegraphics[width=0.45\hsize]{CpF-E2/Growth1.eps}
 \includegraphics[width=0.45\hsize]{CpF-E2/Growth2.eps}
-\caption{Shows the CPU and disk growth through the first 7 years of the program.}
+\caption{The CPU and disk growth through the first 7 years of the LHC program.}
 \label{fig:growth}
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Using those cures to extrapolate out 10 years,  LHC computing would have
+{\color{red} Julia suggest changing "Moore's law doubling expectations" to "that predicted by Moore's law".  Not sure if you will like her suggestion.}
+Extrapolating the growth trend out 10 years,  LHC computing would have
 roughly 3 times the computing expected in 2015, which is lower than the
-Moore's law doubling expectations.  LHC would reach nearly 800PB of disk by
-2023, which again is roughly a factor of 3 over 2015.   These increases could
+Moore's law doubling expectations.  LHC would reach nearly 800 PB of disk 
+space by
+2023, which again is roughly a factor of 3 greater that predicted for
+2015.   These increases could
 probably be achieved with close to flat budgets.   There are potential
 efficiency improvements and new techniques that will be discussed below.
 
-However, going to the HL-LHC or other proposed hadron collider programs,  the
-luminosity and complexity increases dramatically and computing would not be on
+The luminosity and complexity increases dramatically
+going to the HL-LHC or other proposed hadron collider programs
+and computing would not be on
 the curve in Figure~\ref{fig:growth}, but would require a significant shift.
-To estimate the resource needs going from the LHC to the HL-LHC the transition
-from the Tevatron to the LHC is instructive.  We observe that in the 10 years
-going from Tevatron in 2003 to LHC at the end of Run1, the data rates are
-about a factor of ten larger. However,  during that time the total computing
-capacity went up by a factor of thirty,  and the disk capacity, the local data
+To estimate the increase in resources needed to move from the LHC to the
+HL-LHC, it is instructive to examine the transition from the Tevatron to the
+LHC.  Data rates are about a factor of ten larger for the LHC at the end
+of Run1 than for the Tevatron in 2003.
+However,  during that time the total computing
+capacity went up by a factor of thirty, while the disk capacity, the local data
 served, the wide area networking from the host lab, and the inter-site
 transfers all increased by a factor of 100 to accommodate this step.  The step
 from LHC Run2 to the HL-LHC will similarly require very significant additional
 resources, and quite possibly a disruptive change in technologies and
-approaches to enable the large resource increase by  making better use of
-resources. We identify two trends that will potentially help with this: the
+approaches.
+We identify two trends that will potentially help with this: the
 increased use of specialized hardware, and providing and using computing as a
 service.
 
-On the one side the EF will need to evolve to use alternative computing
-architectures and platforms like GPUs and other co-processors,  low-power
+The Energy Frontier will need to evolve to use alternative computing
+architectures and platforms such as GPUs and other co-processors,  low-power
 ``small'' cores, etc., as the focus of industry development is moving away from
 the classic server CPU.  Using GPUs introduces significant diversity to the
 system, complicates the programming, and changes the approaches used in
-scientific calculation, but can increase performance by orders of magnitude
+scientific calculations, but can increase performance by orders of magnitude
 for specific types of calculations.  Co-processors have similar potential
 improvement gains, but also increase the diversity and complexity of the
-system, and pose additional programming challenges.  Low power mobile
+system, and pose additional programming challenges.  Low-power mobile
 platforms are most interesting when they are combined into massively parallel,
-specialized system where a single box may have the same number of cores as a
+specialized system in which a single rack {\color{red} box changed to rack} may have the same number of cores as a
 remote computing center does today.  These systems would be used more like a
 supercomputer and less like a batch farm, which will require new
 expertise in dealing with these more highly interconnected computers.
@@ -128,48 +144,51 @@ expertise in dealing with these more highly interconnected computers.
 Specialized hardware and architectures are likely to be deployed initially in
 extremely well controlled environments, like trigger farms and other dedicated
 centers, where the hardware and be controlled and specified. The next phase is
-likely to be schedulable dedicated specialized systems to permit large-scale
+likely to be schedulable, dedicated, specialized systems that permit large-scale
 calculations to achieve a goal similar to making a supercomputer center
-request.  Large scale clusters of specialized hardware owned by the experiment
+request.  Large-scale clusters of specialized hardware owned by the experiment
 are likely to come last, and are only likely to come if they can completely
 replace a class of computing resources and perform a function at a reduced
 cost and higher efficiency.
 
-The other trend impacting EF computing is the move to computing as a service
-and other ``cloud'' solutions.  Currently,  commercial offerings, academic
-resources, and opportunistic resources are all being offered through cloud
+The other trend impacting Energy Frontier computing is the move to computing as a service
+and other ``cloud-based'' solutions.  Currently,  commercial offerings, academic
+resources, and opportunistic {\color{red} define opportunistic resources} resources are all being offered through cloud
 provisioning techniques.  While commercial solutions are still more expensive
-than well used dedicated resources, there is a steady decrease in the pricing.
+than well-used dedicated resources, there is a steady decrease in the pricing.
 
-EF computing should expect a transition to more shared and opportunistic
+Energy Frontier computing should expect a transition to more shared and opportunistic
 resources provided through a variety of interfaces, including cloud
 interfaces.   Effort is needed to allow the community to make effective use of
 the diverse environments and to perform resource provisioning across
 dedicated, specialized, contributed, opportunistic, and purchased resources.
 
 There are considerable concerns regarding the enormous increase in data
-produced by the next round of EF colliders,   to be ingested by the offline
-computing systems.  We observe that while the EF processing capacity has
-increased largely with what would be expected from Moore's law and relatively
+produced by the next round of Energy Frontier colliders,   to be processed by the offline
+computing systems.  We observe that while the Energy Frontier processing capacity has
+increased largely as would be expected from Moore's law and relatively
 flat budgets, the storage requirements have grown much faster.  The larger
 number of sites and the need for local caches, the increase in trigger rates,
 and the larger event sizes drive the need for disk-based storage.
 
-For EF discovery physics and searches there is a case for storing all
+For Energy Frontier discovery physics and searches there is a case for storing all
 potentially interesting events, and then computationally  applying various
-hypotheses to look for new physics.  For some searches and many measurements a
+hypotheses to look for new physics.  
+{\color{red} Julia requests rewording of the next sentence.  She send a suggestion in an email.}
+For some searches and many measurements a
 new approach where much more of the processing and analysis is done with the
 initial data collection and only synthesized output is archived has the
 potential for preserving physics while reducing the offline processing and
 storage needs.  Already the ALICE experiment is planning to do mostly online
-reconstruction starting with  the coming running period.   For experiments at
-future EF accelerators there will be strong motivations to reconstruct and
+reconstruction, starting with  the coming running period.   For experiments at
+future Energy Frontier accelerators there will be strong motivations to reconstruct and
 calibrate online and write only constants.
+{\color{red} Julia has question about last two sentences}
 
 We expect a change of mentality, moving away from the approach that higher
 trigger rates are always better, and that all data from  all triggered events
-need to be kept.   As the EF trigger rates go up by an order of magnitude,  as
-expected for LHC running, and certainly for the HL-LHC,  the experiments
+need to be kept.   As the Energy Frontier trigger rates go up by an order of magnitude,  as
+expected for the LHC, and certainly for the HL-LHC,  the experiments
 should expect to be more selective in what classes of events to fully
 reconstruct,  and instead develop an approach of on-demand reconstruction,
 calibration, and analysis.
@@ -177,21 +196,21 @@ calibration, and analysis.
 Simulation and raw-data reconstruction produce derived data that can
 entirely be reproduced. At the LHC, already many of the intermediate steps are
 treated as transient data.   More of the data analysis steps should be moved
-into the production chain, only keeping the final output, with the
+into the production chain, only storing the final output, with the
 understanding that it can be re-derived if required later.
 
-With the expected increased diversity of computing resources, EF computing
+With the expected increased diversity of computing resources, Energy Frontier computing
 needs to develop a data management system that can deal with all kinds of
-resources.   In the next decade computing processing for the EF will evolve to
-be less deterministic, with more emphasis on cloud provisioned resources,
+resources.   In the next decade computing processing for the Energy Frontier will evolve to
+be less deterministic, with more emphasis on cloud-provisioned resources,
 opportunistic computing, local computing, and volunteer computing.   A data
-management system that handles the placement of the data and allows the
+management system is needed to handle the placement of the data and allow the
 operations team and analysis users to concentrate more on execution of work
-flows and less on placement and location of data is needed.
+flows and less on placement and location of data.
 
-Industry has put a focus on delivering content either through CDNs (Content
-Delivery Networks)  or through peer-to-peer systems.  The experiment data
-management systems need to evolve to be much less deterministic as well, in
+Industry has put a focus on delivering content either through Content
+Delivery Networks (CDNs) or through peer-to-peer systems.  The experiment data
+management systems need to evolve to be much less {\color{red} define} deterministic as well, in
 order to make efficient use of the diverse landscape of resources that the
 experiment computing models will have to adapt to.
 
