@@ -11,14 +11,14 @@ are many common needs among different areas in HEP, so more
 community planning is advised to increase efficiency.
 Careful and continuing review of the topics we studied, 
 {\it i.e.}, user needs and capabilities of
-current and future technology is needed.  For many years, the particle physics
+current and future technology, is needed.  For many years, the particle physics
 community has been a great source of computing innovation and expertise. 
 We must continue to share our expertise within our field and beyond.
 We should find more opportunties to learn from others as well.
 
 The Computing Frontier
 subgroups covered user needs and infrastructure.
-Experimental user needs subgroups included the three frontiers.
+Experimental user needs subgroups included the Cosmic, Energy and Intensity Frontiers.
 Theory subgroups covered accelerator science,
 astrophysics and cosmology, lattice field theory, and perturbative QCD.
 Four infrastructure groups predicted computing trends and
@@ -27,58 +27,64 @@ capabilities. These groups focused on distributed computing and facility
 infrastructures; networking; software development, personnel, and training; and
 data management and storage. 
 The Computing
-Frontier groups were actively engaged with the other frontiers to learn of
+Frontier groups engaged with the other frontiers to learn of
 their plans and estimate their computing needs.  The infrastructure groups
 engaged with vendors, computer users, providers and technical experts. 
 
 The experimental program mainly relies on distributed
 high-throughput computing (HTC). 
-The distributed computing model was pioneered by energy frontier
+The distributed computing model was pioneered by Energy Frontier
 experiments.  It relies on distributed computing
-centers that are part of the Open Science Grid in the U.S.  
-Additional centers used extend across the globe. 
+centers that are part of the Open Science Grid in the U.S.,
+with additional centers across the globe. 
 The theoretical computing and simulation needs are more commonly
 addressed by high-performance computing (HPC) in which many
-tightly coupled CPUs are working together on a single
+tightly coupled central processing units (CPUs) are working together on a single
 problem. These resources are provided mostly through DOE and NSF
 supercomputing centers.
 
 To what degree can or should data-intensive applications that traditionally 
-rely on HTC use national supercomputer centers which have traditionally 
+rely on HTC use national supercomputer centers, which have traditionally 
 been designed for HPC usage?
-Work is proceeding to see how well and how cost-effectively these HTC
+Work is proceeding to determine how well and how cost-effectively these HTC
 applications can run at HPC centers.
 Also, traditional HPC applications are developing more data-intensive
-science needs, which, however, are currently not a good match to existing
+science needs, which are currently not a good match to existing
 and next-generation HPC architectures. Computational resources will have to
 address the demands for greatly increasing data rates, and the increased
-needs for data intensive computing tasks.
+needs for data-intensive computing tasks.
 
 Another pressing issue facing both HTC and HPC communities is that
 processor speeds are no longer increasing, as they were for
 at least two decades. Instead, new chips provide multiple
 cores. Thus, we cannot rely on new hardware to run serial codes faster, and
-we must parallelize codes to increase application performance. In addition
-to multi-core chips, there are accelerators such as graphical processing
-units (GPUs) and many-core chips such as the Intel Xeon Phi. 
-In the past computing resource needs for energy frontier experiments scaled
+we must therefore parallelize codes to increase application performance. 
+Today's computer servers contain one or more multi-core chips.  Currently,
+these chips  have up to 10 (Intel) or 16 (AMD) cores. 
+For additional performance the server may contain
+computational accelerators such as graphical processing
+units (GPUs) or many-core chips such as the Intel Xeon Phi that can have up
+to 61 cores. 
+In the past, computing resource needs for Energy Frontier experiments scaled
 roughly with the rate that processor speeds increased, following Moore's
-law. In the future this requires full use of multiple-core and many-thread 
+law. In the future, this requires full use of multiple-core and many-thread 
 architectures. Also,
 scaling of disk capacity and throughput is of
-significant concern, as per-unit capacities no longer increase as rapidly.
+significant concern, as per-unit capacities will no longer increase as rapidly
+as they have in the past.
 
 These changes in chip technology and high performance system architectures
 require us to develop parallel algorithms and codes, and to train personnel
 to develop, support and maintain them. Different subgroups are at different
-stages in their efforts to port to these new technologies. Lattice QCD, for
-example, started its CUDA-based GPU porting efforts in 2008 and has had code in
+stages in their efforts to port to these new technologies. 
+In the U.S., the effort to write lattice QCD codes, for
+example, started in 2008 and there has been code in
 production for some time; however, there
 are other parts of the code that are still only running on CPUs.
 Cosmological simulations have exploited GPUs since 2009, and some 
 codes have fully incorporated GPUs in their production versions, running 
 at full scale on hybrid supercomputers.
-Accelerator science is also actively porting codes to GPUs. Some of the
+Accelerator science is also actively writing codes for GPUs. Some of the
 solvers and particle-in-cell infrastructures have been ported and very
 significant speed-ups have been obtained. The perturbative QCD community
 has also started using GPUs.
@@ -86,12 +92,13 @@ has also started using GPUs.
 These trends lead to vastly increasing code and system complexities. For
 example, only a limited number of people in the field can program GPUs. In
 this and other highly technical areas, developing and keeping expertise in
-new software technologies is a challenge, while well-trained personnel and
+new software technologies is a challenge, because well-trained personnel and
 key developers are leaving to take attractive positions in industry.
 Continued training is important.  There are training materials
 from some of the national supercomputing centers.  Summer schools are
-organized by, among others, the Virtual School of Computational Science and
-Engineering (www.vscse.org). We must examine whether these provide the
+organized by the Virtual School of Computational Science and
+Engineering (www.vscse.org) and other groups. 
+We must examine whether these provide the
 right training for our field and whether the delivery mechanisms are
 timely.  On-line media, workbooks and wikis were suggested to enhance
 training. Another area of common concern is the career path of those who
@@ -107,28 +114,30 @@ planned upgrades to the LHC energy and luminosity are expected to result in
 a ten-fold increase in the number of events and a ten-fold increase in
 event complexity. Effort has begun to increase code efficiency and
 parallelism in reconstruction software and to explore the potential of
-accelerators such as GPUs and Xeon Phi.
+computational accelerators such as GPUs and Xeon Phi.
 Saving more raw events to tape and only
-reconstructing them selectively is under considerationa. 
-The LHC produces about 15 PB of raw data per
+reconstructing them selectively is under consideration. 
+The LHC produces about 15 petabytes (PB) of raw data per
 year now, but in 2021 the rate may rise to 130 PB. Attention needs to be
 paid to data management and wide-area networking, to assure that network
-connectivity does not become a bottleneck for the distributed event
+connectivity does not become a bottleneck for distributed event
 analysis. It is important to monitor storage cost and throughputs. More
 than half of the computing cost is now for storage, and in the future it
-may become cost-effective to recompute certain derived quantities rather
+may become cost-effective to recalculate certain derived quantities rather
 than storing them.
 
 {\it Intensity Frontier} experiments have combined computing requirements
-on the scale of a single energy frontier experiment but they are a more
-diverse set than the energy frontier. A survey was conducted and found that
-there is significant commonality in different experiments' needs. Sharing of
+on the scale of a single Energy Frontier experiment, but they are a more
+diverse set than the energy frontier.  We conducted a survey and found that
+there is significant commonality in different experiments' needs. Sharing
 resources across experiments, as in the Open Science Grid, is a first step
 in addressing peak computing needs.  Continued coordination of
-software development between these experiments will allow for efficiently
-developed coding infrastructure.  Leveraging the data handling experience and
-expertise of the energy frontier experiments for the diverse intensity
-frontier experiments would significantly improve their ability to reconstruct
+software development among these experiments will increase efficiency of
+the development effort.
+%%%will allow for efficiently developed coding infrastructure.  
+Leveraging the data handling experience and
+expertise of the Energy Frontier experiments for the diverse Intensity
+Frontier experiments would significantly improve their ability to reconstruct
 and analyze data.
 
 {\it Cosmic Frontier} experiments will greatly expand their storage needs
