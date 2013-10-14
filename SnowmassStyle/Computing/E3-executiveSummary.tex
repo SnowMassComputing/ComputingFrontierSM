@@ -1,83 +1,83 @@
 \section{Computing for the Intensity Frontier}
 
-Computing at the Intensity Frontier (IF) has many significant challenges. The
+Computing at the Intensity Frontier has many significant challenges. The
 experiments, projects and theory all require demanding computing capabilities
-and technologies.  Though not as data intensive as the LHC experiments, the IF
+and technologies.  Though not as data-intensive as the LHC experiments, the Intensity Frontier
 experiments have significant computing requirements for simulation,  theory
 and modeling, beam line and experiment design, triggers and DAQ, online
 monitoring, event reconstruction and processing, and physics analysis.  It is
-critical for the success of the field that IF computing is modern, capable,
-has adequate capacity and support, and is able to take advantage of the latest
-developments in computing hardware and software advances.
+critical for the success of the field that Intensity Frontier computing be up-to-date, with adequate 
+capacity and support, and able to take advantage of the latest
+developments in computing hardware and software.
 
-The IF encompasses a large spectrum of physics, including quark flavor
+\subsection{Scope}
+The Intensity Frontier encompasses a large spectrum of physics, including quark flavor
 physics,  charged lepton processes, neutrinos, baryon number violation,  new
-light weakly coupled particles, and nucleons, nuclei and atoms.  The
+light weakly-coupled particles, and nucleons, nuclei and atoms.  The
 requirements and resources of quark flavor physics, as in Belle II and LHCb,
-are more similar to those of the energy frontier. The requirements and
+are similar to those of the Energy Frontier. The requirements and
 resources of  experiments looking for baryon number violation and  experiments
-searching for new light weakly coupled particles are more similar to  those of the
-cosmic frontier.  The Computing Frontier IF report thus focuses on the areas
-of charged lepton processes,  neutrinos, baryon number violation and nucleons,
+searching for new light weakly-coupled particles are similar to  those of the
+Cosmic Frontier.  This section thus focuses on the areas of charged lepton processes,  neutrinos, nucleons,
 nuclei and atoms.
 
-The IF has increasingly become a focus of the U.S.-based particle physics program. Many  of
+The Intensity Frontier has increasingly become a focus of the U.S.-based particle physics program. Many  of
 the experiments are designed to use very intense particle beams to measure
-rare processes. There is a large number of experiments and a range of scales
-in data output and throughput, as well as in the number of experimenters.
-This can potentially lead to fragmentation, reinvention of the wheel, lack of
-access to computing advances and, in general, more dollars for each type of
-computing and personnel support needed. Furthermore there is significant
-overlap of human resources among experiments, making any significant
+rare processes. There is a large number of experiments, a range of scales
+in data output and throughput, and a range in the number of experimenters.
+This situation can potentially lead to fragmentation, duplication of effort, lack of
+access to computing advances and higher cost than necessary to support these experiments. 
+Furthermore there is significant overlap of human resources among experiments, making any significant
 divergence of  software, frameworks and tools between them particularly
-inefficient.  A broad range of experiments leads to a wide breadth of needs,
-from support of tens to hundreds of experimenters, from high intensity
-realtime processing but small data sets, to large data sets which in the sum
-are equivalent to the previous generation of collider experiments. Over the
-last few years there has been a significant effort by the IF experiments at
+inefficient.  A broad range of experiments leads to a broad range of needs in 
+terms of number of experimenters and the sizes of the data sets. Experiments 
+computing requirements range from high-intensity, real-time processing with 
+small data sets to stored large data sets that are themselves equivalent in 
+size to the previous generation of collider experiments. Over the
+last few years there has been a significant effort by the Intensity Frontier experiments at
 Fermilab to join forces in using a more homogeneous set of software packages,
 frameworks and tools to access infrastructure resources. This trend has
 reduced fragmentation and led to more efficient use of resources. We recommend
-expansion of this trend to the broader IF community, adapted to the needs of each
+expanding this trend to the broader Intensity Frontier community, adapted to the needs of each
 collaboration.
 
+\subsection{Survey}
 For this report a qualitative survey was conducted of the current and near-
-term future experiments in the IF in order to understand their computing needs
+term future experiments in the Intensity Frontier in order to understand their computing needs
 and also the expected evolution of these needs.  Computing liaisons and
 representatives for the LBNE, MicroBooNE, MINER$\nu$A, MINOS$+$, Muon $g-2$,
 NO$\nu$A, SEAQUEST,  Daya Bay, IceCube, SNO+, Super-Kamiokande and T2K
 collaborations all responded to the survey. This does not cover all
-experiments in all areas, but we consider it a representative survey of the IF
+experiments in all areas, but we consider it a representative survey of the Intensity Frontier
 field.
 
-The responses and conclusions to the survey can be summarized in five aspects:  
+The responses and conclusions to the survey can be grouped into five categories:  
 
-\begin{itemize} 
-\item Support for software packages. A list is given in the
-full report. There is significant benefit to encouraging collaborative efforts
+\subsubsection{Support for Software Packages}
+There is significant benefit to encouraging collaborative efforts
 among experiments. An example is the LArSoft common simulation,
 reconstruction and analysis toolkit, used by experiments developing
 simulations and reconstructions for liquid argon time projection chambers.
-This is a collaborative effort that makes better use of development and
-maintenance of resources, that has maintenance support by Fermilab.  In
-addition to simulation and reconstruction related software packages, there are
+LArSoft is a collaborative effort that makes better use of development and
+maintenance of resources, with maintenance support by Fermilab.  In
+addition to software packages for simulation and reconstruction, there are
 several other computing tools that are widely used in the field that should be
 maintained.  These tools provide infrastructure access for code management,
 data management, grid access, electronic log books and document management.
 
-\item Support for software frameworks. Efforts for common frameworks can have
-a significant impact, in terms of optimizing  development and support, and in
-minimizing overhead on the training of experimenters.  The Fermilab-based IF
+\subsubsection{Support for Software Frameworks}
+Efforts for common frameworks can have a significant impact, in terms of optimizing  development and support, and in
+minimizing overhead on the training of experimenters.  The Fermilab-based Intensity Frontier
 experiments (g-2, $\mu2$e, NO$\nu$A, ArgoNeuT, LArIAT, MicroBooNE, LBNE) have
-converged on ART as a framework for job control, I/O operations, and tracking
-of data provenance. Resources for the ART framework thus address needs that
+converged on ART as a framework for job control, I/O operations, and data provenance. 
+Resources for the ART framework thus address needs that
 exist across the experiments, such as more accessible parallelization of
 experiment's code. In fact, the primary limitation listed by users of ART was
 the inability to parallelize jobs at the level of individual algorithms.  The
-ability to do so will become more critical as the numbers of channels in IF
+ability to do so will become more critical as the numbers of channels in Intensity Frontier
 experiments continue to increase and the separation of signal from background
 becomes more difficult due to the rare nature of the processes being examined.
-This ability will also allow IF experiments to take advantage of the design of
+This ability will also allow Intensity Frontier experiments to take advantage of the design of
 modern computers containing multiple cores. Other experiments use LHC-derived
 frameworks such as Gaudi, or homegrown frameworks like MINOS(+), IceTray and
 RAT. The level of support for development and maintenance of such frameworks
@@ -89,57 +89,57 @@ software development. All experiments indicated that with more computing
 professional effort they would put that effort toward parallelization of code,
 establishing batch submission to off-site computing, establishing best
 practices for writing software, software development, and  optimizing use of
-Geant4. Such expertise is in high demand within the IF community. Already
-existing expertise at Fermilab and elsewhere could fulfill this need of the
-wider IF community if this was promoted and properly funded.
+Geant4. Such expertise is in high demand within the Intensity Frontier community. Existing expertise 
+at Fermilab and elsewhere could fulfill this need of the
+wider Intensity Frontier community if this was promoted and properly funded.
 
-\item Access to dedicated and shared resources.  In general, demands for
-computing resources of IF experiments are modest compared to those of the EF
+\subsubection{Access to Dedicated and Shared Resources}
+In general, demands for computing resources of Intensity Frontier experiments are modest compared to those of the EF
 experiments.  However, those needs are not insignificant, and all experiments
 require at least 1,000 dedicated batch slots to ensure timely physics results. 
-NO$\nu$A requires 4.8 million
-CPU hours per year alone for its simulation needs, LBNE expects to need
+NO$\nu$A alone requires 4.8 million
+CPU hours per year for its simulation needs, LBNE expects to need
 several PB of storage space each year during operation, and even smaller scale
 experiments like MINER$\nu$A and MicroBooNE expect to need PB-sized storage.
 The full report shows a table of current and projected CPU needs. Each
-experiment has peak demands following cycles that are strongly correlated with
+experiment has periods of peak demand that following cycles which are strongly correlated with
 major conference cycles.  It is important to take the peak demand per
 experiment into account when planning for resource needs. Those peaks
 typically are much larger than the planned steady state usage. To meet those
-demands for turnaround during peak usage each experiment should have access to
+demands for turnaround during peak usage, each experiment should have access to
 additional resources on which it may run opportunistically.
 %%run opportunistically on a much larger pool of slots, in addition to its
 %%dedicated number of slots, to ensures physics results get produced in a timely fashion.
 
-The survey showed that support of the Fermilab based experiments in terms of
-storage and CPU is rated as excellent.  There are still issues, mostly in
-efficient data handling and script optimization, and additional resources for
-computing professionals are sought.  Professional support is required to
+The survey showed that support of the Fermilab-based experiments in terms of
+storage and CPU is rated as excellent.  There are still issues, mostly in efficient data 
+handling and script optimization that require additional professional support. Professional support is required to
 enable seamless use of resources through Grid job submission, on- or off-site.
 For Fermilab-based experiments, university and other national lab resources
 are used in the production of Monte Carlo files. A common protocol to access
 these resources such as OSG is expected in the future.
 
-However, non-U.S. experiments with U.S. participation enjoy significantly
+Non-U.S. experiments with U.S. participation enjoy significantly
 lower levels of support. OSG provides some support of opportunistic use of
 grid resources.  Without their own domestic computing resources these
 experimenters need to rely either on resources in other countries, with low
-priority, or on university based resources that are shared amongst a broad
-pool of university users from multiple disciplines. In contrast, foreign experimenters
+priority, or on university-based resources that are shared amongst a broad
+pool of university users from multiple disciplines. In contrast, non-US experimenters
 from T2K run intensively and very successfully on grid resources in Europe and
 Canada.  In order to be competitive with analysis of data and simulation, the US 
 researchers must have access to dedicated resources that can
-be shared with other IF experiments. It was widely noted that the lack of dedicated U.S.
+be shared with other Intensity Frontier experiments. It was widely noted that the lack of dedicated U.S.
 resources has a detrimental impact on the science.
 
-Networking requirements are for data to move easily between storage systems,
+Networking requirements are determined by the demand that data move easily between storage systems,
 be accessible for data acquisition, reconstruction, simulation and analysis
-and that there is the ability to take advantage of distributed computing,
+as well as be able to take advantage of distributed computing,
 either as part of the grid or cloud.  Networking must not be a barrier to
-making effective use of distributed computing. With IF experiments becoming
+making effective use of distributed computing. With Intensity Frontier experiments becoming
 larger and more international network requirements will grow.
 
-\item Access to data handling and storage.   Fermilab-based experiments have
+\subsubsection{Access to Data Handling and Storage}
+Fermilab-based experiments have
 their primary data copies stored at Fermilab.  The infrastructure there
 handles active storage as well as archiving of data.  The SAM system designed
 and maintained at Fermilab was noted as the preferred data distribution system
@@ -154,13 +154,14 @@ enable experiments to make optimal use of storage resources at national labs
 and universities.  The need for such a system is acutely felt by experiments
 that are not based at Fermilab.  One possible solution to this problem could
 resemble the tiered computing structure used by the LHC experiments, with all
-IF experiments making use of that structure.
+Intensity Frontier experiments making use of that structure.
 
 
-\item Overall computing model and its evolution.  There is a high degree of
-commonality in IF experiments' computing models, despite large differences in
+\subsubsection{Overall Computing Model and Its Evolution}
+The computing models used in various 
+Intensity Frontier experiments have a lot in common, despite large differences in
 the type of data being analyzed, the scale of processing, or the specific
-workflows followed.   The general model is that of a traditional event driven
+workflows followed.   The general model is that of a traditional event-driven
 analysis and Monte Carlo simulation using centralized data stores that are
 distributed to independent analysis jobs running in parallel on grid computing
 clusters.  In the current model of provisioning, there is a remarkable overlap
@@ -194,38 +195,37 @@ of the ART framework. Greater availability of multi-core/GPU hardware in grid
 nodes would provide motivation for upgrading code to use it. For example
 currently we can only run GPU-accelerated code on local, custom-built systems.
 
-\end{itemize}
-
-To summarize, the computing needs of the IF experiments should be viewed
+\subsection{Summary}
+To summarize, the computing needs of the Intensity Frontier experiments should be viewed
 collectively.  When combined, these experiments require the resources and
 support similar to a single EF experiment.  The support of these experiments
 directly impacts the quality of results and the efficiency with which those
-results can be obtained.  There is significant support already for IF
+results can be obtained.  There is significant support already for Intensity Frontier
 experiments that are based at Fermilab and the support requirements are
 expected to increase as the generation of experiments currently under
-construction begin to take data.  The support of IF experiments that are not
+construction begin to take data.  The support of Intensity Frontier experiments that are not
 based at Fermilab but still have significant U.S. collaboration, such as T2K,
 needs to be improved.  Specifically, there should be an investment in
 infrastructure and professional support to serve these experiments.
 
-Transparent access to data and computing hardware resources is required for IF
+Transparent access to data and computing hardware resources is required for Intensity Frontier
 experiments.   Users must have a simple interface with which to request data
 sets that then determines the stored location of those data and returns the
 data quickly to the user.  Similarly, there should be a standardized grid
 submission tool that determines the optimal location for running jobs without
 the user having to specify those locations.
 
-The IF benefits significantly from the ability to share common frameworks and
+The Intensity Frontier benefits significantly from the ability to share common frameworks and
 tools, such as ART, GENIE, NuSoft and LArSoft.  The support of these efforts
 must be continued and increased as new experiments come on line and more users
 are added to current experiments.  Similarly, the common tools used across all
 frontiers, such as ROOT and Geant4, must be supported and continuously
 improved. Computing professionals are in demand as support for key software
 frameworks, software packages, scripting access to grid resources and data
-handling. Fermilab is a natural center for IF support in these areas given the
-existing expertise and large number of IF experiments already on site.
+handling. Fermilab is a natural center for Intensity Frontier support in these areas given the
+existing expertise and large number of Intensity Frontier experiments already on site.
 
-There are efforts (and problems) that are shared across frontiers, significant
+There are efforts and problems that are shared across frontiers, significant
 investments in ROOT and Geant4 optimizations, HPC for HEP, transparent OSG
 access and open data solutions would have a high payoff.
 
