@@ -53,22 +53,22 @@ Some specific recommendations we feel will help achieve these goals are:
         \item Encourage the creation of new toolkits from existing successful common software (generators, tracking, ...)
         \item  Allow flexible funding of software experts to facilitate transfer of software and sharing of technical expertise between projects
         \item Facilitate code sharing through open-source licensing and use of publicly-readable repositories.
-        \item Consolidate and standardize software management tools to minimize cross-experimental ``friction''
+        \item Consolidate and standardize software management tools to minimize cross-project ``friction''
     \end{itemize}
 
     \item Software Development for new Hardware Architectures
     \begin{itemize}
         \item Significant investments in software are needed to adapt to the evolution of computing processors, both as basic R\&D into appropriate
-techniques and as reengineering ``upgrades''
-        \item New software should be designed, and existing software rengineered, to expose parallelism at multiple levels
+techniques and as re-engineering ``upgrades''
+        \item New software should be designed, and existing software re-engineered, to expose parallelism at multiple levels
         \item Develop flexible software architectures that can exploit efficiently a variety of possible future hardware options
     \end{itemize}    
 
     \item Staffing
       \begin{itemize}
-          \item Recognize software efforts as sub-projects of the experiment
-          \item Integrate computing professionals as part of the experimental team, over the life of the experiment
-          \item Integrate software professionals with scientist developers to insure software meets both the technical and physics performance needs of the experiment
+          \item Recognize software efforts as sub-projects of the project
+          \item Integrate computing professionals as part of the project team, over the life of the project or collaboration
+          \item Integrate software professionals with scientist developers to insure software meets both the technical and scientific needs of the project
       \end{itemize}
 
     \item Training
@@ -79,7 +79,7 @@ techniques and as reengineering ``upgrades''
         \item Involve computing professionals in the training of scientific domain experts
         \item Use online media to share training
         \item Use workbooks and wikis as evolving, interactive software documentation
-        \item Provide young scientitsts with opportunities to learn computing and software skills that are marketable for non-academic jobs
+        \item Provide young scientists with opportunities to learn computing and software skills that are marketable for non-academic jobs
     \end{itemize}
 
 \end{itemize}
@@ -92,8 +92,9 @@ techniques and as reengineering ``upgrades''
 \section{Introduction}
 \label{sec:Intro}
 
-Over time, \HEP experiments have become larger and more complex, and generate ever larger datasets, and require ever higher
-precision analysis.  In addition, the breadth of experiments scientifically relevant to Particle Physics has increased to
+Over time, \HEP projects (experimental and theoretical)
+have become larger and more complex, and generate ever larger datasets, and require ever higher
+precision analysis.  In addition, the breadth of projects scientifically relevant to Particle Physics has increased to
 include fields such as observational cosmology and deep underground experiments.
 In order to deal with these changes, \HEP software has by necessity become more complex.
 Software complexity has also increased due to evolving language standards, which provide more options to programmers.
@@ -120,12 +121,12 @@ increasing reliance on software for scientific progress show no signs of reversi
 The challenge for the next decade is then to guide the development of HEP software so as to maximize the scientific
 output, while respecting the real resource constraints experienced by the field.
 
-The primary responsibility for the scientific success of an experiment lies with the scientists organizing
-and collaborating on that experiment.  This includes the responsibility for the major software design, organization,
-and support decisions which every experiment must make.  However, no modern experiment can write its software completely
-``from scratch''.  To the extent that experiments have common features, sharing of common solutions can help reduce the
+The primary responsibility for the scientific success of an HEP project lies with the scientists organizing
+and collaborating on it.  This includes the responsibility for the major software design, organization,
+and support decisions which every project must make.  However, no modern project can write its software completely
+``from scratch''.  To the extent that projects have common features, sharing of common solutions can help reduce the
 cost and risk of their software development.  Furthermore, the development cost of some common software is beyond the scope of
-a single experiment, requiring a broader community of contributors to create and maintain the software that benefits
+a single project, requiring a broader community of contributors to create and maintain the software that benefits
 them all.  
 
 
@@ -199,15 +200,15 @@ Software is a dynamic environment, where languages, infrastructure,
 algorithms, and requirements are all evolving rapidly.
 For scientific computing to be effective and competitive in this environment,
 scientific software must therefore be continually renewed.
-However, just as new experiments often reuse or repurpose hardware
-from previous experiments, so too can software
+However, just as new projects often reuse or re-`purpose hardware
+from previous projects, so too can software
 developers reuse earlier software. 
 
  Software reuse has several potential benefits, such as:
 \begin{itemize}
 \item Reduced development time.  In particular, the lead time to having
-functional software on a new experiment can often be greatly reduced.
-\item Reduced cost to the experiment through lower demand on software developers.
+functional software on a new project can often be greatly reduced.
+\item Reduced cost to the project through lower demand on software developers.
 \item Reduced risk through use of proven algorithms and implementations.
 \item Preservation of detailed scientific knowledge expressed in the software implementation.
 \end{itemize}
@@ -218,14 +219,14 @@ which can mean migration, refactoring, or even a complete rewrite.
 \item Software developers are often reluctant to reuse code,
 as the effort required to understand poorly documented or
 poorly-implemented code can be greater than the effort needed to write new code.
-\item Commitment to code reuse can place an experiment at risk
+\item Commitment to code reuse can place an project at risk
 if an external developer stops supporting the code, or develops the
-code in a direction away from that experiment's needs.
+code in a direction away from that project's needs.
 \end{itemize}
 
 Software reuse only makes sense if the benefits exceed the costs.
 That decision will be made individually by each new project.
-All current HEP experiments rely upon some combination of new and reused
+All current HEP projects rely upon some combination of new and reused
 software. The choice of what software to reuse and which to develop
 new is driven by both technical and non-technical considerations.
 In an era of increasingly constrained budgets,
@@ -293,10 +294,10 @@ development teams are small (often only 1 or 2 people), they
 often are not able to address all the technical computational
 issues required for efficient performance using GRID
 computing resources.  In experimental software, these technical issues
-are often addressed  by software professionals, who are integrated with the
+are often addressed by software professionals, who are integrated with the
 scientific development community.
 Allowing computing professionals nominally associated with the experimental program
-to integrate with generator development teams would be an effective
+to integrate with theorists involved in the generator development teams would be an effective
 way to improve computational efficiency using existing resources.
 
 \begin{itemize}
@@ -313,7 +314,7 @@ One way to improve this situation would be to encourage projects to put
 non-sensitive code in read-accessible repositories.  Projects should also
 use public licensing to protect their code and facilitate reuse.  Finally,
 new projects should define a 'twilight' clause in their membership agreements,
-whereby all the experiment's software will be made publicly read accessible
+whereby all the project's software will be made publicly read accessible
 at some date after the last data has been recorded.
 
 \begin{itemize}
@@ -321,15 +322,15 @@ at some date after the last data has been recorded.
 Facilitate code sharing through open-source licensing and use of publicly-readable repositories
 \end{itemize}
 
-Use of different software management tools can form a barrier to software sharing across experiments.
+Use of different software management tools can form a barrier to software sharing across projects.
 Different tools can also adversely affect developers and users when they
-transition between experiments.
+transition between projects.
 To the extent possible, use of common management tools
 and common computational environment tools will reduce these burdens.
 
 \begin{itemize}
 \item[] {\bf Recommendation:} 
-Consolidate and standardize software management tools to minimize cross-experimental ``friction''
+Consolidate and standardize software management tools to minimize cross-project ``friction''
 \end{itemize}
 
 
@@ -390,13 +391,13 @@ processors have begun to hit scaling limits, largely driven by overall
 power consumption.
 
 The first large change in commercial processor products as a
-result of these limits was the introduction of ``multicore'' CPUs,
+result of these limits was the introduction of ``multi-core'' CPUs,
 with more than one functional processor on a chip. At the same time
 clock frequencies ceased to increase with each processor generation and
 indeed were often reduced relative to the peak. The result of this was
 one could no longer expect that single, sequential applications would
 run faster on newer processors. However in the first approximation,
-the individual cores in the multicore CPUs appeared more or less
+the individual cores in the multi-core CPUs appeared more or less
 like the single standalone processors used previously. Most large
 scientific applications (HPC/parallel or high throughput) run in
 any case on clusters and the additional cores are often simply
@@ -433,10 +434,10 @@ introduce significantly more fine-grained parallelism.
 \begin{itemize}
 \item[] {\bf Recommendation:} Significant investments in software
 are needed to adapt to the evolution of computing processors, both
-as basic R\&D into appropriate techniques and as reengineering
+as basic R\&D into appropriate techniques and as re-engineering
 ``upgrades''
 \item[] {\bf Recommendation:} New software should be designed, and 
-existing software rengineered, to expose parallelism at multiple levels
+existing software re-engineered, to expose parallelism at multiple levels
 \end{itemize}
 
 
@@ -451,11 +452,11 @@ exploiting these newer architectures will require changes in the software
 to exhibit significantly more parallelism at all levels, much improved locality
 of access to data in memory and attention to maximize floating point
 performance. Most of the scientific software and algorithms
-in use today in experiments was designed for the sequential processor
+in use today in projects was designed for the sequential processor
 model in use for many decades and require significant re-engineering to 
 exploit properly these new architectures.
 
-Most physics algorithm-level software for experiments is written by
+Most physics algorithm-level software for projects is written by
 physicists, rather than by software professionals. Adapting to this new
 reality of hardware heterogeneity, and complex programming models will
 be a challenge for many physicists who do not have the time nor
@@ -489,10 +490,10 @@ FNAL~\cite{FNALWP} (Geant4 and ROOT) and at SLAC~\cite{SLACWP} (Geant4),
 for example. The experience from these efforts will likely guide the way 
 for other projects. 
 
-In addition existing experiment specific codes, for example for triggering
+In addition existing project specific codes, for example for triggering
 and event reconstruction software, will likely need to evolve. In
 some cases, where the time scales and dataset size increases will be
-large, they may need to be reengineered and/or rewritten.
+large, they may need to be re-engineered and/or rewritten.
 
 To summarize, the evolution of processor technology will have a major
 impact on software development over the next decade. 
@@ -505,15 +506,15 @@ Tevatron experiments the dominant programming language was Fortran.
 Most professors in the community knew how to program well enough
 in it, and it was easy to train new graduate students to use the
 language and tools, like CERNLIB, of that time.  Staffing of software
-efforts for the core software of the experiments came from laboratories
+efforts for the core software of the projects came from laboratories
 like CERN, FNAL, and Cornell.  In addition to framework skeletons
-and foundation libraries each experiment had a small team of people
+and foundation libraries each project had a small team of people
 that would integrate and debug the contributions to applications
 from university personnel. In the early 1990s as the complexity of these
 software applications grew problems caused by the deficiencies
  of the language, and the tool sets 
 available for it, developed. 
-New experiments like BaBar and the 4 LHC experiments were
+New projects like BaBar and the 4 LHC experiments were
 designing C++ applications from scratch with the help of hired
 software engineering efforts. More attention was paid to the training
 of postdocs and graduate students. However there were some who did
@@ -522,7 +523,7 @@ along with many of their professors were left behind by this
 transition.  It was no longer the case that anyone could contribute
 to software efforts. Software engineering skills and an ability to
 contribute to large, multi-million line, projects was required. The
-transition was lead by key people within the experiments with many
+transition was lead by key people within the projects with many
 years of domain expertise that made an effort to learn the new
 programming model and language and spread that knowledge to their
 peers. It should be noted that in some frontiers like the cosmic
@@ -534,17 +535,17 @@ the lessons learned from the previous transition by looking at the
 efforts that were most successful and not repeating the mistakes.
 
 In preparation for writing this report, software leaders and
-representatives from many experiments from the energy, intensity,
+representatives from many projects from the energy, intensity,
 and cosmic frontiers were interviewed.  All gave the same advice, based 
 on their experience, regardless of which stage in the above transition or 
 adoption of software engineering techniques they are in. These are 
 summarized in the following principles:
 
 \begin{itemize}
-\item[] {\bf Recommendation:} Recognize software efforts as sub-projects of the experiment.  
+\item[] {\bf Recommendation:} Recognize software efforts as sub-projects of the project.  
 \end{itemize}
 
-Many past and existing experiments have Software and
+Many past and existing projects have Software and
 Computing organizations, however much of the effort comes from
 students or postdocs who were hired to work on detector
 projects or to work on analysis at a University, and whose software
@@ -557,12 +558,12 @@ detector or before you process and analysis dataset.
 %It should be
 %noted that for DES/SDSS software development was separately funded.
 %However the funding has not been sufficient and they are still
-%struggling to meet the needs of the experiment. {\bf Liz: I don't know if
+%struggling to meet the needs of the project. {\bf Liz: I don't know if
 %I can really say this in a document like this? is there a more PC
 %way?}  
 It is key to have people who can reliably estimate the level
-of effort needed for the experiment over the lifetime of the
-experiment; both to be able to explain that need to the collaboration,
+of effort needed for the project over the lifetime of the
+project; both to be able to explain that need to the collaboration,
 and to international funding agencies.
 
 In our surveys we have identified three types of people that
@@ -574,8 +575,8 @@ computational physicists. Computing professional input into the
 implementation of the frameworks and algorithms is very important.
 However we know of no team of isolated computing professionals who
 delivered software of lasting value.  Computing professionals need
-to be integrated as part of the experimental team over the life
-time of the experiment and they should be grouped with and lead by
+to be integrated as part of the project team over the life
+time of the project and they should be grouped with and lead by
 the bridge people identified above. These people can effectively
 communicate requirements and speak the same language as the computing
 professionals when implementation problems (bugs) need to be solved.
@@ -586,14 +587,14 @@ in the most efficient way for the targeted programming model.  This
 model will not be intuitive or natural, so it seems that forming
 these teams is the only way to produce high quality implementations
 that meet the technical and physics requirements of the
-experiments.
+projects.
 
 \begin{itemize}
-\item[] {\bf Recommendation:} Integrate computing professionals as part of the experimental team over the life of the experiment
-\item[] {\bf Recommendation:} Integrate software professionals with scientist developers to insure software meets both the technical and physics performance needs of the experiment
+\item[] {\bf Recommendation:} Integrate computing professionals as part of the project team over the life of the project
+\item[] {\bf Recommendation:} Integrate software professionals with scientist developers to insure software meets both the technical and physics performance needs of the project
 \end{itemize}
 
-User support staffing is very important for experiments.  It
+User support staffing is very important for projects.  It
 accelerates the ability of new people to contribute.  The best model
 we have found is to form a triage system for user support.  An
 individual that is dedicated to user support is identified to field
@@ -683,14 +684,14 @@ both initial training of incoming software developers and regular
 forums and materials to update and extend the training taken.
 
 It is beneficial to plan and provide working environments to ensure
-that such activities follow through the whole lifetime of an
-experiment or project.
+that such activities follow through the whole lifetime of a
+project.
 
 \begin{itemize}
 \item[] {\bf Recommendation:} Use mentors to spread scientific software development standards
 \end{itemize}
 
-In recent years experiments have taken specific steps to embed
+In recent years projects have taken specific steps to embed
 trained software architects and engineers within the physics
 development groups and activities. This ongoing expert guidance and
 feedback results in better initial designs and, as importantly,
@@ -789,10 +790,10 @@ and who contributed many of the ideas presented here.
 %\section{Event Generators}
 %\label{CpFI4:sec:evtgen}
 %Event generators are a particularly critical component of the Monte
-%Carlo simulation workflow of any experiment. A wide range of event
+%Carlo simulation workflow of any project. A wide range of event
 %generators are being developed in the US and elsewhere to meet the
-%changing needs of experimental work and to capture the latest
-%theoretical developments for use by the experiments. This component
+%changing needs of project work and to capture the latest
+%theoretical developments for use by the projects. This component
 %of the workflow can be computationally intensive, both in the sense
 %of required CPU resources and memory footprint.
 %
@@ -808,30 +809,30 @@ and who contributed many of the ideas presented here.
 %the technical performance of matrix-element generators has proven
 %to be a particular concern. In these generators, large calculations
 %are needed to establish the physics cross sections before events
-%can be simulated. As such, the LHC experiments have at times needed
+%can be simulated. As such, the LHC projects have at times needed
 %to schedule production efforts for these events around accelerator
 %shutdowns when appropriate computing resources could be made
 %available.
 %
-%The experiments are the best position to judge which event generators
+%The projects are the best position to judge which event generators
 %can be operated within their operational computing constraints. As
-%such, it is natural to suggest that the experiments work to establish
+%such, it is natural to suggest that the projects work to establish
 %a stronger link to the event generator community, specifically
 %focusing on the event generators of particular interest to each
-%experiment. This link should be extended to include technical
+%project. This link should be extended to include technical
 %software performance discussions in addition to physics and modeling
 %issues. At the same time, event generator authors would benefit
 %from funding opportunities targeting technical performance, perhaps
 %as the last stage of their development process. Another potential
 %enhancement is the establishment of a joint CPU and storage resource
-%for experiments to draw upon. Needs of the LHC experiments for event
+%for projects to draw upon. Needs of the LHC experiments for event
 %generator outputs are naturally similar, both in terms of physics
 %processes and the timing large Monte Carlo simulation production
 %activities. This operation could also establish clear technical
 %performance requirements and provide a natural mechanism for feedback
 %to the event generator development community. This sort of facility
 %has been attempted in the past without real success, in part due
-%to the lack of explicit experimental participation in setting the
+%to the lack of explicit project participation in setting the
 %requirements of the facility.
 
 \begin{thebibliography}{99}
