@@ -14,22 +14,22 @@ with controlled uncertainties, by casting the fundamental equations of QCD
 into a form amenable to high-performance computing.  Thus, facilities for
 numerical lattice gauge theory are an essential theoretical adjunct to the
 experimental high-energy physics program.  Lattice-QCD calculations now play
-an essential role in the search for new physics at the intensity frontier.
+an essential role in the search for new physics at the Intensity Frontier.
 They provide accurate results for many of the hadronic matrix elements needed
 to realize the potential of present experiments probing the physics of
 flavor. The methodology has been validated by comparison with a broad array of
 measured quantities, several of which had not been well measured by experiment
 at the time of the first precise lattice
 calculations.  In the coming decades, lattice QCD will
-play an expanded role in the search for new physics at both the energy and
-intensity frontiers.
+play an expanded role in the search for new physics at both the Energy and
+Intensity Frontiers.
 
-In the U.S., the efforts of the lattice gauge theory community have been
-supported in an essential way by hardware and software funding provided by the
-High Energy and Nuclear Physics Program Offices of the Department of Energy to
-the U.S. Lattice QCD Collaboration (USQCD), which consists of most theoretical
-physicists in the U.S. involved in the numerical studies of QCD and
-beyond-the-Standard-Model theories.  The USQCD Collaboration's current
+The U.S. Lattice QCD Collaboration (USQCD), which consists of
+most theoretical physicists in the country involved in the numerical studies
+of QCD and beyond-the-Standard-Model theories, represents the lattice gauge
+community.  Their efforts have been supported in an essential way by hardware
+and software funding provided by the High Energy and Nuclear Physics Program
+Offices of the Department of Energy.  The USQCD Collaboration's current
 hardware project ends in FY2014, and the collaboration has applied for a
 five-year project extension, ``LQCD-ext~II.''  The Collaboration's ongoing
 software development and maintenance activities are supported by SciDAC-3
@@ -43,7 +43,7 @@ the enormous investment in the high-energy physics experimental program.
 
 \subsection{Lattice Field Theory Scientific Motivation}
 
-Precision measurements at the energy and intensity frontiers probe
+Precision measurements at the Energy and Intensity Frontiers probe
 quantum-mechanical loop effects, and are therefore sensitive to physics at
 higher energy scales than those directly accessible at the LHC.  Contributions
 from new heavy particles may be observable as deviations of the measurements
@@ -69,23 +69,23 @@ strategies for achieving them.  Some of the highest scientific priorities are
 \begin{itemize}
 
 \item Improving calculations of hadronic matrix elements involving
-quark-flavor-changing transitions which are needed to interpret rare kaon
-decay experiments,
+quark-flavor-changing transitions, which are needed to interpret rare kaon
+decay experiments;
 
 \item Improving calculations of the quark masses $m_c$ and $m_b$ and the
-strong coupling $\alpha_s$ which contribute significant parametric
-uncertainties to Higgs branching fractions,
+strong coupling $\alpha_s$, which contribute significant parametric
+uncertainties to Higgs branching fractions;
 
-\item Calculating the nucleon axial form factor which is needed to improve
+\item Calculating the nucleon axial form factor, which is needed to improve
 determinations of neutrino-nucleon cross sections for experiments such as
-LBNE,
+LBNE;
 
-\item Calculating the nucleon light- and strange-quark contents which are
+\item Calculating the nucleon light- and strange-quark contents, which are
 needed to make model predictions for the $\mu \to e$ conversion rate at the
-Mu2e experiment (as well as to interpret dark-matter detection experiments in
-which the dark-matter particle scatters off a nucleus), and
+Mu2e experiment and to interpret dark-matter detection experiments in
+which the dark-matter particle scatters off a nucleus; and
 
-\item Calculating the hadronic light-by-light contribution to muon $g-2$ which
+\item Calculating the hadronic light-by-light contribution to muon $g-2$, which
 is needed to solidify and improve the Standard-Model prediction and interpret
 the upcoming measurement as a search for new physics.
 
@@ -103,22 +103,24 @@ Model against emerging experimental measurements.  Lattice gauge theory
 simulations require parallel programming techniques, with the calculations
 running cooperatively across hundreds to many thousands of processors or
 processor cores.  The simulations must be run on hardware suitable for
-massively parallel computations. The simulations are floating point intensive;
-however, throughput is limited by memory bandwidth or by the latency and
-bandwidth of interprocessor communications. Interprocessor communications of
-data rely on message passing algorithms, typically implemented using an
-MPI~\cite{MPI} library.
+massively parallel computations.  Although the simulations are
+floating point intensive, on all current high-performance computing systems
+throughput is limited by the rate that operands can be supplied to the
+floating point execution units, either because of memory bandwidth limitations
+or by the latency and bandwidth of interprocessor communications.
+Interprocessor communications of data rely on message-passing
+algorithms, typically implemented using an MPI~\cite{MPI} library.
 
 At present, lattice theorists in the United States run these codes on a
-variety of hardware.  First, commodity clusters, based on Intel or AMD x86
-processors and Infiniband networks.  Such clusters have hundreds of nodes and
-thousands of cores.  Next, accelerated commodity clusters, similar to the the
+variety of hardware.  The first type is commodity clusters based on Intel or AMD x86
+processors and Infiniband networks, which have hundreds of nodes and
+thousands of cores.  A second type is accelerated commodity clusters, similar to the the
 standard clusters but with general purpose graphics processing units (GPUs) or
-Intel many integrated core (MIC) accelerators installed in each server.  These
-clusters have fewer nodes but typically hundreds of accelerators.  Next, very
+Intel many integrated core (MIC) accelerators installed in each server; these
+clusters have fewer nodes but typically hundreds of accelerators.  A third type is very
 large scale Cray supercomputers, consisting of thousands of AMD x86 processors
 with a proprietary network, with the newest models also containing thousands
-of GPUs.  Finally, very large scale IBM BlueGene supercomputers, consisting of
+of GPUs.  Finally, lattice theorists use very large scale IBM BlueGene supercomputers, consisting of
 hundreds of thousands of PowerPC cores interconnected on a proprietary
 network.
 
@@ -135,27 +137,33 @@ the largest analysis jobs, as well as dedicated hardware purchased and
 operated by USQCD for the much larger volume of small-to medium-scale analysis
 jobs.
 
-Table~\ref{tab:current} lists the leadership-class facility and capability and
-dedicated capacity resources utilized for lattice-QCD simulations since 2010.
-The capability resources are broken out showing both the ANL and ORNL
-leadership class facilities; the capacity resources include all usage on the
-DOE HEP and NP funded hardware at Fermilab, Jefferson Lab, and BNL.  Subgroups
-within USQCD also use the DOE's National Energy Research Scientific Computing
-Center (NERSC), centers supported by the NSF's Extreme Science and Engineering
-Discovery Environment (XSEDE) Program, and other facilities.
+Table~\ref{tab:current} lists the leadership-class facility
+capability and dedicated capacity resources utilized
+for lattice-QCD simulations since 2010 by the USQCD
+collaboration.  The capability resources are broken out showing both the ANL
+and ORNL leadership class facilities; the capacity resources include all usage
+on the DOE HEP- and NP-funded hardware at
+Fermilab, Jefferson Lab, and BNL.  Subgroups within USQCD also use the DOE's
+National Energy Research Scientific Computing Center (NERSC), centers
+supported by the NSF's Extreme Science and Engineering Discovery Environment
+(XSEDE) Program, and other facilities.
 
 \begin{table}[t]
 \begin{center}
-\caption{Utilized capacity in core-hours of LCF and dedicated capacity
-hardware for lattice-QCD simulations.  The conversion factors for lattice-QCD
-sustained Tflop/sec-years, assuming 8000 hours per year, is 1 Tflop/sec-year =
-3.0M core-hour on BlueGene/Q hardware, and 1 Tflop/sec-year = 6.53M core-hour
-on BlueGene/P and Cray hardware.\vspace{1.5mm}}
+\caption{Utilized core-hours of leadership-class facility
+(LCF) and dedicated capacity hardware for lattice-QCD simulations.  The
+conversion factors for lattice-QCD sustained Tflop/sec-years, assuming 8000
+hours per year, is 1 Tflop/sec-year = 3.0M core-hour on BlueGene/Q hardware, and 1 Tflop/sec-year = 6.53M core-hour on
+BlueGene/P and Cray hardware. Only USQCD-Collaboration resources are shown.
+The drop in ANL LCF utilized capacity in 2012 occurred
+because fewer opportunistic core-hours (``zero-priority queues'') were
+available due to increased demand by other facility users.
+\vspace{1.5mm}}
 \label{tab:current}
 \begin{tabular}{lccc}  
 \hline\hline
 Year & ANL LCF & ORNL LCF & Dedicated Capacity Hardware \\[-0.75mm]
-& (core-hours) & (core-hours) & (core-hours) \\[0.5mm]  \hline
+& (BG/P + BG/Q core-hours) & (Cray core-hours) & (core-hours) \\[0.5mm]  \hline
 2010 & 187M & 53.6M & 125M \\
 2011 & 182M & 49.8M & 205M \\
 2012 & 143M & 77.9M & 330M \\
@@ -169,7 +177,7 @@ efficient utilization of the above computing resources requires flexible and
 effective software.  Since 2004, DOE grants to USQCD during the three
 SciDAC~\cite{SciDAC} programs (2001-2006, 2006-2011, and 2011-2016) led to the
 development of the USQCD software stack~\cite{SciDAC-software}.  This stack
-includes low level communications and I/O application program interfaces
+includes low-level communications and I/O application program interfaces
 (APIs) implemented via libraries ported to and optimized for each of the
 architectures.  The stack includes linear algebra libraries with routines that
 operate on single lattice sites, or across a full lattice with communications
@@ -218,8 +226,7 @@ cores.
 
 Over an order of magnitude increase in storage utilization (disk and tape)
 from the current approximately 2 petabyte usage will also be needed to support
-the planned simulations.  Further, the anticipated evolution of high
-performance computing hardware will require the evolution of software and the
+the planned simulations.  Further, the anticipated evolution of high-performance computing hardware will require the evolution of software and the
 introduction and refinement of new techniques and algorithms.  Positions for
 postdocs and scientific staff to develop new lattice-gauge-theory code cannot
 be supported by grants to lab and university theory groups alone, but must be
@@ -232,7 +239,7 @@ The main findings of the report are summarized here:
 \begin{itemize}
 
 \item Numerical lattice-QCD calculations are needed to interpret many upcoming
-experimental measurements at the energy and intensity frontiers as tests of
+experimental measurements at the Energy and Intensity Frontiers as tests of
 the Standard Model and new-physics searches.  Nonperturbative hadronic matrix
 elements and fundamental QCD parameters enter the Standard~Model predictions
 for many processes as diverse as rare kaon decays, Higgs branching fractions,
@@ -242,7 +249,7 @@ experimental high-energy physics program.
 
 \item The successful accomplishment of USQCD's scientific goals requires
 access to both capacity and capability machines, and hence support for both
-leadership class facilities and dedicated computing clusters.  The combined
+leadership-class facilities and dedicated computing clusters.  The combined
 use of supercomputers to generate large suites of gauge fields and to perform
 the largest analysis jobs with these ensembles, and dedicated lattice capacity
 hardware to perform the much larger volume of small- to medium-scale analysis
