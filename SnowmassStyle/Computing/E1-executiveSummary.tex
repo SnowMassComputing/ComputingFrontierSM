@@ -2,59 +2,44 @@
  
 \section{Computing for the Cosmic Frontier}
 
+The Cosmic Frontier lies at the interface between particle physics,
+cosmology, and astrophysics. Experimental and observational activities
+in the Cosmic Frontier cover laboratory experiments as well as
+multi-band observations of the quiescent and transient sky. Direct
+dark matter search experiments, laboratory tests of gravity theories,
+and accelerator dark matter searches fall into the first
+class. Investigations of dark energy, indirect dark matter detection,
+and studies of primordial fluctuations fall into the second class;
+essentially the entire range of available frequency bands is
+exploited, from the radio to TeV energies. Relevant theoretical
+research also casts a very wide net -- from quantum gravity to the
+astrophysics of galaxy formation.
 
-The Cosmic Frontier is at the interface
-between particle physics, cosmology, and astrophysics. 
-Experimental and observational activities in the Cosmic Frontier cover
-laboratory experiments as well as 
-%multi-band observations of the quiescent and transient sky. 
-observations of the sky using a wide variety of wavelengths.
-Direct dark matter search experiments,
-laboratory tests of gravity theories, and accelerator dark matter
-searches fall into the first class. Investigations of dark energy,
-indirect dark matter detection, and studies of primordial fluctuations
-fall into the second class; essentially the entire range of available
-frequency bands is exploited, from the radio to TeV energies. Relevant
-theoretical research also casts a very wide net --- from quantum
-gravity to the astrophysics of galaxy formation.
-
-The size and complexity of Cosmic Frontier experiments varies,
-ranging from the tabletop to large cosmological surveys,
+The size and complexity of Cosmic Frontier experiments is also
+diverse, ranging from the tabletop to large cosmological surveys,
 simultaneously covering a number of precision measurements and
-discovery-oriented searches. %%%A defining characteristic of 
-A defining characteristic of the Cosmic Frontier 
-is a trend towards ever larger and more complex observational
-campaigns, with over over a thousand researchers
-collaboratoring on sky surveys, making them roughly the size of
-a large high
-energy physics experiment. Cross-correlating different survey
-observations can extract more information, help to eliminate
-degeneracies, and reduce systematic errors. These factors are among
-the major drivers for the computational and data requirements that we
-consider below.
-
+discovery-oriented searches. A defining characteristic of the Cosmic
+Frontier is a trend towards ever larger and more complex observational
+campaigns, with over a thousand researchers collaborating on sky
+surveys, making them roughly the size of a large HEP
+experiment. Cross-correlating different survey observations can
+extract more information, help to eliminate degeneracies, and reduce
+systematic errors. These factors are among the major drivers for the
+computational and data requirements that we consider below.
 
 The dramatic increase in data from Cosmic Frontier experiments over
 the last decade has led to fundamental breakthroughs in our knowledge
-of the ``dark universe'' and physics at very high energies. Driven by
+of the ``Dark Universe'' and physics at very high energies. Driven by
 technological advances, current experiments generate in excess of a
-petabyte (PB) of total data per year. 
-In the coming decade, continued growth in data will come from
-large format 
-charge-coupled device (CCD) cameras to measure
-the growth of structure from weak gravitational lensing, wide-field
-spectroscopic facilities to map the clustering of galaxies, increases
-in the size of direct dark matter detectors, massive radio surveys,
-and ground and space-based cosmic microwave background 
-experiments.
-
-There is a continued growth in data from Cosmic Frontier
-experiments. 
-Survey experiments currently exceed 1 PB of stored
-data. Over the next decade the mass of data will exceed 100 PB. In
-subsequent decades the development of radio experiments and energy
-resolving detectors will result in an increase in data streaming to
-$> 15$ GB/s.
+petabyte (PB) of total data per year. The growth in data will be
+continued over the coming decade by large format CCD cameras to
+measure the growth of structure from weak gravitational lensing,
+wide-field spectroscopic facilities to map the clustering of galaxies,
+increases in the size of direct dark matter detectors, massive radio
+surveys, and ground and space-based Cosmic Microwave Background (CMB)
+experiments. The mass of data will exceed 100~PB; in subsequent decades
+the development of radio experiments and energy resolving detectors
+will result in an increase in data streaming rates to $> 15$~GB/s.
 
 The intrinsically observational nature of much of Cosmic Frontier
 science implies a great reliance on simulation and modeling. Not only
@@ -62,117 +47,43 @@ must simulations provide robust predictions for observations, they are
 also essential in planning and optimizing surveys, and in estimating
 errors, especially in the nonlinear domains of structure
 formation. Synthetic sky catalogs play important roles in testing and
-optimizing data management and analysis. The scale of the
-required simulations varies from medium-scale campaigns for
-determining covariance matrices to state-of-the-art simulations of
-large-volume surveys, or, at the opposite extreme,
-investigating dark matter annihilation signals from dwarf galaxies.
-{\color{red} Why is the latter the opposite extreme?}
+optimizing data management and analysis. The scale of the required
+simulations varies from medium-scale campaigns for determining
+covariance matrices to state-of-the-art simulations of large-volume
+surveys, or, at the opposite extreme, small-volume investigations of
+dark matter annihilation signals from dwarf galaxies.
 
-%%%Required facilities for carrying out simulations include large-scale
-%%%supercomputing resources at DOE and NSF centers, local
-%%%clusters, and data-intensive computing resources needed to deal with
-%%%the enormous data streams generated by cosmological simulations. 
-To carry out simulations, we use supercomputers at DOE and NSF centers,
-and local clusters.  We also use computer systems designed for
-data-intensive to deal with
-the enormous data streams generated by cosmological simulations. 
-The
-data throughput can easily exceed that of observations; data storage,
-archiving, and analysis requirements (often in concert with
-observational data) are just as demanding as for observational
-data sets. Although there are significant challenges in fully
-exploiting future supercomputing hardware, the expected resources
-should satisfy simulation requirements, currently at the 10 
-petaflops (PF)
-scale and expected to reach the exascale ($10^18$) after 2020. The data-related
-issues are more serious and will need changes in the current
-large-scale computing model. Successful implementation of the recently
-suggested Virtual Data Facility (VDF) capability at 
-the Argonne Leadership Computing Facility (ALCF), 
-National Energy Research Scientific Computing Center (NERSCi), and
-the Oak Ridge Leadership Computing Facility (OLCF0, 
-would go a long way towards addressing these issues for Cosmic Frontier 
-simulations.
+Facilities for carrying out the required simulations include
+large-scale resources at DOE and NSF supercomputing centers, augmented
+by local clusters. Data-intensive computing platforms are also needed
+to deal with the enormous data streams generated by cosmological
+simulations. The data throughput can easily exceed that of
+observations; data storage, archiving, and analysis requirements
+(often in concert with observational data) are just as demanding as
+for observational datasets. Although there are significant challenges
+in fully exploiting future supercomputing hardware, available
+resources should satisfy perfromance requirements, currently at the
+scale of $\sim$10~PFlops. These requirements are expected to cross into
+the exascale regime after 2020. The data-related issues are more
+serious and will need changes in the current large-scale computing
+model. Successful implementation of the recently suggested Virtual
+Data Facility (VDF) capability at computing centers would go a long
+way towards addressing these issues for Cosmic Frontier simulations.
 
 Simulation requirements are projected to increase steeply. Current
 allocations are estimated to be of the order of 200M compute
 hours/year, with associated storage in the few PB range, and a shared
-data volume of the order of 100 TB. Data management standards and
+data volume of the order of 100~TB. Data management standards and
 software infrastructure vary widely across research teams. The
 projected requirements for 2020 are an order of magnitude improvement
-in data rates (to 10--100 GB/s), a similar increase in peak
-supercomputer performance ($\approx 200$ PFlops), and the ability to store and
-analyze data sets in the 100 PB class. It is difficult to make precise
+in data rates (to 10-100~GB/s), a similar increase in peak
+supercomputer performance (~200~PFlops), and the ability to store and
+analyze data sets in the 100~PB class. It is difficult to make precise
 estimates for 2030, as hardware projections are hazy, but the
-science requirements based on having complete data sets from missions
+science requirements based on having complete datasets from missions
 such as LSST, Euclid, and large radio surveys would argue for at least
 another order of magnitude increase across the board.
 
-
-The use of computational resources will need to grow to match the
-associated data rates for the processing and analysis of observational
-data and for simulated astrophysical and cosmological processes. Most
-of the data processing pipelines use linear time
-algorithms, where the amount of processing is roughly proportional to
-the amount of data collected by the instruments. Exceptions to the
-linear law will be algorithms that will incrementally reprocess all
-the data from a given instrument over and over, whose processing
-capabilities must therefore grow as a quadratic function of time.
-
-Most pipelines can be characterized by the number of cycles needed to
-process a byte of data. Typical numbers in astrophysics today range
-from a few thousand to 100K cycles, so that processing a canonical 100 PB
-data set requires 10$^{22}$ cycles, or about a billion CPU hours.
-One particular characteristic of this processing is that it
-will require a reasonable, but not excessive, sequential I/O rate to
-the data storage disks, typically less than a GB/s per
-processing node. {\color{red} define}
-
-Much of this processing is massively parallel, and thus will execute
-%%%very well on SIMD architectures. Emerging many-core platforms will
-very well on typical parallel architectures. Emerging many-core platforms will
-likely have a huge impact on efficiency.
-%%computing. While these platforms are harder to code against, pipeline
-While it is harder to program for these platforms, pipeline
-programs will be based on well-designed core libraries, where it will
-be cost-efficient to spend resources to optimize their parallel
-execution, thus substantially decreasing the hardware investment.
-
-
-The projected
-data volumes for archiving observational data 
-are not particularly large compared to
-commercial data sets (with the possible exception of SKA). 
-{\color{red} What is SKA?}
-Given that
-the eventual data volumes will probably exceed a few exabytes, the
-analyses must be co-located with the data.
-The most likely high-level architecture for scientific analyses will
-be a hierarchy of tiers, in some ways analogous to the LHC computing
-model, where the Tier 0 data is a complete set of all raw data,
-but then derived and value-added data products are moved to and analyzed
-further at other tiers of the hierarchy, which are not necessarily
-near
-%%%co-located with 
-the Tier 0 data centers.
-
-The archives will have to be based upon intelligent services, where
-heavy indexing can be used to locate and filter subsets of the
-data. 
-There is a huge growth in the diversity of ``Big Data
-Analytics'' frameworks.
-%%%There is a huge growth in the diversity of such ``Big Data
-%%%Analytics'' frameworks, ranging from petascale databases (SciDB,
-%%%Dremel, etc.) to an array of NoSQL solutions. 
-Over the next five years a
-few clear winners will emerge, allowing us to
-leverage the best solutions. A high speed, reliable and
-inexpensive networking infrastructure connecting the instruments and
-all the sites involved in the archiving will be crucial to the success
-of the entire enterprise.
-
-{\color{red} Editor asks why this paragraph is here.  Should it be in introduction?}
 Today's architectures for data analysis and simulations include
 supercomputers, suitable for massive parallel computations where the
 number of cycles per byte of data is huge, possessing a large
@@ -184,85 +95,125 @@ architecture lies somewhere in between these two: it must have a large
 sequential I/O speed to petabytes of data, and also perform very
 intense parallel computations. 
 
-Fast graph processing will become increasingly important to analyze large
-and complex simulations
-and track complex
-spatio-temporal connections among objects detected in multi-band
-time-domain surveys. 
-%%%To efficiently execute algorithms that require
-%%%large matrices and graphs, it is likely that a combination of large
-%%%(multiple TB) memory (RAM) will be combined with multiprocessors to
-%%%minimize communication overhead. 
-We will likely need large, powerful shared memory computers to efficiently
-execute algorithms that require large matrices and graphs.
-Also, new storage technologies with
-fast random access (SSD, memory bus flash, {\color{red} should that just be
-flash memory?}  phase change memory, 
-non-volatile RAM) will play a crucial role in the storage hierarchy.
+The use of computational resources will need to grow to match the
+associated data rates for the processing and analysis of observational
+data and for simulated astrophysical and cosmological processes. Most
+of the data processing pipelines use linear time algorithms, where the
+amount of processing is roughly proportional to the amount of data
+collected by the instruments. Exceptions to the linear law will be
+algorithms that will incrementally reprocess all the data from a given
+instrument over and over, whose processing capabilities must therefore
+grow as a quadratic function of time.
+
+Most pipelines can be characterized by the number of cycles needed to
+process a byte of data. Typical numbers in astrophysics today range
+from a few thousand to 100K cycles, so that processing a canonical
+100~PB data set, requires 10$^{22}$ cycles, or about a billion CPU
+hours. One particular characteristic of this processing is that it
+will require a reasonable, but not excessive, sequential I/O rate to
+data storage disks, typically less than a GB/s per processing compute
+node.
+
+Much of this processing is massively parallel, and thus will execute
+very well on SIMD (Single Instruction, Multiple Data)
+architectures. Emerging many-core platforms will therefore have a huge
+impact on the efficiency of data processing pipelines. While these
+platforms are harder to code against, pipeline codes will be based on
+well-designed core libraries, where it will be cost-efficient to spend
+resources to optimize their parallel execution, thus substantially
+decreasing the hardware investment.
+
+The projected data volumes for archiving of observational data are not
+particularly large compared to commercial data sets (with the possible
+exception of the Square Kilometer Array). Given that the eventual data
+volumes will probably exceed a few exabytes, the analyses must be
+co-located with the data.
+
+The most likely high-level architecture for scientific analyses will
+be a hierarchy of tiers, in some ways analogous to the LHC computing
+model, where the (top) Tier~0 data is a complete capture of all raw data,
+but then derived and value added data products are moved and analyzed
+further at lower tiers of the hierarchy, which are not necessarily
+co-located with the Tier~0 data centers.
+
+The archives will have to be based upon intelligent services, where
+heavy indexing can be used to locate and filter subsets of the
+data. There is a huge growth in the diversity of such ``Big Data
+Analytics'' frameworks, ranging from petascale databases to an array
+of simpler solutions. Over the next five years a few clear winners
+will emerge, allowing the Cosmic Frontier community to leverage the
+best solutions. A high speed, reliable and inexpensive networking
+infrastructure connecting the instruments and all the sites involved
+in the archiving will be crucial to the success of the entire
+enterprise.
+
+Fast graph processing will become increasingly important to analyze
+large and complex simulations and track complex spatio-temporal
+connections among objects detected in multi-band time-domain
+surveys. To efficiently execute algorithms that require large matrices
+and graphs, it is likely that large (multiple TB) memory (RAM) will be
+melded with multiprocessors to minimize communication overhead. Also,
+new storage technologies with fast random access (SSD, memory bus
+flash, phase change memory, non-volatile RAM) will play a crucial role
+in the storage hierarchy.
 
 Large-scale data sets, arising from both simulations and experiments,
 present different analysis tasks requiring a variety of data access
-patterns. These can be subdivided into three broad categories;
-localized data processing, global data processing and rendering graphics.
+patterns. These can be subdivided into three broad categories:
+localized data processing, global data processing, and rendering
+graphics.
 
 Some of the individual data accesses will be very small and localized,
-such as accessing the properties of individual halos or galaxies, and
-recomputing their observational properties. These accesses typically
-return data in small blocks, require a fast random access, a high 
-integer operation per second (IOPS) rate
-and are greatly aided by good indexing. At the same time there
-will be substantial computation needed on top of the small data
+such as interrogating the properties of individual halos or galaxies, and
+recomputing their observational properties. These operations typically
+return data in small blocks, require a fast random access, a high I/O
+performance, and are greatly aided by good indexing. At the same time
+there will be substantial computation needed on top of the small data
 objects. These accesses can therefore benefit from a good underlying
 database system with enhanced computational capabilities. Going beyond
 the hardware requirements, this is an area where the clever use of
 data structures will have an enormous impact on the system
 performance, and related algorithmic techniques will be explored
 extensively. The challenge here is that the small data accesses will
-be executed billions of times, suggesting a parallel, shared database
+be executed billions of times, suggesting a parallel, sharded database
 cluster with a random access capability of tens of millions of IOPS
 and a sequential data speed of several hundred GB/s, with an unusually
 high computing capability inside the servers themselves.
 
-At the other end of the spectrum are analyses that need to access
-a large fraction all collected data, such as computing the
-FFT of a scalar field over the entire volume, or computing correlation
+At the other end of the spectrum are analyses that need to access a
+large fraction of all collected data, such as computing an FFT of a
+scalar field over the entire volume, or computing correlation
 functions of various orders, over different subclasses of
 objects. These require very fast streaming access to data, algorithms
 that can compute the necessary statistics over (possibly multiple)
-streams, and multiprocessors that can handle these highly parallelizable
-stream computations efficiently.  Here the
-requirements would be a streaming data rate in excess of 500 GB/s
-between the data store and the processing, and a peak processing
-capability of several PFlops over vectorizable code. These patterns
-map best onto traditional HPC systems, with the caveat of the extreme
-data streaming requirements.
+streams, and multiprocessors that can handle these highly
+parallelizable stream computations efficiently. Here the requirements
+would be a streaming data rate in access of~500GB/s between the data
+store and the processing, and a peak processing capability of several
+PFlops. These patterns map best onto traditional HPC systems, with the
+caveat of the extreme data streaming requirements.
 
 The third type of access pattern is related to rendering computer
 graphics. These tasks will generate various maps and projections,
-touching a lot of data, and typically generating two-dimensional images. 
-Three examples of such tasks are:
-(a) computing maps of dark matter annihilation in large
-simulations with trillions of particles, (b) ray-tracing to compute
-gravitational lensing over a large simulation, (c) creating simulated
-images for future telescopes, based on simulations and detailed
-telescope and atmospheric models. As many of these tasks are closely
-related to computer graphics, mapping to GPU hardware will be very
-important, as this approach can yield performance gains of well over
-an order of magnitude.
+touching a lot of data, and typically generating two-dimensional
+images. Such tasks include computing maps of dark matter annihilation
+in trillion-particle simulations, ray-tracing to compute gravitational
+lensing signatures over a large simulation, and generating ray-traced
+simulated images for future telescopes. These ray-traced images are
+based on simulations and detailed telescope and atmospheric models. As
+many of these tasks are closely related to computer graphics, mapping
+to GPU hardware will be very important, as this approach can yield
+performance gains of well over an order of magnitude.
 
 Dealing with each of these access patterns demands substantial
-investments in hardware and software development. 
-%%To build an efficient streaming engine, 
-Every one of the bottlenecks, both in
-hardware and software, must be eliminated.  Even a single chokepoint can
-seriously degrade the performance of the whole system. In terms of
-algorithms, many traditional RAM-resident algorithms must be recast
-into streaming versions. A rethink of statistical algorithm design is
-needed, and computations (and computability) should be explicitly
-included into the cost tradeoffs.
-
-Table \ref{tab:CosmicCompNeeds} summarizes our estimate of 
-computational requirements of the Computing Frontier over the next two decades.
+investments in hardware and software development. To build an
+efficient streaming engine, all hardware and software bottlenecks must
+be eliminated as a single chokepoint can seriously degrade the
+performance of the whole system. In terms of algorithms, many
+traditional RAM-resident algorithms must be recast into streaming
+versions. A rethink of statistical algorithm design is needed, and
+computations (and computability) should be explicitly included into
+the cost tradeoffs.
 
 The need for better programming models, and better high-level
 abstractions is evident. In a complex, massively parallel system it
@@ -273,70 +224,60 @@ execution of the code is transparent to the user. At a higher level,
 there is a pressing need for the development of a sustainable software
 effort that can provide a baseline of support to multiple experiments,
 with experiment-specific extensions being built on top of such a
-capability. This will require a community effort to develop mand implement
-new algorithms, programming models, workflow
-tools, standards for verification, validation, and code testing.
-It will also require
-long-term support for maintenance and further development of the
-resulting software base.
+capability. This will require a community effort to develop and
+implement new algorithms, programming models, workflow tools, as well
+as standards for verification, validation, and code testing. A
+coherent plan for long-term support to maintain and further develop
+the resulting software base will have to be put in place.
 
-Simulation plays a critical role in
-Cosmic Frontier science, not only as the primary tool for theoretical
-predictions, but even more significantly, in evaluating and
-interpreting the capabilities of current and planned experiments. For
-optical surveys, the chain begins with a large cosmological simulation
-into which galaxies and quasars (along with their individual
-properties) are placed using semi-analytic or halo-based models. A
-synthetic sky is then created by adding realistic object images and
-colors and by including the local solar and galactic
-environment. Propagation of this sky through the atmosphere, the
-telescope optics, detector electronics, and the data management and
-analysis systems constitutes an end-to-end simulation of the survey. A
-sufficiently detailed simulation of this type can serve a large number
-of purposes, such as identifying possible sources of systematic errors
-and investigating strategies for correcting them or optimizing
-survey design area, depth, and cadence. The effects of systematic
-errors on the analysis of the data can also be investigated.  Given the
-very low level of statistical errors in current and next-generation
-precision cosmology experiments, and the precision with which
-deviations from $\Lambda$CDM are to be measured, this is an absolutely
-essential task.
+Simulation plays a critical role in Cosmic Frontier science, not only
+as the primary tool for theoretical predictions, but even more
+significantly, in evaluating and interpreting the capabilities of
+current and planned experiments. For optical surveys, the chain begins
+with a large cosmological simulation into which galaxies and quasars
+(along with their individual properties) are placed using
+semi-analytic or halo-based models. A synthetic sky is then created by
+adding realistic object images and colors and by including the local
+solar and galactic environment. Propagation of this sky through the
+atmosphere, the telescope optics, detector electronics, and the data
+management and analysis systems constitutes an end-to-end simulation
+of the survey. A sufficiently detailed simulation of this type can
+serve a large number of purposes such as identifying possible sources
+of systematic errors and investigating strategies for correcting them,
+or for optimizing survey design (in area, depth, and cadence). The
+effects of systematic errors on the analysis of the data can also be
+investigated. Because of the very low level of statistical errors in
+current and next-generation precision cosmology experiments, and the
+precision with which deviations from $\Lambda$CDM are to be measured,
+this is an absolutely essential task.
 
-Directly analogous to building a community-supported
-software base for Cosmic Frontier experiments, there is a related need
-for bringing together larger collaborations in the area of
-simulations. The lattice QCD community has shown what is possible in this
-direction by working together in a large national collaboration. Such
-efforts are now beginning within the Cosmic Frontier and will
-hopefully come to fruition in the near term.
+Directly analogous to building a community-supported software base for
+Cosmic Frontier experiments, there is a related need for bringing
+together larger collaborations in the area of simulations. The lattice
+QCD community has shown what is possible in this direction by working
+together in a large national collaboration. Such efforts are now
+beginning within the Cosmic Frontier and will hopefully come to
+fruition in the near term.
 
-
-While much of the science in Cosmic Frontier is undertaken by small
-groups of physicists, the collaborations themselves have grown to
-hundreds and sometimes thousands of members. Many of the techniques
-utilized by these collaborations are common to multiple Cosmic Frontier 
-experiments. Most experiments have, however, developed their
-analysis and processing software independently of other Cosmic Frontier 
-programs. This can lead to duplication of effort, software
-that is tailored only to meet a specific need, non-scalable
-approaches, and software that is difficult to sustain beyond the
-lifetime of an individual experiment. 
-The HEP community should establish programs for sustainable software
-development.
-%%%Programs for sustainable software should, therefore, be considered 
-%%%by HEP in order to make computing developments more robust. 
-To ensure that the software and
-techniques maintained by these programs are successful will require a
-community that actively uses and develops within these tools.
-The Geant4 program for simulating the passage of
-particles throught matter is an example of a successful, widely used tool.
+While much of the science in the Cosmic Frontier is undertaken by
+small groups of physicists, the collaborations themselves have grown
+to hundreds and sometimes thousands of members. Many of the techniques
+utilized by these collaborations are common to multiple Cosmic
+Frontier experiments. Most experiments have, however, developed their
+analysis and processing software independently of other programs. This
+can lead to duplication of effort, software that is tailored only to
+meet a specific need, non-scalable approaches, and software that is
+difficult to sustain beyond the lifetime of an individual
+experiment. To make computing developments more robust, a sustainable
+software initiative is highly desirable. A substantial community must actively
+develop and deploy the tools created within such a program.
 
 
 \begin{center}
 \begin{table}
 \caption{Computing requirements for Cosmic Frontier science over the next
  10--20 years.}
-\begin{centering}
+\begin{center}
 \begin{tabular}{|l|r|r|r|} 
  \hline 
 {\bf Experimental Data} & 2013 & 2020 & 2030+ \\
@@ -352,7 +293,7 @@ Cores & 0.1--1M & 10--100M &$> 1$G\\
 CPU hours & 200M & $>$20G & $> 100$G\\
 \hline
 \end{tabular}
-\end{centering}
+\end{center}
 \label{tab:CosmicCompNeeds}
 \end{table}
 \end{center}
