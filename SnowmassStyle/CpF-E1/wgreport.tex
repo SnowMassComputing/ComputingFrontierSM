@@ -29,10 +29,10 @@ recognized. With the cementing of the cosmological ``Standard Model''
 -- well measured, but deeply mysterious -- recent progress in this
 area has been dramatic, and has propelled the field to the forefront
 of research in fundamental physics. Topics of key interest in the
-Cosmic Frontier include dark energy, dark matter, physics of the early
-universe, and astrophysical and cosmological probes of fundamental
-physics. Research in these topics impacts our basic notions of space
-and time, the uneasy interaction between gravity and quantum
+Cosmic Frontier include dark energy, dark matter, astrophysical and
+cosmological probes of fundamental physics, and the physics of the
+early universe. Research in these topics impacts our basic notions of
+space and time, the uneasy interaction between gravity and quantum
 mechanics, the origin of primordial fluctuations responsible for all
 structure in the Universe, and provides unique discovery channels for
 reaching beyond the Standard Model of particle physics in the dark
@@ -47,27 +47,51 @@ laboratory tests of gravity theories, and accelerator dark matter
 searches fall into the first class. Investigations of dark energy,
 indirect dark matter detection, and studies of primordial fluctuations
 fall into the second class; essentially the entire set of available
-frequency bands is exploited here, from the radio to TeV
+frequency bands is exploited, from the radio to TeV
 energies. Relevant theoretical research also casts a very wide net --
 ranging from quantum gravity to the astrophysics of galaxy formation.
 
-The size and complexity of Cosmic Frontier experiments is diverse,
-spanning tabletop experiments to large terrestrial detectors and
-ground and space-based cosmological surveys and pointed observations,
-simultaneously covering a number of precision measurements and
+The size and complexity of Cosmic Frontier experiments is diverse (see
+Table~\ref{tab:CompNeeds}), spanning tabletop experiments to large
+scale surveys; simultaneously covering precision measurements and
 discovery-oriented searches. A defining characteristic of the Cosmic
 Frontier is a trend towards ever larger and more complex experimental
 and observational campaigns, with sky surveys now reaching
-collaboration memberships of over a thousand researchers, roughly the
-same size as a large high energy physics experiment. Cross-correlating
-different survey observations can extract more information, help to
-eliminate degeneracies, and reduce systematic errors. These factors
-count among the major drivers for the computational and data
-requirements that we consider below.
+collaboration memberships of over a thousand researchers (roughly the
+same size as a large high energy physics
+experiment). Cross-correlation of these experimental datasets enables
+the extraction of more information, helps to eliminate degeneracies,
+and reduces systematic errors. These factors count among the major
+drivers for the computational and data requirements that we consider
+below.
 
 \medskip
 
-\noindent{\bf\scshape{1.2 Computing at the Cosmic Frontier}}
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{|l|c|c|c|} 
+ \hline 
+{\bf Experimental Data} & 2013 & 2020 & 2030+ \\
+\hline
+Storage & 1PB & 6PB & 100-1500PB \\
+Cores & 10$^3$ & 70K & 300+K \\
+CPU hours & 3x10$^6$ hrs & $2\times 10^8$ hrs & $\sim 10^9$ hrs \\
+ \hline 
+{\bf Simulations}  & 2013 & 2020 & 2030+ \\
+ \hline 
+ Storage & 1-10 PB & 10-100PB & $> 100$PB - 1EB\\
+Cores & 0.1-1M & 10-100M &$> 1$G\\
+CPU hours & 200M & $>$20G & $> 100$G\\
+\hline
+\end{tabular}
+\label{tab:CompNeeds}
+\caption{Estimated compute and storage needs for the next 10-20 years
+  of Cosmic Frontiers simulations and experiments..}
+\end{center}
+\end{table}
+
+
+\subsection{Computing at the Cosmic Frontier}
 
 The role of computing in the Cosmic Frontier is two-fold: on-line
 processing at the instrument, including its data management system,
@@ -79,10 +103,9 @@ the purview of this document. We will focus on general features of the
 data management and analysis chain and on the associated off-line
 computing requirements.
 
-\begin{center}
-{\bf\scshape{2. Cosmic Frontier: Facilities}}
-\end{center}
-\noindent{\bf\scshape{2.1 Experimental Facilities}}
+\section{Cosmic Frontier: Facilities}
+
+\subsection{Experimental Facilities}
 
 The dramatic increase in data from Cosmic Frontier experiments over
 the last decade has led to a number of fundamental breakthroughs in
@@ -92,7 +115,7 @@ experiments generate on the order of a petabyte of data per
 year. Projecting the growth in data over the next two decades, based
 on the expected technological capabilities of the next generation of
 experiments, it is expected that there will be an increase of between
-a factor of 100 and 1000 in data volumes by 2035 that will see the
+a factor of 100 and 1000 in data volumes by 2035. This will see the
 Cosmic Frontier experiments reach an exabyte of data. While the size
 of data from individual experiments is driven by cosmological surveys,
 the rate of increase is common to many of the Cosmic Frontier missions
@@ -102,9 +125,7 @@ number of computational challenges that must be addressed if we wish
 to properly exploit the scientific and discovery potential of these
 experiments.
 
-\medskip
-
-\noindent{\bf\scshape{2.1.1 {\em Optical Surveys}}}
+\subsubsection{Optical Surveys}
 
 Current Cosmic Frontier experiments survey thousands of square degrees
 of the sky using large format CCD cameras and wide field multi-object
@@ -123,7 +144,7 @@ supernovae.
 %\cite{xxx}.
 %NOTE: FOM reference, do we need it?
 
-The spectroscopic counterpart to DES is BOSS (Baryon Oscillation
+The spectroscopic counterpart to DES is BOSS (the Baryon Oscillation
 Spectroscopic Survey)~\cite{boss}; a multi-fiber spectroscopic survey
 that utilizes the Sloan Digital Sky Survey telescope (as part of
 SDSS-III) to measure the redshifts for 1.3M luminous galaxies with
@@ -141,9 +162,9 @@ more than 20 million galaxies and quasars. Through a combination of
 baryon acoustic oscillations (BAO) measurements and measurements of
 redshift space distortions (RSD), eBOSS (Stage III), and DESI will
 achieve accuracies of better than 1\% on measures of the angular
-diameter distances, DESI producing these measurements at $z<2$ with
+diameter distances (with DESI producing these measurements at $z<2$ with
 3-D galaxy maps and at $z>2$ with the Lyman-$\alpha$ forest, in 35
-redshift bins.
+redshift bins).
 
 Over the next two decades the size of dark energy surveys, together
 with the volumes they probe, will grow by two orders of magnitude.
@@ -155,7 +176,7 @@ resolution.  The largest of the imaging surveys, LSST is a joint
 DOE-NSF led initiative. As a Stage IV dark energy mission it will
 survey $>$18,000 deg$^{2}$ of the sky $\sim 1000$ times over the
 period of 10 years. Starting in 2020 it will amass $>60$PB of imaging
-by the completion of the survey in 2030.
+by the completion of operations in 2030.
 
 Complementing the optical ground-based telescopes, the joint ESA led
 space-based Euclid mission (with a 1.2m Korsch telescope) will survey
@@ -165,53 +186,47 @@ will be supplemented with a 15,000 deg$^{2}$ near-infrared
 spectroscopic survey that will measure 40 million redshifts with an
 accuracy of $z < 0.001(1+z)$.  Euclid is expected to launch in 2020
 and have a survey mission lifespan of approximately 6.25 years. Euclid
-will be followed in 2023 by the NASA-led WFIRST space mission. This
-Stage IV dark energy mission, while still under definition, is
-expected to comprise a 2.4m aperture telescope and a large IR camera
-(with 0.11-arcsec pixels) that will provide spectroscopic and imaging
-over its 6 year mission lifetime.
+will likely be followed in 2023 by the NASA-led WFIRST space
+mission. This Stage IV dark energy mission, while still under
+definition, is expected to comprise a 2.4m aperture telescope and a
+large IR camera (with 0.11-arcsec pixels) that will provide
+spectroscopic and imaging over its 6 year mission lifetime.
 
-Each of these missions will address the nature of dark energy through
-a combination of gravitational weak and strong lensing, distances to
-supernovae, baryon acoustic oscillations, redshift space distortions,
-large-scale structure, and counts of clusters of galaxies. The
-datasets generated by these surveys will, however, have a much broader
-reach in terms the cosmological and astrophysical questions they will
-be able to address (e.g., the sum of the masses of neutrinos).
+Beyond the DOE sponsored experiments described previously, this growth
+in imaging data will be matched by a 30-fold increase in spectroscopic
+observations of distant galaxies (in addition to the near-infrared
+spectroscopy available from Euclid and WFIRST). HETDEX (Hobby-Eberly
+Telescope Dark Energy Experiment)~\cite{hetdex}, and the Prime Focus
+Spectrograph (PFS \cite{pfs}), comprise fiber spectrographs with the
+capability of intermediate resolution spectroscopy of a several
+thousand simultaneous targets (with up to 33,500 fibers for
+HETDEX). Surveying between 300 and 18,000 deg$^{2}$ over the period
+2014--2023 these missions will result in over 30 million galaxies with
+spectroscopic redshifts by the mid-point of the LSST mission.
 
-The growth in imaging surveys will be matched by a 30-fold increase in
-spectroscopic observations of distant galaxies (in addition to the
-near-infrared spectroscopy available from Euclid and WFIRST). HETDEX
-(Hobby-Eberly Telescope Dark Energy Experiment)~\cite{hetdex}, the
-Prime Focus Spectrograph (PFS \cite{pfs}), eBOSS and DESI all comprise
-fiber spectrographs with the capability of intermediate resolution
-spectroscopy of a several thousand simultaneous targets (with up to
-33,500 fibers for HETDEX). Surveying between 300 and 18,000 deg$^{2}$
-over the period 2014--2023 these missions will result in over 30
-million galaxies with spectroscopic redshifts by the mid-point of the
-LSST mission.
+While focused on probes of dark energy and dark matter the datasets
+generated by these surveys will have a much broader reach in terms the
+cosmological and astrophysical questions they will address (e.g., the
+sum of the masses of neutrinos). The increase in data volume, the
+complexity of the data, and the sensitivities of these surveys to
+systematic uncertainties within the data are all driving the
+computational complexity and needs of the Cosmic Frontier in
+2020+. The computational requirements for processing of these data
+alone will increase by 2-3 orders of magnitudes by the middle of the
+next decade (driven primarily by cosmological imaging surveys). While
+the individual dark energy missions will provision the computational
+resources appropriate to process their data as it is collected,
+project-led processing must meet the exacting requirements of dark
+energy science (particularly as the computational requirements grow
+quadratically with time due to the reprocessing required by sequential
+data releases). Facilities that possess the capability of reanalyzing
+petascale data resources throughout the lifespan of these missions
+will be required. As an illustrative example, reprocessing the LSST
+images five years into the survey will require approximately a billion
+CPU-hours.
 
-The increase in data volume, the complexity of the data, and the
-sensitivities of these surveys to systematic uncertainties within the
-data are all driving the computational complexity and needs of the
-Cosmic Frontier in 2020+. The computational requirements for
-processing of these data alone will increase by 2-3 orders of
-magnitudes by the middle of the next decade (driven primarily by
-cosmological imaging surveys). While the individual dark energy
-missions will provision the computational resources appropriate to
-process their data as it is collected, project-led processing must
-meet the exacting requirements of dark energy science (particularly as
-the computational requirements grow quadratically with time due to the
-reprocessing required by sequential data releases). Facilities that
-possess the capability of reanalyzing petascale data resources
-throughout the lifespan of these missions will be required. As an
-illustrative example, reprocessing the LSST images five years into the
-survey will require approximately a billion CPU-hours.
-
-\medskip
-
-\noindent{\bf\scshape{2.1.2 {\em Cosmic Microwave Background
-      Surveys}}}
+\subsubsection{Cosmic Microwave Background
+      Surveys}
 
 Cosmic Microwave Background (CMB) surveys have been at the forefront
 of observational cosmology for over two decades. The next generation
@@ -251,9 +266,7 @@ number is an active area of research.
 %NOTE: Last part of this paragraph is info from Julian Borrill (added
 %by SH) 
 
-\medskip
-
-\noindent{\bf\scshape{2.1.3 {\em Radio Surveys}}}
+\subsubsection{Radio Surveys}
 %NOTE: section added by SH with info from Steve Myers and Danny Jacobs 
 
 NRAO has recently announced the VLA Sky Survey (VLASS)~\cite{vlass}
@@ -272,8 +285,8 @@ great utility to this project.
 A VLASS will produce an overall image of up to the 30000 square
 degrees of the visible sky in multiple epochs in the 1000 or more
 frequency channels. This image data cube, at an angular resolution of
-0.1arcseconds, contains nearly 40Ppix per epoch and must be stored,
-processed, studied, and disseminated. In particular, the
+0.1 arcseconds, contains nearly 40 petapixel per epoch and must be
+stored, processed, studied, and disseminated. In particular, the
 cross-correlation and comparison with views of the same sky from other
 facilities and missions such as Planck, Spitzer, JWST (James Webb
 Space Telescope)~\cite{jwst}, and LSST will need to be routine and
@@ -289,7 +302,7 @@ and products for key science aspirations, such as the use of radio
 weak lensing measurements for dark energy studies as outlined in the
 DETF (Dark Energy Task Force) report~\cite{detf}. Even in the SKA
 Phase 1 that is currently under development this facility will require
-support for daunting data rates greatly exceeding those for the VLA
+support for data rates greatly exceeding those for the VLA
 and HERA (HEterodyne Receiver Array)~\cite{hera} projects. Work that
 would be carried out for pathfinders such as the VLA will be directly
 applicable to SKA planning, and can be considered to form a
@@ -298,10 +311,8 @@ later in the decade. SKA precursor instruments are already taking
 data, for example the Murchison Widefield Array (MWA)~\cite{mwa} is
 accumulating data at 1PB/year.
 
-\medskip
-
-\noindent{\bf\scshape{2.1.4 {\em Direct Dark Matter Detection
-      Experiments}}}
+\subsubsection{Direct Dark Matter Detection
+      Experiments}
 
 Direct detection experiments address the nature of dark matter through
 the identification of interactions of Weakly Interacting Massive
@@ -313,7 +324,7 @@ than dark energy experiments, second generation (G2) experiments are
 expected to see a comparable order of magnitude increase in the size
 of detectors and in the volume of data they will generate. By the end
 of this decade direct dark matter experiments will exceed petabyte
-sized data sets.  This increase in scale of data will require a
+sized datasets.  This increase in scale of data will require a
 comparable increase in the sophistication and complexity of software
 frameworks used in processing these data (including the development of
 the infrastructure to manage the data, metadata, and analysis codes).
@@ -328,9 +339,7 @@ analysis frameworks will need to be coordinated across experiments in
 order to maximize the efficient use of resources. HEP is a natural
 organization to foster and manage such collaborations.
 
-\medskip
-
-\noindent{\bf\scshape{2.1.5 {\em Impact of Technology Developments}}} 
+\subsubsection{Impact of Technology Developments}
 
 Current experiments, such as DES, will generate a petabyte of data
 over the period 2013-2017. Next-generation surveys such as CMB-S4 or
@@ -345,12 +354,10 @@ a modern multi-core CPU). Post-2030 technology trends, including
 energy resolving detectors such as Microwave Kinetic Inductance
 Detectors (MKIDs) and advances in radio detectors, are expected to
 maintain the steep growth in data. The near-future VLASS will be
-followed by the SKA expected to come on-line in 2020 and to generate
+followed by the SKA expected to come on-line in the next decade and to generate
 between 300 and 1500PB of data per year.
 
-\medskip
-
-\noindent{\bf\scshape{2.2 Simulation Facilities}}
+\subsection{Simulation Facilities}
 
 The intrinsically observational nature of much of Cosmic Frontier
 science implies a great reliance on simulation and modeling. Not only
@@ -388,13 +395,9 @@ covered in more detail in Section~4. Successful implementation of the
 recently suggested Virtual Data Facility (VDF) capability at ALCF
 (Argonne), NERSC (LBNL), and OLCF (Oak Ridge), would go a long way
 towards addressing these issues for Cosmic Frontier simulations as
-well as for analysis of observational data sets.
+well as for analysis of observational datasets.
 
-\medskip
-
-\begin{center}
-{\bf\scshape{3. Simulations}}
-\end{center}
+\section{Simulations}
 
 Simulations cover a broad area ranging from predictions for various
 theoretical scenarios and for characterizing cosmological probes, to
@@ -402,9 +405,7 @@ detailed end-to-end simulations for specific experiments, to the Monte
 Carlo-based analyses for extracting cosmological and other parameters
 from observational data.
 
-\medskip
-
-\noindent{\bf\scshape{3.1 Role of Simulations}}
+\subsection{Role of Simulations}
 
 It is widely recognized that simulation plays a critical role in
 Cosmic Frontier science, not only as the primary tool for theoretical
@@ -447,9 +448,7 @@ due to the large number of individual efforts in different fields,
 initial attempts are showing some promise and will hopefully come to
 fruition in the near term.
 
-\medskip
-
-\noindent{\bf\scshape{3.2 Computational Challenges}}
+\subsection{Computational Challenges}
 
 We now enumerate a number of computational challenges faced by the
 Cosmic Frontier simulation community in achieving the stated science
@@ -457,9 +456,7 @@ goals of next generation observations. These simulations span a wide
 variety of techniques, from N-body simulations, to gasdynamics, and
 finally to fully consistent quantum transport.
 
-\medskip
-
-\noindent{\bf\scshape{3.2.1 {\em N-body Simulations}}}
+\subsubsection{N-body Simulations}
 
 Cosmological simulations can be classified into two types: (i)
 gravity-only N-body simulations, and (ii) hydrodynamic simulations
@@ -514,9 +511,7 @@ to develop a powerful next generation of these codes that can
 simultaneously avail various types of hybrid and heterogeneous
 architectures.
 
-\medskip
-
-\noindent{\bf\scshape{3.2.2 {\em Hydrodynamic Simulations}}}
+\subsubsection{Hydrodynamic Simulations}
 
 The increased focus on precision cosmological measurements over the
 past decade has led to a regime in which controlling systematic
@@ -597,9 +592,7 @@ fidelity of cluster simulations, particularly the physics of stellar
 and AGN feedback, to the level where the cosmological constraints from
 cluster observations are competitive with other cosmological probes.
 
-\medskip
-
-\noindent{\bf\scshape{3.2.3 {\em Emulators}}}
+\subsubsection{ Emulators}
 
 Future cosmological surveys will probe deep into the nonlinear regime
 of structure formation. Precision predictions in this regime will be
@@ -633,9 +626,7 @@ function, galaxy correlation functions, etc.; (ii) a broader set of
 cosmological models, extending beyond wCDM models; (iii) inclusion of
 baryonic effects; (iv) determination of covariances (see below).
 
-\medskip
-
-\noindent{\bf\scshape{3.2.4 {\em Covariance Matrices}}}
+\subsubsection{Covariance Matrices}
 
 Determining cosmological parameters requires not only the accurate
 predictions of the observables, but also the \emph{errors} on those
@@ -670,9 +661,7 @@ techniques mentioned, the simulation resources will be sufficient for
 this task (roughly three orders of magnitude more than currently
 available) .
 
-\medskip
-
-\noindent{\bf\scshape{3.2.5 {\em Supernova Simulations}}}
+\subsubsection{Supernova Simulations}
 
 Observations of Type Ia SNe have led to an empirical relation between
 the peak brightness of these events and their decay time, providing a
@@ -721,9 +710,7 @@ evolution suggest that there may be surprises. The stakes are high, as
 the compact object and core collapse environments are the key
 cosmological engines of element synthesis.
 
-\medskip
-
-\noindent{\bf\scshape{3.2.6 {\em Impact of Technology Developments}}}
+\subsubsection{ Impact of Technology Developments}
 
 Changes in the hardware and software environment~\cite{microproc}
 associated with petascale computers are complicating the overall
@@ -773,57 +760,45 @@ simulation of the hydrodynamic effects associated with large scales,
 while exploiting accelerators for subresolution effects that do not
 require long-range coupling.
 
-\medskip
+\section{Data-Intensive Science Challenges}
 
-\begin{center}
-{\bf\scshape{4. Data-Intensive Science Challenges}}
-\end{center}
-
-\noindent{\bf\scshape{4.1 Data Challenge}}
 
 The challenge posed by the large data stream from experiments requires
 a number of responses in scalable data analytics, data-intensive
 computing, networking, and new methods to deal with new classes of
-research problems associated with the size and richness of the data
-sets. The Cosmic Frontier experiments have their commonalities and
+research problems associated with the size and richness of the datasets. The Cosmic Frontier experiments have their commonalities and
 differences with traditional HEP experiments, thus the associated data
 management strategy has to be independently developed, while maximally
 leveraging capabilities that already exist.
 
-\medskip
-
-\noindent{\bf\scshape{4.2 Data Growth in Experiments and Simulations}}
+\subsection{Data Growth in Experiments and Simulations}
 
 There is a continued growth in data from Cosmic Frontier
 experiments. Survey experiments currently exceed 1PB of stored
 data. Over the next decade the mass of data will exceed 100PB. In
 subsequent decades the development of radio experiments and energy
-resolving detectors will result in an increase in data streaming to
-$> 15$GB/s.
-
-Simulation requirements are projected to increase steeply. Current
-allocations are estimated to be of the order of 200M compute
-hours/year, with associated storage in the few PB range, and a shared
-data volume of the order of 100TB. Data management standards and
-software infrastructure vary widely across research teams. The
+resolving detectors will result in an increase in data streaming to $>
+15$GB/s. Simulation requirements are also projected to increase
+steeply. Current allocations are estimated to be of the order of 200M
+compute hours/year, with associated storage in the few PB range, and a
+shared data volume of the order of 100TB. Data management standards
+and software infrastructure vary widely across research teams. The
 projected requirements for 2020 are an order of magnitude improvement
 in data rates (to 10-100GB/s), a similar increase in peak
 supercomputer performance ($~200$PFlops), and the ability to store and
-analyze data sets in the 100PB class. It is difficult to make precise
+analyze datasets in the 100PB class. It is difficult to make precise
 estimates for 2030 as hardware projections are hazy, however, the
 science requirements based on having complete datasets from missions
 such as LSST, Euclid, and large radio surveys would argue for at least
 another order of magnitude increase across the board.
 
-\medskip
-
-\noindent{\bf\scshape{4.3 Data Preservation and Archiving}}
+\subsection{Data Preservation and Archiving}
 
 Archiving the observational data in of itself does not appear to be a
-huge challenge, as long as it is understood that each data item needs
+huge challenge, as long as it is understood that each dataset needs
 to be stored redundantly, preferably in a geoplexed way. The projected
 data volumes involved are not particularly large compared to
-commercial data sets (with the possible exception of SKA). Given that
+commercial datasets (with the possible exception of SKA). Given that
 the eventual data volumes will probably exceed a few exabytes, the
 analyses must be co-located with the data.
 
@@ -845,9 +820,7 @@ inexpensive networking infrastructure connecting the instruments and
 all the sites involved in the archiving will be crucial to the success
 of the entire enterprise.
 
-\medskip
-
-\noindent{\bf\scshape{4.4 Computational Resources for Experiments}}
+\subsection{Computational Resources for Experiments}
 
 The use of computational resources will need to grow to match the
 associated data rates for the processing and analysis of observational
@@ -862,7 +835,7 @@ capabilities must therefore grow as a quadratic function of time.
 Most pipelines can be characterized by the number of cycles needed to
 process a byte of data. Typical numbers in astrophysics today range
 from a few thousand to 100K cycles, thus to process a canonical 100PB
-data set, 10$^{22}$ cycles, or about a billion CPU hours, are
+dataset, 10$^{22}$ cycles, or about a billion CPU hours, are
 required. One particular characteristic of this processing is that it
 will require a reasonable, but not excessive sequential I/O rate to
 the disks the data is stored on, typically less than a GB/s per
@@ -876,9 +849,7 @@ codes will be based on well-architected core libraries, where it will
 be cost efficient to spend resources to optimize their parallel
 execution, thus substantially decreasing the hardware investment.
 
-\medskip
-
-\noindent{\bf\scshape{4.5 Computational Resources for Simulations}}
+\subsection{Computational Resources for Simulations}
 
 The required computational resources for simulations naturally fall
 into three tiers. The first level of analysis takes place in the host
@@ -902,10 +873,8 @@ with an associated computation requirement rising from thousands of
 cores to $\sim 10^5$ cores (with a core considered to be equivalent of
 a current generation microprocessor core).
 
-\medskip
-
-\noindent{\bf\scshape{4.6 New Computational Models for Distributed
-    Computing}} 
+\subsection{New Computational Models for Distributed
+    Computing}
 
 Today's architectures for data analysis and simulations include
 supercomputers, suitable for massive parallel computations where the
@@ -928,10 +897,8 @@ minimize communication overhead. Also, new storage technologies with
 fast random access (SSD, memory bus flash, phase change memory, NVRAM)
 will play a crucial role in the storage hierarchy.
 
-\medskip
-
-\noindent{\bf\scshape{4.7 Data Analytics Infrastructure for
-    Experiments and Simulations}} 
+\subsection{Data Analytics Infrastructure for
+    Experiments and Simulations}
 
 \medskip
 
@@ -944,7 +911,7 @@ understanding that there are similar engineering challenges in
 building the shared analytics infrastructure as there are in building
 a new experimental facility.
 
-Large-scale data sets, arising from both simulations and experiments,
+Large-scale datasets, arising from both simulations and experiments,
 present different analysis tasks requiring a variety of data access
 patterns. These can be subdivided into three broad categories.
 
@@ -991,10 +958,11 @@ related to computer graphics, mapping to GPU hardware will be very
 important, as this approach can yield performance gains of well over
 an order of magnitude.
 
-Data access requires touching a large fraction of the data volumes,
-based upon a 4-dimensional spatial index, as the ray tracing is
-potentially traversing along past light cones, connecting multiple
-snapshots of the simulations. The accuracy requirements of these
+%Data access requires touching a large fraction of the data volumes,
+%based upon a 4-dimensional spatial index, as the ray tracing is
+%potentially traversing along past light cones, connecting multiple
+%snapshots of the simulations.
+The accuracy requirements of these
 computations will also demand that the simulations save larger than
 usual numbers of snapshots, increasing the storage requirements. Large
 memory machines combined with massive local GPUs are likely to be an
@@ -1036,13 +1004,9 @@ silicon-based technologies (bigger CCDs, flash, NVRAM, energy
 sensitive photon detectors).  This in turn means, that investments in
 software will have a much larger impact than ever before.
 
-\begin{center}
-{\bf\scshape{5. Community Issues}}
-\end{center}
+\section{Community Issues}
 
-\noindent{\bf\scshape{5.1 Creation of Career Paths}} 
-
-\medskip
+\subsection{Creation of Career Paths}
 
 Over the coming decade Cosmic Frontier science will become ever more
 dependent on developments in computing; from the management of data
@@ -1066,10 +1030,8 @@ universities. A number of areas of HEP (e.g. the Energy Frontier) have
 addressed many of these challenges and may provide exemplars for the
 Cosmic Frontier community.
 
-\medskip
-
-\noindent{\bf\scshape{5.2 Community Approach to Scalable and Robust
-    Software}}
+\subsection{Community Approach to Scalable and Robust
+    Software}
 
 The robustness of methods and software implementations is a major
 issue that must be considered by the entire community. Best practices
@@ -1092,27 +1054,43 @@ this area, sufficient resources will have to be committed to this
 activity, such as a long-lived testing facility, which may include a
 public software registry.
 
-\medskip
+\section{Conclusions}
+
+Lying at the interface between particle physics, cosmology, and
+astrophysics, the Cosmic Frontier addresses many fundamental questions
+in Physics today; from dark energy, to quantum gravity, to the
+astrophysics of galaxy formation.  With a 1000-fold increase in data
+rates expected over the next decade from a diverse range of Cosmic
+Frontier experiments, computational resources and facilities will need
+to grow to support the generation, processing and analysis of data
+from these experiments. In this era of data intensive science,
+simulations, of similar or large scales, will be required to support the
+optimization of experimental surveys as well as the physical interpretation of
+the experimental results.
+
+Many of the techniques utilized by Cosmic Frontier collaborations are
+common across different experiments and simulation frameworks. Most
+experiments have, however, developed their analysis and processing
+software independently of other programs. There is a growing need for
+the development of sustainable software programs that can provide a
+baseline of computational and analytic support for multiple
+experiments and collaborations.  This will include both the
+development of computational architectures and tools, as well as the
+software for analyzing and interpreting the data.  To accomplish this
+will require a coherent community effort for long-term support to
+develop and implement new algorithms, programming models, workflow
+tools, as well as standards for verification, validation, and code
+testing.
+
+Coupling the computational and data requirements necessitates a
+science community who can work at the interface of science, computing,
+and data; software will become the instrumentation of the next
+decade. Sustained support for the education of the community in the
+development and application of these facilities (including the
+creation of long term career paths) is of importance to the health of
+computing in Cosmic Frontiers.
 
 
-\begin{center}
-\begin{table}
-\begin{tabular}{|l|c|c|c|} 
- \hline 
-{\bf Experimental Data} & 2013 & 2020 & 2030+ \\
-\hline
-Storage & 1PB & 6PB & 100-1500PB \\
-Cores & 10$^3$ & 70K & 300+K \\
-CPU hours & 3x10$^6$ hrs & $2\times 10^8$ hrs & $\sim 10^9$ hrs \\
-{\bf Simulations} &&& \\
-Storage & 1-10 PB & 10-100PB & $> 100$PB - 1EB\\
-Cores & 0.1-1M & 10-100M &$> 1$G\\
-CPU hours & 200M & $>$20G & $> 100$G
-\label{tab:CompNeeds}
-\end{tabular}
-\caption{Compute needs in 10-20 years.}
-\end{table}
-\end{center}
 
 \begin{thebibliography}{99}
 \bibitem{des} J.~Annis et al., arXiv:astro-ph/0510195
