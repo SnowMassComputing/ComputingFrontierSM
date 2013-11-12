@@ -47,8 +47,8 @@ Beyond HEP, efficient and agile data access will underpin future successes in da
 scientific and commercial applications.  It is hard, but not impossible, to believe that HEP 
 will continue to be best served by a persistency solution that appears to be confined to HEP.
 
-Distributed data management is proving to be a major success of the LHC experiments, as 
-illustrated in Figures xx,yy,zz., and is an area where the US brings much of the intellectual 
+Distributed workflow and data management is proving to be a major success of the LHC experiments, as 
+illustrated in Figures \ref{fig:atlas-jobs},\ref{fig:atlas-ddm},\ref{fig:cms-aaa}, and is an area where the US brings much of the intellectual 
 leadership.  But this success is costly. For example the US-ATLAS M\&O-funded effort that 
 contributes to developing and operating the ATLAS distributed workflow and data management 
 system amounts to around \$4.5M per year.  This is in addition to the effort required to operate 
@@ -56,7 +56,24 @@ the US Tier 1 and Tier 2 facilities.  It is difficult to imagine that the LHC-fo
 could continue at this level for two decades, and even more difficult to imagine that other HEP 
 or wider science activities could take advantage of the LHC experiments current achievements 
 given their operational cost and complexity. 
-
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{CpF-I5/ATLAS-jobs.pdf}
+\caption{ATLAS jobs executing on the WLCG}
+\label{fig:atlas-jobs}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{CpF-I5/ATLAS-DDM.pdf}
+\caption{ATLAS distributed data management: Top level source-destination matrix showing success rates and data transfer rates}
+\label{fig:atlas-ddm}
+\end{figure}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{CpF-I5/CMS-AAA.pdf}
+\caption{Map showing the CMS "Any data Anywhere Anytime" distributed direct access system based on xrootd software}
+\label{fig:cms-aaa}
+\end{figure}
 With respect to data preservation and open availability, the LHC experiments are actively 
 developing appropriate policies. Nascent efforts aimed at data preservation for internal 
 re-use and some moves towards public access have begun at the LHC.  The Tevatron experiments 
@@ -225,7 +242,7 @@ scientific or even commercial fields.
 \label{sec:cpfi5-technology}
 A simplistic prediction for the future evolution of technology is that it 
 would to continue to 
-evolve as it has in the past.  Figure aa shows a highly selective, but relevant, 
+evolve as it has in the past.  Figure \ref{fig:technology-evolution} shows a highly selective, but relevant, 
 view of technology evolution, charting how much you can get for \$1M in disk storage, 
 CPU power and long-haul network links that have been bought by over three decades 
 for some particular experimental HEP activities.  The figure is  selective in that 
@@ -250,6 +267,14 @@ persistent storage (just two examples of HEP’s ``data frontier'') shows a simi
 distance from the technology evolution and hence, perhaps a similar level of 
 technological challenge but separated by more than a decade in time. 
 \end{itemize}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{CpF-I5/technology-evolution.pdf}
+\caption{Historical trends in technology used for HEP computing.  The data reflect cpu and disk purchases for L3 at CERN, and BaBar and ATLAS at SLAC.  The network data are for the LEP3Net and USLHCNet links managed by Caltech}
+\label{fig:technology-evolution}
+\end{figure}
+
 
 \subsection{Storage Futures}
 \subsubsection{Tape}
