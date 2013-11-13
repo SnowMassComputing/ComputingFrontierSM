@@ -70,7 +70,7 @@ given their operational cost and complexity.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{CpF-I5/CMS-AAA.pdf}
-\caption{Map showing the CMS "Any data Anywhere Anytime" distributed direct access system based on xrootd\cite{Bauerdick:2012st} software}
+\caption{Map showing the CMS ``Any data Anywhere Anytime'' distributed direct access system based on xrootd\cite{Bauerdick:2012st} software}
 \label{fig:cms-aaa}
 \end{figure}
 
@@ -115,9 +115,9 @@ its data maximally useful to scientists.  This approach continues with LSST, not
 development of a multi-petabyte scalable object catalog database that is capable of rapid 
 response to complex queries.  The data management needs of the sky surveys -- handling image 
 catalogs and object catalogs -- appear very different from those of experimental HEP, but 
-nevertheless, the baseline LSST object catalog employs HEP’s xrootd technology in the key 
+nevertheless, the baseline LSST object catalog employs HEP's xrootd technology in the key 
 role of providing a switchyard between MYSQL front ends and thousands of MYSQL backend servers.  
-LSST’s 3.2 gigapixel camera will produce 15 terabytes per night, building up to over 100 
+LSST's 3.2 gigapixel camera will produce 15 terabytes per night, building up to over 100 
 petabytes of images and 20 petabytes of catalog database during the first ten years.
 
 Although the basic data-access technology to make LSST science achievable has already been 
@@ -143,7 +143,7 @@ has no US involvement, it presents a concretely planned example of the technolog
 data-related challenges that will certainly be faced by US scientists involved in projects 
 in the same timeframe.
 
-Todays example of the SKA concept is the Murchison Wide-Field array where a raw 
+Today's example of the SKA concept is the Murchison Wide-Field array where a raw 
 15.8 gigabytes/s is processed to a produce a stored 400 MB/s.
 
 \subsubsection{“HEP Detectors” in Space}
@@ -167,7 +167,7 @@ design of observational programs and for their detailed technical elements.
 
 Already today, post-processing of simulation data presents a major data-intensive 
 computing challenge, requiring data management, large-scale databases and tools for 
-data analytics.  Some of today’s pain relates to the much more ready availability of 
+data analytics.  Some of today's pain relates to the much more ready availability of 
 national resources for computation than those for data management and analysis: ``we 
 can easily generate many petabytes from simulations and have [almost] no place to 
 store them and analyze them''.
@@ -183,7 +183,7 @@ are readily intelligible by other scientists and even the general public.  From 
 experimental HEP perspective, data preservation and open availability is relatively 
 simple to achieve once policies have been decided.  However, the simple approach to open access will become more challenging for data-intensive image-based activities such as LSST.  Even though the data schema may be intelligible to all, analysis of the data can require massive resources, effectively limiting open access to the images or even the multi-petabyte object catalog.
 
-The raw persistent data from ''HEP-Detector-like'' devices contrasts markedly with that from the 
+The raw persistent data from ``HEP-Detector-like'' devices contrasts markedly with that from the 
 image-based telescopes.  Like data from almost any HEP experiment, they are 
 intelligible only to a few experts until substantial reconstruction and analysis 
 has been performed.  They present the same data preservation and open availability 
@@ -257,7 +257,7 @@ Disk accesses per \$M -- almost totally dominated by the unchanging rotational
 speed of disks -- has changed hardly at all in two decades.
 \item
 Comparison of technology evolution with the BaBar and ATLAS raw data rates to 
-persistent storage (just two examples of HEP’s ``data frontier'') shows a similar 
+persistent storage (just two examples of HEP's ``data frontier'') shows a similar 
 distance from the technology evolution and hence, perhaps a similar level of 
 technological challenge but separated by more than a decade in time. 
 \end{itemize}
@@ -355,8 +355,8 @@ pattern of bits that are close together but physically isolated from each other.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{CpF-I5/shingled-recording-crop.pdf}
-\caption{Disk track layout produced by shingled recording}
+\includegraphics[width=0.9\textwidth]{CpF-I5/shingled-recording-crop.pdf}
+\caption{Disk track layout produced by shingled recording.  Tracks are written from left to right in the diagram by a head that produces a magnetized volume with a triangular cross section. Individual tracks cannot be modified or erased}
 \label{fig:shingled-recording}
 \end{figure}
 
@@ -374,11 +374,11 @@ disk systems.
 \subsubsection{Solid-State Storage}
 The certainty of an increasing role for solid-state storage is suggested by 
 the twenty-year failure of rotating disk to provide more accesses per second 
-per dollar.  In terms of this metric, today’s solid-state storage provides 
+per dollar.  In terms of this metric, today's solid-state storage provides 
 vastly better value than rotating disk.  The solid state storage being used 
 in (exploratory) production at HEP computing centers costs about ten times as 
 much per unit capacity as rotating disk.  Reducing a rotating disk purchase 
-by 10\% and spending the money on solid-state storage is cost neutral and can 
+by 10\% and spending the money on solid-state cache is cost neutral and can 
 improve physics analysis throughput.
 
 In this caching mode, solid-state storage is certain to play an increasing but not 
@@ -395,8 +395,8 @@ facilities -- that would be needed to displace the world's many exabytes of disk
 \subsection{Storage Middleware and Data Management}
 With the notable exception of the adoption by several HEP sites of the 
 semi-commercial HPSS (High Performance Storage System)\cite{HPSS:url} to manage tape data, 
-single-site storage middleware in HEP has been entirely home made.  In the 
-late 1990s, it seemed that it would be an achievement to limit HEP’s invention 
+single-site storage middleware in HEP has been almost entirely home made.  In the 
+late 1990s, it seemed that it would be an achievement to limit HEP's invention 
 of tape data management systems to only one per lab.
 
 HEP's middleware stacks have proved quite successful, for example the seamless 
@@ -408,8 +408,8 @@ In the wider scientific world, middleware such as Globus Online (GO)\cite{Globus
 a data transfer mechanism that has nice retry and a graphical display, is 
 currently the norm.  These tools continue to grow and change, but are still 
 based on the gridftp protocol.  There are other tools for data transfer, but 
-it still has to be managed by the application.   There are  also tools that
-are emerging that transfer data at the file system level.  
+it still has to be managed by the application.  Tools are also emerging that 
+that transfer data at the file system level.  
 
 Scalable file systems such as Lustre\cite{Lustre:url} and GPFS\cite{GPFS:url} connect 
 the file system with the archive or nearline environment so there is seamless
@@ -427,13 +427,13 @@ separate, in a replicated environment, and the data could be anywhere in the
 world.  As data is retrieved from locations, it moves closer and locally 
 depending on the application requirements.   These methods all have small 
 latencies added and depending on the actual location of the data, the latency could 
-be great especially if it’s on tape somewhere.   If these efforts yield systems and services 
+be great especially if it's on tape somewhere.   If these efforts yield systems and services 
 that are widely adopted by science they must become serious candidates for 
 meeting HEP needs in the future.
 
 Even so, at the current time there are no commercial or widely used open-source 
 offerings meeting the HEP needs for worldwide data and workflow management.  
-The absence of commercial offerings is probably largely due to HEP’s need to 
+The absence of commercial offerings is probably largely due to HEP's need to 
 integrate tens to hundreds of autonomous computer centers, having many different 
 funding sources, many different technologies, and a varying level of affiliation, 
 from loose to none at all, with any particular HEP project.  Multinational commercial 
@@ -520,7 +520,7 @@ predicted earlier in this report.
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.7\textwidth]{storage-evolution-v2.pdf}
+\includegraphics[width=0.7\textwidth]{CpF-I5/storage-evolution-v2.pdf}
 \caption{Raw data rates of HEP experimental/observational programs in comparison with likely capacity/unit price evolution}
 \label{fig:storage-evolution}
 \end{figure}
@@ -633,22 +633,27 @@ or mandated.
   I.~Antcheva, M.~Ballintijn, B.~Bellenot, M.~Biskup, R.~Brun, N.~Buncic, P.~.Canal and D.~Casadei {\it et al.},
   %``ROOT: A C++ framework for petabyte data storage, statistical analysis and visualization,''
   Comput.\ Phys.\ Commun.\  {\bf 180}, 2499 (2009).
-\end{thebibliography}
+
 \bibitem{Canal:2011zz} 
   P.~Canal, B.~Bockelman and R.~Brun,
   %``ROOT I/O: The fast and furious,''
   J.\ Phys.\ Conf.\ Ser.\  {\bf 331}, 042005 (2011).
+
 \bibitem{Bauerdick:2012st} 
   L.~Bauerdick, D.~Benjamin, K.~Bloom, B.~Bockelman, D.~Bradley, S.~Dasu, M.~Ernst and R.~Gardner {\it et al.},
   %``Using Xrootd to federate regional storage,''
   J.\ Phys.\ Conf.\ Ser.\  {\bf 396}, 042009 (2012).
+
 \bibitem{GlobusOnline:url}
   https://www.globusonline.org/
+
 \bibitem{Lustre:url}
-  http://en.wikipedia.org/wiki/Lustre_(file_system) \\
+  http://en.wikipedia.org/wiki/Lustre\_(file\_system) \\
   http://lustre.org
+
 \bibitem{GPFS:url}
-  http://en.wikipedia.org/wiki/IBM_General_Parallel_File_System
+  http://en.wikipedia.org/wiki/IBM\_General\_Parallel\_File\_System
+
 \bibitem{HPSS:url}
   http://www.hpss-collaboration.org/
 
