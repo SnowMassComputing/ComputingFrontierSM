@@ -27,8 +27,7 @@ Experiments at energy frontier hadron colliders already generate over a petabyte
 second of data at the detector device level.  Triggering and real-time event filtering 
 is used to reduce this by six orders of magnitude for a final rate to persistent storage 
 of around one gigabyte per second in the case of LHC experiments at the start of Run 2.  
-The main requirement dictating the rate to storage is keeping the storage cost, and the 
-cost of the computing to analyze the stored data, at a tolerable level.
+The cost of storing and analyzing data is a major fraction of the operational cost of LHC experiments, and thus the rate to persistent storage is determined by physics requirements and, perhaps even more, by what is affordable.
 
 Science at energy frontier lepton colliders is unlikely to be constrained by data 
 management and storage issues.
@@ -41,7 +40,7 @@ reconstruction or distribution unless a physics case arose, would cut costs or a
 the rate to persistent storage to be raised.
 
 The vast majority of LHC data storage and data access relates to derived or simulated 
-data stored and accessed using ROOT persistency.  Efficient and agile data access is 
+data stored and accessed using ROOT\cite{Antcheva:2009zz} persistency\cite{Canal:2011zz}.  Efficient and agile data access is 
 already a major issue that is expected to rise in importance by the time of LHC Run 3.  
 Beyond HEP, efficient and agile data access will underpin future successes in data-intensive 
 scientific and commercial applications.  It is hard, but not impossible, to believe that HEP 
@@ -71,9 +70,10 @@ given their operational cost and complexity.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=0.7\textwidth]{CpF-I5/CMS-AAA.pdf}
-\caption{Map showing the CMS "Any data Anywhere Anytime" distributed direct access system based on xrootd software}
+\caption{Map showing the CMS "Any data Anywhere Anytime" distributed direct access system based on xrootd\cite{Bauerdick:2012st} software}
 \label{fig:cms-aaa}
 \end{figure}
+
 With respect to data preservation and open availability, the LHC experiments are actively 
 developing appropriate policies. Nascent efforts aimed at data preservation for internal 
 re-use and some moves towards public access have begun at the LHC.  The Tevatron experiments 
@@ -131,11 +131,6 @@ The model for funding and executing these studies is not yet clear.
 The Dark Energy Survey (DES) can be considered a precursor to LSST, taking data with a 
 0.6 gigapixel camera for five years from 2012 culminating in a petabyte dataset.
 
-The images, and tabular object catalogs of sky surveys and other image-based astronomy 
-are readily intelligible by other scientists and even the general public.  From the 
-experimental HEP perspective, data preservation and open availability is relatively 
-simple to achieve once policies have been decided.
-
 \subsubsection{Terrestrial Radio Telescopes}
 Arrays of radio telescopes can present a data-volume challenge comparable with that 
 posed by energy frontier hadron collider experiments.  The most extreme example now being 
@@ -152,7 +147,7 @@ Todays example of the SKA concept is the Murchison Wide-Field array where a raw
 15.8 gigabytes/s is processed to a produce a stored 400 MB/s.
 
 \subsubsection{“HEP Detectors” in Space}
-Examples include the Fermi Gama Space Telescope (FGST) and the Alpha Magnetic 
+Examples include the Fermi Gamma Space Telescope (FGST) and the Alpha Magnetic 
 Spectrometer (AMS-02).  These detectors have front-end data rates far lower than 
 LHC experiments and would not be constrained by terrestrial storage and data analysis 
 capabilities.  The choke points determining their trigger rates to persistent storage 
@@ -162,13 +157,6 @@ technology in space seems guaranteed to keep downlink bandwidths well below rate
 that would make storage and data distribution a challenge in the future.  
 Nevertheless, these detectors are built and operated by large collaborations and 
 thus require functional distributed data management.
-
-The raw persistent data from these devices contrasts markedly with that from the 
-image-based telescopes.  Like data from almost any HEP experiment, they are 
-intelligible only to a few experts until substantial reconstruction and analysis 
-has been performed.  They present the same data preservation and open availability 
-challenges as HEP experiments, and may be subject to the higher availability 
-expectations typical of image-based astronomy
 
 \subsubsection{Simulations}
 Simulation provides our only way to perform ``experimental cosmology'' since only one 
@@ -188,18 +176,24 @@ There is some expectation that compute-intensive simulation will be co-located w
 data-intensive facilities for analysis of the simulation, but powerful, easy to use 
 analysis tools will still need to be developed.
 
-Astrophysical experiments have traditionally made their datasets public after a 
-limited time when they are open only to the experimental team for analysis.  Clearly, 
-with a project such as the LSST, with a catalogue that runs to the 10s of petabytes, 
-sustaining this policy unmodified into the future will require huge investments in storage, 
-networking infrastructure, and, potentially, public computing resources.
+\subsubsection{Cosmic Frontier Data Preservation and Access}
+
+The images, and tabular object catalogs of sky surveys and other image-based astronomy 
+are readily intelligible by other scientists and even the general public.  From the 
+experimental HEP perspective, data preservation and open availability is relatively 
+simple to achieve once policies have been decided.  However, the simple approach to open access will become more challenging for data-intensive image-based activities such as LSST.  Even though the data schema may be intelligible to all, analysis of the data can require massive resources, effectively limiting open access to the images or even the multi-petabyte object catalog.
+
+The raw persistent data from ''HEP-Detector-like'' devices contrasts markedly with that from the 
+image-based telescopes.  Like data from almost any HEP experiment, they are 
+intelligible only to a few experts until substantial reconstruction and analysis 
+has been performed.  They present the same data preservation and open availability 
+challenges as HEP experiments, and may be subject to the higher availability 
+expectations typical of image-based astronomy
 
 \subsection{Lattice Field Theory (LQCD)}
-Like other simulation-based sciences, LQCD appears to use massive simulations on national 
-supercomputer facilities, followed by intense analysis of the resultant data.  However, 
-in the more conventional view of LQCD, the configuration generation step is performed on 
-massively parallel supercomputers because these are best adapted to the problem, whereas the 
-subsequent, and by no means less compute-intensive, analysis step is performed on HEP-funded 
+Like other simulation-based sciences, LQCD uses massive simulations on national 
+supercomputer facilities, followed by intense analysis of the resultant data.  The LQCD configuration generation step is performed on massively parallel supercomputers 
+because these are best adapted to the problem, whereas the subsequent, and by no means less compute-intensive, analysis step is performed on HEP-funded 
 throughput-optimized systems because these are the most appropriate for this step.
 
 LQCD has significant, but not problematic data volumes that must be managed and transmitted 
@@ -294,7 +288,7 @@ to RAID, provided that the data are stored away from areas prone to major natura
 disasters.
 
 Data volumes in science beyond HEP seem to be doubling every year according to NCSA 
-experience.  This makes sense as driven not just be the increasing data hunger of 
+experience.  This makes sense as driven not just by the increasing data hunger of 
 individual sciences, but also by the increasing number of fields that are becoming 
 data intensive.  Hence the view from outside HEP is of a growing role for tape in an 
 optimized scientific data management hierarchy.
@@ -308,8 +302,8 @@ labor intensive approaches to its integration in the storage hierarchy will appe
 not least due to development efforts at NCSA and other major scientific computing 
 centers that see a clear need for this integration.
 
-Tape technology has, for many decades, been limited by marketing considerations 
-more than by technology.  Tape is very far from its fundamental physical 
+Tape technology availability has, for many decades, been limited by marketing considerations 
+more than by technology itself.  Tape is very far from its fundamental physical 
 limitations and suffers mainly from the existence of very few -- approximately 
 two today -- major drive manufacturers who can see no reason to compete with 
 themselves.  The technology could deliver twice the capacity per dollar every 
@@ -331,9 +325,9 @@ In the enterprise-disk world, devices are loosely classified by their interfaces
 SATA disks with low rotational speed and maximum capacity are used for less demanding 
 “nearline” applications and much more expensive SAS disks are used for the more 
 demanding “online” applications.  The cost differences are not really related to the 
-SATA or SAS interfaces, but to the differing rotational speeds, qualities of the 
-mechanical engineering, device monitoring probes and firmware, automatic recovery 
-firmware etc. incorporated into each class of drive.  The market for the most 
+SATA or SAS interfaces, but rather to properties such as rotational speed, quality of 
+mechanical engineering, device monitoring probes,  and automatic recovery 
+firmware.   The market for the most 
 expensive disk capacity, currently provided by 2.5 inch 15k rpm drives used 
 primarily for database applications, is already threatened by solid-state 
 storage with much lower latency. 
@@ -347,7 +341,7 @@ Technological developments along these directions have been in the works for som
 years, but according to industry experts, none will be advanced enough to bring the 
 next jump in disk capacity to market much before the end of the decade.  The prime 
 ``use-a-larger-volume-of-magnetic material'' approach is shingled recording, 
-conceptually illustrated in Figure bb. In this approach a specially shaped write 
+conceptually illustrated in Figure \ref{fig:shingled-recording}. In this approach a specially shaped write 
 head lays down tracks with a triangular cross section, which become a set of 
 ``shingles'' as successive tracks are written.  Each shingle goes deep into the 
 material, so can be stable even if it is much narrower than current tracks.  
@@ -358,6 +352,13 @@ in the wider marketplace could be problematic.  The ``high-coercivity'' approach
 include Heat-Assisted Magnetic Recording (HAMR) using a uniform surface with higher 
 coercivity and ``bit patterned recording'' using lithography to lay down a circular 
 pattern of bits that are close together but physically isolated from each other.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{CpF-I5/shingled-recording-crop.pdf}
+\caption{Disk track layout produced by shingled recording}
+\label{fig:shingled-recording}
+\end{figure}
 
 The next ten years of disk evolution is thus highly uncertain.  It would be 
 prudent and probably correct to assume that the doubling time is now around four 
@@ -371,16 +372,16 @@ favoring, long lasting, low power, physically dense, and therefore very heavy
 disk systems.
 
 \subsubsection{Solid-State Storage}
-The certainty of an increasing role for solid-state storage was suggested by 
+The certainty of an increasing role for solid-state storage is suggested by 
 the twenty-year failure of rotating disk to provide more accesses per second 
 per dollar.  In terms of this metric, today’s solid-state storage provides 
 vastly better value than rotating disk.  The solid state storage being used 
 in (exploratory) production at HEP computing centers costs about ten times as 
-much per unit capacity as rotating disk.  Thus reducing a rotating disk purchase 
+much per unit capacity as rotating disk.  Reducing a rotating disk purchase 
 by 10\% and spending the money on solid-state storage is cost neutral and can 
 improve physics analysis throughput.
 
-In this mode, solid-state storage is certain to play an increasing but not 
+In this caching mode, solid-state storage is certain to play an increasing but not 
 dominant role in HEP, and perhaps an even larger role in the commercial world.  
 The woes of rotating disk described above are likely to allow solid-state -- 
 specifically flash-memory-based -- storage to lower its cost relative to disk 
@@ -389,28 +390,28 @@ go down from around a factor ten now to around a factor 3 within ten years.
 Industry experts do not expect current solid-state technologies to “kill” disk 
 in the foreseeable future, not least because it is almost inconceivable to 
 create the large number of multi-billion dollar ``fabs'' -- chip fabrication 
-facilities -- that would be needed to displace the world’s many exabytes of disk.
+facilities -- that would be needed to displace the world's many exabytes of disk.
 
 \subsection{Storage Middleware and Data Management}
 With the notable exception of the adoption by several HEP sites of the 
-semi-commercial HPSS (High Performance Storage System) to manage tape data, 
+semi-commercial HPSS (High Performance Storage System)\cite{HPSS:url} to manage tape data, 
 single-site storage middleware in HEP has been entirely home made.  In the 
 late 1990s, it seemed that it would be an achievement to limit HEP’s invention 
 of tape data management systems to only one per lab.
 
-HEP’s middleware stacks have proved quite successful, for example the seamless 
+HEP's middleware stacks have proved quite successful, for example the seamless 
 integration for BaBar at SLAC of petabyte (HPSS) tape storage and tens of terabytes 
 of disks distributed over 50 servers, but these successes have not translated into 
 wide HEP adoption, let alone interest by other sciences or industry. 
 
-In the wider scientific world of middleware such as Globus Online (GO), which is 
+In the wider scientific world, middleware such as Globus Online (GO)\cite{GlobusOnline:url}, which is 
 a data transfer mechanism that has nice retry and a graphical display, is 
 currently the norm.  These tools continue to grow and change, but are still 
 based on the gridftp protocol.  There are other tools for data transfer, but 
 it still has to be managed by the application.   There are  also tools that
 are emerging that transfer data at the file system level.  
 
-There are scalable file systems such as Lustre and GPFS that are connecting 
+Scalable file systems such as Lustre\cite{Lustre:url} and GPFS\cite{GPFS:url} connect 
 the file system with the archive or nearline environment so there is seamless
 access, from the users prospective, to all files.  The data-managed file 
 system means that the inode remains in the file system with a stub of the first 
@@ -420,13 +421,13 @@ The data can be recalled from any ftp archive as long as permissions and
 security have been prearranged.   This builds basically an endless file system.   
 Connecting these large endless file systems is then next on the horizon.  
 
-There are some test sites in the next few years that will be using GO-Storage 
-to connect these large managed file systems together, so the meta-data is 
-separate and in a replicated environment and the data could be anywhere in the 
+In the next few years some test sites will be using GO-Storage 
+to connect these large managed file systems together. The meta-data will be 
+separate, in a replicated environment, and the data could be anywhere in the 
 world.  As data is retrieved from locations, it moves closer and locally 
-depending on the applications requirements.   These methods all have small 
-latencies added and depending on the data actually location, the latency could 
-be great if it’s on tape somewhere.   If these efforts yield systems and services 
+depending on the application requirements.   These methods all have small 
+latencies added and depending on the actual location of the data, the latency could 
+be great especially if it’s on tape somewhere.   If these efforts yield systems and services 
 that are widely adopted by science they must become serious candidates for 
 meeting HEP needs in the future.
 
@@ -442,8 +443,8 @@ challenges, but HEP is still at the bleeding/leading edge in terms of overall
 complexity.
 
 The commercial world of distributed data-intensive applications should not be 
-ignored -- individual technologies and de-facto standards relevant to HEP are 
-almost certain to appear.  The wide scientific world must also not be ignored.  
+ignored -- individual technologies and {\it de-facto} standards relevant to HEP are 
+almost certain to appear.  The wider scientific world must also not be ignored.  
 HEP will be able to bring benefit, reap credit and attract non-HEP funding by 
 helping adapt some of its most successful distributed computing technologies 
 for other sciences and smaller HEP activities. Beyond this, HEP can benefit 
@@ -513,9 +514,16 @@ frontiers straining against the limits of data management and storage technology
 Storage technology is likely to evolve in capacity/cost more slowly than in the 
 last decades, making it ever more important that the role of storage is carefully 
 optimized with respect to other costly elements of the scientific programs.  
-Figure dd gives attempts to illustrate this challenge by comparing the data rates 
+Figure \ref{fig:storage-evolution} attempts to illustrate this challenge by comparing the data rates 
 expected from the most challenging activities with the disk technology evolution 
 predicted earlier in this report.  
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.7\textwidth]{storage-evolution-v2.pdf}
+\caption{Raw data rates of HEP experimental/observational programs in comparison with likely capacity/unit price evolution}
+\label{fig:storage-evolution}
+\end{figure}
 
 As outlined earlier, the rate of writing raw events to persistent storage for the 
 LHC experiments is substantially influenced by the cost of storage and can be 
@@ -533,9 +541,9 @@ Tape will fall slightly in relative cost should and play a more important role
 than, for example, in the LHC experiments today where it is arguably underused.
 \item
 Rotating Disk, will not improve in capacity/cost as rapidly as tape or solid-state 
-storage and is for the next decade may take around four years to double capacity/cost.  
-As a result, it will be cost-effective to wait about eight years before replacing 
-disks, provided the space, power and cooling are available to make this possible.
+storage and for the next decade may take around four years to double capacity/cost.  
+As a result, it could be cost-effective to wait about eight years before replacing 
+disks that are not giving trouble, provided the space, power and cooling are available to make this possible.
 \item
 Solid-state storage will not kill rotating disk in the enterprise and data-intensive 
 science markets, but it will become relatively cheaper, perhaps by a factor of three, 
@@ -550,7 +558,7 @@ The relative rates of cost evolution of tape, rotating disk, solid-state storage
 networks and CPU are clearly uncertain.  However, it is certain that HEP computing
 models will need to adapt to make the most efficient use of all these elements.  
 The best way to adapt would be to make the implementation of the models 
-intrinsically adjustable to adapt to a wide range of situations. The now old, 
+intrinsically adjustable to serve a wide range of situations. The now old, 
 but never really implemented, concept of ``virtual data'' would go a long way to 
 making HEP computing dynamically adaptable to wide range of relative storage and 
 CPU costs.  In a virtual data system, all derived (or simulated) data products 
@@ -611,5 +619,40 @@ access and adoption of best practices in knowledge preservation.  Solutions
 should be developed that meet the needs of the particle and astrophysics 
 communities before widespread release of data to the public can be expected 
 or mandated.
+
+
+\begin{thebibliography}{99}
+
+%%
+%%  bibliographic items can be constructed using the LaTeX format in SPIRES:
+%%    see    http://www.slac.stanford.edu/spires/hep/latex.html
+%%  SPIRES will also supply the CITATION line information; please include it.
+%%
+
+\bibitem{Antcheva:2009zz} 
+  I.~Antcheva, M.~Ballintijn, B.~Bellenot, M.~Biskup, R.~Brun, N.~Buncic, P.~.Canal and D.~Casadei {\it et al.},
+  %``ROOT: A C++ framework for petabyte data storage, statistical analysis and visualization,''
+  Comput.\ Phys.\ Commun.\  {\bf 180}, 2499 (2009).
+\end{thebibliography}
+\bibitem{Canal:2011zz} 
+  P.~Canal, B.~Bockelman and R.~Brun,
+  %``ROOT I/O: The fast and furious,''
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 331}, 042005 (2011).
+\bibitem{Bauerdick:2012st} 
+  L.~Bauerdick, D.~Benjamin, K.~Bloom, B.~Bockelman, D.~Bradley, S.~Dasu, M.~Ernst and R.~Gardner {\it et al.},
+  %``Using Xrootd to federate regional storage,''
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 396}, 042009 (2012).
+\bibitem{GlobusOnline:url}
+  https://www.globusonline.org/
+\bibitem{Lustre:url}
+  http://en.wikipedia.org/wiki/Lustre_(file_system) \\
+  http://lustre.org
+\bibitem{GPFS:url}
+  http://en.wikipedia.org/wiki/IBM_General_Parallel_File_System
+\bibitem{HPSS:url}
+  http://www.hpss-collaboration.org/
+
+
+\end{thebibliography}
 
 \end{document}
