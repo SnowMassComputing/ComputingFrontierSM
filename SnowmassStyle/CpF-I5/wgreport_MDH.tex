@@ -185,7 +185,8 @@ are readily intelligible by other scientists and even the general public.
 
 From the 
 experimental HEP perspective, data preservation and open availability is relatively 
-simple to achieve for image-based astronomy once policies have been decided.  
+simple to achieve once policies have been decided.  
+(Not sure I agree with this!  Mike)
 
 However, the simple approach to open access will become more challenging for data-intensive image-based activities such as LSST.  Even though the data schema may be intelligible to all, analysis of the data can require massive resources, effectively limiting open access to the images or even to the multi-petabyte object catalog.  Current plans for LSST public access to
 data include providing limited computing resources, with data access limited to those individuals or organizations
@@ -482,8 +483,8 @@ a manner that will allow many different experiments across the different frontie
 to adopt a common solution.
 \item
 Outreach: limited access to some data and the accompanying documentation provides one 
-means of preserving the ensemble of data and software.  Resources such as Rivet\cite{Rivet}, 
-RECAST\cite{RECAST}, and the extensions to HepDB provide a means of encapsulating the structure 
+means of preserving the ensemble of data and software.  Resources such as Rivet, 
+RECAST, and the extensions to HepDB provide a means of encapsulating the structure 
 of a given analysis in a manner that allows easy communication between experts and 
 relatively simple re-use.  More broad outreach efforts, such as those supported by 
 nearly all Energy Frontier experiments, have also developed simple yet powerful 
@@ -517,7 +518,7 @@ The DPHEP effort\cite{DPHEP}, a Study Group for Data Preservation in High Energy
 Among colliders whose data-taking period has ended, two currently have advanced efforts in data preservation and access.  The BaBar Long Term Data Access archival system\cite{BaBar} is comprised of several racks of compute nodes and data and database servers, all completely walled-off from the host laboratory.  The deployment of virtual machines ensures a stable, non-evolving software environment.  This system is designed to provide active analysis use through 2018, at which point only the legacy data would be preserved.  At DESY, a combined effort is underway to maintain sustained access to the HERA datasets of ZEUS, H1, and HERMES.  A cross-HERA virtual environment based on current grid infrastructure that will allow new production of simulated events already exists; each of the experiments has slightly different plans for the long-term archiving and access to their data and the corresponding documentation.  A general software/archival validation tool is also under development at DESY\cite{DESY}; this could become a general component in any long-term software and data preservation effort.
 Planning at the Tevatron is underway\cite{Tevatron}. The Tevatron experiments finished data collection at the end of September, 2011. Unlike at the LHC, very little thought was given to data preservation and re-use during Tevatron running, which will make the preservation of the data especially challenging. 
 
-At the LHC, K. Cranmer’s RECAST project is notable for its advanced state of deployment and its differences from traditional archival methods.  RECAST is a computational framework designed to encapsulate the “institutional knowledge” about a particular analysis in a way that allows outsiders to query the dataset for a certain physics result.  The analysis methods, the simulated events, and the results from data are stored in a manner that can be used to probe the presence or absence of new physical processes that were not considered at the time of the analysis.  So, the analysis algorithms and the dataset are fixed, but the results and constraints on new physics models can be explored.  
+At the LHC, K. Cranmer’s RECAST project\cite{RECAST} is notable for its advanced state of deployment and its differences from traditional archival methods.  RECAST is a computational framework designed to encapsulate the “institutional knowledge” about a particular analysis in a way that allows outsiders to query the dataset for a certain physics result.  The analysis methods, the simulated events, and the results from data are stored in a manner that can be used to probe the presence or absence of new physical processes that were not considered at the time of the analysis.  So, the analysis algorithms and the dataset are fixed, but the results and constraints on new physics models can be explored.  
 
 The LHC experiments are currently considering data preservation and public access policies.  CMS and LHCb have approved policies on public access to data and on the prospects of releasing processed data to the public.
 
@@ -665,9 +666,6 @@ or mandated.
   %``Using Xrootd to federate regional storage,''
   J.\ Phys.\ Conf.\ Ser.\  {\bf 396}, 042009 (2012).
 
-\bibitem{HPSS:url}
-  http://www.hpss-collaboration.org/
-
 \bibitem{GlobusOnline:url}
   https://www.globusonline.org/
 
@@ -678,6 +676,9 @@ or mandated.
 \bibitem{GPFS:url}
   http://en.wikipedia.org/wiki/IBM\_General\_Parallel\_File\_System
 
+\bibitem{HPSS:url}
+  http://www.hpss-collaboration.org/
+
 \bibitem{DPHEP}
 The DPHEP Study Group, DPHEP-2009-00, http://arxiv.org/pdf/0912.0255;\\
 The DPHEP Study Group, DPHEP-2012-01, May 2012, arXiv:1205.4667v1
@@ -687,8 +688,6 @@ C. Cartaro, {\it et al.}, “Design, Status, and Experience with BaBar LTDA”, 
 
 \bibitem{DESY} Y. Kemp, M. Strutz, H. Hessling, “A validation system for data preservation in HEP”, Proceedings of ACAT 2011, 5-9 September 2011, Uxbridge, London, 
 \bibitem{Tevatron} S. Amerio, et al., “Data Preservation at CDF”, to appear in the proceedings of CHEP 2012, New York, May 21-25, 2012; Q. Li, et al., “Data Preservation at DØ”, Presentations at the 5th DPHEP Workshop, FNAL, May 2011. Conference page: http://indico.cern.ch/conferenceDisplay.py?confId=116485.
-\bibitem{Rivet:url}
-  http://rivet.hepforge.org/
 \bibitem{RECAST} K. Cranmer and I. Yavin, “RECAST: Extending the Impact of Existing Analyses”, JHEP 1104 (2011) 038 [arXiv:1010.2506].
 
 
