@@ -4,7 +4,7 @@ For the {\bf Energy Frontier}, computing limitations already
 reduce the amount of physics data that can be analyzed. The
 planned upgrades to the LHC energy and luminosity are expected to result in
 a ten-fold increase in the number of events and a ten-fold increase in
-event complexity. Effort has begun to increase code efficiency and
+event complexity. Efforts have begun to increase code efficiency and
 parallelism in reconstruction software and to explore the potential of
 computational accelerators such as GPUs and Xeon Phi.
 Saving more raw events to tape and only
@@ -20,7 +20,8 @@ than storing them.
 
 {\bf Intensity Frontier} experiments have combined computing requirements
 on the scale of a single Energy Frontier experiment, but they are a more
-diverse set than the energy frontier.  We conducted a survey and found that
+diverse set than those of the Energy Frontier.  
+We conducted a survey and found that
 there is significant commonality in different experiments' needs. Sharing
 resources across experiments, as in the Open Science Grid, is a first step
 in addressing peak computing needs.  Continued coordination of
@@ -48,7 +49,7 @@ computers' architectures and very large data sets, as described above.
 Growing archival storage, visualization of simulations, and allowing public
 access to data are also issues that need attention.
 
-{\bf Accelerator Science} is called on to simulate new accelerator designs
+{\bf Accelerator science} is called on to simulate new accelerator designs
 and to provide near-real-time simulations feedback for accelerator
 operation. 
 Research into new algorithms and designs has the potential to bring new ideas and
@@ -58,7 +59,7 @@ to improve algorithms to achieve these goals. Production runs can use from
 10K to 100K cores. Considerable effort is being expended to port to new
 architectures, in particular to address the real-time requirements.
 
-{\bf Lattice Field Theory} calculations rely on national supercomputer
+{\bf Lattice field theory} calculations rely on national supercomputer
 centers and hardware purchased for the USQCD Computing Project. Allocations
 at supercomputer centers have exceeded 500 M core-hrs this year, and
 resource requests will go up by a factor of 50 by the end of this decade.
@@ -77,18 +78,19 @@ OLCF, and also run on the Open Science Grid. They have also been
 benchmarking GPU codes and finding impressive speed up with respect to
  a single core.
 A computer at CERN was used to benchmark the Intel Xeon Phi chip.
-A repository of codes has been established at NERSC and a long term goal is
+A repository of codes has been established at NERSC.  A long term goal is
 to make it easy for experimentalists to use these codes to compute Standard
 Model rates for the processes they need.
 
-The {\bf Distributed Computing and Facilities Infrastructures} subgroup
+The {\bf Distributed computing and facilities infrastructures} subgroup
 looked at the growth trends in distributed resources as provided by the
 Open Science Grid, and the national high performance computing (HPC)
 centers. Most of the computing by experiments is of the HTC type, but HPC
 centers could be used for specific work flows. Using existing computing
 centers could save smaller experiments from large investments in hardware
 and personnel. Distributed HTC has become important in a number of science
-areas outside HEP, but HEP is still the biggest user and must continue to
+areas outside particle physics, but particle physics is still the 
+biggest user and must continue to
 drive the future computing development. HPC computing needs for theoretical
 physics will require an order of magnitude increase in capacity and
 capability at the HPC centers in the next five years, and two orders of
@@ -107,33 +109,36 @@ investments in higher performance links continue. However, there is
 uncertainty as to whether network costs will drop at the same rate as they
 have done in the past.
 
-The {\bf Software Development, Personnel and Training} subgroup has a
+The {\bf Software development, personnel, and training} subgroup has a
 number of recommendations to implement three main goals. The first goal is
 to use software development strategies and staffing models that result in
-software more widely useful to the HEP community. The second goal is to
+software more widely useful to the particle physics community. The second goal is to
 develop and support software that will run with optimal efficiency on
 future computer architectures. The third goal is to insure that developers
 and users have the training necessary to deal with the increasingly complex
 software environments and computing systems that will be used in the future.
 
-The {\bf Storage and Data Management} subgroup found that storage continues
+The {\bf Storage and data management} subgroup found that storage continues
 to be a cost driver for many experiments. It is necessary to manage the
 cost to optimize the science output from the experiment. Tape storage
 continues to be relatively inexpensive and should be more utilized within
 the storage hierarchy. 
 Disk storage is likely to increase in capacity/cost relatively slowly due
 to a shrinking consumer market and technology barriers.
-Operating distributed data management systems can be costly for
-experiments, and continued R\&D in this area would benefit a number of 
-experiments.
+It  can be costly for experiments to operate their own
+distributed data management systems, thus
+continued R\&D in this area would benefit a number of experiments.
 
 To summarize, the challenging resource needs for the planned and proposed
-physics programs require efficient and flexible use of all resources. HEP
-needs both distributed HTC and HPC. Emerging experimental programs might
-consider a mix to fulfill demands. Programs to fund these resources need to
-continue. Sharing and opportunistic use help address resource needs, from
-all tiers of computing, eventually including commercial providers. There is
-increasing need for data intensive computing in traditionally
+physics programs require efficient and flexible use of all resources. 
+Particle physics
+needs both distributed HTC and HPC.  Emerging experimental programs might
+consider a mix to fulfill demands. 
+Programs to fund these resources need to continue. 
+It may also be possible to use shared computer resources and opportunistic 
+sources of computing to meet some needs.  Commercial cloud providers
+may also provide a useful resource, particularly if prices are reduced.
+There is increasing need for data-intensive computing in traditionally
 computation-intensive fields, including at HPC centers.  
 
 In order to satisfy our increasing computational demands, the field needs
@@ -141,10 +146,10 @@ to make better use of advanced computing architectures. With the need for
 more parallelization, the complexity of software and systems continues to
 increase, impacting architectures for application frameworks, workload
 management systems, and also the physics code. We must develop and maintain
-expertise across the field, and re-engineer frameworks, libraries and
+expertise across the field, and re-engineer frameworks, libraries, and
 physics codes. Unless corrective action is taken to enable us to take full
-advantage of the new hardware architectures, we could be frozen out of cost
-effective computing solutions on a time scale of 10 years. There is a large
+advantage of the new hardware architectures, we could be frozen out of 
+cost-effective computing solutions on a time scale of 10 years. There is a large
 code base that needs to be re-engineered, and we currently do not have
 enough people trained to do it.
 
@@ -153,17 +158,18 @@ need for continued R\&D investment in data management, data access methods,
 and networking. Continued evolution of the data management and storage
 systems will be needed in order to take advantage of new network
 capabilities, ensure efficiency and robustness of the global data
-federations, and to contain the level of effort needed for operations.
+federations, and contain the level of effort needed for operations.
 Significant challenges with data management and access remain, and research
 into these areas could continue to bring benefit across the Frontiers.  
 
 Network reliability is essential for data intensive distributed computing.
 Emerging network capabilities and data access technologies improve our
 ability to use resources independent of location. This will enable use of
-diverse compute resources: dedicated facilities, university computing
-centers, opportunistic use of shared resources between PIs, even scientific
-communities, commercial clouds, eventually also making leadership-class HPC
-centers relevant for data-intensive computing. The computing models should
+diverse computing resources including dedicated facilities, university computing 
+centers, resources shared opportunistically between PIs, and potentially 
+also commercial clouds. Leadership-class HPC centers may also become 
+relevant for data-intensive computing.
+The computing models should
 treat networks as a resource that needs to be managed and planned for.
 
 Computing will be essential for progress in theory and experiment over the
@@ -172,8 +178,8 @@ The advances in computer hardware that we have seen
 in the past may not continue at the same rate in the future. The issues
 identified in this report will require continuing attention from both the
 scientists who develop code and determine what resources best meet
-their needs, and from the funding agencies who will review plans, and
+their needs, and from the funding agencies who will review plans and
 determine what shall be funded.
 Careful attention to the computational challenges in our field
 will increase efficiency and enable us to meet the
-experimental and theoretical goals identified through the Snowmass process.
+experimental and theoretical physics goals identified through the Snowmass process.
