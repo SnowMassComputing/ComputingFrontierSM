@@ -25,6 +25,7 @@ in networking based on a tiered system of computing centers at various
 scales. Both data storage and processing are distributed through 
 this hierarchy of centers to maximize usability and throughput.
 
+\subsection{Current and future computing needs}
 %%%Progress in distributed high-throughput computing, in high-performance
 %%%networks, in distributed data management, in remote data access, in work flow
 %%%systems, etc. enables the experimental groups to marshal these diverse and
@@ -35,7 +36,7 @@ this hierarchy of centers to maximize usability and throughput.
 Progress in distributed HTC, high-performance networks, distributed data 
 management, remote data access, and work flow systems has helped 
 experimental groups, production teams and scientists worldwide to
-effectviely access 
+effectively access 
 and use their data. Collaboration, facilitated by groups such as 
 the WLCG and national consortia, enables this progress.
 In the U.S.  the Open Science Grid is  bringing together the sites, 
@@ -43,7 +44,7 @@ experiments, infrastructure
 providers, and computing specialists, that are necessary sustain and
 further develop this distributed environment.
 
-LHC computing Today routinely uses 250,000 CPU processor cores and nearly 170
+LHC computing today routinely uses 250,000 CPU processor cores and nearly 170
 PB of disk storage in addition to large multi-hundred PB capacity
 tape libraries.  The experiments generate over 1 PB per second of data
 at the detector device level. Triggering and real-time event filtering  is
@@ -71,7 +72,8 @@ centers around the world.
 In contrast to the LHC and its future upgrade, science at Energy Frontier 
 lepton colliders is unlikely to be constrained by computing issues.  
 
-The full report on Computing for the Energy Frontier presents a  prediction 
+The full report on Computing for the Energy Frontier \cite{Fisk:2014lia}
+presents a  prediction 
 of the magnitude of changes that should be expected over the coming decade. 
 It reviews  the changes between the Tevatron and LHC over the past 10 years. 
 We argue
@@ -115,7 +117,9 @@ The Energy Frontier will need to adopt new techniques and methods moving forward
 \begin{center}
 %\includegraphics[width=0.45\hsize]{CpF-E2/Growth1.eps}
 %\includegraphics[width=0.45\hsize]{CpF-E2/Growth2.eps}
-\includegraphics{CpF-E2/FigureSnowMass.eps}
+%\includegraphics{CpF-E2/FigureSnowMass.eps}
+\includegraphics[width=0.5\hsize]{CpF-E2/fig1a.pdf}\ \ \ \
+\includegraphics[width=0.45\hsize]{CpF-E2/fig1b.pdf}
 \caption{The CPU and disk growth through the first 6 years of the LHC program
 and projections to 2017.}
 \label{fig:growth}
@@ -152,6 +156,7 @@ We identify two trends that will potentially help with this: the
 increased use of specialized hardware, and providing and using computing as a
 service.
 
+\subsection{Trends to specialized systems and computing as a service}
 The Energy Frontier will need to evolve to use alternative computing
 architectures and platforms such as GPUs and other co-processors,  low-power
 ``small'' cores, etc., as the focus of industry development is moving away from
@@ -193,6 +198,7 @@ interfaces.   Effort is needed to allow the community to make effective use of
 the diverse environments and to perform resource provisioning across
 dedicated, specialized, contributed, opportunistic, and purchased resources.
 
+\subsection{Becoming more selective}
 There are a considerable concerns regarding the enormous increase in data
 produced by the next round of Energy Frontier colliders,   to be processed by the offline
 computing systems.  We observe that while the Energy Frontier processing capacity has
@@ -230,6 +236,7 @@ treated as transient data.   More of the data analysis steps should be moved
 into the production chain, only storing the final output, with the
 understanding that it can be re-derived if required later.
 
+\subsection{Data management}
 With the expected increased diversity of computing resources, Energy Frontier computing
 needs to develop a data management system that can deal with all kinds of
 resources.   In the next decade computing processing for the Energy Frontier will evolve to
@@ -243,10 +250,12 @@ Industry has put a focus on delivering content either through Content
 Delivery Networks (CDNs) or through peer-to-peer systems.  The experiment data
 management systems need to evolve to be more flexible in terms of what 
 computing resources can be used to solve each type of computing problem,
-in order to make efficient use of the diverse landscape of resoures to which
+in order to make efficient use of the diverse landscape of resoucres to which
 the experiment computing modes will have to adapt.
 The development of a data intensive content delivery network should not be
 unique to one experiment, and should even be applicable to several scientific
 domains, but this will require commitment and effort to develop.
 
+Additional details may be found in the full subgroup report 
+\cite{Fisk:2014lia}.
 

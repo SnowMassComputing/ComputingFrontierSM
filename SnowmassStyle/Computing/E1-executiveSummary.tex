@@ -15,6 +15,7 @@ exploited, from the radio to TeV energies. Relevant theoretical
 research also casts a very wide net --- from quantum gravity to the
 astrophysics of galaxy formation.
 
+\subsection{Experimental facilities}
 The size and complexity of Cosmic Frontier experiments is also
 diverse, ranging from the tabletop to large cosmological surveys,
 simultaneously covering a number of precision measurements and
@@ -41,6 +42,7 @@ experiments. The mass of data will exceed 100~PB; in subsequent decades
 the development of radio experiments and energy resolving detectors
 will result in an increase in data streaming rates to greater than 15 GB/s.
 
+\subsection{Simulations}
 The intrinsically observational nature of much of Cosmic Frontier
 science implies a great reliance on simulation and modeling. Not only
 must simulations provide robust predictions for observations, they are
@@ -53,6 +55,24 @@ covariance matrices to state-of-the-art simulations of large-volume
 surveys, or, at the opposite extreme, small-volume investigations of
 dark matter annihilation signals from dwarf galaxies.
 
+For optical surveys, the chain begins
+with a large cosmological simulation into which galaxies and quasars
+(along with their individual properties) are placed using
+semi-analytic or halo-based models. A synthetic sky is then created by
+adding realistic object images and colors and by including the local
+solar and galactic environment. Propagation of this sky through the
+atmosphere, the telescope optics, detector electronics, and the data
+management and analysis systems constitutes an end-to-end simulation
+of the survey. A sufficiently detailed simulation of this type can
+serve a large number of purposes such as identifying possible sources
+of systematic errors and investigating strategies for correcting them,
+or for optimizing survey design (in area, depth, and cadence). The
+effects of systematic errors on the analysis of the data can also be
+investigated. Because of the very low level of statistical errors in
+current and next-generation precision cosmology experiments, and the
+precision with which deviations from $\Lambda$CDM are to be measured,
+this is an absolutely essential task.
+
 Facilities for carrying out the required simulations include
 large-scale resources at DOE and NSF supercomputing centers, augmented
 by local clusters. Data-intensive computing platforms are also needed
@@ -62,7 +82,7 @@ observations; data storage, archiving, and analysis requirements
 (often in concert with observational data) are just as demanding as
 for observational data sets. Although there are significant challenges
 in fully exploiting future supercomputing hardware, available
-resources should satisfy perfromance requirements, currently at the
+resources should satisfy performance requirements, currently at the
 scale of $\sim$10~PFlops. These requirements are expected to cross into
 the exascale regime after 2020. The data-related issues are more
 serious and will need changes in the current large-scale computing
@@ -84,12 +104,13 @@ science requirements based on having complete data sets from missions
 such as LSST, Euclid, and large radio surveys would argue for at least
 another order of magnitude increase across the board.
 
+\subsection{Computational resources and architectures}
 %%Today's architectures for data analysis and simulations include
 %%supercomputers, suitable for massive parallel computations where the
 %%number of cycles per byte of data is huge, possessing a large
 %%distributed memory, but with a relatively small amount of on-line
 %%storage. 
-Today's architechtures for data analysis and simulations include supercomputers, 
+Today's architectures for data analysis and simulations include supercomputers, 
 that are suitable for massively parallel computations where the number of 
 cycles per byte of data is huge.  These possess a large distributed memory 
 but a relatively small amount of on-line storage.
@@ -162,6 +183,7 @@ new storage technologies with fast random access (SSD, memory bus
 flash, phase change memory, non-volatile RAM) will play a crucial role
 in the storage hierarchy.
 
+\subsection{Data access and analysis}
 Large-scale data sets, arising from both simulations and experiments,
 present different analysis tasks requiring a variety of data access
 patterns. These can be subdivided into three broad categories:
@@ -213,13 +235,14 @@ performance gains of well over an order of magnitude.
 Dealing with each of these access patterns demands substantial
 investments in hardware and software development. To build an
 efficient streaming engine, all hardware and software bottlenecks must
-be eliminated, since a single chokepoint can seriously degrade the
+be eliminated, since a single choke point can seriously degrade the
 performance of the whole system. In terms of algorithms, many
 traditional RAM-resident algorithms must be recast into streaming
 versions. A rethink of statistical algorithm design is needed, and
 computations (and computability) should be explicitly included into
 the cost tradeoffs.
 
+\subsection{Development and support of a computational community}
 The need for better programming models and better high-level
 abstractions is evident. In a complex, massively parallel system it
 will become increasingly difficult to write code explicitly
@@ -234,27 +257,6 @@ implement new algorithms, programming models, workflow tools, as well
 as standards for verification, validation, and code testing. A
 coherent plan for long-term support to maintain and further develop
 the resulting software base will have to be put in place.
-
-Simulation plays a critical role in Cosmic Frontier science, not only
-as the primary tool for theoretical predictions, but even more
-significantly, in evaluating and interpreting the capabilities of
-current and planned experiments. For optical surveys, the chain begins
-with a large cosmological simulation into which galaxies and quasars
-(along with their individual properties) are placed using
-semi-analytic or halo-based models. A synthetic sky is then created by
-adding realistic object images and colors and by including the local
-solar and galactic environment. Propagation of this sky through the
-atmosphere, the telescope optics, detector electronics, and the data
-management and analysis systems constitutes an end-to-end simulation
-of the survey. A sufficiently detailed simulation of this type can
-serve a large number of purposes such as identifying possible sources
-of systematic errors and investigating strategies for correcting them,
-or for optimizing survey design (in area, depth, and cadence). The
-effects of systematic errors on the analysis of the data can also be
-investigated. Because of the very low level of statistical errors in
-current and next-generation precision cosmology experiments, and the
-precision with which deviations from $\Lambda$CDM are to be measured,
-this is an absolutely essential task.
 
 Directly analogous to building a community-supported software base for
 Cosmic Frontier experiments, there is a related need for bringing
@@ -276,6 +278,8 @@ difficult to sustain beyond the lifetime of an individual
 experiment. To make computing developments more robust, a sustainable
 software initiative is highly desirable. A substantial community must actively
 develop and deploy the tools created within such a program.
+
+Additional details may be found in the full subgroup report \cite{Connolly:2013ibs}.
 
 
 \begin{center}
